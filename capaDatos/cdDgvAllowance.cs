@@ -80,8 +80,9 @@ namespace capaDatos
             }
         }
 
-        public void updateDatagrid(DataGridView dgvAllowance)
+        public void updateDatagrid(DataGridView dgvAllowance, Hashtable pdfs)
         {
+            pdfs.Clear();
             dgvAllowance.RowCount = 0;
             for (int i = 0; i < emailUsers.Count; i++)
             {
@@ -95,6 +96,7 @@ namespace capaDatos
                 newRow.Cells[4].Value = date[i];
                 newRow.Cells[5].Value = startHours[i];
                 newRow.Cells[6].Value = endHours[i];
+                pdfs.Add(idAllowance[i], invoices[i]);
                 //newRow.Cells[7].Value = invoices[i];
                 newRow.Cells[8].Value = states[i];
                 dgvAllowance.Rows.Add(newRow);

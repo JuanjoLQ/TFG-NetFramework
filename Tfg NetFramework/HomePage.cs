@@ -13,6 +13,7 @@ using capaNegocio;
 using System.Diagnostics;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Collections;
 
 namespace Tfg_NetFramework
 {
@@ -28,6 +29,7 @@ namespace Tfg_NetFramework
         cnDgvMileage cnDgvMileage = new cnDgvMileage();
         cnDgvUser cnDgvUser = new cnDgvUser();
         cdGlobals cdGlobals = new cdGlobals();
+        Hashtable pdfs = new Hashtable();
 
         public HomePage()
         {
@@ -73,14 +75,16 @@ namespace Tfg_NetFramework
 
             cnUser.dgvUsers(dgvUser);
 
-            cnDgvAllowance.dgvAllowance(dgvAllowances);
+            cnDgvAllowance.dgvAllowance(dgvAllowances, pdfs);
             cnDgvMileage.dgvMileage(dgvMileage);
 
             pSolSolicitudDietas.Visible = false;
             pSolKilometraje.Visible = false;
 
             System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(ceGlobals.lang);
-            GetLanguage(); ;
+            GetLanguage();
+
+            axAcroPDF1.Visible = false;
 
         }
 
@@ -92,12 +96,23 @@ namespace Tfg_NetFramework
 
         private void translateBars()
         {
+            if (Res.Exit == "Salir")
+            {
+                
+                btnGestUsers.Text = Res.pManUsers.Replace(" ", "\n");
+                btnSolDietas.Text = Res.pSolAllowance.Replace(" ", "\n");
+                btnGestDietas.Text = Res.pManAllowance.Replace(" ", "\n");
+                btnSettings.Text = Res.pSettings;
+            }
+            else
+            {
+                btnGestUsers.Text = Res.pManUsers.Replace(" ", "\n");
+                btnSolDietas.Text = Res.pSolAllowance.Replace(" ", "\n");
+                btnGestDietas.Text = Res.pManAllowance.Replace(" ", "\n");
+                btnSettings.Text = Res.pSettings;
+            }
             btnSalirHome.Text = Res.Exit;
             btnSubMenu.Text = Res.modules;
-            btnGestUsers.Text = Res.pManUsers;
-            btnSolDietas.Text = Res.pSolAllowance;
-            btnGestDietas.Text = Res.pManAllowance;
-            btnSettings.Text = Res.pSettings;
             lbTitle.Text = Res.lbHomePage;
             lbRole.Text = Res.lbRole;
             lbUser.Text = Res.lbUser;
@@ -533,6 +548,11 @@ namespace Tfg_NetFramework
             mtbReqAllowancesStartHour.SelectionStart = 0;
         }
 
+        private void mtbReqAllowancesEndHour_Click(object sender, EventArgs e)
+        {
+            mtbReqAllowancesEndHour.SelectionStart = 0;
+        }
+
         private void mtbStartTime_Leave(object sender, EventArgs e)
         {
             char[] arr = mtbReqAllowancesStartHour.Text.ToCharArray(0, 5);
@@ -571,7 +591,7 @@ namespace Tfg_NetFramework
         {
             dgvAllowances.Update();
             dgvAllowances.Refresh();
-            cnDgvAllowance.dgvAllowance(dgvAllowances);
+            cnDgvAllowance.dgvAllowance(dgvAllowances, pdfs);
             dgvUser.Update();
             dgvUser.Refresh();
             cnUser.dgvUsers(dgvUser);
@@ -605,10 +625,25 @@ namespace Tfg_NetFramework
             MySqlCommand cmd;
             conn.Open();
 
+            /*
             System.IO.FileStream fileStream = File.OpenRead(file);
             byte[] contents = new byte[fileStream.Length];
             fileStream.Read(contents, 0, (int)fileStream.Length);
             fileStream.Close();
+            */
+
+            //
+            string name = Path.GetFileName(fileName);
+            string newPath = @"C:\Users\Jesus\Tfg Net Framework\Tfg NetFramework\files\";
+            string locationCopy = newPath + name;
+            MessageBox.Show("Location Copy: " + locationCopy + "\nFileName: " + fileName);
+
+            if (File.Exists(fileName))
+            {
+                File.Copy(fileName, locationCopy, true);
+                MessageBox.Show("File Copied");
+            }
+            //
 
             using (cmd = new MySqlCommand("insert into allowance(User_idUser, Title, Observations, State, StartTime, StartHour, EndHour, Invoice) " +
                 "values(@idUser, @title, @observations, @state, @startTime, @startHour, @endHour, @invoice)", conn))
@@ -620,10 +655,11 @@ namespace Tfg_NetFramework
                 cmd.Parameters.AddWithValue("@startTime", dtpReqAllowancesStartTime.Text);
                 cmd.Parameters.AddWithValue("@startHour", mtbReqAllowancesStartHour.Text);
                 cmd.Parameters.AddWithValue("@endHour", mtbReqAllowancesEndHour.Text);
-                cmd.Parameters.AddWithValue("@invoice", contents);
+                cmd.Parameters.AddWithValue("@invoice", locationCopy);
                 cmd.ExecuteNonQuery();
             }
             MessageBox.Show("Finished uploading files", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             conn.Close();
         }
 
@@ -638,7 +674,7 @@ namespace Tfg_NetFramework
 
                     if (dialog == DialogResult.Yes)
                     {
-                        fileName = ofdUpload.FileName;
+                        fileName = ofdUpload.FileName; // Ruta absoluta del archivo
                     }
                     else
                     {
@@ -793,5 +829,22 @@ namespace Tfg_NetFramework
         {
 
         }
+
+        private void dgvAllowances_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvAllowances.Columns[e.ColumnIndex].Name == "invoice")
+            {
+                pGestDietasDietas.AutoScroll = false;
+                pGestDietasDietas.HorizontalScroll.Enabled = false;
+                pGestDietasDietas.HorizontalScroll.Visible = false;
+                pGestDietasDietas.HorizontalScroll.Maximum = 0;
+                pGestDietasDietas.AutoScroll = true;
+
+                axAcroPDF1.Visible = true;
+                axAcroPDF1.src = pdfs[dgvAllowances.CurrentRow.Cells[0].Value.ToString()].ToString();
+            }
+
+        }
+
     }
 }

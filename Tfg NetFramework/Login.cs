@@ -133,5 +133,21 @@ namespace Tfg_NetFramework
         {
 
         }
+
+        private void tbEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
+
+        private void tbPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
     }
 }

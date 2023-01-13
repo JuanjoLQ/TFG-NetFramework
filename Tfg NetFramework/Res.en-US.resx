@@ -238,7 +238,7 @@
     <value>Settings</value>
   </data>
   <data name="pSolAllowance" xml:space="preserve">
-    <value>Allowance Management</value>
+    <value>Request Allowance</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>

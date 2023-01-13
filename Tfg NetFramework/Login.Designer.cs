@@ -45,20 +45,23 @@ namespace Tfg_NetFramework
             // tbPassword
             // 
             this.tbPassword.ForeColor = System.Drawing.Color.DimGray;
-            this.tbPassword.Location = new System.Drawing.Point(15, 106);
+            this.tbPassword.Location = new System.Drawing.Point(20, 130);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(90, 20);
+            this.tbPassword.Size = new System.Drawing.Size(119, 22);
             this.tbPassword.TabIndex = 2;
             this.tbPassword.Text = "Password";
             this.tbPassword.GotFocus += new System.EventHandler(this.tbPassword_Focus);
+            this.tbPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPassword_KeyPress);
             this.tbPassword.LostFocus += new System.EventHandler(this.tbPassword_LostFocus);
             // 
             // btnLogin
             // 
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogin.Location = new System.Drawing.Point(15, 137);
+            this.btnLogin.Location = new System.Drawing.Point(20, 169);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(79, 23);
+            this.btnLogin.Size = new System.Drawing.Size(105, 28);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -67,12 +70,14 @@ namespace Tfg_NetFramework
             // tbEmail
             // 
             this.tbEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.tbEmail.Location = new System.Drawing.Point(15, 55);
+            this.tbEmail.Location = new System.Drawing.Point(20, 68);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(157, 20);
+            this.tbEmail.Size = new System.Drawing.Size(208, 22);
             this.tbEmail.TabIndex = 1;
             this.tbEmail.Text = "Email";
             this.tbEmail.GotFocus += new System.EventHandler(this.tbEmail_Focus);
+            this.tbEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbEmail_KeyPress);
             this.tbEmail.LostFocus += new System.EventHandler(this.tbEmail_LostFocus);
             // 
             // btnSalir
@@ -81,10 +86,10 @@ namespace Tfg_NetFramework
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Comic Sans MS", 16.2F, System.Drawing.FontStyle.Bold);
-            this.btnSalir.Location = new System.Drawing.Point(407, 61);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSalir.Location = new System.Drawing.Point(543, 75);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(81, 28);
+            this.btnSalir.Size = new System.Drawing.Size(108, 34);
             this.btnSalir.TabIndex = 7;
             this.btnSalir.Text = "X";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -99,9 +104,10 @@ namespace Tfg_NetFramework
             this.cbLanguage.Items.AddRange(new object[] {
             "EN - English",
             "ES - Spanish"});
-            this.cbLanguage.Location = new System.Drawing.Point(178, 105);
+            this.cbLanguage.Location = new System.Drawing.Point(237, 129);
+            this.cbLanguage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbLanguage.Name = "cbLanguage";
-            this.cbLanguage.Size = new System.Drawing.Size(115, 21);
+            this.cbLanguage.Size = new System.Drawing.Size(152, 24);
             this.cbLanguage.TabIndex = 8;
             this.cbLanguage.SelectedIndexChanged += new System.EventHandler(this.cbLanguage_SelectedIndexChanged);
             this.cbLanguage.SelectedValueChanged += new System.EventHandler(this.cbLanguage_SelectedValueChanged);
@@ -116,11 +122,11 @@ namespace Tfg_NetFramework
             this.gbLogin.Controls.Add(this.tbPassword);
             this.gbLogin.Controls.Add(this.btnLogin);
             this.gbLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gbLogin.Location = new System.Drawing.Point(174, 83);
-            this.gbLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbLogin.Location = new System.Drawing.Point(232, 102);
+            this.gbLogin.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.gbLogin.Name = "gbLogin";
-            this.gbLogin.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbLogin.Size = new System.Drawing.Size(314, 175);
+            this.gbLogin.Padding = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.gbLogin.Size = new System.Drawing.Size(419, 215);
             this.gbLogin.TabIndex = 9;
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "Please Login";
@@ -128,32 +134,35 @@ namespace Tfg_NetFramework
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Location = new System.Drawing.Point(15, 83);
+            this.lbPassword.Location = new System.Drawing.Point(20, 102);
+            this.lbPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(56, 13);
+            this.lbPassword.Size = new System.Drawing.Size(70, 16);
             this.lbPassword.TabIndex = 6;
             this.lbPassword.Text = "Password:";
             // 
             // lbEmail
             // 
             this.lbEmail.AutoSize = true;
-            this.lbEmail.Location = new System.Drawing.Point(15, 30);
+            this.lbEmail.Location = new System.Drawing.Point(20, 37);
+            this.lbEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(38, 13);
+            this.lbEmail.Size = new System.Drawing.Size(47, 16);
             this.lbEmail.TabIndex = 5;
             this.lbEmail.Text = "Email: ";
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(607, 377);
+            this.ClientSize = new System.Drawing.Size(809, 464);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.gbLogin);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);

@@ -1,5 +1,6 @@
 ﻿using capaDatos;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +12,10 @@ namespace capaNegocio
     public class cnDgvAllowance
     {
         cdDgvAllowance cdDgvAllowance = new cdDgvAllowance();
-        public void dgvAllowance(DataGridView dgvAllowance)
+        public void dgvAllowance(DataGridView dgvAllowance, Hashtable pdfs)
         {
             cdDgvAllowance.GetData();
-            cdDgvAllowance.updateDatagrid(dgvAllowance);
+            cdDgvAllowance.updateDatagrid(dgvAllowance, pdfs);
         }
     }
 }
