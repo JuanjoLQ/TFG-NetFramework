@@ -74,7 +74,7 @@ namespace capaDatos
                 }
                 else
                 {
-                    MessageBox.Show("Data not found");
+                    //MessageBox.Show("Data not found");
                 }
 
                 row.Close();// Close reader.
