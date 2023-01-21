@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ceAllowance.cs" />
+    <Compile Include="ceCustomer.cs" />
     <Compile Include="ceGlobals.cs" />
+    <Compile Include="ceLead.cs" />
     <Compile Include="ceMileage.cs" />
     <Compile Include="ceUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

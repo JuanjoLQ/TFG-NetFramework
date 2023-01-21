@@ -81,10 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cdAllowance.cs" />
+    <Compile Include="cdCustomer.cs" />
     <Compile Include="cdDgvAllowance.cs" />
     <Compile Include="cdDgvMileage.cs" />
     <Compile Include="cdDgvUser.cs" />
     <Compile Include="cdGlobals.cs" />
+    <Compile Include="cdLead.cs" />
     <Compile Include="cdMileage.cs" />
     <Compile Include="cdRole.cs" />
     <Compile Include="cdUser.cs" />

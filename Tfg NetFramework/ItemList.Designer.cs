@@ -28,46 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.lbTitle = new System.Windows.Forms.Label();
+            this.lbCustomer = new System.Windows.Forms.Label();
+            this.lbAmount = new System.Windows.Forms.Label();
+            this.lbType = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // lbTitle
             // 
-            this.button1.Location = new System.Drawing.Point(20, 23);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 51);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lbTitle.AutoSize = true;
+            this.lbTitle.Location = new System.Drawing.Point(16, 23);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(35, 13);
+            this.lbTitle.TabIndex = 0;
+            this.lbTitle.Text = "lbTitle";
             // 
-            // panel1
+            // lbCustomer
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(274, 108);
-            this.panel1.TabIndex = 1;
+            this.lbCustomer.AutoSize = true;
+            this.lbCustomer.Location = new System.Drawing.Point(19, 63);
+            this.lbCustomer.Name = "lbCustomer";
+            this.lbCustomer.Size = new System.Drawing.Size(59, 13);
+            this.lbCustomer.TabIndex = 1;
+            this.lbCustomer.Text = "lbCustomer";
+            // 
+            // lbAmount
+            // 
+            this.lbAmount.AutoSize = true;
+            this.lbAmount.Location = new System.Drawing.Point(29, 108);
+            this.lbAmount.Name = "lbAmount";
+            this.lbAmount.Size = new System.Drawing.Size(51, 13);
+            this.lbAmount.TabIndex = 2;
+            this.lbAmount.Text = "lbAmount";
+            // 
+            // lbType
+            // 
+            this.lbType.AutoSize = true;
+            this.lbType.Location = new System.Drawing.Point(29, 150);
+            this.lbType.Name = "lbType";
+            this.lbType.Size = new System.Drawing.Size(39, 13);
+            this.lbType.TabIndex = 3;
+            this.lbType.Text = "lbType";
             // 
             // ItemList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.lbType);
+            this.Controls.Add(this.lbAmount);
+            this.Controls.Add(this.lbCustomer);
+            this.Controls.Add(this.lbTitle);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ItemList";
-            this.Size = new System.Drawing.Size(301, 127);
-            this.panel1.ResumeLayout(false);
+            this.Size = new System.Drawing.Size(318, 257);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ItemList_MouseDown);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbTitle;
+        private System.Windows.Forms.Label lbCustomer;
+        private System.Windows.Forms.Label lbAmount;
+        private System.Windows.Forms.Label lbType;
     }
 }

@@ -43,9 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cnAllowance.cs" />
+    <Compile Include="cnCustomer.cs" />
     <Compile Include="cnDgvAllowance.cs" />
     <Compile Include="cnDgvMileage.cs" />
     <Compile Include="cnDgvUser.cs" />
+    <Compile Include="cnLead.cs" />
     <Compile Include="cnMileage.cs" />
     <Compile Include="cnUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

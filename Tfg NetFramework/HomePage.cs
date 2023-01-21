@@ -21,7 +21,6 @@ namespace Tfg_NetFramework
     {
         bool sidebarExpand;
         bool sidebarSubMenu;
-        int aux = 0;
         cnUser cnUser = new cnUser();
         cnAllowance cnAllowance = new cnAllowance();
         cnMileage cnMileage = new cnMileage();
@@ -924,11 +923,84 @@ namespace Tfg_NetFramework
         | '--------------' || '--------------' || '--------------' |
          '----------------'  '----------------'  '----------------' 
         */
-
+        private int aux = 0;
         private void button1_Click_1(object sender, EventArgs e)
         {
             ItemList item = new ItemList();
+
+            item.Id = aux;
+            item.Title = aux.ToString();
+            item.Customer = "Customer: " + aux.ToString();
+            item.Amount = 100;
+            item.Type = "Product";
+
+            aux++;
+
             flpNew.Controls.Add(item);
+        }
+
+        private void control_MouseDown(object sender, MouseEventArgs e)
+        {
+            var control = sender as Control;
+            this.DoDragDrop(control.Name, DragDropEffects.Move);
+        }
+
+        private void flp_DragEnter(object sender, DragEventArgs e)
+        {
+            if (!e.Data.GetDataPresent(typeof(string)))
+                return;
+
+            var name = e.Data.GetData(typeof(string)) as string;
+            var control = this.Controls.Find(name, true).FirstOrDefault();
+            if (control != null)
+            {
+                e.Effect = DragDropEffects.Move;
+
+            }
+        }
+
+        private void flp_DragDrop(object sender, DragEventArgs e)
+        {
+            if (!e.Data.GetDataPresent(typeof(string)))
+                return;
+
+            var name = e.Data.GetData(typeof(string)) as string;
+            var control = this.Controls.Find(name, true).FirstOrDefault();
+
+            if (flpNew.Controls.Contains(control))
+            {
+                flpNew.Controls.Remove(control);
+            }
+
+            if (control != null)
+            {
+                var panel = sender as FlowLayoutPanel;
+                ((FlowLayoutPanel)sender).Controls.Add(control);
+            }
+        }
+
+        private void btnPipelineAddLead_Click(object sender, EventArgs e)
+        {
+            Form newLead = new newLead();
+
+            newLead.Show();
+        }
+
+        private void btnPipelineRemoveLead_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCustomersAddCustomers_Click(object sender, EventArgs e)
+        {
+            Form newCustomer = new newCustomer();
+
+            newCustomer.Show();
+        }
+
+        private void btnCustomersRemoveCustomers_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

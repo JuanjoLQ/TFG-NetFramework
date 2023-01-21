@@ -547,7 +547,7 @@ namespace Tfg_NetFramework {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a jose@gmail.com.
+        ///   Busca una cadena traducida similar a pedro@gmail.com.
         /// </summary>
         internal static string user {
             get {
