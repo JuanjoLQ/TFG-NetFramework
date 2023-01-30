@@ -8,6 +8,11 @@ using System.Text;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Windows.Forms;
 using System;
+using System.Collections;
+using System.Runtime.Remoting.Messaging;
+using Org.BouncyCastle.Utilities;
+using System.Reflection;
+using System.Collections.Generic;
 
 namespace capaDatos
 {
@@ -322,11 +327,6 @@ namespace capaDatos
             return namesRole.ToString();
         }
 
-
-
-
-
-
         public bool deteteUser(int idUser)
         {
             try
@@ -401,5 +401,70 @@ namespace capaDatos
             }
         }
 
+        public Dictionary<Tuple<string, string>, string> obtainEmployeesPerDepartment(Dictionary<Tuple<string, string>, string> departments_employees)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                conn.Open();
+                string query = "select department.name, user.email, user.idUser " +
+                    "FROM((department_user INNER JOIN user ON department_user.User_idUser = user.idUser) " +
+                    "INNER JOIN department ON department_user.Department_idDepartment = department.idDepartment);";
+
+                MySqlCommand command = new MySqlCommand(query, conn);
+
+                var row = command.ExecuteReader();
+
+                //
+                /*
+                var key = new Tuple<string, string>("multiple", "keys");
+                var value = "Open Sesame!";
+
+                departments_employees.Add(key, value);
+
+                foreach (var k in departments_employees.Keys) if (k.Item1 == "multiple" && k.Item2 == "keys")
+                {
+                    Console.WriteLine("Item 1: " + k.Item1);
+                    Console.WriteLine("Item 2: " + k.Item2);
+                    Console.WriteLine("Item value: " + departments_employees[k]);
+                }
+                */
+                //
+
+                ArrayList array = new ArrayList();
+                //array.Contains(key);
+
+                if (row.HasRows)
+                {
+                    while (row.Read())
+                    {
+                        if (array.Contains(row["name"].ToString()))
+                        {
+                            departments_employees.Add(new Tuple<string, string>(row["name"].ToString(), row["email"].ToString()), row["idUser"].ToString());
+                        }
+                        else
+                        {
+                            array.Add(row["name"].ToString());
+
+                            departments_employees.Add(new Tuple<string, string>(row["name"].ToString(), row["email"].ToString()), row["idUser"].ToString());
+
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Data not found");
+                }
+
+                row.Close();// Close reader.
+                conn.Close();// Close connection.
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.ToString());
+            }
+
+            return departments_employees;
+        }
     }
 }

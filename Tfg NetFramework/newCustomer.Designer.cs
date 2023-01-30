@@ -236,9 +236,11 @@
             // 
             // dtpNewCustomer
             // 
+            this.dtpNewCustomer.CustomFormat = "yyyy-MM-dd hh:mm:ss";
+            this.dtpNewCustomer.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNewCustomer.Location = new System.Drawing.Point(38, 713);
             this.dtpNewCustomer.Name = "dtpNewCustomer";
-            this.dtpNewCustomer.Size = new System.Drawing.Size(200, 20);
+            this.dtpNewCustomer.Size = new System.Drawing.Size(252, 20);
             this.dtpNewCustomer.TabIndex = 22;
             // 
             // lbType

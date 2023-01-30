@@ -1,6 +1,7 @@
 ﻿using capaDatos;
 using capaEntidad;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,10 @@ namespace CapaNegocio
             return cdCustomer.addCustomer(customer);
         }
 
+        public ArrayList getCustomers (ArrayList array)
+        {
+            return cdCustomer.getCustomers(array);
+        }
 
     }
 }

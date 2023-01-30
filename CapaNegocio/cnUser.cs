@@ -1,6 +1,8 @@
 ﻿using capaDatos;
 using capaEntidad;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -78,6 +80,11 @@ namespace capaNegocio
         public bool delUser(int idUser)
         {
             return cdUser.deteteUser(idUser);
+        }
+
+        public Dictionary<Tuple<string, string>, string> obtainEmployeesPerDepartment (Dictionary<Tuple<string, string>, string> departments_employees)
+        {
+            return cdUser.obtainEmployeesPerDepartment(departments_employees);
         }
 
     }

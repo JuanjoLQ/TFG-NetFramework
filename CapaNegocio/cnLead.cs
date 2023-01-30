@@ -16,5 +16,17 @@ namespace CapaNegocio
             return cdLead.addLead(lead);
         }
 
+        //public bool removeLead(ceLead lead)
+        //{
+
+        //}
+
+        //public ceLead getLead()
+        //{
+
+        //}
+        
+
+
     }
 }

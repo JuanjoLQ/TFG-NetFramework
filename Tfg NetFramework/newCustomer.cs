@@ -28,14 +28,14 @@ namespace Tfg_NetFramework
                 if (cnCustomer.addCustomer(new ceCustomer(tbNewCustomerName.Text, tbNewCustomerPhone.Text, tbNewCustomerEmail.Text,
                     tbNewCustomerDepartment.Text, tbNewCustomerCity.Text, tbNewCustomerState.Text, tbNewCustomerZip.Text,
                     tbNewCustomerCountry.Text, tbNewCustomerAdress1.Text, tbNewCustomerAdress2.Text, cbNewCustomerType.SelectedItem.ToString(),
-                    tbNewCustomerNotes.Text, tbNewCustomerNotes.Text)))
+                    tbNewCustomerNotes.Text, dtpNewCustomer.Text)))
                 {
                     MessageBox.Show("Customer creado con éxito.");
                 }
                 else
-                    {
-                        MessageBox.Show("Customer NO creado con éxito.");
-                    }
+                {
+                    MessageBox.Show("Customer NO creado con éxito.");
+                }
                     
             }
         }

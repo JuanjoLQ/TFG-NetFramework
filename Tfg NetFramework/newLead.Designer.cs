@@ -44,6 +44,11 @@
             this.lbNewLeadAssignedTo = new System.Windows.Forms.Label();
             this.dtpNewLeadCreatedAt = new System.Windows.Forms.DateTimePicker();
             this.lbNewLeadCreatedAt = new System.Windows.Forms.Label();
+            this.lBNewLeadEmployees = new System.Windows.Forms.ListBox();
+            this.lbNewLeadDepartment = new System.Windows.Forms.Label();
+            this.lbNewLeadEmployee = new System.Windows.Forms.Label();
+            this.lbNewLeadCustomer = new System.Windows.Forms.Label();
+            this.lBNewLeadCustomers = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // tbNewLeadAmount
@@ -98,7 +103,7 @@
             // 
             // btnNewLeadSave
             // 
-            this.btnNewLeadSave.Location = new System.Drawing.Point(189, 491);
+            this.btnNewLeadSave.Location = new System.Drawing.Point(189, 542);
             this.btnNewLeadSave.Name = "btnNewLeadSave";
             this.btnNewLeadSave.Size = new System.Drawing.Size(75, 23);
             this.btnNewLeadSave.TabIndex = 28;
@@ -108,7 +113,7 @@
             // 
             // btnNewLeadCancel
             // 
-            this.btnNewLeadCancel.Location = new System.Drawing.Point(87, 491);
+            this.btnNewLeadCancel.Location = new System.Drawing.Point(87, 542);
             this.btnNewLeadCancel.Name = "btnNewLeadCancel";
             this.btnNewLeadCancel.Size = new System.Drawing.Size(75, 23);
             this.btnNewLeadCancel.TabIndex = 27;
@@ -118,6 +123,8 @@
             // 
             // dtpNewLeadDate
             // 
+            this.dtpNewLeadDate.CustomFormat = "yyyy-MM-dd hh:mm:ss";
+            this.dtpNewLeadDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNewLeadDate.Location = new System.Drawing.Point(105, 97);
             this.dtpNewLeadDate.Name = "dtpNewLeadDate";
             this.dtpNewLeadDate.Size = new System.Drawing.Size(213, 20);
@@ -128,13 +135,10 @@
             // 
             this.cbNewLeadStage.FormattingEnabled = true;
             this.cbNewLeadStage.Items.AddRange(new object[] {
-            "Prospecting",
-            "Appointment",
-            "Presentation",
-            "Bought in",
-            "Contract",
-            "Closed Won",
-            "Closed Lost"});
+            "New",
+            "Qualified",
+            "Proposition",
+            "Won"});
             this.cbNewLeadStage.Location = new System.Drawing.Point(105, 147);
             this.cbNewLeadStage.Name = "cbNewLeadStage";
             this.cbNewLeadStage.Size = new System.Drawing.Size(121, 21);
@@ -143,12 +147,11 @@
             // cbNewLeadAssignedTo
             // 
             this.cbNewLeadAssignedTo.FormattingEnabled = true;
-            this.cbNewLeadAssignedTo.Items.AddRange(new object[] {
-            "Empleados"});
-            this.cbNewLeadAssignedTo.Location = new System.Drawing.Point(105, 380);
+            this.cbNewLeadAssignedTo.Location = new System.Drawing.Point(189, 377);
             this.cbNewLeadAssignedTo.Name = "cbNewLeadAssignedTo";
             this.cbNewLeadAssignedTo.Size = new System.Drawing.Size(121, 21);
             this.cbNewLeadAssignedTo.TabIndex = 34;
+            this.cbNewLeadAssignedTo.SelectedIndexChanged += new System.EventHandler(this.cbNewLeadAssignedTo_SelectedIndexChanged);
             // 
             // lbNewLeadNotes
             // 
@@ -178,7 +181,9 @@
             // 
             // dtpNewLeadCreatedAt
             // 
-            this.dtpNewLeadCreatedAt.Location = new System.Drawing.Point(105, 430);
+            this.dtpNewLeadCreatedAt.CustomFormat = "yyyy-MM-dd hh:mm:ss";
+            this.dtpNewLeadCreatedAt.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpNewLeadCreatedAt.Location = new System.Drawing.Point(105, 491);
             this.dtpNewLeadCreatedAt.Name = "dtpNewLeadCreatedAt";
             this.dtpNewLeadCreatedAt.Size = new System.Drawing.Size(200, 20);
             this.dtpNewLeadCreatedAt.TabIndex = 35;
@@ -187,18 +192,66 @@
             // lbNewLeadCreatedAt
             // 
             this.lbNewLeadCreatedAt.AutoSize = true;
-            this.lbNewLeadCreatedAt.Location = new System.Drawing.Point(35, 430);
+            this.lbNewLeadCreatedAt.Location = new System.Drawing.Point(35, 491);
             this.lbNewLeadCreatedAt.Name = "lbNewLeadCreatedAt";
             this.lbNewLeadCreatedAt.Size = new System.Drawing.Size(61, 13);
             this.lbNewLeadCreatedAt.TabIndex = 36;
             this.lbNewLeadCreatedAt.Text = "Created At*";
+            // 
+            // lBNewLeadEmployees
+            // 
+            this.lBNewLeadEmployees.FormattingEnabled = true;
+            this.lBNewLeadEmployees.Location = new System.Drawing.Point(381, 349);
+            this.lBNewLeadEmployees.Name = "lBNewLeadEmployees";
+            this.lBNewLeadEmployees.Size = new System.Drawing.Size(136, 69);
+            this.lBNewLeadEmployees.TabIndex = 37;
+            // 
+            // lbNewLeadDepartment
+            // 
+            this.lbNewLeadDepartment.AutoSize = true;
+            this.lbNewLeadDepartment.Location = new System.Drawing.Point(123, 380);
+            this.lbNewLeadDepartment.Name = "lbNewLeadDepartment";
+            this.lbNewLeadDepartment.Size = new System.Drawing.Size(62, 13);
+            this.lbNewLeadDepartment.TabIndex = 38;
+            this.lbNewLeadDepartment.Text = "Department";
+            // 
+            // lbNewLeadEmployee
+            // 
+            this.lbNewLeadEmployee.AutoSize = true;
+            this.lbNewLeadEmployee.Location = new System.Drawing.Point(317, 377);
+            this.lbNewLeadEmployee.Name = "lbNewLeadEmployee";
+            this.lbNewLeadEmployee.Size = new System.Drawing.Size(58, 13);
+            this.lbNewLeadEmployee.TabIndex = 39;
+            this.lbNewLeadEmployee.Text = "Employees";
+            // 
+            // lbNewLeadCustomer
+            // 
+            this.lbNewLeadCustomer.AutoSize = true;
+            this.lbNewLeadCustomer.Location = new System.Drawing.Point(38, 425);
+            this.lbNewLeadCustomer.Name = "lbNewLeadCustomer";
+            this.lbNewLeadCustomer.Size = new System.Drawing.Size(51, 13);
+            this.lbNewLeadCustomer.TabIndex = 40;
+            this.lbNewLeadCustomer.Text = "Customer";
+            // 
+            // lBNewLeadCustomers
+            // 
+            this.lBNewLeadCustomers.FormattingEnabled = true;
+            this.lBNewLeadCustomers.Location = new System.Drawing.Point(109, 409);
+            this.lBNewLeadCustomers.Name = "lBNewLeadCustomers";
+            this.lBNewLeadCustomers.Size = new System.Drawing.Size(117, 69);
+            this.lBNewLeadCustomers.TabIndex = 41;
             // 
             // newLead
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 759);
+            this.ClientSize = new System.Drawing.Size(566, 591);
+            this.Controls.Add(this.lBNewLeadCustomers);
+            this.Controls.Add(this.lbNewLeadCustomer);
+            this.Controls.Add(this.lbNewLeadEmployee);
+            this.Controls.Add(this.lbNewLeadDepartment);
+            this.Controls.Add(this.lBNewLeadEmployees);
             this.Controls.Add(this.lbNewLeadCreatedAt);
             this.Controls.Add(this.dtpNewLeadCreatedAt);
             this.Controls.Add(this.cbNewLeadAssignedTo);
@@ -217,6 +270,7 @@
             this.Controls.Add(this.lbNewLeadName);
             this.Name = "newLead";
             this.Text = "newLead";
+            this.Load += new System.EventHandler(this.newLead_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,5 +294,10 @@
         private System.Windows.Forms.Label lbNewLeadAssignedTo;
         private System.Windows.Forms.DateTimePicker dtpNewLeadCreatedAt;
         private System.Windows.Forms.Label lbNewLeadCreatedAt;
+        private System.Windows.Forms.ListBox lBNewLeadEmployees;
+        private System.Windows.Forms.Label lbNewLeadDepartment;
+        private System.Windows.Forms.Label lbNewLeadEmployee;
+        private System.Windows.Forms.Label lbNewLeadCustomer;
+        private System.Windows.Forms.ListBox lBNewLeadCustomers;
     }
 }

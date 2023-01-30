@@ -9,7 +9,7 @@ namespace capaEntidad
     public class ceLead
     {
         public ceLead(string Name, string Date, string Stage, int Amount,
-            string Notes, string AssignedTo, string CreatedAt)
+            string Notes, string AssignedTo, string CreatedAt, int IdCustomer, int idUser)
         {
             this.Name = Name;
             this.Date = Date;
@@ -18,6 +18,8 @@ namespace capaEntidad
             this.Notes = Notes;
             this.AssignedTo = AssignedTo;
             this.CreatedAt = CreatedAt;
+            this.idCustomer = IdCustomer;
+            this.idUser = idUser;
         }
 
         public string Name { get; set; }
@@ -27,6 +29,8 @@ namespace capaEntidad
         public string Notes { get; set; }
         public string AssignedTo { get; set; }
         public string CreatedAt { get; set; }
+        public int idCustomer { get; set; }
+        public int idUser { get; set; }
 
     }
 }

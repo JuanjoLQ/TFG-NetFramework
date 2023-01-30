@@ -1,6 +1,8 @@
 ﻿using capaEntidad;
+using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Lifetime;
@@ -46,5 +48,41 @@ namespace capaDatos
             return true;
         }
 
+        public ArrayList getCustomers(ArrayList array)
+        {
+            try
+            {
+                array.Clear();
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                conn.Open();
+                string query = "select idCustomer, name, type from customer;";
+
+                MySqlCommand command = new MySqlCommand(query, conn);
+
+                var row = command.ExecuteReader();
+                var tupla = new Tuple<string, string, string>(string.Empty, string.Empty, string.Empty);
+
+                if (row.HasRows)
+                {
+                    while (row.Read())
+                    {
+                        array.Add(new Tuple<string, string, string>(row["name"].ToString(), row["type"].ToString(), row["idCustomer"].ToString()));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Data not found");
+                }
+
+                row.Close();// Close reader.
+                conn.Close();// Close connection.
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.ToString());
+            }
+
+            return array;
+        }
     }
 }
