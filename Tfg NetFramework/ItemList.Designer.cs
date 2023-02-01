@@ -28,57 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbTitle = new System.Windows.Forms.Label();
-            this.lbCustomer = new System.Windows.Forms.Label();
+            this.lbName = new System.Windows.Forms.Label();
+            this.lbNameCustomer = new System.Windows.Forms.Label();
             this.lbAmount = new System.Windows.Forms.Label();
-            this.lbType = new System.Windows.Forms.Label();
+            this.lbCreatedAt = new System.Windows.Forms.Label();
+            this.lbDate = new System.Windows.Forms.Label();
+            this.lbStage = new System.Windows.Forms.Label();
+            this.lbNotes = new System.Windows.Forms.Label();
+            this.lbAssignedTo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // lbTitle
+            // lbName
             // 
-            this.lbTitle.AutoSize = true;
-            this.lbTitle.Location = new System.Drawing.Point(16, 23);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(35, 13);
-            this.lbTitle.TabIndex = 0;
-            this.lbTitle.Text = "lbTitle";
+            this.lbName.AutoSize = true;
+            this.lbName.Location = new System.Drawing.Point(19, 16);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(43, 13);
+            this.lbName.TabIndex = 0;
+            this.lbName.Text = "lbName";
             // 
-            // lbCustomer
+            // lbNameCustomer
             // 
-            this.lbCustomer.AutoSize = true;
-            this.lbCustomer.Location = new System.Drawing.Point(19, 63);
-            this.lbCustomer.Name = "lbCustomer";
-            this.lbCustomer.Size = new System.Drawing.Size(59, 13);
-            this.lbCustomer.TabIndex = 1;
-            this.lbCustomer.Text = "lbCustomer";
+            this.lbNameCustomer.AutoSize = true;
+            this.lbNameCustomer.Location = new System.Drawing.Point(22, 184);
+            this.lbNameCustomer.Name = "lbNameCustomer";
+            this.lbNameCustomer.Size = new System.Drawing.Size(87, 13);
+            this.lbNameCustomer.TabIndex = 1;
+            this.lbNameCustomer.Text = "lbNameCustomer";
             // 
             // lbAmount
             // 
             this.lbAmount.AutoSize = true;
-            this.lbAmount.Location = new System.Drawing.Point(29, 108);
+            this.lbAmount.Location = new System.Drawing.Point(19, 93);
             this.lbAmount.Name = "lbAmount";
             this.lbAmount.Size = new System.Drawing.Size(51, 13);
             this.lbAmount.TabIndex = 2;
             this.lbAmount.Text = "lbAmount";
             // 
-            // lbType
+            // lbCreatedAt
             // 
-            this.lbType.AutoSize = true;
-            this.lbType.Location = new System.Drawing.Point(29, 150);
-            this.lbType.Name = "lbType";
-            this.lbType.Size = new System.Drawing.Size(39, 13);
-            this.lbType.TabIndex = 3;
-            this.lbType.Text = "lbType";
+            this.lbCreatedAt.AutoSize = true;
+            this.lbCreatedAt.Location = new System.Drawing.Point(19, 161);
+            this.lbCreatedAt.Name = "lbCreatedAt";
+            this.lbCreatedAt.Size = new System.Drawing.Size(62, 13);
+            this.lbCreatedAt.TabIndex = 3;
+            this.lbCreatedAt.Text = "lbCreatedAt";
+            // 
+            // lbDate
+            // 
+            this.lbDate.AutoSize = true;
+            this.lbDate.Location = new System.Drawing.Point(19, 40);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.Size = new System.Drawing.Size(38, 13);
+            this.lbDate.TabIndex = 4;
+            this.lbDate.Text = "lbDate";
+            // 
+            // lbStage
+            // 
+            this.lbStage.AutoSize = true;
+            this.lbStage.Location = new System.Drawing.Point(19, 67);
+            this.lbStage.Name = "lbStage";
+            this.lbStage.Size = new System.Drawing.Size(43, 13);
+            this.lbStage.TabIndex = 5;
+            this.lbStage.Text = "lbStage";
+            // 
+            // lbNotes
+            // 
+            this.lbNotes.AutoSize = true;
+            this.lbNotes.Location = new System.Drawing.Point(19, 116);
+            this.lbNotes.Name = "lbNotes";
+            this.lbNotes.Size = new System.Drawing.Size(43, 13);
+            this.lbNotes.TabIndex = 6;
+            this.lbNotes.Text = "lbNotes";
+            // 
+            // lbAssignedTo
+            // 
+            this.lbAssignedTo.AutoSize = true;
+            this.lbAssignedTo.Location = new System.Drawing.Point(19, 137);
+            this.lbAssignedTo.Name = "lbAssignedTo";
+            this.lbAssignedTo.Size = new System.Drawing.Size(71, 13);
+            this.lbAssignedTo.TabIndex = 7;
+            this.lbAssignedTo.Text = "lbAssignedTo";
             // 
             // ItemList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Controls.Add(this.lbType);
+            this.Controls.Add(this.lbAssignedTo);
+            this.Controls.Add(this.lbNotes);
+            this.Controls.Add(this.lbStage);
+            this.Controls.Add(this.lbDate);
+            this.Controls.Add(this.lbCreatedAt);
             this.Controls.Add(this.lbAmount);
-            this.Controls.Add(this.lbCustomer);
-            this.Controls.Add(this.lbTitle);
+            this.Controls.Add(this.lbNameCustomer);
+            this.Controls.Add(this.lbName);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "ItemList";
             this.Size = new System.Drawing.Size(318, 257);
@@ -90,9 +134,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbTitle;
-        private System.Windows.Forms.Label lbCustomer;
+        private System.Windows.Forms.Label lbName;
+        private System.Windows.Forms.Label lbNameCustomer;
         private System.Windows.Forms.Label lbAmount;
-        private System.Windows.Forms.Label lbType;
+        private System.Windows.Forms.Label lbCreatedAt;
+        private System.Windows.Forms.Label lbDate;
+        private System.Windows.Forms.Label lbStage;
+        private System.Windows.Forms.Label lbNotes;
+        private System.Windows.Forms.Label lbAssignedTo;
     }
 }

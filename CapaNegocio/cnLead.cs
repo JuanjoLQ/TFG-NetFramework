@@ -1,6 +1,7 @@
 ﻿using capaDatos;
 using capaEntidad;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,10 +22,10 @@ namespace CapaNegocio
 
         //}
 
-        //public ceLead getLead()
-        //{
-
-        //}
+        public ArrayList getLeads(ArrayList array)
+        {
+            return cdLead.getLeads(array);
+        }
         
 
 

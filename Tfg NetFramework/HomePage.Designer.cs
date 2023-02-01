@@ -221,6 +221,8 @@ namespace Tfg_NetFramework
             this.flpQualified = new System.Windows.Forms.FlowLayoutPanel();
             this.flpNew = new System.Windows.Forms.FlowLayoutPanel();
             this.Customers = new System.Windows.Forms.TabPage();
+            this.btnCustomersRemoveCustomers = new System.Windows.Forms.Button();
+            this.btnCustomersAddCustomers = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -263,8 +265,6 @@ namespace Tfg_NetFramework
             this.teamLostLeads = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teamWonLeads = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnCustomersRemoveCustomers = new System.Windows.Forms.Button();
-            this.btnCustomersAddCustomers = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.pHome.SuspendLayout();
             this.containerModulos.SuspendLayout();
@@ -2122,6 +2122,7 @@ namespace Tfg_NetFramework
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(902, 592);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
             // 
             // pipeline
             // 
@@ -2292,6 +2293,30 @@ namespace Tfg_NetFramework
             this.Customers.TabIndex = 1;
             this.Customers.Text = "Customers";
             this.Customers.UseVisualStyleBackColor = true;
+            // 
+            // btnCustomersRemoveCustomers
+            // 
+            this.btnCustomersRemoveCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(37)))), ((int)(((byte)(68)))));
+            this.btnCustomersRemoveCustomers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCustomersRemoveCustomers.BackgroundImage")));
+            this.btnCustomersRemoveCustomers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCustomersRemoveCustomers.Location = new System.Drawing.Point(178, 27);
+            this.btnCustomersRemoveCustomers.Name = "btnCustomersRemoveCustomers";
+            this.btnCustomersRemoveCustomers.Size = new System.Drawing.Size(30, 30);
+            this.btnCustomersRemoveCustomers.TabIndex = 14;
+            this.btnCustomersRemoveCustomers.UseVisualStyleBackColor = false;
+            this.btnCustomersRemoveCustomers.Click += new System.EventHandler(this.btnCustomersRemoveCustomers_Click);
+            // 
+            // btnCustomersAddCustomers
+            // 
+            this.btnCustomersAddCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(136)))), ((int)(((byte)(237)))));
+            this.btnCustomersAddCustomers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCustomersAddCustomers.BackgroundImage")));
+            this.btnCustomersAddCustomers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCustomersAddCustomers.Location = new System.Drawing.Point(132, 26);
+            this.btnCustomersAddCustomers.Name = "btnCustomersAddCustomers";
+            this.btnCustomersAddCustomers.Size = new System.Drawing.Size(30, 30);
+            this.btnCustomersAddCustomers.TabIndex = 13;
+            this.btnCustomersAddCustomers.UseVisualStyleBackColor = false;
+            this.btnCustomersAddCustomers.Click += new System.EventHandler(this.btnCustomersAddCustomers_Click);
             // 
             // label5
             // 
@@ -2646,30 +2671,6 @@ namespace Tfg_NetFramework
             this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 0;
             this.label3.Text = "label3";
-            // 
-            // btnCustomersRemoveCustomers
-            // 
-            this.btnCustomersRemoveCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(37)))), ((int)(((byte)(68)))));
-            this.btnCustomersRemoveCustomers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCustomersRemoveCustomers.BackgroundImage")));
-            this.btnCustomersRemoveCustomers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCustomersRemoveCustomers.Location = new System.Drawing.Point(178, 27);
-            this.btnCustomersRemoveCustomers.Name = "btnCustomersRemoveCustomers";
-            this.btnCustomersRemoveCustomers.Size = new System.Drawing.Size(30, 30);
-            this.btnCustomersRemoveCustomers.TabIndex = 14;
-            this.btnCustomersRemoveCustomers.UseVisualStyleBackColor = false;
-            this.btnCustomersRemoveCustomers.Click += new System.EventHandler(this.btnCustomersRemoveCustomers_Click);
-            // 
-            // btnCustomersAddCustomers
-            // 
-            this.btnCustomersAddCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(136)))), ((int)(((byte)(237)))));
-            this.btnCustomersAddCustomers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCustomersAddCustomers.BackgroundImage")));
-            this.btnCustomersAddCustomers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCustomersAddCustomers.Location = new System.Drawing.Point(132, 26);
-            this.btnCustomersAddCustomers.Name = "btnCustomersAddCustomers";
-            this.btnCustomersAddCustomers.Size = new System.Drawing.Size(30, 30);
-            this.btnCustomersAddCustomers.TabIndex = 13;
-            this.btnCustomersAddCustomers.UseVisualStyleBackColor = false;
-            this.btnCustomersAddCustomers.Click += new System.EventHandler(this.btnCustomersAddCustomers_Click);
             // 
             // HomePage
             // 

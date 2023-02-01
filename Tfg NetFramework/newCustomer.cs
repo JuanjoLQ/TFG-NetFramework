@@ -25,7 +25,7 @@ namespace Tfg_NetFramework
         {
             if (tbNewCustomerName.Text != string.Empty && cbNewCustomerType.SelectedItem.ToString() != string.Empty)
             {
-                if (cnCustomer.addCustomer(new ceCustomer(tbNewCustomerName.Text, tbNewCustomerPhone.Text, tbNewCustomerEmail.Text,
+                if (cnCustomer.addCustomer(new ceCustomer(null, tbNewCustomerName.Text, tbNewCustomerPhone.Text, tbNewCustomerEmail.Text,
                     tbNewCustomerDepartment.Text, tbNewCustomerCity.Text, tbNewCustomerState.Text, tbNewCustomerZip.Text,
                     tbNewCustomerCountry.Text, tbNewCustomerAdress1.Text, tbNewCustomerAdress2.Text, cbNewCustomerType.SelectedItem.ToString(),
                     tbNewCustomerNotes.Text, dtpNewCustomer.Text)))

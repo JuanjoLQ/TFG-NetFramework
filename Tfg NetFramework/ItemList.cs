@@ -18,11 +18,38 @@ namespace Tfg_NetFramework
             InitializeComponent();
         }
 
+        public ItemList(int id, string name, string date, string stage, float amount, string notes, 
+            string assignedTo, string createdAt, int idCustomer, string nameCustomer, int idUser)
+        {
+            this.id = id;
+            this.name = name;
+            this.date = date;
+            this.stage = stage;
+            this.amount = amount;
+            this.notes = notes;
+            this.assignedTo = assignedTo;
+            this.createdAt = createdAt;
+            this.idCustomer = idCustomer;
+            this.nameCustomer = nameCustomer;
+            this.idUser = idUser;
+        }
+
         private int id;
-        private string title;
-        private string customer;
+        private string name;
+        
+        private string date;
+
+        private string stage;
         private float amount;
-        private string type;
+        private string notes;
+        private string assignedTo;
+
+        private string createdAt;
+
+        private int idCustomer;
+        private string nameCustomer;
+
+        private int idUser;
 
         public int Id
         {
@@ -30,16 +57,22 @@ namespace Tfg_NetFramework
             set { id = value; }
         }
 
-        public string Title
+        public string Name
         {
-            get { return title; }
-            set { title = value; lbTitle.Text = value; }
+            get { return date; }
+            set { name = value; lbName.Text = value; }
         }
 
-        public string Customer
+        public string Date
         {
-            get { return customer; }
-            set { customer = value; lbCustomer.Text = value; }
+            get { return date; }
+            set { date = value; lbDate.Text = value; }
+        }
+
+        public string Stage
+        {
+            get { return stage; }
+            set { stage = value; lbStage.Text = value; }
         }
 
         public float Amount
@@ -48,10 +81,40 @@ namespace Tfg_NetFramework
             set { amount = value; lbAmount.Text = value.ToString(); }
         }
 
-        public string Type
+        public string Notes
         {
-            get { return type; }
-            set { type = value; lbType.Text = value; }
+            get { return notes; }
+            set { notes = value; lbNotes.Text = value.ToString(); }
+        }
+
+        public string AssignedTo
+        {
+            get { return assignedTo; }
+            set { assignedTo = value; lbAssignedTo.Text = value.ToString(); }
+        }
+
+        public string CreatedAt
+        {
+            get { return createdAt; }
+            set { createdAt = value; lbCreatedAt.Text = value; }
+        }
+
+        public int IdCustomer
+        {
+            get { return idCustomer; }
+            set { idCustomer = value; }
+        }
+
+        public string NameCustomer
+        {
+            get { return nameCustomer; }
+            set { nameCustomer = value; lbNameCustomer.Text = value; }
+        }
+
+        public int IdUser
+        {
+            get { return idUser; }
+            set { idUser = value; }
         }
 
         private void ItemList_MouseDown(object sender, MouseEventArgs e)

@@ -14,6 +14,8 @@ using System.Diagnostics;
 using MySql.Data.MySqlClient;
 using System.IO;
 using System.Collections;
+using CapaNegocio;
+using System.Security.Policy;
 
 namespace Tfg_NetFramework
 {
@@ -27,6 +29,7 @@ namespace Tfg_NetFramework
         cnDgvAllowance cnDgvAllowance = new cnDgvAllowance();
         cnDgvMileage cnDgvMileage = new cnDgvMileage();
         cnDgvUser cnDgvUser = new cnDgvUser();
+        cnLead cnLead = new cnLead();
         cdGlobals cdGlobals = new cdGlobals();
         Hashtable pdfs = new Hashtable();
 
@@ -929,7 +932,7 @@ namespace Tfg_NetFramework
             ItemList item = new ItemList();
 
             item.Id = aux;
-            item.Title = aux.ToString();
+            item.Name = aux.ToString();
             item.Customer = "Customer: " + aux.ToString();
             item.Amount = 100;
             item.Type = "Product";
@@ -1002,5 +1005,35 @@ namespace Tfg_NetFramework
         {
 
         }
+
+        private void tabControl1_TabIndexChanged(object sender, EventArgs e)
+        {
+            // Guardar leads
+            ArrayList array = new ArrayList();
+            array = cnLead.getLeads(array);
+
+            // Diferenciar según stage del lead e inserción en su flowlayoutpanel
+            foreach(ceLead it in array)
+            {
+
+                switch (it.Stage)
+                {
+                    case "New":
+                        
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
+
+        }
+
+        private void stageNew(ItemList item)
+        {
+            flpNew.Controls.Add(item);
+        }
+
+        
     }
 }
