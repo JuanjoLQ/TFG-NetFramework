@@ -29,6 +29,7 @@ namespace Tfg_NetFramework
         cnDgvAllowance cnDgvAllowance = new cnDgvAllowance();
         cnDgvMileage cnDgvMileage = new cnDgvMileage();
         cnDgvUser cnDgvUser = new cnDgvUser();
+        cnPipelineFlps cnPipelineFlps = new cnPipelineFlps();
         cnLead cnLead = new cnLead();
         cdGlobals cdGlobals = new cdGlobals();
         Hashtable pdfs = new Hashtable();
@@ -933,9 +934,9 @@ namespace Tfg_NetFramework
 
             item.Id = aux;
             item.Name = aux.ToString();
-            item.Customer = "Customer: " + aux.ToString();
+            //item.Customer = "Customer: " + aux.ToString();
             item.Amount = 100;
-            item.Type = "Product";
+            //item.Type = "Product";
 
             aux++;
 
@@ -1034,6 +1035,53 @@ namespace Tfg_NetFramework
             flpNew.Controls.Add(item);
         }
 
-        
+        private void btnUpdateFlps_Click(object sender, EventArgs e)
+        {
+            flpNew.Controls.Clear();
+            flpQualified.Controls.Clear();
+            flpProposition.Controls.Clear();
+            flpWon.Controls.Clear();
+
+            ArrayList arrayDescrItemList = new ArrayList();
+            arrayDescrItemList = cnPipelineFlps.updateFpls();
+            foreach (ceDescripcionItem item in arrayDescrItemList)
+            {
+                ItemList itemFlp = new ItemList(item.User, item.Lead, item.Customer);
+                
+                itemFlp.Id = item.Lead.Idlead;
+                itemFlp.Name = item.Lead.Name;
+                itemFlp.Stage = item.Lead.Stage;
+                itemFlp.Amount = item.Lead.Amount;
+                itemFlp.Notes = item.Lead.Notes;
+                itemFlp.AssignedTo = item.User.Email;
+                itemFlp.CreatedAt = item.Lead.CreatedAt;
+                itemFlp.NameCustomer = item.Customer.Name;
+
+                itemFlp.User = item.User;
+                itemFlp.Lead = item.Lead;
+                itemFlp.Customer = item.Customer;
+
+                if (item.Lead.Stage == "New")
+                {
+                    flpNew.Controls.Add(itemFlp);
+                }                
+                else if (item.Lead.Stage == "Qualified")
+                {
+                    flpQualified.Controls.Add(itemFlp);
+                }
+                else if (item.Lead.Stage == "Proposition")
+                {
+                    flpProposition.Controls.Add(itemFlp);
+                }
+                else
+                {
+                    flpWon.Controls.Add(itemFlp);
+                }
+
+            }
+            
+
+            //descripcionItemList descripcionItemList = new descripcionItemList
+        }
     }
 }

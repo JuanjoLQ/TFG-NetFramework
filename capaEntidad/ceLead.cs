@@ -21,7 +21,21 @@ namespace capaEntidad
             this.idCustomer = IdCustomer;
             this.idUser = idUser;
         }
-
+        public ceLead(int idLead, string Name, string Date, string Stage, int Amount,
+            string Notes, string AssignedTo, string CreatedAt, int IdCustomer, int idUser)
+        {
+            this.Idlead = idLead;
+            this.Name = Name;
+            this.Date = Date;
+            this.Stage = Stage;
+            this.Amount = Amount;
+            this.Notes = Notes;
+            this.AssignedTo = AssignedTo;
+            this.CreatedAt = CreatedAt;
+            this.idCustomer = IdCustomer;
+            this.idUser = idUser;
+        }
+        public int Idlead { get; set; }
         public string Name { get; set; }
         public string Date { get; set; }
         public string Stage { get; set; }

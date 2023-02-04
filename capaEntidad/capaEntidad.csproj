@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ceAllowance.cs" />
     <Compile Include="ceCustomer.cs" />
+    <Compile Include="ceDescripcionItem.cs" />
     <Compile Include="ceGlobals.cs" />
     <Compile Include="ceLead.cs" />
     <Compile Include="ceMileage.cs" />

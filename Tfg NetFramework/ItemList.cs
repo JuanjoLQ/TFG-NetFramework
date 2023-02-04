@@ -1,4 +1,5 @@
-﻿using System;
+﻿using capaEntidad;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,7 @@ namespace Tfg_NetFramework
         public ItemList(int id, string name, string date, string stage, float amount, string notes, 
             string assignedTo, string createdAt, int idCustomer, string nameCustomer, int idUser)
         {
+
             this.id = id;
             this.name = name;
             this.date = date;
@@ -33,6 +35,18 @@ namespace Tfg_NetFramework
             this.nameCustomer = nameCustomer;
             this.idUser = idUser;
         }
+
+        public ItemList(ceUser user, ceLead lead, ceCustomer customer)
+        {
+            InitializeComponent();
+            this.user = user;
+            this.lead = lead;
+            this.customer = customer;
+        }
+
+        private ceUser user;
+        private ceLead lead;
+        private ceCustomer customer;
 
         private int id;
         private string name;
@@ -51,6 +65,24 @@ namespace Tfg_NetFramework
 
         private int idUser;
 
+        public ceUser User
+        {
+            get { return user; }
+            set { user = value; }
+        }
+
+        public ceLead Lead
+        {
+            get { return lead; }
+            set { lead = value; }
+        }
+
+        public ceCustomer Customer
+        {
+            get { return customer; }
+            set { customer = value; }
+        }
+
         public int Id
         {
             get { return id; }
@@ -59,7 +91,7 @@ namespace Tfg_NetFramework
 
         public string Name
         {
-            get { return date; }
+            get { return name; }
             set { name = value; lbName.Text = value; }
         }
 
@@ -123,5 +155,13 @@ namespace Tfg_NetFramework
             control.Name = id.ToString();
             this.DoDragDrop(control.Name, DragDropEffects.Move);
         }
+
+        private void btnMoreInfo_Click(object sender, EventArgs e)
+        {
+            descripcionItemList descripcionItemList = new descripcionItemList(new ceDescripcionItem(this.user, this.lead, this.customer));
+
+            descripcionItemList.Show();
+        }
+        
     }
 }

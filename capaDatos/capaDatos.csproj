@@ -96,6 +96,7 @@
     <Compile Include="cdGlobals.cs" />
     <Compile Include="cdLead.cs" />
     <Compile Include="cdMileage.cs" />
+    <Compile Include="cdPipelineFlps.cs" />
     <Compile Include="cdRole.cs" />
     <Compile Include="cdUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -12,6 +12,14 @@
             this.Password = password;
             this.isAdmin = isAdmin;
         }
+        public ceUser(int idUser, int isAdmin, string email, string password)
+        {
+            this.idUser = idUser;
+            this.Email = email;
+            this.Password = password;
+            this.isAdmin = isAdmin;
+        }
+        public int idUser { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public int isAdmin { get; set; }

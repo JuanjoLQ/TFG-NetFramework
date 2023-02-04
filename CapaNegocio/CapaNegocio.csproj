@@ -49,6 +49,7 @@
     <Compile Include="cnDgvUser.cs" />
     <Compile Include="cnLead.cs" />
     <Compile Include="cnMileage.cs" />
+    <Compile Include="cnPipelineFlps.cs" />
     <Compile Include="cnUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
