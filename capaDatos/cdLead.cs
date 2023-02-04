@@ -1,5 +1,7 @@
 ﻿using capaEntidad;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Utilities;
+using Org.BouncyCastle.Utilities.Collections;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -87,6 +89,54 @@ namespace capaDatos
             }
 
             return array;
+        }
+
+        public void updateStageLead(int idLead, string newStage)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                MySqlCommand cmd;
+                conn.Open();
+
+                using (cmd = new MySqlCommand("UPDATE mydb.lead SET stage = @newStage WHERE idLead = @idLead;", conn))
+                {
+                    cmd.Parameters.AddWithValue("@idLead", idLead);
+                    cmd.Parameters.AddWithValue("@newStage", newStage);
+                    cmd.ExecuteNonQuery();
+                }
+                MessageBox.Show("Lead Actualizado", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void deleteLead(int idLead)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                MySqlCommand cmd;
+                conn.Open();
+
+                using (cmd = new MySqlCommand("DELETE FROM mydb.lead WHERE idLead = @idLead;", conn))
+                {
+                    cmd.Parameters.AddWithValue("@idLead", idLead);
+                    cmd.ExecuteNonQuery();
+                }
+                MessageBox.Show("Lead Eliminado", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
     }

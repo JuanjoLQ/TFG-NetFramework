@@ -76,19 +76,26 @@ namespace Tfg_NetFramework
         {
             var idCustomer = string.Empty;
             var idUser = string.Empty;
-            if (tbNewLeadName.Text != string.Empty && cbNewLeadStage.SelectedItem.ToString() != string.Empty && 
-                lBNewLeadEmployees.Items.ToString() != string.Empty && lBNewLeadCustomers.Items.ToString() != string.Empty)
+            
+            if (tbNewLeadName.Text != string.Empty && cbNewLeadStage.SelectedItem.ToString() != string.Empty &&
+            lBNewLeadEmployees.SelectedItem.ToString() != string.Empty && lBNewLeadEmployees != null && lBNewLeadCustomers.SelectedItem.ToString() != string.Empty && lBNewLeadCustomers != null)
             {
 
-                //
-
                 string[] words = lBNewLeadCustomers.SelectedItem.ToString().Split(' ');
-                //item.Item1 + " (" + item.Item2 + ")");
-                words[1] = words[1].Replace("(", string.Empty).Replace(")", string.Empty);
                 
+                if (words.Length > 2)
+                {
+                    for(int i = 1; i < words.Length - 1; i++)
+                    {
+                        words[0] += " " + words[i];
+                    }
+                    words[1] = words[words.Length - 1];
+                }
 
                 MessageBox.Show(words[0]);
                 MessageBox.Show(words[1]);
+                
+                words[1] = words[1].Replace("(", string.Empty).Replace(")", string.Empty);
 
                 foreach (Tuple<string, string, string> k in customers) if (k.Item1 == words[0] && k.Item2 == words[1])
                 {
@@ -96,18 +103,7 @@ namespace Tfg_NetFramework
                     break;
                 }
 
-                //
-
                 idUser = departments_employees[new Tuple<string, string>(cbNewLeadAssignedTo.SelectedItem.ToString(), lBNewLeadEmployees.SelectedItem.ToString())];
-
-                //MessageBox.Show(tbNewLeadName.Text);
-                //MessageBox.Show(dtpNewLeadDate.Text);
-                //MessageBox.Show(cbNewLeadStage.SelectedItem.ToString());
-                //MessageBox.Show(int.Parse(tbNewLeadAmount.Text).ToString());
-                //MessageBox.Show(tbNewLeadNotes.Text);
-                //MessageBox.Show(cbNewLeadAssignedTo.SelectedItem.ToString());
-                //MessageBox.Show(dtpNewLeadCreatedAt.Text);
-
 
                 if (cnLead.addLead(new ceLead(tbNewLeadName.Text, dtpNewLeadDate.Text, cbNewLeadStage.SelectedItem.ToString(),
                     int.Parse(tbNewLeadAmount.Text), tbNewLeadNotes.Text, lBNewLeadEmployees.SelectedItem.ToString(),

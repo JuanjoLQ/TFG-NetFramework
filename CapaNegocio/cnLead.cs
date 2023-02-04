@@ -26,8 +26,15 @@ namespace CapaNegocio
         {
             return cdLead.getLeads(array);
         }
-        
 
+        public void updateStageLead(int idLead, string newStage)
+        {
+            cdLead.updateStageLead(idLead, newStage);
+        }
 
+        public void deleteLead(int idLead)
+        {
+            cdLead.deleteLead(idLead);
+        }
     }
 }

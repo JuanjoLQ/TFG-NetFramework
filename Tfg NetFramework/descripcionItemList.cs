@@ -1,4 +1,5 @@
 ﻿using capaEntidad;
+using CapaNegocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,15 +14,37 @@ namespace Tfg_NetFramework
 {
     public partial class descripcionItemList : Form
     {
+        int idLead;
+        string stageLead;
+        cnLead cnLead = new cnLead();
         private void descripcionItemList_Load(object sender, EventArgs e)
         {
-            ItemList item = new ItemList();
+            
         }
 
         public descripcionItemList(ceDescripcionItem descripcionItem)
         {
             InitializeComponent();
 
+            stageLead = descripcionItem.Lead.Stage;
+
+            if(stageLead == "New")
+            {
+                btnNew.BackColor = Color.FromArgb(107, 107, 114);
+            }
+            else if(stageLead == "Qualified")
+            {
+                btnNew.BackColor = Color.FromArgb(107, 107, 114);
+            }
+            else if (stageLead == "Proposition")
+            {
+                btnNew.BackColor = Color.FromArgb(107, 107, 114);
+            }
+            else
+            {
+                btnNew.BackColor = Color.FromArgb(107, 107, 114);
+            }
+            idLead = descripcionItem.Lead.Idlead;
             lbLeadName.Text = descripcionItem.Lead.Name;
             lbUserAssignedTo.Text = descripcionItem.Lead.AssignedTo;
             lbAmountLead.Text = descripcionItem.Lead.Amount.ToString();
@@ -41,28 +64,64 @@ namespace Tfg_NetFramework
             tbCustomerDepartment.Text = descripcionItem.Customer.Department;
             tbCustomerType.Text = descripcionItem.Customer.Type;
             tbCustomerDate.Text = descripcionItem.Customer.Date;
-
         }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
-
+            if (stageLead != "New")
+            {
+                updateStageLead(idLead, "New");
+                btnNew.BackColor = Color.FromArgb(107, 107, 114);
+                btnQualified.BackColor = Color.FromArgb(246, 246, 246);
+                btnProposition.BackColor = Color.FromArgb(246, 246, 246);
+                btnWon.BackColor = Color.FromArgb(246, 246, 246);
+            }
         }
 
         private void btnQualified_Click(object sender, EventArgs e)
         {
-
+            if (stageLead != "Qualified")
+            {
+                updateStageLead(idLead ,"Qualified");
+                btnNew.BackColor = Color.FromArgb(246, 246, 246);
+                btnQualified.BackColor = Color.FromArgb(107, 107, 114);
+                btnProposition.BackColor = Color.FromArgb(246, 246, 246);
+                btnWon.BackColor = Color.FromArgb(246, 246, 246);
+            }
         }
 
         private void btnProposition_Click(object sender, EventArgs e)
         {
-
+            if (stageLead != "Proposition")
+            {
+                updateStageLead(idLead, "Proposition");
+                btnNew.BackColor = Color.FromArgb(246, 246, 246);
+                btnQualified.BackColor = Color.FromArgb(246, 246, 246);
+                btnProposition.BackColor = Color.FromArgb(107, 107, 114);
+                btnWon.BackColor = Color.FromArgb(246, 246, 246);
+            }
         }
 
         private void btnWon_Click(object sender, EventArgs e)
         {
-
+            if (stageLead != "Won")
+            {
+                updateStageLead(idLead, "Won");
+                btnNew.BackColor = Color.FromArgb(246, 246, 246);
+                btnQualified.BackColor = Color.FromArgb(246, 246, 246);
+                btnProposition.BackColor = Color.FromArgb(246, 246, 246);
+                btnWon.BackColor = Color.FromArgb(107, 107, 114);
+            }
         }
 
+        private void updateStageLead(int idLead, string newStage)
+        {
+            cnLead.updateStageLead(idLead, newStage);
+        }
+
+        private void btnLeadRemove_Click(object sender, EventArgs e)
+        {
+            cnLead.deleteLead(idLead);
+        }
     }
 }

@@ -1050,6 +1050,7 @@ namespace Tfg_NetFramework
                 
                 itemFlp.Id = item.Lead.Idlead;
                 itemFlp.Name = item.Lead.Name;
+                itemFlp.Date = item.Lead.Date;
                 itemFlp.Stage = item.Lead.Stage;
                 itemFlp.Amount = item.Lead.Amount;
                 itemFlp.Notes = item.Lead.Notes;
@@ -1079,9 +1080,6 @@ namespace Tfg_NetFramework
                 }
 
             }
-            
-
-            //descripcionItemList descripcionItemList = new descripcionItemList
         }
     }
 }
