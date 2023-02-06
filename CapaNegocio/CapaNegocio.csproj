@@ -45,6 +45,8 @@
     <Compile Include="cnAllowance.cs" />
     <Compile Include="cnCustomer.cs" />
     <Compile Include="cnDgvAllowance.cs" />
+    <Compile Include="cnDgvCustomer.cs" />
+    <Compile Include="cnDgvLead.cs" />
     <Compile Include="cnDgvMileage.cs" />
     <Compile Include="cnDgvUser.cs" />
     <Compile Include="cnLead.cs" />

@@ -91,6 +91,8 @@
     <Compile Include="cdAllowance.cs" />
     <Compile Include="cdCustomer.cs" />
     <Compile Include="cdDgvAllowance.cs" />
+    <Compile Include="cdDgvCustomer.cs" />
+    <Compile Include="cdDgvLead.cs" />
     <Compile Include="cdDgvMileage.cs" />
     <Compile Include="cdDgvUser.cs" />
     <Compile Include="cdGlobals.cs" />

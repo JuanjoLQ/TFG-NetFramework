@@ -31,6 +31,10 @@ namespace Tfg_NetFramework
         cnDgvUser cnDgvUser = new cnDgvUser();
         cnPipelineFlps cnPipelineFlps = new cnPipelineFlps();
         cnLead cnLead = new cnLead();
+        cnDgvCustomer cnDgvCustomer = new cnDgvCustomer();
+        cnDgvLead cnDgvLead = new cnDgvLead();
+        cnCustomer cnCustomer = new cnCustomer();
+
         cdGlobals cdGlobals = new cdGlobals();
         Hashtable pdfs = new Hashtable();
 
@@ -1009,6 +1013,7 @@ namespace Tfg_NetFramework
 
         private void tabControl1_TabIndexChanged(object sender, EventArgs e)
         {
+            /*
             // Guardar leads
             ArrayList array = new ArrayList();
             array = cnLead.getLeads(array);
@@ -1026,8 +1031,7 @@ namespace Tfg_NetFramework
                         break;
                 }
             }
-            
-
+            */
         }
 
         private void stageNew(ItemList item)
@@ -1080,6 +1084,29 @@ namespace Tfg_NetFramework
                 }
 
             }
+        }
+
+        private void btnUpdateDgvCustomer_Click(object sender, EventArgs e)
+        {
+            dgvCustomer.Update();
+            dgvCustomer.Refresh();
+            cnDgvCustomer.updateDgvCustomer(dgvCustomer);
+        }
+
+        private void dgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lbLeadName.Text = dgvCustomer.CurrentRow.Cells[1].Value.ToString();
+            cnDgvLead.updateDgvLead(int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString()), dgvCustomer_Lead);
+        }
+
+        private void btnMoreInfoCustomer_Click(object sender, EventArgs e)
+        {
+            ceCustomer customer = cnCustomer.getCustomer(int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString()));
+
+            descrCustomer descrCustomer = new descrCustomer(cnCustomer.getCustomer(int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString())));
+            descrCustomer.Show();
+
+
         }
     }
 }

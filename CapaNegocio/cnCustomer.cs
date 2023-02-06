@@ -23,5 +23,10 @@ namespace CapaNegocio
             return cdCustomer.getCustomers(array);
         }
 
+        public ceCustomer getCustomer(int id)
+        {
+            return cdCustomer.GetCustomer(id);
+        }
+
     }
 }

@@ -12,6 +12,7 @@ namespace capaNegocio
     public class cnDgvAllowance
     {
         cdDgvAllowance cdDgvAllowance = new cdDgvAllowance();
+
         public void dgvAllowance(DataGridView dgvAllowance, Hashtable pdfs)
         {
             cdDgvAllowance.GetData();

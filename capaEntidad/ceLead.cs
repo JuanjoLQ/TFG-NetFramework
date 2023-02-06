@@ -8,6 +8,17 @@ namespace capaEntidad
 {
     public class ceLead
     {
+        public ceLead(int idLead, string name, string date, string stage, int amount, string AssignedTo, string CreatedAt) { 
+            this.Idlead = idLead;
+            this.Name = name;
+            this.Date = date;
+            this.Stage = stage;
+            this.Amount = amount;
+            this.AssignedTo = AssignedTo;
+            this.CreatedAt = CreatedAt;
+                        
+        }
+
         public ceLead(string Name, string Date, string Stage, int Amount,
             string Notes, string AssignedTo, string CreatedAt, int IdCustomer, int idUser)
         {
@@ -21,6 +32,7 @@ namespace capaEntidad
             this.idCustomer = IdCustomer;
             this.idUser = idUser;
         }
+
         public ceLead(int idLead, string Name, string Date, string Stage, int Amount,
             string Notes, string AssignedTo, string CreatedAt, int IdCustomer, int idUser)
         {
@@ -35,6 +47,7 @@ namespace capaEntidad
             this.idCustomer = IdCustomer;
             this.idUser = idUser;
         }
+
         public int Idlead { get; set; }
         public string Name { get; set; }
         public string Date { get; set; }

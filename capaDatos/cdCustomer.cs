@@ -84,5 +84,59 @@ namespace capaDatos
 
             return array;
         }
+
+        public ceCustomer GetCustomer(int id) 
+        {
+            ceCustomer customer = null;
+
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                conn.Open();
+                string query = "SELECT name, phone, email, department, city, state, zip, country, adress1, adress2, type, notes, date FROM customer WHERE idCustomer = ?idCustomer;";
+
+                MySqlCommand command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("?idCustomer", id);
+
+                var row = command.ExecuteReader();
+
+                if (row.HasRows)
+                {
+                    while (row.Read())
+                    {
+                        var name = row["name"].ToString();
+                        var phone = row["phone"].ToString();
+                        var email = row["email"].ToString();
+                        var department = row["department"].ToString();
+                        var city = row["city"].ToString();
+                        var state = row["state"].ToString();
+                        var zip = row["zip"].ToString();
+                        var country = row["country"].ToString();
+                        var address1 = row["adress1"].ToString();
+                        var address2 = row["adress2"].ToString();
+                        var type = row["type"].ToString();
+                        var notes = row["notes"].ToString();
+                        var date = row["date"].ToString();
+
+                        customer = new ceCustomer(id.ToString(), name, phone, email, department, city, state, zip, country, address1, address2, type, notes, date);
+
+                    }
+                }
+                else
+                {
+                    //MessageBox.Show("Data not found");
+                }
+
+                row.Close();// Close reader.
+                conn.Close();// Close connection.
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.ToString());
+            }
+
+            return customer;
+        }
+
     }
 }

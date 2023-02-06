@@ -8,7 +8,22 @@ namespace capaEntidad
 {
     public class ceCustomer
     {
-        public ceCustomer(string idCustomer, string Name, string Phone, string Email, string Department, 
+
+        public ceCustomer(string idCustomer, string Name, string Phone, string Email, string Department,
+            string City, string Country, string Type, string Leads)
+        {
+            this.idCustomer = idCustomer;
+            this.Name= Name;
+            this.Phone = Phone;
+            this.Email = Email;
+            this.Department = Department;
+            this.City = City;
+            this.Country = Country;
+            this.Type = Type;
+            this.Leads = Leads;
+        }
+
+            public ceCustomer(string idCustomer, string Name, string Phone, string Email, string Department, 
             string City, string State, string Zip, string Country, string Adress1, 
             string Adress2, string Type, string Notes, string Date)
         {
@@ -41,6 +56,7 @@ namespace capaEntidad
         public string Type { get; set; }
         public string Notes { get; set; }
         public string Date { get; set; }
+        public string Leads { get; set; }
 
     }
 }

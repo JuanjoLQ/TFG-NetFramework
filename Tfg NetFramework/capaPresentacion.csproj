@@ -85,6 +85,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="descrCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="descrCustomer.Designer.cs">
+      <DependentUpon>descrCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="descripcionItemList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Res.en-US.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="descrCustomer.resx">
+      <DependentUpon>descrCustomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="descripcionItemList.resx">
       <DependentUpon>descripcionItemList.cs</DependentUpon>
     </EmbeddedResource>

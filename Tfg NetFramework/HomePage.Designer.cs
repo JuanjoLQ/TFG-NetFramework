@@ -209,6 +209,7 @@ namespace Tfg_NetFramework
             this.pCRMGest = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pipeline = new System.Windows.Forms.TabPage();
+            this.btnUpdateFlps = new System.Windows.Forms.Button();
             this.btnPipelineRemoveLead = new System.Windows.Forms.Button();
             this.btnPipelineAddLead = new System.Windows.Forms.Button();
             this.flpWon = new System.Windows.Forms.FlowLayoutPanel();
@@ -221,6 +222,27 @@ namespace Tfg_NetFramework
             this.flpQualified = new System.Windows.Forms.FlowLayoutPanel();
             this.flpNew = new System.Windows.Forms.FlowLayoutPanel();
             this.Customers = new System.Windows.Forms.TabPage();
+            this.dgvCustomer_Lead = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbLeadName = new System.Windows.Forms.Label();
+            this.btnMoreInfoCustomer = new System.Windows.Forms.Button();
+            this.dgvCustomer = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.country = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewButtonColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnUpdateDgvCustomer = new System.Windows.Forms.Button();
             this.btnCustomersRemoveCustomers = new System.Windows.Forms.Button();
             this.btnCustomersAddCustomers = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -231,24 +253,7 @@ namespace Tfg_NetFramework
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.city = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.leadsCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.openLeads = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lostLeads = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wonLeads = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.teams = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -265,7 +270,6 @@ namespace Tfg_NetFramework
             this.teamLostLeads = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.teamWonLeads = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnUpdateFlps = new System.Windows.Forms.Button();
             this.sidebar.SuspendLayout();
             this.pHome.SuspendLayout();
             this.containerModulos.SuspendLayout();
@@ -295,8 +299,8 @@ namespace Tfg_NetFramework
             this.tabControl1.SuspendLayout();
             this.pipeline.SuspendLayout();
             this.Customers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer_Lead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.teams.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
@@ -2219,7 +2223,7 @@ namespace Tfg_NetFramework
             this.pCRMGest.Location = new System.Drawing.Point(277, 94);
             this.pCRMGest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pCRMGest.Name = "pCRMGest";
-            this.pCRMGest.Size = new System.Drawing.Size(1261, 775);
+            this.pCRMGest.Size = new System.Drawing.Size(1623, 775);
             this.pCRMGest.TabIndex = 11;
             // 
             // tabControl1
@@ -2231,7 +2235,7 @@ namespace Tfg_NetFramework
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1203, 729);
+            this.tabControl1.Size = new System.Drawing.Size(1581, 729);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.TabIndexChanged += new System.EventHandler(this.tabControl1_TabIndexChanged);
             // 
@@ -2253,10 +2257,21 @@ namespace Tfg_NetFramework
             this.pipeline.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pipeline.Name = "pipeline";
             this.pipeline.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pipeline.Size = new System.Drawing.Size(1195, 700);
+            this.pipeline.Size = new System.Drawing.Size(1573, 700);
             this.pipeline.TabIndex = 0;
             this.pipeline.Text = "Pipeline";
             this.pipeline.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateFlps
+            // 
+            this.btnUpdateFlps.Location = new System.Drawing.Point(527, 9);
+            this.btnUpdateFlps.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdateFlps.Name = "btnUpdateFlps";
+            this.btnUpdateFlps.Size = new System.Drawing.Size(140, 54);
+            this.btnUpdateFlps.TabIndex = 13;
+            this.btnUpdateFlps.Text = "Update Flps";
+            this.btnUpdateFlps.UseVisualStyleBackColor = true;
+            this.btnUpdateFlps.Click += new System.EventHandler(this.btnUpdateFlps_Click);
             // 
             // btnPipelineRemoveLead
             // 
@@ -2381,6 +2396,11 @@ namespace Tfg_NetFramework
             // 
             // Customers
             // 
+            this.Customers.Controls.Add(this.dgvCustomer_Lead);
+            this.Customers.Controls.Add(this.lbLeadName);
+            this.Customers.Controls.Add(this.btnMoreInfoCustomer);
+            this.Customers.Controls.Add(this.dgvCustomer);
+            this.Customers.Controls.Add(this.btnUpdateDgvCustomer);
             this.Customers.Controls.Add(this.btnCustomersRemoveCustomers);
             this.Customers.Controls.Add(this.btnCustomersAddCustomers);
             this.Customers.Controls.Add(this.label5);
@@ -2391,25 +2411,228 @@ namespace Tfg_NetFramework
             this.Customers.Controls.Add(this.button4);
             this.Customers.Controls.Add(this.button3);
             this.Customers.Controls.Add(this.button2);
-            this.Customers.Controls.Add(this.dataGridView4);
             this.Customers.Controls.Add(this.label2);
-            this.Customers.Controls.Add(this.dataGridView1);
             this.Customers.Controls.Add(this.label1);
             this.Customers.Location = new System.Drawing.Point(4, 25);
             this.Customers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Customers.Name = "Customers";
             this.Customers.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Customers.Size = new System.Drawing.Size(1195, 700);
+            this.Customers.Size = new System.Drawing.Size(1573, 700);
             this.Customers.TabIndex = 1;
             this.Customers.Text = "Customers";
             this.Customers.UseVisualStyleBackColor = true;
+            // 
+            // dgvCustomer_Lead
+            // 
+            this.dgvCustomer_Lead.AllowUserToAddRows = false;
+            this.dgvCustomer_Lead.AllowUserToDeleteRows = false;
+            this.dgvCustomer_Lead.AllowUserToOrderColumns = true;
+            this.dgvCustomer_Lead.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomer_Lead.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22});
+            this.dgvCustomer_Lead.Location = new System.Drawing.Point(12, 450);
+            this.dgvCustomer_Lead.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.dgvCustomer_Lead.Name = "dgvCustomer_Lead";
+            this.dgvCustomer_Lead.RowHeadersWidth = 51;
+            this.dgvCustomer_Lead.RowTemplate.Height = 29;
+            this.dgvCustomer_Lead.Size = new System.Drawing.Size(1227, 193);
+            this.dgvCustomer_Lead.TabIndex = 27;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.HeaderText = "idLead";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.HeaderText = "Stage";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn20.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.HeaderText = "Assigned To";
+            this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn21.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.HeaderText = "Created At";
+            this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Width = 125;
+            // 
+            // lbLeadName
+            // 
+            this.lbLeadName.AutoSize = true;
+            this.lbLeadName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLeadName.Location = new System.Drawing.Point(167, 411);
+            this.lbLeadName.Name = "lbLeadName";
+            this.lbLeadName.Size = new System.Drawing.Size(53, 25);
+            this.lbLeadName.TabIndex = 26;
+            this.lbLeadName.Text = "Date";
+            // 
+            // btnMoreInfoCustomer
+            // 
+            this.btnMoreInfoCustomer.BackColor = System.Drawing.Color.White;
+            this.btnMoreInfoCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMoreInfoCustomer.BackgroundImage")));
+            this.btnMoreInfoCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMoreInfoCustomer.FlatAppearance.BorderSize = 0;
+            this.btnMoreInfoCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMoreInfoCustomer.Location = new System.Drawing.Point(8, 310);
+            this.btnMoreInfoCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMoreInfoCustomer.Name = "btnMoreInfoCustomer";
+            this.btnMoreInfoCustomer.Size = new System.Drawing.Size(40, 37);
+            this.btnMoreInfoCustomer.TabIndex = 16;
+            this.btnMoreInfoCustomer.UseVisualStyleBackColor = false;
+            this.btnMoreInfoCustomer.Click += new System.EventHandler(this.btnMoreInfoCustomer_Click);
+            // 
+            // dgvCustomer
+            // 
+            this.dgvCustomer.AllowUserToAddRows = false;
+            this.dgvCustomer.AllowUserToDeleteRows = false;
+            this.dgvCustomer.AllowUserToOrderColumns = true;
+            this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.country,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewButtonColumn1});
+            this.dgvCustomer.Location = new System.Drawing.Point(11, 102);
+            this.dgvCustomer.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.RowHeadersWidth = 51;
+            this.dgvCustomer.RowTemplate.Height = 29;
+            this.dgvCustomer.Size = new System.Drawing.Size(1540, 193);
+            this.dgvCustomer.TabIndex = 15;
+            this.dgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellClick);
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "idCustomer";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Phone";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "Department";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn13.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "City";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn14.Width = 125;
+            // 
+            // country
+            // 
+            this.country.HeaderText = "Country";
+            this.country.MinimumWidth = 6;
+            this.country.Name = "country";
+            this.country.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.HeaderText = "Type";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn15.Width = 125;
+            // 
+            // dataGridViewButtonColumn1
+            // 
+            this.dataGridViewButtonColumn1.HeaderText = "Leads";
+            this.dataGridViewButtonColumn1.MinimumWidth = 6;
+            this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewButtonColumn1.Width = 125;
+            // 
+            // btnUpdateDgvCustomer
+            // 
+            this.btnUpdateDgvCustomer.Location = new System.Drawing.Point(317, 22);
+            this.btnUpdateDgvCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdateDgvCustomer.Name = "btnUpdateDgvCustomer";
+            this.btnUpdateDgvCustomer.Size = new System.Drawing.Size(205, 41);
+            this.btnUpdateDgvCustomer.TabIndex = 15;
+            this.btnUpdateDgvCustomer.Text = "Update table";
+            this.btnUpdateDgvCustomer.UseVisualStyleBackColor = true;
+            this.btnUpdateDgvCustomer.Click += new System.EventHandler(this.btnUpdateDgvCustomer_Click);
             // 
             // btnCustomersRemoveCustomers
             // 
             this.btnCustomersRemoveCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(37)))), ((int)(((byte)(68)))));
             this.btnCustomersRemoveCustomers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCustomersRemoveCustomers.BackgroundImage")));
             this.btnCustomersRemoveCustomers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCustomersRemoveCustomers.Location = new System.Drawing.Point(237, 33);
+            this.btnCustomersRemoveCustomers.Location = new System.Drawing.Point(233, 32);
             this.btnCustomersRemoveCustomers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCustomersRemoveCustomers.Name = "btnCustomersRemoveCustomers";
             this.btnCustomersRemoveCustomers.Size = new System.Drawing.Size(40, 37);
@@ -2433,7 +2656,7 @@ namespace Tfg_NetFramework
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(625, 377);
+            this.label5.Location = new System.Drawing.Point(624, 337);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(287, 32);
@@ -2442,7 +2665,7 @@ namespace Tfg_NetFramework
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(968, 443);
+            this.dateTimePicker2.Location = new System.Drawing.Point(972, 410);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(265, 22);
@@ -2450,7 +2673,7 @@ namespace Tfg_NetFramework
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(676, 426);
+            this.dateTimePicker1.Location = new System.Drawing.Point(661, 411);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
@@ -2468,7 +2691,7 @@ namespace Tfg_NetFramework
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(764, 518);
+            this.button5.Location = new System.Drawing.Point(1113, 314);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(69, 85);
@@ -2478,7 +2701,7 @@ namespace Tfg_NetFramework
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(629, 517);
+            this.button4.Location = new System.Drawing.Point(952, 332);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(85, 62);
@@ -2498,65 +2721,13 @@ namespace Tfg_NetFramework
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(364, 345);
+            this.button2.Location = new System.Drawing.Point(377, 342);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 39);
             this.button2.TabIndex = 5;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8});
-            this.dataGridView4.Location = new System.Drawing.Point(48, 446);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowHeadersWidth = 51;
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(517, 225);
-            this.dataGridView4.TabIndex = 4;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Lead Name";
-            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Date";
-            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Customer";
-            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "Stage";
-            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Amount";
-            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 125;
             // 
             // label2
             // 
@@ -2566,98 +2737,6 @@ namespace Tfg_NetFramework
             this.label2.Size = new System.Drawing.Size(71, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "Customers";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.name,
-            this.phone,
-            this.emailCustomer,
-            this.department,
-            this.city,
-            this.type,
-            this.leadsCustomer,
-            this.openLeads,
-            this.lostLeads,
-            this.wonLeads});
-            this.dataGridView1.Location = new System.Drawing.Point(43, 86);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1141, 235);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // name
-            // 
-            this.name.HeaderText = "Name";
-            this.name.MinimumWidth = 6;
-            this.name.Name = "name";
-            this.name.Width = 125;
-            // 
-            // phone
-            // 
-            this.phone.HeaderText = "Phone";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
-            this.phone.Width = 125;
-            // 
-            // emailCustomer
-            // 
-            this.emailCustomer.HeaderText = "Email";
-            this.emailCustomer.MinimumWidth = 6;
-            this.emailCustomer.Name = "emailCustomer";
-            this.emailCustomer.Width = 125;
-            // 
-            // department
-            // 
-            this.department.HeaderText = "Department";
-            this.department.MinimumWidth = 6;
-            this.department.Name = "department";
-            this.department.Width = 125;
-            // 
-            // city
-            // 
-            this.city.HeaderText = "City";
-            this.city.MinimumWidth = 6;
-            this.city.Name = "city";
-            this.city.Width = 125;
-            // 
-            // type
-            // 
-            this.type.HeaderText = "Type";
-            this.type.MinimumWidth = 6;
-            this.type.Name = "type";
-            this.type.Width = 125;
-            // 
-            // leadsCustomer
-            // 
-            this.leadsCustomer.HeaderText = "Leads";
-            this.leadsCustomer.MinimumWidth = 6;
-            this.leadsCustomer.Name = "leadsCustomer";
-            this.leadsCustomer.Width = 125;
-            // 
-            // openLeads
-            // 
-            this.openLeads.HeaderText = "Open Leads";
-            this.openLeads.MinimumWidth = 6;
-            this.openLeads.Name = "openLeads";
-            this.openLeads.Width = 125;
-            // 
-            // lostLeads
-            // 
-            this.lostLeads.HeaderText = "Lost Leads";
-            this.lostLeads.MinimumWidth = 6;
-            this.lostLeads.Name = "lostLeads";
-            this.lostLeads.Width = 125;
-            // 
-            // wonLeads
-            // 
-            this.wonLeads.HeaderText = "Won Leads";
-            this.wonLeads.MinimumWidth = 6;
-            this.wonLeads.Name = "wonLeads";
-            this.wonLeads.Width = 125;
             // 
             // label1
             // 
@@ -2675,7 +2754,7 @@ namespace Tfg_NetFramework
             this.teams.Location = new System.Drawing.Point(4, 25);
             this.teams.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.teams.Name = "teams";
-            this.teams.Size = new System.Drawing.Size(1195, 700);
+            this.teams.Size = new System.Drawing.Size(1573, 700);
             this.teams.TabIndex = 2;
             this.teams.Text = "Teams";
             this.teams.UseVisualStyleBackColor = true;
@@ -2797,16 +2876,6 @@ namespace Tfg_NetFramework
             this.label3.TabIndex = 0;
             this.label3.Text = "label3";
             // 
-            // btnUpdateFlps
-            // 
-            this.btnUpdateFlps.Location = new System.Drawing.Point(527, 9);
-            this.btnUpdateFlps.Name = "btnUpdateFlps";
-            this.btnUpdateFlps.Size = new System.Drawing.Size(140, 54);
-            this.btnUpdateFlps.TabIndex = 13;
-            this.btnUpdateFlps.Text = "Update Flps";
-            this.btnUpdateFlps.UseVisualStyleBackColor = true;
-            this.btnUpdateFlps.Click += new System.EventHandler(this.btnUpdateFlps_Click);
-            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -2865,8 +2934,8 @@ namespace Tfg_NetFramework
             this.pipeline.PerformLayout();
             this.Customers.ResumeLayout(false);
             this.Customers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer_Lead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.teams.ResumeLayout(false);
             this.teams.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -3058,7 +3127,6 @@ namespace Tfg_NetFramework
         private FlowLayoutPanel flpNew;
         private TabPage Customers;
         private Label label2;
-        private DataGridView dataGridView1;
         private Label label1;
         private TabPage teams;
         private Button button1;
@@ -3067,28 +3135,12 @@ namespace Tfg_NetFramework
         private Label lbProposition;
         private Label lbQualified;
         private Label lbNew;
-        private DataGridView dataGridView4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private DataGridView dataGridView3;
         private Label label3;
         private Button button5;
         private Button button4;
         private Button button3;
         private Button button2;
-        private DataGridViewTextBoxColumn name;
-        private DataGridViewTextBoxColumn phone;
-        private DataGridViewTextBoxColumn emailCustomer;
-        private DataGridViewTextBoxColumn department;
-        private DataGridViewTextBoxColumn city;
-        private DataGridViewTextBoxColumn type;
-        private DataGridViewTextBoxColumn leadsCustomer;
-        private DataGridViewTextBoxColumn openLeads;
-        private DataGridViewTextBoxColumn lostLeads;
-        private DataGridViewTextBoxColumn wonLeads;
         private Label label4;
         private Label label5;
         private DateTimePicker dateTimePicker2;
@@ -3110,5 +3162,26 @@ namespace Tfg_NetFramework
         private Button btnCustomersRemoveCustomers;
         private Button btnCustomersAddCustomers;
         private Button btnUpdateFlps;
+        private Button btnUpdateDgvCustomer;
+        private DataGridView dgvCustomer;
+        private Button btnMoreInfoCustomer;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private DataGridViewTextBoxColumn country;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private DataGridViewTextBoxColumn dataGridViewButtonColumn1;
+        private Label lbLeadName;
+        private DataGridView dgvCustomer_Lead;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
     }
 }

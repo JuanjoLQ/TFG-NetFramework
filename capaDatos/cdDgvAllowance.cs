@@ -25,7 +25,7 @@ namespace capaDatos
         private static ArrayList invoices = new ArrayList();
         private static ArrayList states = new ArrayList();
 
-        public void resetData()
+        private void resetData()
         {
             emailUsers.Clear();
             titles.Clear();
