@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CapaNegocio
 {
@@ -16,11 +17,6 @@ namespace CapaNegocio
         {
             return cdLead.addLead(lead);
         }
-
-        //public bool removeLead(ceLead lead)
-        //{
-
-        //}
 
         public ArrayList getLeads(ArrayList array)
         {
@@ -35,6 +31,11 @@ namespace CapaNegocio
         public void deleteLead(int idLead)
         {
             cdLead.deleteLead(idLead);
+        }
+
+        public void leadsByDate(DataGridView dgvLead_Date, int idCustomer, DateTime startDate, DateTime endDate)
+        {
+            cdLead.leadsByDate(dgvLead_Date, idCustomer, startDate, endDate);
         }
     }
 }

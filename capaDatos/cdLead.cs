@@ -139,5 +139,75 @@ namespace capaDatos
             }
         }
 
+        public void leadsByDate(DataGridView dgvLeadsByLead, int idCustomer, DateTime startDate, DateTime endDate)
+        {
+            dgvLeadsByLead.RowCount = 0;
+            ArrayList array = new ArrayList();
+            try
+            {
+                array.Clear();
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                conn.Open();
+                string query = "SELECT idLead, name, date, stage, amount, notes, assignedTo, createdAt FROM mydb.lead WHERE Customer_idCustomer = ?idCustomer and date >= ?startDate and date <= ?endDate;";
+
+                MySqlCommand command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("?idCustomer", idCustomer);
+                command.Parameters.AddWithValue("?startDate", startDate);
+                command.Parameters.AddWithValue("?endDate", endDate);
+
+                var row = command.ExecuteReader();
+
+                if (row.HasRows)
+                {
+                    while (row.Read())
+                    {
+                        int idLead = int.Parse(row["idLead"].ToString());
+                        string name = row["name"].ToString();
+                        string date = row["date"].ToString();
+                        string stage = row["stage"].ToString();
+                        int amount = int.Parse(row["amount"].ToString());
+                        string notes = row["notes"].ToString();
+                        string assignedTo = row["assignedTo"].ToString();
+                        string createdAt = row["createdAt"].ToString();
+
+                        array.Add(new ceLead(idLead, name, date, stage, amount, notes, assignedTo, createdAt));
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay leads correspondientes al fechado indicado.");
+                }
+
+                row.Close();// Close reader.
+                conn.Close();// Close connection.
+
+                ceLead lead = null;
+                for (int i = 0; i < array.Count; i++)
+                {
+                    DataGridViewRow newRow = new DataGridViewRow();
+
+                    lead = null;
+                    lead = (ceLead) array[i];
+
+                    newRow.CreateCells(dgvLeadsByLead);
+
+                    newRow.Cells[0].Value = lead.Idlead;
+                    newRow.Cells[1].Value = lead.Name;
+                    newRow.Cells[2].Value = lead.Date;
+                    newRow.Cells[3].Value = lead.Stage;
+                    newRow.Cells[4].Value = lead.Amount;
+                    newRow.Cells[5].Value = lead.AssignedTo;
+                    newRow.Cells[6].Value = lead.CreatedAt;
+
+                    dgvLeadsByLead.Rows.Add(newRow);
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.ToString());
+            }
+
+        }
+
     }
 }

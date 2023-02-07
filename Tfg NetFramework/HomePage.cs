@@ -994,11 +994,6 @@ namespace Tfg_NetFramework
             newLead.Show();
         }
 
-        private void btnPipelineRemoveLead_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCustomersAddCustomers_Click(object sender, EventArgs e)
         {
             Form newCustomer = new newCustomer();
@@ -1077,7 +1072,6 @@ namespace Tfg_NetFramework
                 {
                     flpWon.Controls.Add(itemFlp);
                 }
-
             }
         }
 
@@ -1101,6 +1095,26 @@ namespace Tfg_NetFramework
             descrCustomer descrCustomer = new descrCustomer(cnCustomer.getCustomer(int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString())));
             descrCustomer.Show();
 
+        }
+
+        private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
+        {
+            var startDate = DateTime.Parse(dtpFechaInicio.Value.ToString("yyyy-MM-dd"));
+            var endDate = DateTime.Parse(dtpFechaFin.Value.ToString("yyyy-MM-dd"));
+
+            if (startDate > endDate && dgvCustomer.CurrentRow != null)
+            {
+                MessageBox.Show("La fecha inicio no puede ser más antigua que la fecha fin");
+            }
+            else
+            {
+                cnLead.leadsByDate(dgvCustomer_Lead, int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString()), startDate, endDate);
+            }
+        }
+
+        private void dtpFechaFin_ValueChanged(object sender, EventArgs e)
+        {
+            dtpFechaInicio_ValueChanged(sender, e);
         }
     }
 }

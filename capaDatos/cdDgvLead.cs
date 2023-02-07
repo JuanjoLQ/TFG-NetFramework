@@ -60,7 +60,7 @@ namespace capaDatos
                         assignedTo = row["assignedTo"].ToString();
                         createdAt = row["createdAt"].ToString();
 
-                        ceLead lead = new ceLead( int.Parse(idLead), name, date, stage, int.Parse(amount), assignedTo, createdAt);
+                        ceLead lead = new ceLead(int.Parse(idLead), name, date, stage, int.Parse(amount), assignedTo, createdAt);
 
                         arrayLeads_Customer.Add(lead);
                     }

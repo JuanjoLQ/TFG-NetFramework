@@ -252,15 +252,6 @@
   <metadata name="opfSeleccionarArchivo.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>271, 17</value>
   </metadata>
-  <data name="btnPipelineRemoveLead.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAJdJREFUWEftl80NQEAUhLcL3ThpQSMqcFQLJXBXiEKYSUg2ssJj4y/zJV+yeS87
-        5sCBEyfJYL6Ss1uo4LhhCaPQwNADrsjMwzxeoIC8sNjBwSjv+BnMFCZS2EaSWWb4bYdepjMyy8zrCtRw
-        gWd/t7dXARVQARVQARX4R4F+nlGe/d3enjMzvOSHXPGbBRLI360YMksEcG4C7dhqbEARK10AAAAASUVO
-        RK5CYII=
-</value>
-  </data>
   <data name="btnPipelineAddLead.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO

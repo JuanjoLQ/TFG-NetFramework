@@ -42,7 +42,6 @@ namespace capaDatos
                         int idLead = int.Parse(row["idLead"].ToString());
                         int idCustomer = int.Parse(row["idCustomer"].ToString());
                         string userEmail = row["userEmail"].ToString();
-                        MessageBox.Show(userEmail);
                         string nameLead = row["nameLead"].ToString();
                         string dateLead = row["dateLead"].ToString();
                         string stage = row["stage"].ToString();
