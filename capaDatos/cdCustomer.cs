@@ -138,5 +138,36 @@ namespace capaDatos
             return customer;
         }
 
+        public void deleteCustomer(int id)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                MySqlCommand cmd;
+                conn.Open();
+
+                using (cmd = new MySqlCommand("DELETE FROM mydb.lead WHERE Customer_idCustomer = @idCustomer;", conn))
+                {
+                    cmd.Parameters.AddWithValue("@idCustomer", id);
+                    cmd.ExecuteNonQuery();
+                }
+                MessageBox.Show("Lead Eliminado", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                using (cmd = new MySqlCommand("DELETE FROM customer WHERE idCustomer = @idCustomer;", conn))
+                {
+                    cmd.Parameters.AddWithValue("@idCustomer", id);
+                    cmd.ExecuteNonQuery();
+                }
+                MessageBox.Show("Customer Eliminado", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                conn.Close();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

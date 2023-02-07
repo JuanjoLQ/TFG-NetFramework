@@ -28,5 +28,10 @@ namespace CapaNegocio
             return cdCustomer.GetCustomer(id);
         }
 
+        public void deleteCustomer (int id)
+        {
+            cdCustomer.deleteCustomer(id);
+        }
+
     }
 }

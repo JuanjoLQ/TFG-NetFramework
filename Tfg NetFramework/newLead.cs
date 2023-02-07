@@ -80,7 +80,6 @@ namespace Tfg_NetFramework
             if (tbNewLeadName.Text != string.Empty && cbNewLeadStage.SelectedItem.ToString() != string.Empty &&
             lBNewLeadEmployees.SelectedItem.ToString() != string.Empty && lBNewLeadEmployees != null && lBNewLeadCustomers.SelectedItem.ToString() != string.Empty && lBNewLeadCustomers != null)
             {
-
                 string[] words = lBNewLeadCustomers.SelectedItem.ToString().Split(' ');
                 
                 if (words.Length > 2)
@@ -93,9 +92,10 @@ namespace Tfg_NetFramework
                 }
 
                 MessageBox.Show(words[0]);
-                MessageBox.Show(words[1]);
                 
                 words[1] = words[1].Replace("(", string.Empty).Replace(")", string.Empty);
+
+                MessageBox.Show(words[1]);
 
                 foreach (Tuple<string, string, string> k in customers) if (k.Item1 == words[0] && k.Item2 == words[1])
                 {
@@ -105,9 +105,26 @@ namespace Tfg_NetFramework
 
                 idUser = departments_employees[new Tuple<string, string>(cbNewLeadAssignedTo.SelectedItem.ToString(), lBNewLeadEmployees.SelectedItem.ToString())];
 
-                if (cnLead.addLead(new ceLead(tbNewLeadName.Text, dtpNewLeadDate.Text, cbNewLeadStage.SelectedItem.ToString(),
-                    int.Parse(tbNewLeadAmount.Text), tbNewLeadNotes.Text, lBNewLeadEmployees.SelectedItem.ToString(),
-                    dtpNewLeadCreatedAt.Text, int.Parse(idCustomer), int.Parse(idUser))))
+                string Name = tbNewLeadName.Text;
+                string Date = dtpNewLeadDate.Text;
+                string Stage = cbNewLeadStage.SelectedItem.ToString();
+                int Amount;
+                if(tbNewLeadAmount.Text == string.Empty)
+                {
+                    Amount = 0;
+                }
+                else
+                {
+                    Amount = int.Parse(tbNewLeadAmount.Text);
+                }
+                
+                string Notes = tbNewLeadNotes.Text;
+                string AssignedTo = lBNewLeadEmployees.SelectedItem.ToString();
+                string CreatedAt = dtpNewLeadCreatedAt.Text;
+
+                if (cnLead.addLead(new ceLead(Name, Date, Stage,
+                    Amount, Notes, AssignedTo, CreatedAt, 
+                    int.Parse(idCustomer), int.Parse(idUser))))
                 {
                     MessageBox.Show("Lead creado con éxito.");
                 }

@@ -1008,30 +1008,23 @@ namespace Tfg_NetFramework
 
         private void btnCustomersRemoveCustomers_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void tabControl1_TabIndexChanged(object sender, EventArgs e)
-        {
-            /*
-            // Guardar leads
-            ArrayList array = new ArrayList();
-            array = cnLead.getLeads(array);
-
-            // Diferenciar según stage del lead e inserción en su flowlayoutpanel
-            foreach(ceLead it in array)
+            DialogResult dialogResult = MessageBox.Show("Si eliminas un customer también se eliminarán los leads asociados",
+                "Some Title", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-
-                switch (it.Stage)
+                string idCustomer = dgvCustomer.CurrentRow.Cells[0].Value.ToString();
+                if (idCustomer != null)
                 {
-                    case "New":
-                        
-                        break;
-                    default:
-                        break;
+                    cnCustomer.deleteCustomer(int.Parse(idCustomer));
+                    dgvCustomer_Lead.RowCount = 0;
+                    btnUpdateDgvCustomer_Click(sender, e);
                 }
             }
-            */
+            else if (dialogResult == DialogResult.No)
+            {
+                //do something else
+            }
+            
         }
 
         private void stageNew(ItemList item)
@@ -1048,6 +1041,8 @@ namespace Tfg_NetFramework
 
             ArrayList arrayDescrItemList = new ArrayList();
             arrayDescrItemList = cnPipelineFlps.updateFpls();
+            MessageBox.Show(arrayDescrItemList.Count.ToString());
+            
             foreach (ceDescripcionItem item in arrayDescrItemList)
             {
                 ItemList itemFlp = new ItemList(item.User, item.Lead, item.Customer);
@@ -1078,7 +1073,7 @@ namespace Tfg_NetFramework
                 {
                     flpProposition.Controls.Add(itemFlp);
                 }
-                else
+                else if (item.Lead.Stage == "Won")
                 {
                     flpWon.Controls.Add(itemFlp);
                 }
@@ -1105,7 +1100,6 @@ namespace Tfg_NetFramework
 
             descrCustomer descrCustomer = new descrCustomer(cnCustomer.getCustomer(int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString())));
             descrCustomer.Show();
-
 
         }
     }

@@ -22,17 +22,18 @@ namespace capaDatos
             {
                 MySqlConnection conn = new MySqlConnection(cadenaConexion);
                 conn.Open();
-                string query = "SELECT user.idUser, lead.idLead, customer.idCustomer, user.email AS userEmail, lead.name AS nameLead, lead.date AS dateLead, " +
-                    "lead.stage, lead.amount, lead.notes AS notesLead, lead.assignedTo, lead.createdAt, customer.name AS nameCustomer, " +
+                string query = "SELECT user.idUser, mydb.lead.idLead, customer.idCustomer, user.email AS userEmail, mydb.lead.name AS nameLead, mydb.lead.date AS dateLead, " +
+                    "mydb.lead.stage, mydb.lead.amount, mydb.lead.notes AS notesLead, mydb.lead.assignedTo, mydb.lead.createdAt, customer.name AS nameCustomer, " +
                     "customer.phone, customer.email AS customerEmail, customer.department, customer.city, customer.state, " +
                     "customer.zip, customer.country, customer.adress1, customer.adress2, customer.type, " +
                     "customer.notes AS notesCustomer, customer.date AS dateCustomer " +
-                    "FROM user INNER JOIN mydb.lead ON user.idUser = mydb.lead.idLead INNER JOIN customer ON mydb.lead.idLead = customer.idCustomer;";
+                    "FROM((mydb.lead INNER JOIN user ON lead.User_idUser = user.idUser) " +
+                    "INNER JOIN Customer ON mydb.lead.Customer_idCustomer = Customer.idCustomer);";
 
                 MySqlCommand command = new MySqlCommand(query, conn);
 
                 var row = command.ExecuteReader();
-
+                
                 if (row.HasRows)
                 {
                     while (row.Read())
@@ -41,6 +42,7 @@ namespace capaDatos
                         int idLead = int.Parse(row["idLead"].ToString());
                         int idCustomer = int.Parse(row["idCustomer"].ToString());
                         string userEmail = row["userEmail"].ToString();
+                        MessageBox.Show(userEmail);
                         string nameLead = row["nameLead"].ToString();
                         string dateLead = row["dateLead"].ToString();
                         string stage = row["stage"].ToString();
