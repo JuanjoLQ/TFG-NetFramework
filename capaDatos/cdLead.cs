@@ -19,29 +19,36 @@ namespace capaDatos
         ceLead ceLead = null;
         public bool addLead(ceLead lead)
         {
-            MySqlConnection conn = new MySqlConnection(cadenaConexion);
-            MySqlCommand cmd;
-            conn.Open();
-            
-            using (cmd = new MySqlCommand("insert into mydb.lead (name, date, stage, " +
-            "amount, notes, assignedTo, createdAt, customer_idcustomer, user_iduser) " +
-            "values(@name, @date, @stage, @amount, @notes, @assignedTo, @createdAt, @customeridcustomer, @useriduser);", conn))
+            try
             {
-                cmd.Parameters.AddWithValue("@name", lead.Name);
-                cmd.Parameters.AddWithValue("@date", lead.Date);
-                cmd.Parameters.AddWithValue("@stage", lead.Stage);
-                cmd.Parameters.AddWithValue("@amount", lead.Amount);
-                cmd.Parameters.AddWithValue("@notes", lead.Notes);
-                cmd.Parameters.AddWithValue("@assignedTo", lead.AssignedTo);
-                cmd.Parameters.AddWithValue("@createdAt", lead.CreatedAt);
-                cmd.Parameters.AddWithValue("@customeridcustomer", lead.idCustomer);
-                cmd.Parameters.AddWithValue("@useriduser", lead.idUser);
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                MySqlCommand cmd;
+                conn.Open();
+            
+                using (cmd = new MySqlCommand("insert into mydb.lead (name, date, stage, " +
+                "amount, notes, assignedTo, createdAt, customer_idcustomer, user_iduser) " +
+                "values(@name, @date, @stage, @amount, @notes, @assignedTo, @createdAt, @customeridcustomer, @useriduser);", conn))
+                {
+                    cmd.Parameters.AddWithValue("@name", lead.Name);
+                    cmd.Parameters.AddWithValue("@date", lead.Date);
+                    cmd.Parameters.AddWithValue("@stage", lead.Stage);
+                    cmd.Parameters.AddWithValue("@amount", lead.Amount);
+                    cmd.Parameters.AddWithValue("@notes", lead.Notes);
+                    cmd.Parameters.AddWithValue("@assignedTo", lead.AssignedTo);
+                    cmd.Parameters.AddWithValue("@createdAt", lead.CreatedAt);
+                    cmd.Parameters.AddWithValue("@customeridcustomer", lead.idCustomer);
+                    cmd.Parameters.AddWithValue("@useriduser", lead.idUser);
 
-                cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
+                }
+                MessageBox.Show("Lead añadido", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                conn.Close();
             }
-            MessageBox.Show("Lead añadido", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            conn.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
             return true;
         }

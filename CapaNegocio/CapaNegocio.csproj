@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cnAllowance.cs" />
+    <Compile Include="cnDoBackup.cs" />
     <Compile Include="cnCustomer.cs" />
     <Compile Include="cnDgvAllowance.cs" />
     <Compile Include="cnDgvCustomer.cs" />

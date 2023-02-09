@@ -34,6 +34,7 @@ namespace Tfg_NetFramework
         cnDgvCustomer cnDgvCustomer = new cnDgvCustomer();
         cnDgvLead cnDgvLead = new cnDgvLead();
         cnCustomer cnCustomer = new cnCustomer();
+        cnDoBackup cnDoBackup = new cnDoBackup();
 
         cdGlobals cdGlobals = new cdGlobals();
         Hashtable pdfs = new Hashtable();
@@ -449,6 +450,7 @@ namespace Tfg_NetFramework
             pGestionDietas.Visible = false;
             pSolicitudDieta.Visible = false;
             pCRMGest.Visible = false;
+            pSettingsModule.Visible = false;
         }
 
         private void btnSolDietas_Click(object sender, EventArgs e)
@@ -457,6 +459,7 @@ namespace Tfg_NetFramework
             pGestionDietas.Visible = false;
             pSolicitudDieta.Visible = true;
             pCRMGest.Visible = false;
+            pSettingsModule.Visible = false;
         }
 
         private void btnGestDietas_Click(object sender, EventArgs e)
@@ -465,8 +468,8 @@ namespace Tfg_NetFramework
             pGestionDietas.Visible = true;
             pSolicitudDieta.Visible = false;
             pCRMGest.Visible = false;
+            pSettingsModule.Visible = false;
         }
-
 
         private void btnCRM_Click(object sender, EventArgs e)
         {
@@ -474,8 +477,8 @@ namespace Tfg_NetFramework
             pGestionDietas.Visible = false;
             pSolicitudDieta.Visible = false;
             pCRMGest.Visible = true;
+            pSettingsModule.Visible = false;
         }
-
 
         private void dgvKilometraje_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -1115,6 +1118,28 @@ namespace Tfg_NetFramework
         private void dtpFechaFin_ValueChanged(object sender, EventArgs e)
         {
             dtpFechaInicio_ValueChanged(sender, e);
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            pSettingsModule.Visible = true;
+            pUsuarios.Visible = false;
+            pGestionDietas.Visible = false;
+            pSolicitudDieta.Visible = false;
+            pCRMGest.Visible = false;
+        }
+
+        private void btnSettingsSaveBackup_Click(object sender, EventArgs e)
+        {
+            // Guardar copia BBDD en CSV
+            cnDoBackup.doBackUp();
+
+        }
+
+        private void btnRestoreBackup_Click(object sender, EventArgs e)
+        {
+            // Restaurar copia BBDD en CSV
+
         }
     }
 }

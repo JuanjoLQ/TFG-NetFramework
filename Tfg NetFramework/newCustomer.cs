@@ -23,21 +23,37 @@ namespace Tfg_NetFramework
 
         private void btnNewCustomerSave_Click(object sender, EventArgs e)
         {
-            if (tbNewCustomerName.Text != string.Empty && cbNewCustomerType.SelectedItem.ToString() != string.Empty)
+            try
             {
-                if (cnCustomer.addCustomer(new ceCustomer(null, tbNewCustomerName.Text, tbNewCustomerPhone.Text, tbNewCustomerEmail.Text,
-                    tbNewCustomerDepartment.Text, tbNewCustomerCity.Text, tbNewCustomerState.Text, tbNewCustomerZip.Text,
-                    tbNewCustomerCountry.Text, tbNewCustomerAdress1.Text, tbNewCustomerAdress2.Text, cbNewCustomerType.SelectedItem.ToString(),
-                    tbNewCustomerNotes.Text, dtpNewCustomer.Text)))
+                var aux1 = tbNewCustomerName.Text;
+                var aux2 = cbNewCustomerType.SelectedItem;
+
+                if(aux1 == string.Empty || aux2 == null)
                 {
-                    MessageBox.Show("Customer creado con éxito.");
+                    MessageBox.Show("Falta por rellenar campos obligatorios.");
                 }
-                else
+
+                if (aux1 != string.Empty && aux2 != null)
                 {
-                    MessageBox.Show("Customer NO creado con éxito.");
+                    if (cnCustomer.addCustomer(new ceCustomer(null, tbNewCustomerName.Text, tbNewCustomerPhone.Text, tbNewCustomerEmail.Text,
+                        tbNewCustomerDepartment.Text, tbNewCustomerCity.Text, tbNewCustomerState.Text, tbNewCustomerZip.Text,
+                        tbNewCustomerCountry.Text, tbNewCustomerAdress1.Text, tbNewCustomerAdress2.Text, cbNewCustomerType.SelectedItem.ToString(),
+                        tbNewCustomerNotes.Text, dtpNewCustomer.Text)))
+                    {
+                        MessageBox.Show("Customer creado con éxito.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Customer NO creado con éxito.");
+                    }
+
                 }
-                    
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
 
         private void btnNewCustomerCancel_Click(object sender, EventArgs e)

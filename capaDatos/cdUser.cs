@@ -98,9 +98,6 @@ namespace capaDatos
                 return false;
             }
 
-
-
-
             Debug.WriteLine("CrearUsuario Succesfull");
 
             return true;
