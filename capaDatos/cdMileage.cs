@@ -33,11 +33,42 @@ namespace capaDatos
                 cmd.Parameters.AddWithValue("@priceperkilometer", mileage.priceperkilometer);
                 cmd.Parameters.AddWithValue("@final", mileage.final);
                 cmd.Parameters.AddWithValue("@state", "Solicitado");
+
                 cmd.ExecuteNonQuery();
             }
             MessageBox.Show("Kilometraje añadido", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             conn.Close();
+        }
+
+        public void addMileage(ceMileage mileage, MySqlConnection conn)
+        {
+            try
+            {
+                using (MySqlCommand cmd = new MySqlCommand("insert into mileage (idMileage, User_idUser, title, fechado, " +
+                "subcategory, origen, destino, kilometers, priceperkilometer, final, state) values(@idMileage, @User_idUser, " +
+                "@title, @fechado, @subcategory, @origen, @destino, @kilometers, @priceperkilometer, @final, @state);", conn))
+                {
+                    cmd.Parameters.AddWithValue("@idMileage", mileage.idMileage);
+                    cmd.Parameters.AddWithValue("@User_idUser", mileage.idMileage);
+                    cmd.Parameters.AddWithValue("@title", mileage.title);
+                    cmd.Parameters.AddWithValue("@fechado", mileage.fechado);
+                    cmd.Parameters.AddWithValue("@subcategory", mileage.subcategory);
+                    cmd.Parameters.AddWithValue("@origen", mileage.origen);
+                    cmd.Parameters.AddWithValue("@destino", mileage.destino);
+                    cmd.Parameters.AddWithValue("@kilometers", mileage.kilometers);
+                    cmd.Parameters.AddWithValue("@priceperkilometer", mileage.priceperkilometer);
+                    cmd.Parameters.AddWithValue("@final", mileage.final);
+                    cmd.Parameters.AddWithValue("@state", mileage.state);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         public void updateMileage(int idMileage, string state)

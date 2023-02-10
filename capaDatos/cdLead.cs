@@ -17,6 +17,7 @@ namespace capaDatos
     {
         string cadenaConexion = "Server=localhost;User=root;Password=TFG_ERP_C#;Port=3306;database=mydb;";
         ceLead ceLead = null;
+
         public bool addLead(ceLead lead)
         {
             try
@@ -51,6 +52,35 @@ namespace capaDatos
             }
 
             return true;
+        }
+
+        public void addLead(ceLead lead, MySqlConnection conn)
+        {
+            try
+            {
+                using (MySqlCommand cmd = new MySqlCommand("insert into mydb.lead (idLead, name, date, stage, " +
+                "amount, notes, assignedTo, createdAt, customer_idcustomer, user_iduser) " +
+                "values(@idLead, @name, @date, @stage, @amount, @notes, @assignedTo, @createdAt, @customeridcustomer, @useriduser);", conn))
+                {
+                    cmd.Parameters.AddWithValue("@idLead", lead.Idlead);
+                    cmd.Parameters.AddWithValue("@name", lead.Name);
+                    cmd.Parameters.AddWithValue("@date", lead.Date);
+                    cmd.Parameters.AddWithValue("@stage", lead.Stage);
+                    cmd.Parameters.AddWithValue("@amount", lead.Amount);
+                    cmd.Parameters.AddWithValue("@notes", lead.Notes);
+                    cmd.Parameters.AddWithValue("@assignedTo", lead.AssignedTo);
+                    cmd.Parameters.AddWithValue("@createdAt", lead.CreatedAt);
+                    cmd.Parameters.AddWithValue("@customeridcustomer", lead.idCustomer);
+                    cmd.Parameters.AddWithValue("@useriduser", lead.idUser);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         public ArrayList getLeads (ArrayList array)

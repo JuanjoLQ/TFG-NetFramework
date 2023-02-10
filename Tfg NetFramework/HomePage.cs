@@ -35,6 +35,7 @@ namespace Tfg_NetFramework
         cnDgvLead cnDgvLead = new cnDgvLead();
         cnCustomer cnCustomer = new cnCustomer();
         cnDoBackup cnDoBackup = new cnDoBackup();
+        cnRestoreBackUp cnRestoreBackUp = new cnRestoreBackUp();
 
         cdGlobals cdGlobals = new cdGlobals();
         Hashtable pdfs = new Hashtable();
@@ -1133,13 +1134,38 @@ namespace Tfg_NetFramework
         {
             // Guardar copia BBDD en CSV
             cnDoBackup.doBackUp();
-
         }
 
         private void btnRestoreBackup_Click(object sender, EventArgs e)
         {
+            string filePath = null;
             // Restaurar copia BBDD en CSV
+            using (OpenFileDialog ofdUpload = new OpenFileDialog() { Filter = "Text Documents (*.csv;) |*.csv", ValidateNames = true })
+            {
+                if (ofdUpload.ShowDialog() == DialogResult.OK)
+                {
+                    DialogResult dialog = MessageBox.Show("Are you sure want to restore this file?", "Juanjo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                    if (dialog == DialogResult.Yes)
+                    {
+                        filePath = ofdUpload.FileName; // Ruta absoluta del archivo
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
+            }
+
+            if (File.Exists(filePath))
+            {
+                cnRestoreBackUp.restoreBackUp(filePath);
+            }
+
+
+
+            
         }
+
     }
 }

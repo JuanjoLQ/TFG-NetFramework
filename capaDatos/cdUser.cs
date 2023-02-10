@@ -36,6 +36,26 @@ namespace capaDatos
             }
             MessageBox.Show("Conectado a la BBDD");
         }
+
+        public void addUser(ceUser user, MySqlConnection conn)
+        {
+            try
+            {
+                using (MySqlCommand cmd = new MySqlCommand("insert into user (idUser, email, password) " +
+                "values(@idUser, @email, @password);", conn))
+                {
+                    cmd.Parameters.AddWithValue("@idUser", user.idUser);
+                    cmd.Parameters.AddWithValue("@email", user.Email);
+                    cmd.Parameters.AddWithValue("@password", user.Password);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         
         public bool checkRole(string role)
         {

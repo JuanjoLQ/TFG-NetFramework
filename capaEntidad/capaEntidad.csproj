@@ -42,11 +42,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ceAllowance.cs" />
+    <Compile Include="ceCompany.cs" />
     <Compile Include="ceCustomer.cs" />
+    <Compile Include="ceDepartment.cs" />
+    <Compile Include="ceDepartment_User.cs" />
     <Compile Include="ceDescripcionItem.cs" />
     <Compile Include="ceGlobals.cs" />
     <Compile Include="ceLead.cs" />
     <Compile Include="ceMileage.cs" />
+    <Compile Include="ceRole.cs" />
+    <Compile Include="ceRole_User.cs" />
     <Compile Include="ceUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

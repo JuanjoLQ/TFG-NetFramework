@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.PropertyGridInternal;
 
 namespace capaDatos
 {
@@ -60,10 +61,25 @@ namespace capaDatos
 
         }
 
+        public void addRole(ceRole role, MySqlConnection conn)
+        {
+            try
+            {
+                using (MySqlCommand cmd = new MySqlCommand("insert into role (idRole, nameRole, privileges) " +
+                "values(@idRole, @nameRole, @privileges);", conn))
+                {
+                    cmd.Parameters.AddWithValue("@idRole", role.idRole);
+                    cmd.Parameters.AddWithValue("@nameRole", role.nameRole);
+                    cmd.Parameters.AddWithValue("@privileges", role.privileges);
 
-
-
-
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
     }
 }

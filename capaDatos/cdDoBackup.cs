@@ -82,6 +82,7 @@ namespace capaDatos
                         string department_users = row["department_users"].ToString();
 
                         sw.WriteLine("users: " + users + "," + " customers: " + customers + ", roles: " + roles + ", companies: " + companies + ", departments:" + departments + ", leads: " + leads + ", mileages: " + mileages + ", allowances: " + allowances + ", role_users: " + role_users + ", department_users: " + department_users);
+                        sw.WriteLine(users + ","+ customers + "," + roles + "," + companies + "," + departments + "," + leads + "," + mileages + "," + allowances + "," + role_users + "," + department_users);
                     }
                 }
                 else

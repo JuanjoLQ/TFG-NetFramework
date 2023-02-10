@@ -1,5 +1,6 @@
 ﻿using capaDatos;
 using capaEntidad;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,6 +17,11 @@ namespace CapaNegocio
         public bool addCustomer(ceCustomer customer)
         {
             return cdCustomer.addCustomer(customer);
+        }
+        
+        public void addCustomer(ceCustomer customer, MySqlConnection conn)
+        {
+            cdCustomer.addCustomer(customer, conn);
         }
 
         public ArrayList getCustomers (ArrayList array)

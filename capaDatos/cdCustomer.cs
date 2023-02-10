@@ -48,6 +48,39 @@ namespace capaDatos
             return true;
         }
 
+        public void addCustomer(ceCustomer customer, MySqlConnection conn)
+        {
+            try
+            {
+                using (MySqlCommand cmd = new MySqlCommand("insert into customer (idCustomer, name, phone, email, " +
+                "department, city, state, zip, country, adress1, adress2, type, notes, date) values(@idCustomer, @name, " +
+                "@phone, @email, @department, @city, @state, @zip, @country, @adress1, @adress2, @type, @notes, @date);", conn))
+                {
+                    cmd.Parameters.AddWithValue("@idCustomer", customer.idCustomer);
+                    cmd.Parameters.AddWithValue("@name", customer.Name);
+                    cmd.Parameters.AddWithValue("@phone", customer.Phone);
+                    cmd.Parameters.AddWithValue("@email", customer.Email);
+                    cmd.Parameters.AddWithValue("@department", customer.Department);
+                    cmd.Parameters.AddWithValue("@city", customer.City);
+                    cmd.Parameters.AddWithValue("@state", customer.State);
+                    cmd.Parameters.AddWithValue("@zip", customer.Zip);
+                    cmd.Parameters.AddWithValue("@country", customer.Country);
+                    cmd.Parameters.AddWithValue("@adress1", customer.Adress1);
+                    cmd.Parameters.AddWithValue("@adress2", customer.Adress2);
+                    cmd.Parameters.AddWithValue("@type", customer.Type);
+                    cmd.Parameters.AddWithValue("@notes", customer.Notes);
+                    cmd.Parameters.AddWithValue("@date", customer.Date);
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
         public ArrayList getCustomers(ArrayList array)
         {
             try
