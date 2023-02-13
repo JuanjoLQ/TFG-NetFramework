@@ -25,8 +25,8 @@
         public ceUser(string idUser, string email, string password)
         {
             this.idUser = int.Parse(idUser);
+            this.Email = email;
             this.Password = password;
-            this.isAdmin = isAdmin;
         }
 
         public int idUser { get; set; }

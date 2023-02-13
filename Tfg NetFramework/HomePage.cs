@@ -36,6 +36,8 @@ namespace Tfg_NetFramework
         cnCustomer cnCustomer = new cnCustomer();
         cnDoBackup cnDoBackup = new cnDoBackup();
         cnRestoreBackUp cnRestoreBackUp = new cnRestoreBackUp();
+        cnRole cnRole = new cnRole();
+        cnDepartment cnDepartment = new cnDepartment();
 
         cdGlobals cdGlobals = new cdGlobals();
         Hashtable pdfs = new Hashtable();
@@ -98,6 +100,9 @@ namespace Tfg_NetFramework
             GetLanguage();
 
             axAcroPDF1.Visible = false;
+
+            cnRole.getRoles(this.cbRole);
+            cnDepartment.getDepartments(this.cbDepartamento);
 
         }
 

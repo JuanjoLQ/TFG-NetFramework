@@ -15,7 +15,7 @@ namespace capaDatos
         {
             try
             {
-                using (MySqlCommand cmd = new MySqlCommand("INSERT INTO Department_Dser (Department_idDepartment, User_idUser) VALUES " +
+                using (MySqlCommand cmd = new MySqlCommand("INSERT INTO Department_User (Department_idDepartment, User_idUser) VALUES " +
                     "(@Department_idDepartment, @User_idUser);", conn))
                 {
                     cmd.Parameters.AddWithValue("@Department_idDepartment", department_user.Department_idDepartment);
@@ -24,9 +24,9 @@ namespace capaDatos
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.ToString());
             }
         }
     }

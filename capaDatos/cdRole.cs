@@ -1,9 +1,12 @@
 ﻿using capaEntidad;
 using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -75,11 +78,92 @@ namespace capaDatos
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch (MySqlException ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.ToString());
             }
         }
+
+        public int addAdminRole(MySqlConnection conn)
+        {
+            int idRole = 0;
+
+            conn.Close();
+
+            MySqlConnection con = new MySqlConnection(cadenaConexion);
+            con.Open();
+
+            
+            using (MySqlCommand cmd = new MySqlCommand("insert into role (nameRole, privileges) " +
+                "values(@nameRole, @privileges);", con))
+            {
+                cmd.Parameters.AddWithValue("@nameRole", "adminadmin");
+                cmd.Parameters.AddWithValue("@privileges", "1111");
+
+                cmd.ExecuteNonQuery();
+            }
+            
+            
+            string query = "SELECT idRole FROM role WHERE nameRole = ?nameRole;";
+
+            MySqlCommand command = new MySqlCommand(query, con);
+            command.Parameters.AddWithValue("?nameRole", "adminadmin");
+
+            var row = command.ExecuteReader();
+
+            
+
+            if (row.HasRows)
+            {
+                while (row.Read())
+                {
+                    idRole = int.Parse(row["idRole"].ToString());
+                }
+            }
+            else
+            {
+                MessageBox.Show("No hay users admins correspondientes al email indicado.");
+            }
+            
+            return idRole;
+
+        }
+
+        public void getRoles(ComboBox cbRole)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                conn.Open();
+                string query = "SELECT nameRole FROM role;";
+
+                MySqlCommand command = new MySqlCommand(query, conn);
+
+                var row = command.ExecuteReader();
+
+                if (row.HasRows)
+                {
+                    while (row.Read())
+                    {
+                        string nameRole = row["nameRole"].ToString();
+                        
+                        cbRole.Items.Add(nameRole);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay leads correspondientes al fechado indicado.");
+                }
+
+                row.Close();// Close reader.
+                conn.Close();// Close connection.
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.ToString());
+            }
+        }
+
 
     }
 }

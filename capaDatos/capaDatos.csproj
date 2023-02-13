@@ -90,6 +90,7 @@
   <ItemGroup>
     <Compile Include="cdAllowance.cs" />
     <Compile Include="cdCompany.cs" />
+    <Compile Include="cdDeleteBBDD.cs" />
     <Compile Include="cdDepartment.cs" />
     <Compile Include="cdDepartmentUser.cs" />
     <Compile Include="cdDoBackup.cs" />

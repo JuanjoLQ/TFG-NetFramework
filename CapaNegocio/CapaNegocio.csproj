@@ -82,6 +82,7 @@
   <ItemGroup>
     <Compile Include="cnAllowance.cs" />
     <Compile Include="cnCompany.cs" />
+    <Compile Include="cnDeleteBBDD.cs" />
     <Compile Include="cnDepartment.cs" />
     <Compile Include="cnDepartmentUser.cs" />
     <Compile Include="cnDoBackup.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="cnMileage.cs" />
     <Compile Include="cnPipelineFlps.cs" />
     <Compile Include="cnRestoreBackUp.cs" />
+    <Compile Include="cnRole.cs" />
     <Compile Include="cnRoleUser.cs" />
     <Compile Include="cnUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -13,13 +13,16 @@ using System.Runtime.Remoting.Messaging;
 using Org.BouncyCastle.Utilities;
 using System.Reflection;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.ComTypes;
+using System.Security.Cryptography;
 
 namespace capaDatos
 {
 
     public class cdUser
     {
-
+        cdRole cdRole = new cdRole();
+        cdRoleUser cdRoleUser = new cdRoleUser();
         string cadenaConexion = "Server=localhost;User=root;Password=TFG_ERP_C#;Port=3306;database=mydb;";
 
         public void PruebaConexion() {
@@ -50,13 +53,68 @@ namespace capaDatos
 
                     cmd.ExecuteNonQuery();
                 }
+
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        public void addAdminUser(MySqlConnection conn)
+        {
+            try
+            {
+                int idUser = 0;
+                int idRole = 0;
+
+                using (MySqlCommand cmd = new MySqlCommand("insert into user (email, password) " +
+                "values(@email, @password);", conn))
+                {
+                    cmd.Parameters.AddWithValue("@email", "admin@admin.com");
+                    cmd.Parameters.AddWithValue("@password", 1234);
+
+                    cmd.ExecuteNonQuery();
+                }
+                
+                string query = "SELECT idUser FROM user WHERE email = ?email;";
+
+                MySqlCommand command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("?email", "admin@admin.com");
+
+                var row = command.ExecuteReader();
+
+                if (row.HasRows)
+                {
+                    while (row.Read())
+                    {
+                        idUser = int.Parse(row["idUser"].ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay users admins correspondientes al email indicado.");
+                }
+                
+                if (idUser > 0)
+                {
+                    idRole = cdRole.addAdminRole(conn);
+                    if (idRole > 0)
+                    {
+                        MySqlConnection con = new MySqlConnection(cadenaConexion);
+                        con.Open();
+                        cdRoleUser.addRoleUserAdmin(idUser, idRole, con);
+                    }
+                }
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
         public bool checkRole(string role)
         {
             Debug.WriteLine("Capa datos checkRole");
