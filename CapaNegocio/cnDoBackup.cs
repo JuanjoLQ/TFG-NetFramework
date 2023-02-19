@@ -11,9 +11,9 @@ namespace CapaNegocio
     {
         cdDoBackup cdBackup = new cdDoBackup();
 
-        public void doBackUp()
+        public void doBackUp(string email)
         {
-            cdBackup.doBackUp();
+            cdBackup.doBackUp(email);
         }
 
 

@@ -139,6 +139,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Res.en-US.resx</DependentUpon>
     </Compile>
+    <Compile Include="tbPlaceHolder.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="descrCustomer.resx">
       <DependentUpon>descrCustomer.cs</DependentUpon>
     </EmbeddedResource>

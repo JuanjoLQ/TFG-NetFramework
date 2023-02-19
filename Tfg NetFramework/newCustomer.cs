@@ -16,9 +16,12 @@ namespace Tfg_NetFramework
     public partial class newCustomer : Form
     {
         cnCustomer cnCustomer = new cnCustomer();
-        public newCustomer()
+        cdGlobals cdGlobals = new cdGlobals();
+        string email;
+        public newCustomer(string email)
         {
             InitializeComponent();
+            this.email = email;
         }
 
         private void btnNewCustomerSave_Click(object sender, EventArgs e)
@@ -41,6 +44,7 @@ namespace Tfg_NetFramework
                         tbNewCustomerNotes.Text, dtpNewCustomer.Text)))
                     {
                         MessageBox.Show("Customer creado con éxito.");
+                        cdGlobals.newLogEntry(this.email, "Customer creado");
                     }
                     else
                     {

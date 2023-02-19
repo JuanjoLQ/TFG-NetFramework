@@ -11,9 +11,9 @@ namespace CapaNegocio
     {
         cdRestoreBackUp cdRestoreBackUp = new cdRestoreBackUp();
 
-        public void restoreBackUp(string path)
+        public void restoreBackUp(string path, string email)
         {
-            cdRestoreBackUp.restoreBackUp(path);
+            cdRestoreBackUp.restoreBackUp(path, email);
         }
 
     }

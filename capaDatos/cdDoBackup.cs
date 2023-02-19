@@ -15,7 +15,9 @@ namespace capaDatos
     public class cdDoBackup
     {
         string cadenaConexion = "Server=localhost;User=root;Password=TFG_ERP_C#;Port=3306;database=mydb;";
-        public void doBackUp()
+        cdGlobals cdGlobals = new cdGlobals();
+
+        public void doBackUp(string email)
         {
             try
             {
@@ -50,6 +52,7 @@ namespace capaDatos
             finally
             {
                 Console.WriteLine("Executing finally block.");
+                cdGlobals.newLogEntry(email, "Copia de seguridad de la BBDD realizada correctamente");
             }
         }
 

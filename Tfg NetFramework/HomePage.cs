@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using capaDatos;
 using capaEntidad;
@@ -15,7 +11,6 @@ using MySql.Data.MySqlClient;
 using System.IO;
 using System.Collections;
 using CapaNegocio;
-using System.Security.Policy;
 
 namespace Tfg_NetFramework
 {
@@ -42,6 +37,8 @@ namespace Tfg_NetFramework
         cdGlobals cdGlobals = new cdGlobals();
         Hashtable pdfs = new Hashtable();
 
+        string emailUser;
+
         public HomePage()
         {
             InitializeComponent();
@@ -59,6 +56,8 @@ namespace Tfg_NetFramework
 
             StringBuilder sb = new StringBuilder("User: ", 50);
             sb.Append(ceGlobals.email);
+
+            this.emailUser = ceGlobals.email;
 
             cdGlobals.setId(ceGlobals.email);
 
@@ -104,6 +103,7 @@ namespace Tfg_NetFramework
             cnRole.getRoles(this.cbRole);
             cnDepartment.getDepartments(this.cbDepartamento);
 
+            cdGlobals.newLogEntry(emailUser, "Inicio de sesión de " + emailUser);
         }
 
         private void GetLanguage()
@@ -116,7 +116,6 @@ namespace Tfg_NetFramework
         {
             if (Res.Exit == "Salir")
             {
-
                 btnGestUsers.Text = Res.pManUsers.Replace(" ", "\n");
                 btnSolDietas.Text = Res.pSolAllowance.Replace(" ", "\n");
                 btnGestDietas.Text = Res.pManAllowance.Replace(" ", "\n");
@@ -152,13 +151,13 @@ namespace Tfg_NetFramework
             lbRegisterUser.Text = Res.lbRegisterUser;
 
             // Textboxs
-            //tbREmail.PlaceholderText = Res.Email;
-            //tbRPassword.PlaceholderText = Res.Pass;
-            //tbEmail.PlaceholderText = Res.Email;
-            //tbPassword.PlaceholderText = Res.Pass;
-            //tbDepartment.PlaceholderText = Res.department;
-            //tbIdUser.PlaceholderText = Res.idUser;
-            //tbOcupacion.PlaceholderText = Res.job;
+            tbREmail.start(Res.Email);
+            tbRPassword.start(Res.Pass);
+            tbEmail.start(Res.Email);
+            tbPassword.start(Res.Pass);
+            tbDepartment.start(Res.department);
+            tbIdUser.start(Res.idUser);
+            tbOcupacion.start(Res.job);
 
             // Buttons
             btnRRegistrar.Text = Res.btnRegistrar;
@@ -188,8 +187,8 @@ namespace Tfg_NetFramework
             lbReqAllowancesDate.Text = Res.date;
 
             // TextBoxs
-            //tbReqAllowancesTitle.PlaceholderText = Res.title;
-            //tbReqAllowancesObservations.PlaceholderText = Res.observations;
+            tbReqAllowancesTitle.start(Res.title);
+            tbReqAllowancesObservations.start(Res.observations);
 
             // Buttons
             btnReqAllowancesUploadFile.Text = Res.UploadFile;
@@ -208,12 +207,12 @@ namespace Tfg_NetFramework
             lbReqMileagePricePerKilometer.Text = Res.pricePerKilometer;
 
             // Textboxs
-            //tbReqMileageMileage.PlaceholderText = Res.kilometers;
-            //tbReqMileageTitle.PlaceholderText = Res.title;
-            //tbReqMileageOrigin.PlaceholderText = Res.origin;
-            //tbReqMileageDestination.PlaceholderText = Res.destination;
-            //tbReqMileageTotal.PlaceholderText = Res.total;
-            //tbReqMileagePricePerKilometer.PlaceholderText = Res.pricePerKilometer;
+            tbReqMileageMileage.start(Res.kilometers);
+            tbReqMileageTitle.start(Res.title);
+            tbReqMileageOrigin.start(Res.origin);
+            tbReqMileageDestination.start(Res.destination);
+            tbReqMileageTotal.start(Res.total);
+            tbReqMileagePricePerKilometer.start(Res.pricePerKilometer);
 
             // Button
             btnSolDietasSolKilometraje.Text = Res.requestMileage;
@@ -251,14 +250,14 @@ namespace Tfg_NetFramework
             lbManAllowancesIdAllowance.Text = Res.idAllowance;
 
             // Textboxs
-            //tbManAllowancesEmail.PlaceholderText = Res.Email;
-            //tbManAllowancesTitle.PlaceholderText = Res.title;
-            //tbManAllowancesObservations.PlaceholderText = Res.observations;
-            //tbManAllowancesDate.PlaceholderText = Res.date;
-            //tbManAllowancesStartHour.PlaceholderText = Res.startHour;
-            //tbManAllowancesEndHour.PlaceholderText = Res.endHour;
-            //tbManAllowancesState.PlaceholderText = Res.state;
-            //tbManAllowancesIdAllowance.PlaceholderText = Res.idAllowance;
+            tbManAllowancesEmail.start(Res.Email);
+            tbManAllowancesTitle.start(Res.title);
+            tbManAllowancesObservations.start(Res.observations);
+            tbManAllowancesDate.start(Res.date);
+            tbManAllowancesStartHour.start(Res.startHour);
+            tbManAllowancesEndHour.start(Res.endHour);
+            tbManAllowancesState.start(Res.state);
+            tbManAllowancesIdAllowance.start(Res.idAllowance);
 
             // Buttons
             btnManAllowancesDietasRefresh.Text = Res.updateTable;
@@ -296,19 +295,17 @@ namespace Tfg_NetFramework
             lbManMileageNewState.Text = Res.newState;
 
             // Textboxs
-            //tbManMileageEmail.PlaceholderText = Res.Email;
-            //tbManMileageTitle.PlaceholderText = Res.title;
-            //tbManMileageDate.PlaceholderText = Res.date;
-            //tbManMileageSubcategory.PlaceholderText = Res.subcategory;
-            //tbManMileageIdMileage.PlaceholderText = Res.idMileage;
-            //tbManMileageOrigin.PlaceholderText = Res.origin;
-            //tbManMileageDestination.PlaceholderText = Res.destination;
-            //tbManMileageKilometers.PlaceholderText = Res.kilometers;
-            //tbManMileagePricePerKilometer.PlaceholderText = Res.pricePerKilometer;
-            //tbManMileageFinal.PlaceholderText = Res.final;
-            //tbManMileageState.PlaceholderText = Res.state;
-
-
+            tbManMileageEmail.start(Res.Email);
+            tbManMileageTitle.start(Res.title);
+            tbManMileageDate.start(Res.date);
+            tbManMileageSubcategory.start(Res.subcategory);
+            tbManMileageIdMileage.start(Res.idMileage);
+            tbManMileageOrigin.start(Res.origin);
+            tbManMileageDestination.start(Res.destination);
+            tbManMileageKilometers.start(Res.kilometers);
+            tbManMileagePricePerKilometer.start(Res.pricePerKilometer);
+            tbManMileageFinal.start(Res.final);
+            tbManMileageState.start(Res.state);
 
             // Buttons
             btnManMileageRefreshDgvMileage.Text = Res.updateTable;
@@ -389,6 +386,24 @@ namespace Tfg_NetFramework
             Application.Exit();
         }
 
+        /*
+         
+            .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
+        | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+        | | _____  _____ | || |    _______   | || |  _________   | || |  _______     | || |    _______   | |
+        | ||_   _||_   _|| || |   /  ___  |  | || | |_   ___  |  | || | |_   __ \    | || |   /  ___  |  | |
+        | |  | |    | |  | || |  |  (__ \_|  | || |   | |_  \_|  | || |   | |__) |   | || |  |  (__ \_|  | |
+        | |  | '    ' |  | || |   '.___`-.   | || |   |  _|  _   | || |   |  __ /    | || |   '.___`-.   | |
+        | |   \ `--' /   | || |  |`\____) |  | || |  _| |___/ |  | || |  _| |  \ \_  | || |  |`\____) |  | |
+        | |    `.__.'    | || |  |_______.'  | || | |_________|  | || | |____| |___| | || |  |_______.'  | |
+        | |              | || |              | || |              | || |              | || |              | |
+        | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+            '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
+
+         */
+
+
+
         private void btnRRegistrar_Click(object sender, EventArgs e)
         {
             string role, departamento;
@@ -407,6 +422,7 @@ namespace Tfg_NetFramework
             if (cnUser.CrearUser(user, role, departamento))
             {
                 MessageBox.Show("Usuario creado con éxito.");
+                cdGlobals.newLogEntry(emailUser, "Usuario creado");
             }
             else
             {
@@ -536,6 +552,22 @@ namespace Tfg_NetFramework
             tbManMileageState.Text = dgvMileage.CurrentRow.Cells[10].Value.ToString();
         }
 
+        /*
+        
+         .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .-----------------. .----------------.  .----------------.  .----------------. 
+        | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+        | |      __      | || |   _____      | || |   _____      | || |     ____     | || | _____  _____ | || |      __      | || | ____  _____  | || |     ______   | || |  _________   | || |    _______   | |
+        | |     /  \     | || |  |_   _|     | || |  |_   _|     | || |   .'    `.   | || ||_   _||_   _|| || |     /  \     | || ||_   \|_   _| | || |   .' ___  |  | || | |_   ___  |  | || |   /  ___  |  | |
+        | |    / /\ \    | || |    | |       | || |    | |       | || |  /  .--.  \  | || |  | | /\ | |  | || |    / /\ \    | || |  |   \ | |   | || |  / .'   \_|  | || |   | |_  \_|  | || |  |  (__ \_|  | |
+        | |   / ____ \   | || |    | |   _   | || |    | |   _   | || |  | |    | |  | || |  | |/  \| |  | || |   / ____ \   | || |  | |\ \| |   | || |  | |         | || |   |  _|  _   | || |   '.___`-.   | |
+        | | _/ /    \ \_ | || |   _| |__/ |  | || |   _| |__/ |  | || |  \  `--'  /  | || |  |   /\   |  | || | _/ /    \ \_ | || | _| |_\   |_  | || |  \ `.___.'\  | || |  _| |___/ |  | || |  |`\____) |  | |
+        | ||____|  |____|| || |  |________|  | || |  |________|  | || |   `.____.'   | || |  |__/  \__|  | || ||____|  |____|| || ||_____|\____| | || |   `._____.'  | || | |_________|  | || |  |_______.'  | |
+        | |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | |
+        | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+         '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
+
+        */
+
         private void cbGestDietas_SelectionChangeCommitted(object sender, EventArgs e)
         {
             if (cbGestDietas.SelectedItem.Equals("Dietas"))
@@ -643,6 +675,7 @@ namespace Tfg_NetFramework
         {
             string idUser = dgvUser.CurrentRow.Cells[0].Value.ToString();
             cnUser.delUser(int.Parse(idUser));
+            cdGlobals.newLogEntry(emailUser, "Usuario eliminado");
             tbDepartment.Text = string.Empty;
             tbOcupacion.Text = string.Empty;
             tbIdUser.Text = string.Empty;
@@ -708,6 +741,7 @@ namespace Tfg_NetFramework
                     if (dialog == DialogResult.Yes)
                     {
                         fileName = ofdUpload.FileName; // Ruta absoluta del archivo
+                        cdGlobals.newLogEntry(emailUser, "Dieta: Archivo seleccionado");
                     }
                     else
                     {
@@ -723,6 +757,7 @@ namespace Tfg_NetFramework
                 && !mtbReqAllowancesStartHour.Equals("") && !mtbReqAllowancesEndHour.Equals("") && !fileName.Equals(""))
             {
                 UploadFile(fileName);
+                cdGlobals.newLogEntry(emailUser, "Dieta solicitada");
             }
             else
             {
@@ -743,6 +778,7 @@ namespace Tfg_NetFramework
         private void btnGestDietasUpdate_Click(object sender, EventArgs e)
         {
             cnAllowance.updateAllowance(int.Parse(dgvAllowances.CurrentRow.Cells[0].Value.ToString()), tbManAllowancesState.Text);
+            cdGlobals.newLogEntry(emailUser, "Dieta modificada");
             tbManAllowancesEmail.Text = string.Empty;
             tbManAllowancesTitle.Text = string.Empty;
             tbManAllowancesObservations.Text = string.Empty;
@@ -754,6 +790,40 @@ namespace Tfg_NetFramework
             cbStateDietas.Text = string.Empty;
         }
 
+        private void btnAllowanceRemove_Click(object sender, EventArgs e)
+        {
+            cnAllowance.deleteAllowance(int.Parse(dgvAllowances.CurrentRow.Cells[0].Value.ToString()));
+            cdGlobals.newLogEntry(emailUser, "Dieta eliminada");
+            dgvUser.Update();
+            dgvUser.Refresh();
+            cnUser.dgvUsers(dgvUser);
+            tbManAllowancesEmail.Text = string.Empty;
+            tbManAllowancesTitle.Text = string.Empty;
+            tbManAllowancesObservations.Text = string.Empty;
+            tbManAllowancesDate.Text = string.Empty;
+            tbManAllowancesStartHour.Text = string.Empty;
+            tbManAllowancesEndHour.Text = string.Empty;
+            tbManAllowancesState.Text = string.Empty;
+            tbManAllowancesIdAllowance.Text = string.Empty;
+            cbStateDietas.Text = string.Empty;
+        }
+
+        /*
+
+         .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
+        | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+        | | ____    ____ | || |     _____    | || |   _____      | || |  _________   | || |      __      | || |    ______    | || |  _________   | || |    _______   | |
+        | ||_   \  /   _|| || |    |_   _|   | || |  |_   _|     | || | |_   ___  |  | || |     /  \     | || |  .' ___  |   | || | |_   ___  |  | || |   /  ___  |  | |
+        | |  |   \/   |  | || |      | |     | || |    | |       | || |   | |_  \_|  | || |    / /\ \    | || | / .'   \_|   | || |   | |_  \_|  | || |  |  (__ \_|  | |
+        | |  | |\  /| |  | || |      | |     | || |    | |   _   | || |   |  _|  _   | || |   / ____ \   | || | | |    ____  | || |   |  _|  _   | || |   '.___`-.   | |
+        | | _| |_\/_| |_ | || |     _| |_    | || |   _| |__/ |  | || |  _| |___/ |  | || | _/ /    \ \_ | || | \ `.___]  _| | || |  _| |___/ |  | || |  |`\____) |  | |
+        | ||_____||_____|| || |    |_____|   | || |  |________|  | || | |_________|  | || ||____|  |____|| || |  `._____.'   | || | |_________|  | || |  |_______.'  | |
+        | |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | |
+        | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+         '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
+
+        */
+
         private void cbMileageState_SelectionChangeCommitted(object sender, EventArgs e)
         {
             tbManMileageState.Text = cbManMileageNewState.SelectedItem.ToString();
@@ -762,6 +832,7 @@ namespace Tfg_NetFramework
         private void btnUpdateStateMileage_Click(object sender, EventArgs e)
         {
             cnMileage.updateMileage(int.Parse(dgvMileage.CurrentRow.Cells[0].Value.ToString()), tbManMileageState.Text);
+            cdGlobals.newLogEntry(emailUser, "Kilometraje actualizado");
         }
 
         private void btnRefreshDgvMileage_Click(object sender, EventArgs e)
@@ -787,6 +858,7 @@ namespace Tfg_NetFramework
         private void btnKilometrajeEliminar_Click(object sender, EventArgs e)
         {
             cnMileage.deleteMileage(int.Parse(dgvMileage.CurrentRow.Cells[0].Value.ToString()));
+            cdGlobals.newLogEntry(emailUser, "Kilometraje eliminado");
 
             tbManMileageEmail.Text = string.Empty;
             tbManMileageTitle.Text = string.Empty;
@@ -802,30 +874,13 @@ namespace Tfg_NetFramework
             cbManMileageNewState.Text = string.Empty;
         }
 
-        private void btnAllowanceRemove_Click(object sender, EventArgs e)
-        {
-            cnAllowance.deleteAllowance(int.Parse(dgvAllowances.CurrentRow.Cells[0].Value.ToString()));
-            dgvUser.Update();
-            dgvUser.Refresh();
-            cnUser.dgvUsers(dgvUser);
-            tbManAllowancesEmail.Text = string.Empty;
-            tbManAllowancesTitle.Text = string.Empty;
-            tbManAllowancesObservations.Text = string.Empty;
-            tbManAllowancesDate.Text = string.Empty;
-            tbManAllowancesStartHour.Text = string.Empty;
-            tbManAllowancesEndHour.Text = string.Empty;
-            tbManAllowancesState.Text = string.Empty;
-            tbManAllowancesIdAllowance.Text = string.Empty;
-            cbStateDietas.Text = string.Empty;
-        }
-
         private void btnSolDietasSolKilometraje_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Id user: " + ceGlobals.id);
             cnMileage.insertMileage(new ceMileage(0, int.Parse(ceGlobals.id),
                 tbReqMileageTitle.Text, dtpReqDietasMileageDate.Text, cbReqMileageSubCategory.SelectedItem.ToString(),
                 tbReqMileageOrigin.Text, tbReqMileageDestination.Text, float.Parse(tbReqMileageMileage.Text),
                 float.Parse(tbReqMileagePricePerKilometer.Text), float.Parse(tbReqMileageTotal.Text), "Solicitado"));
+            cdGlobals.newLogEntry(emailUser, "Kilometraje solicitado");
         }
 
         private void cbMileageSubCategory_SelectionChangeCommitted(object sender, EventArgs e)
@@ -858,11 +913,6 @@ namespace Tfg_NetFramework
             }
         }
 
-        private void tbREmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void dgvAllowances_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvAllowances.Columns[e.ColumnIndex].Name == "invoice")
@@ -880,54 +930,6 @@ namespace Tfg_NetFramework
         }
 
         /*
-
-         .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
-        | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
-        | | ____    ____ | || |     _____    | || |   _____      | || |  _________   | || |      __      | || |    ______    | || |  _________   | || |    _______   | |
-        | ||_   \  /   _|| || |    |_   _|   | || |  |_   _|     | || | |_   ___  |  | || |     /  \     | || |  .' ___  |   | || | |_   ___  |  | || |   /  ___  |  | |
-        | |  |   \/   |  | || |      | |     | || |    | |       | || |   | |_  \_|  | || |    / /\ \    | || | / .'   \_|   | || |   | |_  \_|  | || |  |  (__ \_|  | |
-        | |  | |\  /| |  | || |      | |     | || |    | |   _   | || |   |  _|  _   | || |   / ____ \   | || | | |    ____  | || |   |  _|  _   | || |   '.___`-.   | |
-        | | _| |_\/_| |_ | || |     _| |_    | || |   _| |__/ |  | || |  _| |___/ |  | || | _/ /    \ \_ | || | \ `.___]  _| | || |  _| |___/ |  | || |  |`\____) |  | |
-        | ||_____||_____|| || |    |_____|   | || |  |________|  | || | |_________|  | || ||____|  |____|| || |  `._____.'   | || | |_________|  | || |  |_______.'  | |
-        | |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | |
-        | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
-         '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
-
-        */
-
-        /*
-        
-         .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .-----------------. .----------------.  .----------------.  .----------------. 
-        | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
-        | |      __      | || |   _____      | || |   _____      | || |     ____     | || | _____  _____ | || |      __      | || | ____  _____  | || |     ______   | || |  _________   | || |    _______   | |
-        | |     /  \     | || |  |_   _|     | || |  |_   _|     | || |   .'    `.   | || ||_   _||_   _|| || |     /  \     | || ||_   \|_   _| | || |   .' ___  |  | || | |_   ___  |  | || |   /  ___  |  | |
-        | |    / /\ \    | || |    | |       | || |    | |       | || |  /  .--.  \  | || |  | | /\ | |  | || |    / /\ \    | || |  |   \ | |   | || |  / .'   \_|  | || |   | |_  \_|  | || |  |  (__ \_|  | |
-        | |   / ____ \   | || |    | |   _   | || |    | |   _   | || |  | |    | |  | || |  | |/  \| |  | || |   / ____ \   | || |  | |\ \| |   | || |  | |         | || |   |  _|  _   | || |   '.___`-.   | |
-        | | _/ /    \ \_ | || |   _| |__/ |  | || |   _| |__/ |  | || |  \  `--'  /  | || |  |   /\   |  | || | _/ /    \ \_ | || | _| |_\   |_  | || |  \ `.___.'\  | || |  _| |___/ |  | || |  |`\____) |  | |
-        | ||____|  |____|| || |  |________|  | || |  |________|  | || |   `.____.'   | || |  |__/  \__|  | || ||____|  |____|| || ||_____|\____| | || |   `._____.'  | || | |_________|  | || |  |_______.'  | |
-        | |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | |
-        | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
-         '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
-
-        */
-
-        /*
-         
-            .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
-        | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
-        | | _____  _____ | || |    _______   | || |  _________   | || |  _______     | || |    _______   | |
-        | ||_   _||_   _|| || |   /  ___  |  | || | |_   ___  |  | || | |_   __ \    | || |   /  ___  |  | |
-        | |  | |    | |  | || |  |  (__ \_|  | || |   | |_  \_|  | || |   | |__) |   | || |  |  (__ \_|  | |
-        | |  | '    ' |  | || |   '.___`-.   | || |   |  _|  _   | || |   |  __ /    | || |   '.___`-.   | |
-        | |   \ `--' /   | || |  |`\____) |  | || |  _| |___/ |  | || |  _| |  \ \_  | || |  |`\____) |  | |
-        | |    `.__.'    | || |  |_______.'  | || | |_________|  | || | |____| |___| | || |  |_______.'  | |
-        | |              | || |              | || |              | || |              | || |              | |
-        | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
-            '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
-
-         */
-
-        /*
          .----------------.  .----------------.  .----------------. 
         | .--------------. || .--------------. || .--------------. |
         | |     ______   | || |  _______     | || | ____ ____ | |
@@ -940,6 +942,7 @@ namespace Tfg_NetFramework
         | '--------------' || '--------------' || '--------------' |
          '----------------'  '----------------'  '----------------' 
         */
+
         private int aux = 0;
         private void button1_Click_1(object sender, EventArgs e)
         {
@@ -998,14 +1001,15 @@ namespace Tfg_NetFramework
 
         private void btnPipelineAddLead_Click(object sender, EventArgs e)
         {
-            Form newLead = new newLead();
+            Form newLead = new newLead(emailUser);
 
             newLead.Show();
+            
         }
 
         private void btnCustomersAddCustomers_Click(object sender, EventArgs e)
         {
-            Form newCustomer = new newCustomer();
+            Form newCustomer = new newCustomer(emailUser);
 
             newCustomer.Show();
         }
@@ -1022,6 +1026,7 @@ namespace Tfg_NetFramework
                     cnCustomer.deleteCustomer(int.Parse(idCustomer));
                     dgvCustomer_Lead.RowCount = 0;
                     btnUpdateDgvCustomer_Click(sender, e);
+                    cdGlobals.newLogEntry(emailUser, "Customer y leads asociados eliminados");
                 }
             }
             else if (dialogResult == DialogResult.No)
@@ -1103,6 +1108,7 @@ namespace Tfg_NetFramework
 
             descrCustomer descrCustomer = new descrCustomer(cnCustomer.getCustomer(int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString())));
             descrCustomer.Show();
+            cdGlobals.newLogEntry(emailUser, "Customer visualización de información, idCustomer: " + dgvCustomer.CurrentRow.Cells[0].Value.ToString());
 
         }
 
@@ -1138,7 +1144,7 @@ namespace Tfg_NetFramework
         private void btnSettingsSaveBackup_Click(object sender, EventArgs e)
         {
             // Guardar copia BBDD en CSV
-            cnDoBackup.doBackUp();
+            cnDoBackup.doBackUp(emailUser);
         }
 
         private void btnRestoreBackup_Click(object sender, EventArgs e)
@@ -1164,12 +1170,9 @@ namespace Tfg_NetFramework
 
             if (File.Exists(filePath))
             {
-                cnRestoreBackUp.restoreBackUp(filePath);
+                cnRestoreBackUp.restoreBackUp(filePath, emailUser);
             }
 
-
-
-            
         }
 
     }

@@ -26,11 +26,12 @@ namespace capaDatos
         cdRoleUser cdRoleUser = new cdRoleUser();
         cdDepartmentUser cdDepartmentUser = new cdDepartmentUser();
         cdDeleteBBDD cdDeleteBBDD = new cdDeleteBBDD();
+        cdGlobals cdGlobals = new cdGlobals();
 
         List<string> backup = new List<string>();
 
         string cadenaConexion = "Server=localhost;User=root;Password=TFG_ERP_C#;Port=3306;database=mydb;";
-        public void restoreBackUp(string path) 
+        public void restoreBackUp(string path, string email) 
         {
             string line;
             //Pass the file path and file name to the StreamReader constructor
@@ -173,6 +174,8 @@ namespace capaDatos
                 departments_users(backup[i], conn);
             }
             MessageBox.Show("Department_Users: Inicio: " + start + ", end: " + end);
+
+            cdGlobals.newLogEntry(email, "Copia de seguridad restaurada");
 
             conn.Close();
 

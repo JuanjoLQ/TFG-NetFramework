@@ -1,13 +1,7 @@
 ﻿using capaEntidad;
 using CapaNegocio;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tfg_NetFramework
@@ -34,15 +28,16 @@ namespace Tfg_NetFramework
             }
             else if(stageLead == "Qualified")
             {
-                btnNew.BackColor = Color.FromArgb(107, 107, 114);
+
+                btnQualified.BackColor = Color.FromArgb(107, 107, 114);
             }
             else if (stageLead == "Proposition")
             {
-                btnNew.BackColor = Color.FromArgb(107, 107, 114);
+                btnProposition.BackColor = Color.FromArgb(107, 107, 114);
             }
             else
             {
-                btnNew.BackColor = Color.FromArgb(107, 107, 114);
+                btnWon.BackColor = Color.FromArgb(107, 107, 114);
             }
             idLead = descripcionItem.Lead.Idlead;
             lbLeadName.Text = descripcionItem.Lead.Name;

@@ -12,20 +12,25 @@ using System.Windows.Forms;
 using System.Collections;
 using System.Data.SqlClient;
 using capaNegocio;
+using capaDatos;
 
 namespace Tfg_NetFramework
 {
     public partial class newLead : Form
     {
         cnLead cnLead = new cnLead();
+        cdGlobals cdGlobals = new cdGlobals();
         cnUser cnUser = new cnUser();
         cnCustomer cnCustomer = new cnCustomer();
         Dictionary<Tuple<string, string>, string> departments_employees = new Dictionary<Tuple<string, string>, string>();
         ArrayList customers = new ArrayList();
+        string email;
 
-        public newLead()
+        public newLead(string email)
         {
             InitializeComponent();
+            this.email = email;
+
         }
 
         private void newLead_Load(object sender, EventArgs e)
@@ -127,6 +132,7 @@ namespace Tfg_NetFramework
                     int.Parse(idCustomer), int.Parse(idUser))))
                 {
                     MessageBox.Show("Lead creado con éxito.");
+                    cdGlobals.newLogEntry(email, "Lead creado");
                 }
                 else
                 {

@@ -1,22 +1,14 @@
 ﻿using capaEntidad;
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Utilities;
-using Org.BouncyCastle.Utilities.Collections;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Lifetime;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace capaDatos
-{    
+{
     public class cdLead
     {
         string cadenaConexion = "Server=localhost;User=root;Password=TFG_ERP_C#;Port=3306;database=mydb;";
-        ceLead ceLead = null;
 
         public bool addLead(ceLead lead)
         {
