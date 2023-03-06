@@ -9,7 +9,6 @@ namespace capaEntidad
     public class ceDescripcionItem
     {
 
-
         public ceDescripcionItem(ceUser user, ceLead lead, ceCustomer customer)
         {
             this.User = user;
@@ -20,8 +19,6 @@ namespace capaEntidad
         public ceUser User { get; set; }
         public ceLead Lead { get; set; }
         public ceCustomer Customer { get; set; }
-
-
 
     }
 }

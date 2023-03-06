@@ -50,9 +50,11 @@
     <Compile Include="ceGlobals.cs" />
     <Compile Include="ceLead.cs" />
     <Compile Include="ceMileage.cs" />
+    <Compile Include="ceProduct.cs" />
     <Compile Include="ceRole.cs" />
     <Compile Include="ceRole_User.cs" />
     <Compile Include="ceUser.cs" />
+    <Compile Include="ceWarehouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -32,6 +32,18 @@ namespace Tfg_NetFramework
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.sidebar = new System.Windows.Forms.FlowLayoutPanel();
             this.pHome = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.Button();
@@ -64,20 +76,9 @@ namespace Tfg_NetFramework
             this.lbReqAllowancesOptions = new System.Windows.Forms.Label();
             this.cbSolicitudDietas = new System.Windows.Forms.ComboBox();
             this.lbTitleSolDieta = new System.Windows.Forms.Label();
-            this.pSolKilometraje = new System.Windows.Forms.Panel();
-            this.btnSolDietasSolKilometraje = new System.Windows.Forms.Button();
-            this.lbMileageTitle = new System.Windows.Forms.Label();
-            this.dtpReqDietasMileageDate = new System.Windows.Forms.DateTimePicker();
-            this.cbReqMileageSubCategory = new System.Windows.Forms.ComboBox();
-            this.lbTitleMileage = new System.Windows.Forms.Label();
-            this.lbReqMileageDate = new System.Windows.Forms.Label();
-            this.lbReqMileageSubcategory = new System.Windows.Forms.Label();
-            this.lbReqMileageOrigin = new System.Windows.Forms.Label();
-            this.lbReqMileageDestination = new System.Windows.Forms.Label();
-            this.lbReqMileageTotal = new System.Windows.Forms.Label();
-            this.lbReqMileagePricePerKilometer = new System.Windows.Forms.Label();
-            this.lbReqMileage = new System.Windows.Forms.Label();
             this.pSolSolicitudDietas = new System.Windows.Forms.Panel();
+            this.tbReqAllowancesObservations = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbReqAllowancesTitle = new Tfg_NetFramework.tbPlaceHolder();
             this.labelURL = new System.Windows.Forms.Label();
             this.lbReqAllowancesEndHour = new System.Windows.Forms.Label();
             this.lbReqAllowancesStartHour = new System.Windows.Forms.Label();
@@ -91,11 +92,76 @@ namespace Tfg_NetFramework
             this.btnReqAllowancesUploadFile = new System.Windows.Forms.Button();
             this.dtpReqAllowancesStartTime = new System.Windows.Forms.DateTimePicker();
             this.lbReqAllowancesDate = new System.Windows.Forms.Label();
+            this.pSolKilometraje = new System.Windows.Forms.Panel();
+            this.tbReqMileagePricePerKilometer = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbReqMileageTotal = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbReqMileageDestination = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbReqMileageOrigin = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbReqMileageTitle = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbReqMileageMileage = new Tfg_NetFramework.tbPlaceHolder();
+            this.btnSolDietasSolKilometraje = new System.Windows.Forms.Button();
+            this.lbMileageTitle = new System.Windows.Forms.Label();
+            this.dtpReqDietasMileageDate = new System.Windows.Forms.DateTimePicker();
+            this.cbReqMileageSubCategory = new System.Windows.Forms.ComboBox();
+            this.lbTitleMileage = new System.Windows.Forms.Label();
+            this.lbReqMileageDate = new System.Windows.Forms.Label();
+            this.lbReqMileageSubcategory = new System.Windows.Forms.Label();
+            this.lbReqMileageOrigin = new System.Windows.Forms.Label();
+            this.lbReqMileageDestination = new System.Windows.Forms.Label();
+            this.lbReqMileageTotal = new System.Windows.Forms.Label();
+            this.lbReqMileagePricePerKilometer = new System.Windows.Forms.Label();
+            this.lbReqMileage = new System.Windows.Forms.Label();
             this.pGestionDietas = new System.Windows.Forms.Panel();
             this.lbManAllowancesOptions = new System.Windows.Forms.Label();
             this.cbGestDietas = new System.Windows.Forms.ComboBox();
             this.lbManAllowances = new System.Windows.Forms.Label();
+            this.pGestDietasDietas = new System.Windows.Forms.Panel();
+            this.lbManAllowanceObservation = new System.Windows.Forms.Label();
+            this.lbManAllowanceState = new System.Windows.Forms.Label();
+            this.lbManAllowanceEndHour = new System.Windows.Forms.Label();
+            this.tbManAllowancesIdAllowance = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManAllowancesState = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManAllowancesEndHour = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManAllowancesStartHour = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManAllowancesDate = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManAllowancesObservations = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManAllowancesTitle = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManAllowancesEmail = new Tfg_NetFramework.tbPlaceHolder();
+            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
+            this.btnManAllowancesAllowanceRemove = new System.Windows.Forms.Button();
+            this.lbManAllowancesIdAllowance = new System.Windows.Forms.Label();
+            this.btnManAllowancesUpdateData = new System.Windows.Forms.Button();
+            this.lbManAllowancesNewState = new System.Windows.Forms.Label();
+            this.cbStateDietas = new System.Windows.Forms.ComboBox();
+            this.btnManAllowancesDietasRefresh = new System.Windows.Forms.Button();
+            this.lbManAllowancesDate = new System.Windows.Forms.Label();
+            this.lbManAllowancesStartHour = new System.Windows.Forms.Label();
+            this.lbManAllowancesEndHour = new System.Windows.Forms.Label();
+            this.lbManAllowancesTitle = new System.Windows.Forms.Label();
+            this.lbManAllowancesEmail = new System.Windows.Forms.Label();
+            this.dgvAllowances = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.observations = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.invoice = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbTitleManAllowance = new System.Windows.Forms.Label();
             this.pGestDietasKilometraje = new System.Windows.Forms.Panel();
+            this.tbManMileageState = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManMileageFinal = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManMileagePricePerKilometer = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManMileageKilometers = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManMileageDestination = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManMileageOrigin = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManMileageIdMileage = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManMileageSubcategory = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManMileageDate = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManMileageTitle = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbManMileageEmail = new Tfg_NetFramework.tbPlaceHolder();
             this.btnManMileageRemoveMileage = new System.Windows.Forms.Button();
             this.lbManMileageIdMileage = new System.Windows.Forms.Label();
             this.btnManMileageRefreshDgvMileage = new System.Windows.Forms.Button();
@@ -125,33 +191,15 @@ namespace Tfg_NetFramework
             this.pricePerKilometer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Final = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pGestDietasDietas = new System.Windows.Forms.Panel();
-            this.axAcroPDF1 = new AxAcroPDFLib.AxAcroPDF();
-            this.btnManAllowancesAllowanceRemove = new System.Windows.Forms.Button();
-            this.lbManAllowancesIdAllowance = new System.Windows.Forms.Label();
-            this.btnManAllowancesUpdateData = new System.Windows.Forms.Button();
-            this.lbManAllowancesNewState = new System.Windows.Forms.Label();
-            this.cbStateDietas = new System.Windows.Forms.ComboBox();
-            this.btnManAllowancesDietasRefresh = new System.Windows.Forms.Button();
-            this.lbManAllowancesObservations = new System.Windows.Forms.Label();
-            this.lbManAllowancesDate = new System.Windows.Forms.Label();
-            this.lbManAllowancesStartHour = new System.Windows.Forms.Label();
-            this.lbManAllowancesEndHour = new System.Windows.Forms.Label();
-            this.lbManAllowancesState = new System.Windows.Forms.Label();
-            this.lbManAllowancesTitle = new System.Windows.Forms.Label();
-            this.lbManAllowancesEmail = new System.Windows.Forms.Label();
-            this.dgvAllowances = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.observations = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.invoice = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.state = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbTitleManAllowance = new System.Windows.Forms.Label();
             this.pUsuarios = new System.Windows.Forms.Panel();
+            this.cbUserNewDepartment = new System.Windows.Forms.ComboBox();
+            this.cbUserNewRole = new System.Windows.Forms.ComboBox();
+            this.btnUpdateUser = new System.Windows.Forms.Button();
+            this.tbEmail = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbIdUser = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbJob = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbDepartment = new Tfg_NetFramework.tbPlaceHolder();
+            this.tbPassword = new Tfg_NetFramework.tbPlaceHolder();
             this.btnEliminarUser = new System.Windows.Forms.Button();
             this.btnUpdateDtgUsers = new System.Windows.Forms.Button();
             this.lbJob = new System.Windows.Forms.Label();
@@ -170,11 +218,15 @@ namespace Tfg_NetFramework
             this.cbRole = new System.Windows.Forms.ComboBox();
             this.btnRRegistrar = new System.Windows.Forms.Button();
             this.lbRegisterUser = new System.Windows.Forms.Label();
+            this.tbRPassword = new Tfg_NetFramework.tbPlaceHolder();
             this.cbDepartamento = new System.Windows.Forms.ComboBox();
+            this.tbREmail = new Tfg_NetFramework.tbPlaceHolder();
             this.opfSeleccionarArchivo = new System.Windows.Forms.OpenFileDialog();
             this.pCRMGest = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.pipeline = new System.Windows.Forms.TabPage();
+            this.lbSales = new System.Windows.Forms.Label();
+            this.flpSale = new System.Windows.Forms.FlowLayoutPanel();
             this.btnUpdateFlps = new System.Windows.Forms.Button();
             this.btnPipelineAddLead = new System.Windows.Forms.Button();
             this.flpWon = new System.Windows.Forms.FlowLayoutPanel();
@@ -187,6 +239,7 @@ namespace Tfg_NetFramework
             this.flpQualified = new System.Windows.Forms.FlowLayoutPanel();
             this.flpNew = new System.Windows.Forms.FlowLayoutPanel();
             this.Customers = new System.Windows.Forms.TabPage();
+            this.lbStateDateLead = new System.Windows.Forms.Label();
             this.lbDateEnd = new System.Windows.Forms.Label();
             this.lbDateStart = new System.Windows.Forms.Label();
             this.dgvCustomer_Lead = new System.Windows.Forms.DataGridView();
@@ -198,7 +251,6 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbLeadName = new System.Windows.Forms.Label();
-            this.btnMoreInfoCustomer = new System.Windows.Forms.Button();
             this.dgvCustomer = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -236,40 +288,27 @@ namespace Tfg_NetFramework
             this.btnRestoreBackup = new System.Windows.Forms.Button();
             this.btnSettingsSaveBackup = new System.Windows.Forms.Button();
             this.lbSettings = new System.Windows.Forms.Label();
-            this.tbReqMileagePricePerKilometer = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbReqMileageTotal = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbReqMileageDestination = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbReqMileageOrigin = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbReqMileageTitle = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbReqMileageMileage = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbReqAllowancesObservations = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbReqAllowancesTitle = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbEmail = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbIdUser = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbOcupacion = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbDepartment = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbPassword = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbRPassword = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbREmail = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManAllowancesEmail = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManAllowancesTitle = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManAllowancesObservations = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManAllowancesDate = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManAllowancesStartHour = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManAllowancesEndHour = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManAllowancesState = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManAllowancesIdAllowance = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManMileageEmail = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManMileageTitle = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManMileageDate = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManMileageSubcategory = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManMileageIdMileage = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManMileageOrigin = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManMileageDestination = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManMileageKilometers = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManMileagePricePerKilometer = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManMileageFinal = new Tfg_NetFramework.tbPlaceHolder();
-            this.tbManMileageState = new Tfg_NetFramework.tbPlaceHolder();
+            this.pInventory = new System.Windows.Forms.Panel();
+            this.blbMaxQuantity = new Bunifu.UI.WinForms.BunifuLabel();
+            this.blbAmountUpdate = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bdStoreIntoWarehouses = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.btbStoreAmount = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.blbTitleProductsAboutType = new Bunifu.UI.WinForms.BunifuLabel();
+            this.blbTitleStateProducts = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bbtnAddProduct = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.bbtnAddProductToWarehouse = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.bdgvItemsPerType = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.idProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pricePerUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unitOfMeasure = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.productCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bdgvStoredProducts = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbInventory = new System.Windows.Forms.Label();
             this.sidebar.SuspendLayout();
             this.pHome.SuspendLayout();
             this.containerModulos.SuspendLayout();
@@ -283,15 +322,15 @@ namespace Tfg_NetFramework
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.pHeader.SuspendLayout();
             this.pSolicitudDieta.SuspendLayout();
-            this.pSolKilometraje.SuspendLayout();
             this.pSolSolicitudDietas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.thumbNailInvoice)).BeginInit();
+            this.pSolKilometraje.SuspendLayout();
             this.pGestionDietas.SuspendLayout();
-            this.pGestDietasKilometraje.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMileage)).BeginInit();
             this.pGestDietasDietas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllowances)).BeginInit();
+            this.pGestDietasKilometraje.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMileage)).BeginInit();
             this.pUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.pRegister.SuspendLayout();
@@ -304,6 +343,9 @@ namespace Tfg_NetFramework
             this.teams.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.pSettingsModule.SuspendLayout();
+            this.pInventory.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgvItemsPerType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgvStoredProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -318,7 +360,7 @@ namespace Tfg_NetFramework
             this.sidebar.MaximumSize = new System.Drawing.Size(257, 733);
             this.sidebar.MinimumSize = new System.Drawing.Size(73, 729);
             this.sidebar.Name = "sidebar";
-            this.sidebar.Size = new System.Drawing.Size(165, 729);
+            this.sidebar.Size = new System.Drawing.Size(165, 733);
             this.sidebar.TabIndex = 0;
             this.sidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -505,6 +547,7 @@ namespace Tfg_NetFramework
             this.btnModuleAux.TabIndex = 11;
             this.btnModuleAux.Text = "            Module \r\n            Aux";
             this.btnModuleAux.UseVisualStyleBackColor = false;
+            this.btnModuleAux.Click += new System.EventHandler(this.btnModuleAux_Click);
             // 
             // btnSubMenu
             // 
@@ -668,8 +711,8 @@ namespace Tfg_NetFramework
             this.pSolicitudDieta.Controls.Add(this.lbReqAllowancesOptions);
             this.pSolicitudDieta.Controls.Add(this.cbSolicitudDietas);
             this.pSolicitudDieta.Controls.Add(this.lbTitleSolDieta);
-            this.pSolicitudDieta.Controls.Add(this.pSolKilometraje);
             this.pSolicitudDieta.Controls.Add(this.pSolSolicitudDietas);
+            this.pSolicitudDieta.Controls.Add(this.pSolKilometraje);
             this.pSolicitudDieta.Location = new System.Drawing.Point(166, 61);
             this.pSolicitudDieta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pSolicitudDieta.Name = "pSolicitudDieta";
@@ -707,146 +750,6 @@ namespace Tfg_NetFramework
             this.lbTitleSolDieta.TabIndex = 0;
             this.lbTitleSolDieta.Text = "Solicitud de dietas";
             // 
-            // pSolKilometraje
-            // 
-            this.pSolKilometraje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.pSolKilometraje.Controls.Add(this.tbReqMileagePricePerKilometer);
-            this.pSolKilometraje.Controls.Add(this.tbReqMileageTotal);
-            this.pSolKilometraje.Controls.Add(this.tbReqMileageDestination);
-            this.pSolKilometraje.Controls.Add(this.tbReqMileageOrigin);
-            this.pSolKilometraje.Controls.Add(this.tbReqMileageTitle);
-            this.pSolKilometraje.Controls.Add(this.tbReqMileageMileage);
-            this.pSolKilometraje.Controls.Add(this.btnSolDietasSolKilometraje);
-            this.pSolKilometraje.Controls.Add(this.lbMileageTitle);
-            this.pSolKilometraje.Controls.Add(this.dtpReqDietasMileageDate);
-            this.pSolKilometraje.Controls.Add(this.cbReqMileageSubCategory);
-            this.pSolKilometraje.Controls.Add(this.lbTitleMileage);
-            this.pSolKilometraje.Controls.Add(this.lbReqMileageDate);
-            this.pSolKilometraje.Controls.Add(this.lbReqMileageSubcategory);
-            this.pSolKilometraje.Controls.Add(this.lbReqMileageOrigin);
-            this.pSolKilometraje.Controls.Add(this.lbReqMileageDestination);
-            this.pSolKilometraje.Controls.Add(this.lbReqMileageTotal);
-            this.pSolKilometraje.Controls.Add(this.lbReqMileagePricePerKilometer);
-            this.pSolKilometraje.Controls.Add(this.lbReqMileage);
-            this.pSolKilometraje.Location = new System.Drawing.Point(21, 45);
-            this.pSolKilometraje.Name = "pSolKilometraje";
-            this.pSolKilometraje.Size = new System.Drawing.Size(459, 388);
-            this.pSolKilometraje.TabIndex = 7;
-            // 
-            // btnSolDietasSolKilometraje
-            // 
-            this.btnSolDietasSolKilometraje.Location = new System.Drawing.Point(39, 293);
-            this.btnSolDietasSolKilometraje.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSolDietasSolKilometraje.Name = "btnSolDietasSolKilometraje";
-            this.btnSolDietasSolKilometraje.Size = new System.Drawing.Size(127, 34);
-            this.btnSolDietasSolKilometraje.TabIndex = 10;
-            this.btnSolDietasSolKilometraje.Text = "Solicitar kilometraje";
-            this.btnSolDietasSolKilometraje.UseVisualStyleBackColor = true;
-            this.btnSolDietasSolKilometraje.Click += new System.EventHandler(this.btnSolDietasSolKilometraje_Click);
-            // 
-            // lbMileageTitle
-            // 
-            this.lbMileageTitle.AutoSize = true;
-            this.lbMileageTitle.Location = new System.Drawing.Point(46, 7);
-            this.lbMileageTitle.Name = "lbMileageTitle";
-            this.lbMileageTitle.Size = new System.Drawing.Size(58, 13);
-            this.lbMileageTitle.TabIndex = 29;
-            this.lbMileageTitle.Text = "Kilometraje";
-            // 
-            // dtpReqDietasMileageDate
-            // 
-            this.dtpReqDietasMileageDate.CustomFormat = "dd/MM/yyyy";
-            this.dtpReqDietasMileageDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpReqDietasMileageDate.Location = new System.Drawing.Point(102, 105);
-            this.dtpReqDietasMileageDate.Name = "dtpReqDietasMileageDate";
-            this.dtpReqDietasMileageDate.Size = new System.Drawing.Size(93, 20);
-            this.dtpReqDietasMileageDate.TabIndex = 4;
-            this.dtpReqDietasMileageDate.Value = new System.DateTime(2022, 12, 18, 0, 0, 0, 0);
-            // 
-            // cbReqMileageSubCategory
-            // 
-            this.cbReqMileageSubCategory.FormattingEnabled = true;
-            this.cbReqMileageSubCategory.Items.AddRange(new object[] {
-            "Vehículo propio",
-            "Vehículo empresa"});
-            this.cbReqMileageSubCategory.Location = new System.Drawing.Point(102, 140);
-            this.cbReqMileageSubCategory.Name = "cbReqMileageSubCategory";
-            this.cbReqMileageSubCategory.Size = new System.Drawing.Size(94, 21);
-            this.cbReqMileageSubCategory.TabIndex = 5;
-            this.cbReqMileageSubCategory.SelectionChangeCommitted += new System.EventHandler(this.cbMileageSubCategory_SelectionChangeCommitted);
-            // 
-            // lbTitleMileage
-            // 
-            this.lbTitleMileage.AutoSize = true;
-            this.lbTitleMileage.Location = new System.Drawing.Point(1, 75);
-            this.lbTitleMileage.Name = "lbTitleMileage";
-            this.lbTitleMileage.Size = new System.Drawing.Size(35, 13);
-            this.lbTitleMileage.TabIndex = 14;
-            this.lbTitleMileage.Text = "Título";
-            // 
-            // lbReqMileageDate
-            // 
-            this.lbReqMileageDate.AutoSize = true;
-            this.lbReqMileageDate.Location = new System.Drawing.Point(6, 111);
-            this.lbReqMileageDate.Name = "lbReqMileageDate";
-            this.lbReqMileageDate.Size = new System.Drawing.Size(37, 13);
-            this.lbReqMileageDate.TabIndex = 15;
-            this.lbReqMileageDate.Text = "Fecha";
-            // 
-            // lbReqMileageSubcategory
-            // 
-            this.lbReqMileageSubcategory.AutoSize = true;
-            this.lbReqMileageSubcategory.Location = new System.Drawing.Point(1, 144);
-            this.lbReqMileageSubcategory.Name = "lbReqMileageSubcategory";
-            this.lbReqMileageSubcategory.Size = new System.Drawing.Size(67, 13);
-            this.lbReqMileageSubcategory.TabIndex = 16;
-            this.lbReqMileageSubcategory.Text = "Subcategory";
-            // 
-            // lbReqMileageOrigin
-            // 
-            this.lbReqMileageOrigin.AutoSize = true;
-            this.lbReqMileageOrigin.Location = new System.Drawing.Point(6, 180);
-            this.lbReqMileageOrigin.Name = "lbReqMileageOrigin";
-            this.lbReqMileageOrigin.Size = new System.Drawing.Size(38, 13);
-            this.lbReqMileageOrigin.TabIndex = 17;
-            this.lbReqMileageOrigin.Text = "Origen";
-            // 
-            // lbReqMileageDestination
-            // 
-            this.lbReqMileageDestination.AutoSize = true;
-            this.lbReqMileageDestination.Location = new System.Drawing.Point(6, 205);
-            this.lbReqMileageDestination.Name = "lbReqMileageDestination";
-            this.lbReqMileageDestination.Size = new System.Drawing.Size(43, 13);
-            this.lbReqMileageDestination.TabIndex = 18;
-            this.lbReqMileageDestination.Text = "Destino";
-            // 
-            // lbReqMileageTotal
-            // 
-            this.lbReqMileageTotal.AutoSize = true;
-            this.lbReqMileageTotal.Location = new System.Drawing.Point(6, 233);
-            this.lbReqMileageTotal.Name = "lbReqMileageTotal";
-            this.lbReqMileageTotal.Size = new System.Drawing.Size(31, 13);
-            this.lbReqMileageTotal.TabIndex = 19;
-            this.lbReqMileageTotal.Text = "Total";
-            // 
-            // lbReqMileagePricePerKilometer
-            // 
-            this.lbReqMileagePricePerKilometer.AutoSize = true;
-            this.lbReqMileagePricePerKilometer.Location = new System.Drawing.Point(6, 259);
-            this.lbReqMileagePricePerKilometer.Name = "lbReqMileagePricePerKilometer";
-            this.lbReqMileagePricePerKilometer.Size = new System.Drawing.Size(100, 13);
-            this.lbReqMileagePricePerKilometer.TabIndex = 20;
-            this.lbReqMileagePricePerKilometer.Text = "Precio por kilómetro";
-            // 
-            // lbReqMileage
-            // 
-            this.lbReqMileage.AutoSize = true;
-            this.lbReqMileage.Location = new System.Drawing.Point(1, 36);
-            this.lbReqMileage.Name = "lbReqMileage";
-            this.lbReqMileage.Size = new System.Drawing.Size(58, 13);
-            this.lbReqMileage.TabIndex = 14;
-            this.lbReqMileage.Text = "Kilometraje";
-            // 
             // pSolSolicitudDietas
             // 
             this.pSolSolicitudDietas.Controls.Add(this.tbReqAllowancesObservations);
@@ -868,6 +771,25 @@ namespace Tfg_NetFramework
             this.pSolSolicitudDietas.Name = "pSolSolicitudDietas";
             this.pSolSolicitudDietas.Size = new System.Drawing.Size(459, 388);
             this.pSolSolicitudDietas.TabIndex = 14;
+            // 
+            // tbReqAllowancesObservations
+            // 
+            this.tbReqAllowancesObservations.Location = new System.Drawing.Point(69, 74);
+            this.tbReqAllowancesObservations.Multiline = true;
+            this.tbReqAllowancesObservations.Name = "tbReqAllowancesObservations";
+            this.tbReqAllowancesObservations.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbReqAllowancesObservations.PlaceholderText = "";
+            this.tbReqAllowancesObservations.Size = new System.Drawing.Size(197, 83);
+            this.tbReqAllowancesObservations.TabIndex = 3;
+            // 
+            // tbReqAllowancesTitle
+            // 
+            this.tbReqAllowancesTitle.Location = new System.Drawing.Point(65, 41);
+            this.tbReqAllowancesTitle.Name = "tbReqAllowancesTitle";
+            this.tbReqAllowancesTitle.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbReqAllowancesTitle.PlaceholderText = "";
+            this.tbReqAllowancesTitle.Size = new System.Drawing.Size(100, 20);
+            this.tbReqAllowancesTitle.TabIndex = 2;
             // 
             // labelURL
             // 
@@ -994,18 +916,212 @@ namespace Tfg_NetFramework
             this.lbReqAllowancesDate.TabIndex = 3;
             this.lbReqAllowancesDate.Text = "Start Time";
             // 
+            // pSolKilometraje
+            // 
+            this.pSolKilometraje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.pSolKilometraje.Controls.Add(this.tbReqMileagePricePerKilometer);
+            this.pSolKilometraje.Controls.Add(this.tbReqMileageTotal);
+            this.pSolKilometraje.Controls.Add(this.tbReqMileageDestination);
+            this.pSolKilometraje.Controls.Add(this.tbReqMileageOrigin);
+            this.pSolKilometraje.Controls.Add(this.tbReqMileageTitle);
+            this.pSolKilometraje.Controls.Add(this.tbReqMileageMileage);
+            this.pSolKilometraje.Controls.Add(this.btnSolDietasSolKilometraje);
+            this.pSolKilometraje.Controls.Add(this.lbMileageTitle);
+            this.pSolKilometraje.Controls.Add(this.dtpReqDietasMileageDate);
+            this.pSolKilometraje.Controls.Add(this.cbReqMileageSubCategory);
+            this.pSolKilometraje.Controls.Add(this.lbTitleMileage);
+            this.pSolKilometraje.Controls.Add(this.lbReqMileageDate);
+            this.pSolKilometraje.Controls.Add(this.lbReqMileageSubcategory);
+            this.pSolKilometraje.Controls.Add(this.lbReqMileageOrigin);
+            this.pSolKilometraje.Controls.Add(this.lbReqMileageDestination);
+            this.pSolKilometraje.Controls.Add(this.lbReqMileageTotal);
+            this.pSolKilometraje.Controls.Add(this.lbReqMileagePricePerKilometer);
+            this.pSolKilometraje.Controls.Add(this.lbReqMileage);
+            this.pSolKilometraje.Location = new System.Drawing.Point(21, 45);
+            this.pSolKilometraje.Name = "pSolKilometraje";
+            this.pSolKilometraje.Size = new System.Drawing.Size(459, 388);
+            this.pSolKilometraje.TabIndex = 7;
+            // 
+            // tbReqMileagePricePerKilometer
+            // 
+            this.tbReqMileagePricePerKilometer.Location = new System.Drawing.Point(102, 260);
+            this.tbReqMileagePricePerKilometer.Name = "tbReqMileagePricePerKilometer";
+            this.tbReqMileagePricePerKilometer.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbReqMileagePricePerKilometer.PlaceholderText = "";
+            this.tbReqMileagePricePerKilometer.Size = new System.Drawing.Size(100, 20);
+            this.tbReqMileagePricePerKilometer.TabIndex = 35;
+            // 
+            // tbReqMileageTotal
+            // 
+            this.tbReqMileageTotal.Location = new System.Drawing.Point(102, 235);
+            this.tbReqMileageTotal.Name = "tbReqMileageTotal";
+            this.tbReqMileageTotal.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbReqMileageTotal.PlaceholderText = "";
+            this.tbReqMileageTotal.Size = new System.Drawing.Size(100, 20);
+            this.tbReqMileageTotal.TabIndex = 34;
+            // 
+            // tbReqMileageDestination
+            // 
+            this.tbReqMileageDestination.Location = new System.Drawing.Point(102, 206);
+            this.tbReqMileageDestination.Name = "tbReqMileageDestination";
+            this.tbReqMileageDestination.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbReqMileageDestination.PlaceholderText = "";
+            this.tbReqMileageDestination.Size = new System.Drawing.Size(100, 20);
+            this.tbReqMileageDestination.TabIndex = 33;
+            // 
+            // tbReqMileageOrigin
+            // 
+            this.tbReqMileageOrigin.Location = new System.Drawing.Point(102, 175);
+            this.tbReqMileageOrigin.Name = "tbReqMileageOrigin";
+            this.tbReqMileageOrigin.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbReqMileageOrigin.PlaceholderText = "";
+            this.tbReqMileageOrigin.Size = new System.Drawing.Size(100, 20);
+            this.tbReqMileageOrigin.TabIndex = 32;
+            // 
+            // tbReqMileageTitle
+            // 
+            this.tbReqMileageTitle.Location = new System.Drawing.Point(102, 74);
+            this.tbReqMileageTitle.Name = "tbReqMileageTitle";
+            this.tbReqMileageTitle.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbReqMileageTitle.PlaceholderText = "";
+            this.tbReqMileageTitle.Size = new System.Drawing.Size(100, 20);
+            this.tbReqMileageTitle.TabIndex = 31;
+            // 
+            // tbReqMileageMileage
+            // 
+            this.tbReqMileageMileage.Location = new System.Drawing.Point(102, 34);
+            this.tbReqMileageMileage.Name = "tbReqMileageMileage";
+            this.tbReqMileageMileage.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbReqMileageMileage.PlaceholderText = "";
+            this.tbReqMileageMileage.Size = new System.Drawing.Size(100, 20);
+            this.tbReqMileageMileage.TabIndex = 30;
+            // 
+            // btnSolDietasSolKilometraje
+            // 
+            this.btnSolDietasSolKilometraje.Location = new System.Drawing.Point(39, 293);
+            this.btnSolDietasSolKilometraje.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSolDietasSolKilometraje.Name = "btnSolDietasSolKilometraje";
+            this.btnSolDietasSolKilometraje.Size = new System.Drawing.Size(127, 34);
+            this.btnSolDietasSolKilometraje.TabIndex = 10;
+            this.btnSolDietasSolKilometraje.Text = "Solicitar kilometraje";
+            this.btnSolDietasSolKilometraje.UseVisualStyleBackColor = true;
+            this.btnSolDietasSolKilometraje.Click += new System.EventHandler(this.btnSolDietasSolKilometraje_Click);
+            // 
+            // lbMileageTitle
+            // 
+            this.lbMileageTitle.AutoSize = true;
+            this.lbMileageTitle.Location = new System.Drawing.Point(46, 7);
+            this.lbMileageTitle.Name = "lbMileageTitle";
+            this.lbMileageTitle.Size = new System.Drawing.Size(58, 13);
+            this.lbMileageTitle.TabIndex = 29;
+            this.lbMileageTitle.Text = "Kilometraje";
+            // 
+            // dtpReqDietasMileageDate
+            // 
+            this.dtpReqDietasMileageDate.CustomFormat = "dd/MM/yyyy";
+            this.dtpReqDietasMileageDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpReqDietasMileageDate.Location = new System.Drawing.Point(102, 105);
+            this.dtpReqDietasMileageDate.Name = "dtpReqDietasMileageDate";
+            this.dtpReqDietasMileageDate.Size = new System.Drawing.Size(93, 20);
+            this.dtpReqDietasMileageDate.TabIndex = 4;
+            this.dtpReqDietasMileageDate.Value = new System.DateTime(2022, 12, 18, 0, 0, 0, 0);
+            // 
+            // cbReqMileageSubCategory
+            // 
+            this.cbReqMileageSubCategory.FormattingEnabled = true;
+            this.cbReqMileageSubCategory.Items.AddRange(new object[] {
+            "Vehículo propio",
+            "Vehículo empresa"});
+            this.cbReqMileageSubCategory.Location = new System.Drawing.Point(102, 140);
+            this.cbReqMileageSubCategory.Name = "cbReqMileageSubCategory";
+            this.cbReqMileageSubCategory.Size = new System.Drawing.Size(94, 21);
+            this.cbReqMileageSubCategory.TabIndex = 5;
+            this.cbReqMileageSubCategory.SelectionChangeCommitted += new System.EventHandler(this.cbMileageSubCategory_SelectionChangeCommitted);
+            // 
+            // lbTitleMileage
+            // 
+            this.lbTitleMileage.AutoSize = true;
+            this.lbTitleMileage.Location = new System.Drawing.Point(1, 75);
+            this.lbTitleMileage.Name = "lbTitleMileage";
+            this.lbTitleMileage.Size = new System.Drawing.Size(35, 13);
+            this.lbTitleMileage.TabIndex = 14;
+            this.lbTitleMileage.Text = "Título";
+            // 
+            // lbReqMileageDate
+            // 
+            this.lbReqMileageDate.AutoSize = true;
+            this.lbReqMileageDate.Location = new System.Drawing.Point(6, 111);
+            this.lbReqMileageDate.Name = "lbReqMileageDate";
+            this.lbReqMileageDate.Size = new System.Drawing.Size(37, 13);
+            this.lbReqMileageDate.TabIndex = 15;
+            this.lbReqMileageDate.Text = "Fecha";
+            // 
+            // lbReqMileageSubcategory
+            // 
+            this.lbReqMileageSubcategory.AutoSize = true;
+            this.lbReqMileageSubcategory.Location = new System.Drawing.Point(1, 144);
+            this.lbReqMileageSubcategory.Name = "lbReqMileageSubcategory";
+            this.lbReqMileageSubcategory.Size = new System.Drawing.Size(67, 13);
+            this.lbReqMileageSubcategory.TabIndex = 16;
+            this.lbReqMileageSubcategory.Text = "Subcategory";
+            // 
+            // lbReqMileageOrigin
+            // 
+            this.lbReqMileageOrigin.AutoSize = true;
+            this.lbReqMileageOrigin.Location = new System.Drawing.Point(6, 180);
+            this.lbReqMileageOrigin.Name = "lbReqMileageOrigin";
+            this.lbReqMileageOrigin.Size = new System.Drawing.Size(38, 13);
+            this.lbReqMileageOrigin.TabIndex = 17;
+            this.lbReqMileageOrigin.Text = "Origen";
+            // 
+            // lbReqMileageDestination
+            // 
+            this.lbReqMileageDestination.AutoSize = true;
+            this.lbReqMileageDestination.Location = new System.Drawing.Point(6, 205);
+            this.lbReqMileageDestination.Name = "lbReqMileageDestination";
+            this.lbReqMileageDestination.Size = new System.Drawing.Size(43, 13);
+            this.lbReqMileageDestination.TabIndex = 18;
+            this.lbReqMileageDestination.Text = "Destino";
+            // 
+            // lbReqMileageTotal
+            // 
+            this.lbReqMileageTotal.AutoSize = true;
+            this.lbReqMileageTotal.Location = new System.Drawing.Point(6, 233);
+            this.lbReqMileageTotal.Name = "lbReqMileageTotal";
+            this.lbReqMileageTotal.Size = new System.Drawing.Size(31, 13);
+            this.lbReqMileageTotal.TabIndex = 19;
+            this.lbReqMileageTotal.Text = "Total";
+            // 
+            // lbReqMileagePricePerKilometer
+            // 
+            this.lbReqMileagePricePerKilometer.AutoSize = true;
+            this.lbReqMileagePricePerKilometer.Location = new System.Drawing.Point(6, 259);
+            this.lbReqMileagePricePerKilometer.Name = "lbReqMileagePricePerKilometer";
+            this.lbReqMileagePricePerKilometer.Size = new System.Drawing.Size(100, 13);
+            this.lbReqMileagePricePerKilometer.TabIndex = 20;
+            this.lbReqMileagePricePerKilometer.Text = "Precio por kilómetro";
+            // 
+            // lbReqMileage
+            // 
+            this.lbReqMileage.AutoSize = true;
+            this.lbReqMileage.Location = new System.Drawing.Point(1, 36);
+            this.lbReqMileage.Name = "lbReqMileage";
+            this.lbReqMileage.Size = new System.Drawing.Size(58, 13);
+            this.lbReqMileage.TabIndex = 14;
+            this.lbReqMileage.Text = "Kilometraje";
+            // 
             // pGestionDietas
             // 
             this.pGestionDietas.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pGestionDietas.Controls.Add(this.lbManAllowancesOptions);
             this.pGestionDietas.Controls.Add(this.cbGestDietas);
             this.pGestionDietas.Controls.Add(this.lbManAllowances);
-            this.pGestionDietas.Controls.Add(this.pGestDietasKilometraje);
             this.pGestionDietas.Controls.Add(this.pGestDietasDietas);
+            this.pGestionDietas.Controls.Add(this.pGestDietasKilometraje);
             this.pGestionDietas.Location = new System.Drawing.Point(166, 61);
             this.pGestionDietas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pGestionDietas.Name = "pGestionDietas";
-            this.pGestionDietas.Size = new System.Drawing.Size(1066, 710);
+            this.pGestionDietas.Size = new System.Drawing.Size(1066, 857);
             this.pGestionDietas.TabIndex = 3;
             this.pGestionDietas.Visible = false;
             // 
@@ -1038,6 +1154,364 @@ namespace Tfg_NetFramework
             this.lbManAllowances.Size = new System.Drawing.Size(89, 13);
             this.lbManAllowances.TabIndex = 2;
             this.lbManAllowances.Text = "Gestión de dietas";
+            // 
+            // pGestDietasDietas
+            // 
+            this.pGestDietasDietas.AutoScroll = true;
+            this.pGestDietasDietas.Controls.Add(this.lbManAllowanceObservation);
+            this.pGestDietasDietas.Controls.Add(this.lbManAllowanceState);
+            this.pGestDietasDietas.Controls.Add(this.lbManAllowanceEndHour);
+            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesIdAllowance);
+            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesState);
+            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesEndHour);
+            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesStartHour);
+            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesDate);
+            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesObservations);
+            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesTitle);
+            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesEmail);
+            this.pGestDietasDietas.Controls.Add(this.axAcroPDF1);
+            this.pGestDietasDietas.Controls.Add(this.btnManAllowancesAllowanceRemove);
+            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesIdAllowance);
+            this.pGestDietasDietas.Controls.Add(this.btnManAllowancesUpdateData);
+            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesNewState);
+            this.pGestDietasDietas.Controls.Add(this.cbStateDietas);
+            this.pGestDietasDietas.Controls.Add(this.btnManAllowancesDietasRefresh);
+            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesDate);
+            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesStartHour);
+            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesEndHour);
+            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesTitle);
+            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesEmail);
+            this.pGestDietasDietas.Controls.Add(this.dgvAllowances);
+            this.pGestDietasDietas.Controls.Add(this.lbTitleManAllowance);
+            this.pGestDietasDietas.Location = new System.Drawing.Point(14, 56);
+            this.pGestDietasDietas.Name = "pGestDietasDietas";
+            this.pGestDietasDietas.Size = new System.Drawing.Size(1556, 1500);
+            this.pGestDietasDietas.TabIndex = 8;
+            // 
+            // lbManAllowanceObservation
+            // 
+            this.lbManAllowanceObservation.AutoSize = true;
+            this.lbManAllowanceObservation.Location = new System.Drawing.Point(24, 264);
+            this.lbManAllowanceObservation.Name = "lbManAllowanceObservation";
+            this.lbManAllowanceObservation.Size = new System.Drawing.Size(69, 13);
+            this.lbManAllowanceObservation.TabIndex = 41;
+            this.lbManAllowanceObservation.Text = "Observations";
+            // 
+            // lbManAllowanceState
+            // 
+            this.lbManAllowanceState.AutoSize = true;
+            this.lbManAllowanceState.Location = new System.Drawing.Point(276, 301);
+            this.lbManAllowanceState.Name = "lbManAllowanceState";
+            this.lbManAllowanceState.Size = new System.Drawing.Size(32, 13);
+            this.lbManAllowanceState.TabIndex = 40;
+            this.lbManAllowanceState.Text = "State";
+            // 
+            // lbManAllowanceEndHour
+            // 
+            this.lbManAllowanceEndHour.AutoSize = true;
+            this.lbManAllowanceEndHour.Location = new System.Drawing.Point(273, 267);
+            this.lbManAllowanceEndHour.Name = "lbManAllowanceEndHour";
+            this.lbManAllowanceEndHour.Size = new System.Drawing.Size(52, 13);
+            this.lbManAllowanceEndHour.TabIndex = 39;
+            this.lbManAllowanceEndHour.Text = "End Hour";
+            // 
+            // tbManAllowancesIdAllowance
+            // 
+            this.tbManAllowancesIdAllowance.Location = new System.Drawing.Point(620, 301);
+            this.tbManAllowancesIdAllowance.Name = "tbManAllowancesIdAllowance";
+            this.tbManAllowancesIdAllowance.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManAllowancesIdAllowance.PlaceholderText = "";
+            this.tbManAllowancesIdAllowance.Size = new System.Drawing.Size(100, 20);
+            this.tbManAllowancesIdAllowance.TabIndex = 38;
+            // 
+            // tbManAllowancesState
+            // 
+            this.tbManAllowancesState.Location = new System.Drawing.Point(331, 302);
+            this.tbManAllowancesState.Name = "tbManAllowancesState";
+            this.tbManAllowancesState.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManAllowancesState.PlaceholderText = "";
+            this.tbManAllowancesState.ReadOnly = true;
+            this.tbManAllowancesState.Size = new System.Drawing.Size(100, 20);
+            this.tbManAllowancesState.TabIndex = 37;
+            // 
+            // tbManAllowancesEndHour
+            // 
+            this.tbManAllowancesEndHour.Location = new System.Drawing.Point(331, 266);
+            this.tbManAllowancesEndHour.Name = "tbManAllowancesEndHour";
+            this.tbManAllowancesEndHour.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManAllowancesEndHour.PlaceholderText = "";
+            this.tbManAllowancesEndHour.Size = new System.Drawing.Size(100, 20);
+            this.tbManAllowancesEndHour.TabIndex = 36;
+            // 
+            // tbManAllowancesStartHour
+            // 
+            this.tbManAllowancesStartHour.Location = new System.Drawing.Point(331, 230);
+            this.tbManAllowancesStartHour.Name = "tbManAllowancesStartHour";
+            this.tbManAllowancesStartHour.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManAllowancesStartHour.PlaceholderText = "";
+            this.tbManAllowancesStartHour.Size = new System.Drawing.Size(100, 20);
+            this.tbManAllowancesStartHour.TabIndex = 35;
+            // 
+            // tbManAllowancesDate
+            // 
+            this.tbManAllowancesDate.Location = new System.Drawing.Point(331, 195);
+            this.tbManAllowancesDate.Name = "tbManAllowancesDate";
+            this.tbManAllowancesDate.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManAllowancesDate.PlaceholderText = "";
+            this.tbManAllowancesDate.Size = new System.Drawing.Size(100, 20);
+            this.tbManAllowancesDate.TabIndex = 34;
+            // 
+            // tbManAllowancesObservations
+            // 
+            this.tbManAllowancesObservations.Location = new System.Drawing.Point(99, 262);
+            this.tbManAllowancesObservations.Multiline = true;
+            this.tbManAllowancesObservations.Name = "tbManAllowancesObservations";
+            this.tbManAllowancesObservations.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManAllowancesObservations.PlaceholderText = "";
+            this.tbManAllowancesObservations.Size = new System.Drawing.Size(166, 80);
+            this.tbManAllowancesObservations.TabIndex = 33;
+            // 
+            // tbManAllowancesTitle
+            // 
+            this.tbManAllowancesTitle.Location = new System.Drawing.Point(99, 235);
+            this.tbManAllowancesTitle.Name = "tbManAllowancesTitle";
+            this.tbManAllowancesTitle.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManAllowancesTitle.PlaceholderText = "";
+            this.tbManAllowancesTitle.Size = new System.Drawing.Size(100, 20);
+            this.tbManAllowancesTitle.TabIndex = 32;
+            // 
+            // tbManAllowancesEmail
+            // 
+            this.tbManAllowancesEmail.Location = new System.Drawing.Point(99, 198);
+            this.tbManAllowancesEmail.Name = "tbManAllowancesEmail";
+            this.tbManAllowancesEmail.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManAllowancesEmail.PlaceholderText = "";
+            this.tbManAllowancesEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbManAllowancesEmail.TabIndex = 31;
+            // 
+            // axAcroPDF1
+            // 
+            this.axAcroPDF1.Enabled = true;
+            this.axAcroPDF1.Location = new System.Drawing.Point(106, 354);
+            this.axAcroPDF1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.axAcroPDF1.Name = "axAcroPDF1";
+            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
+            this.axAcroPDF1.Size = new System.Drawing.Size(853, 435);
+            this.axAcroPDF1.TabIndex = 30;
+            // 
+            // btnManAllowancesAllowanceRemove
+            // 
+            this.btnManAllowancesAllowanceRemove.Location = new System.Drawing.Point(832, 192);
+            this.btnManAllowancesAllowanceRemove.Name = "btnManAllowancesAllowanceRemove";
+            this.btnManAllowancesAllowanceRemove.Size = new System.Drawing.Size(145, 31);
+            this.btnManAllowancesAllowanceRemove.TabIndex = 13;
+            this.btnManAllowancesAllowanceRemove.Text = "Eliminar dieta";
+            this.btnManAllowancesAllowanceRemove.UseVisualStyleBackColor = true;
+            this.btnManAllowancesAllowanceRemove.Click += new System.EventHandler(this.btnAllowanceRemove_Click);
+            // 
+            // lbManAllowancesIdAllowance
+            // 
+            this.lbManAllowancesIdAllowance.AutoSize = true;
+            this.lbManAllowancesIdAllowance.Location = new System.Drawing.Point(1283, 950);
+            this.lbManAllowancesIdAllowance.Name = "lbManAllowancesIdAllowance";
+            this.lbManAllowancesIdAllowance.Size = new System.Drawing.Size(65, 13);
+            this.lbManAllowancesIdAllowance.TabIndex = 29;
+            this.lbManAllowancesIdAllowance.Text = "IdAllowance";
+            // 
+            // btnManAllowancesUpdateData
+            // 
+            this.btnManAllowancesUpdateData.Location = new System.Drawing.Point(488, 188);
+            this.btnManAllowancesUpdateData.Name = "btnManAllowancesUpdateData";
+            this.btnManAllowancesUpdateData.Size = new System.Drawing.Size(121, 40);
+            this.btnManAllowancesUpdateData.TabIndex = 11;
+            this.btnManAllowancesUpdateData.Text = "Actualizar datos";
+            this.btnManAllowancesUpdateData.UseVisualStyleBackColor = true;
+            this.btnManAllowancesUpdateData.Click += new System.EventHandler(this.btnGestDietasUpdate_Click);
+            // 
+            // lbManAllowancesNewState
+            // 
+            this.lbManAllowancesNewState.AutoSize = true;
+            this.lbManAllowancesNewState.Location = new System.Drawing.Point(1302, 618);
+            this.lbManAllowancesNewState.Name = "lbManAllowancesNewState";
+            this.lbManAllowancesNewState.Size = new System.Drawing.Size(43, 13);
+            this.lbManAllowancesNewState.TabIndex = 26;
+            this.lbManAllowancesNewState.Text = "Estado:";
+            // 
+            // cbStateDietas
+            // 
+            this.cbStateDietas.FormattingEnabled = true;
+            this.cbStateDietas.Items.AddRange(new object[] {
+            "Solicitado",
+            "En trámite",
+            "Aceptado"});
+            this.cbStateDietas.Location = new System.Drawing.Point(475, 301);
+            this.cbStateDietas.Name = "cbStateDietas";
+            this.cbStateDietas.Size = new System.Drawing.Size(115, 21);
+            this.cbStateDietas.TabIndex = 9;
+            this.cbStateDietas.SelectionChangeCommitted += new System.EventHandler(this.cbStateDietas_SelectionChangeCommitted);
+            // 
+            // btnManAllowancesDietasRefresh
+            // 
+            this.btnManAllowancesDietasRefresh.Location = new System.Drawing.Point(657, 190);
+            this.btnManAllowancesDietasRefresh.Name = "btnManAllowancesDietasRefresh";
+            this.btnManAllowancesDietasRefresh.Size = new System.Drawing.Size(145, 35);
+            this.btnManAllowancesDietasRefresh.TabIndex = 12;
+            this.btnManAllowancesDietasRefresh.Text = "Refrescar tabla";
+            this.btnManAllowancesDietasRefresh.UseVisualStyleBackColor = true;
+            this.btnManAllowancesDietasRefresh.Click += new System.EventHandler(this.btnGestDietasDietasRefresh_Click);
+            // 
+            // lbManAllowancesDate
+            // 
+            this.lbManAllowancesDate.AutoSize = true;
+            this.lbManAllowancesDate.Location = new System.Drawing.Point(274, 198);
+            this.lbManAllowancesDate.Name = "lbManAllowancesDate";
+            this.lbManAllowancesDate.Size = new System.Drawing.Size(30, 13);
+            this.lbManAllowancesDate.TabIndex = 21;
+            this.lbManAllowancesDate.Text = "Date";
+            // 
+            // lbManAllowancesStartHour
+            // 
+            this.lbManAllowancesStartHour.AutoSize = true;
+            this.lbManAllowancesStartHour.Location = new System.Drawing.Point(265, 235);
+            this.lbManAllowancesStartHour.Name = "lbManAllowancesStartHour";
+            this.lbManAllowancesStartHour.Size = new System.Drawing.Size(55, 13);
+            this.lbManAllowancesStartHour.TabIndex = 19;
+            this.lbManAllowancesStartHour.Text = "Start Hour";
+            // 
+            // lbManAllowancesEndHour
+            // 
+            this.lbManAllowancesEndHour.AutoSize = true;
+            this.lbManAllowancesEndHour.Location = new System.Drawing.Point(671, 849);
+            this.lbManAllowancesEndHour.Name = "lbManAllowancesEndHour";
+            this.lbManAllowancesEndHour.Size = new System.Drawing.Size(52, 13);
+            this.lbManAllowancesEndHour.TabIndex = 17;
+            this.lbManAllowancesEndHour.Text = "End Hour";
+            // 
+            // lbManAllowancesTitle
+            // 
+            this.lbManAllowancesTitle.AutoSize = true;
+            this.lbManAllowancesTitle.Location = new System.Drawing.Point(26, 238);
+            this.lbManAllowancesTitle.Name = "lbManAllowancesTitle";
+            this.lbManAllowancesTitle.Size = new System.Drawing.Size(35, 13);
+            this.lbManAllowancesTitle.TabIndex = 13;
+            this.lbManAllowancesTitle.Text = "Título";
+            // 
+            // lbManAllowancesEmail
+            // 
+            this.lbManAllowancesEmail.AutoSize = true;
+            this.lbManAllowancesEmail.Location = new System.Drawing.Point(26, 202);
+            this.lbManAllowancesEmail.Name = "lbManAllowancesEmail";
+            this.lbManAllowancesEmail.Size = new System.Drawing.Size(32, 13);
+            this.lbManAllowancesEmail.TabIndex = 11;
+            this.lbManAllowancesEmail.Text = "Email";
+            // 
+            // dgvAllowances
+            // 
+            this.dgvAllowances.AllowUserToAddRows = false;
+            this.dgvAllowances.AllowUserToDeleteRows = false;
+            this.dgvAllowances.AllowUserToOrderColumns = true;
+            this.dgvAllowances.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllowances.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.observations,
+            this.cDate,
+            this.startHour,
+            this.endHour,
+            this.invoice,
+            this.state});
+            this.dgvAllowances.Location = new System.Drawing.Point(0, 26);
+            this.dgvAllowances.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvAllowances.Name = "dgvAllowances";
+            this.dgvAllowances.RowHeadersWidth = 51;
+            this.dgvAllowances.RowTemplate.Height = 29;
+            this.dgvAllowances.Size = new System.Drawing.Size(1186, 157);
+            this.dgvAllowances.TabIndex = 14;
+            this.dgvAllowances.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDietas_CellClick);
+            this.dgvAllowances.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllowances_CellContentClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "idAllowance";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Title";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // observations
+            // 
+            this.observations.HeaderText = "Observations";
+            this.observations.MinimumWidth = 6;
+            this.observations.Name = "observations";
+            this.observations.Width = 125;
+            // 
+            // cDate
+            // 
+            this.cDate.HeaderText = "Date";
+            this.cDate.MinimumWidth = 6;
+            this.cDate.Name = "cDate";
+            this.cDate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.cDate.Width = 125;
+            // 
+            // startHour
+            // 
+            this.startHour.HeaderText = "Start Hour";
+            this.startHour.MinimumWidth = 6;
+            this.startHour.Name = "startHour";
+            this.startHour.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.startHour.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.startHour.Width = 125;
+            // 
+            // endHour
+            // 
+            this.endHour.HeaderText = "End Hour";
+            this.endHour.MinimumWidth = 6;
+            this.endHour.Name = "endHour";
+            this.endHour.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.endHour.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.endHour.Width = 125;
+            // 
+            // invoice
+            // 
+            this.invoice.HeaderText = "Invoice";
+            this.invoice.MinimumWidth = 6;
+            this.invoice.Name = "invoice";
+            this.invoice.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.invoice.Text = "Abrir";
+            this.invoice.UseColumnTextForButtonValue = true;
+            this.invoice.Width = 125;
+            // 
+            // state
+            // 
+            this.state.HeaderText = "State";
+            this.state.MinimumWidth = 6;
+            this.state.Name = "state";
+            this.state.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.state.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.state.Width = 125;
+            // 
+            // lbTitleManAllowance
+            // 
+            this.lbTitleManAllowance.AutoSize = true;
+            this.lbTitleManAllowance.Location = new System.Drawing.Point(10, 24);
+            this.lbTitleManAllowance.Name = "lbTitleManAllowance";
+            this.lbTitleManAllowance.Size = new System.Drawing.Size(37, 13);
+            this.lbTitleManAllowance.TabIndex = 4;
+            this.lbTitleManAllowance.Text = "Dietas";
             // 
             // pGestDietasKilometraje
             // 
@@ -1074,6 +1548,105 @@ namespace Tfg_NetFramework
             this.pGestDietasKilometraje.Name = "pGestDietasKilometraje";
             this.pGestDietasKilometraje.Size = new System.Drawing.Size(1556, 842);
             this.pGestDietasKilometraje.TabIndex = 9;
+            // 
+            // tbManMileageState
+            // 
+            this.tbManMileageState.Location = new System.Drawing.Point(452, 185);
+            this.tbManMileageState.Name = "tbManMileageState";
+            this.tbManMileageState.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManMileageState.PlaceholderText = "";
+            this.tbManMileageState.Size = new System.Drawing.Size(100, 20);
+            this.tbManMileageState.TabIndex = 65;
+            // 
+            // tbManMileageFinal
+            // 
+            this.tbManMileageFinal.Location = new System.Drawing.Point(262, 322);
+            this.tbManMileageFinal.Name = "tbManMileageFinal";
+            this.tbManMileageFinal.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManMileageFinal.PlaceholderText = "";
+            this.tbManMileageFinal.Size = new System.Drawing.Size(100, 20);
+            this.tbManMileageFinal.TabIndex = 62;
+            // 
+            // tbManMileagePricePerKilometer
+            // 
+            this.tbManMileagePricePerKilometer.Location = new System.Drawing.Point(309, 288);
+            this.tbManMileagePricePerKilometer.Name = "tbManMileagePricePerKilometer";
+            this.tbManMileagePricePerKilometer.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManMileagePricePerKilometer.PlaceholderText = "";
+            this.tbManMileagePricePerKilometer.Size = new System.Drawing.Size(100, 20);
+            this.tbManMileagePricePerKilometer.TabIndex = 61;
+            // 
+            // tbManMileageKilometers
+            // 
+            this.tbManMileageKilometers.Location = new System.Drawing.Point(262, 254);
+            this.tbManMileageKilometers.Name = "tbManMileageKilometers";
+            this.tbManMileageKilometers.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManMileageKilometers.PlaceholderText = "";
+            this.tbManMileageKilometers.Size = new System.Drawing.Size(100, 20);
+            this.tbManMileageKilometers.TabIndex = 60;
+            // 
+            // tbManMileageDestination
+            // 
+            this.tbManMileageDestination.Location = new System.Drawing.Point(262, 224);
+            this.tbManMileageDestination.Name = "tbManMileageDestination";
+            this.tbManMileageDestination.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManMileageDestination.PlaceholderText = "";
+            this.tbManMileageDestination.Size = new System.Drawing.Size(100, 20);
+            this.tbManMileageDestination.TabIndex = 59;
+            // 
+            // tbManMileageOrigin
+            // 
+            this.tbManMileageOrigin.Location = new System.Drawing.Point(262, 185);
+            this.tbManMileageOrigin.Name = "tbManMileageOrigin";
+            this.tbManMileageOrigin.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManMileageOrigin.PlaceholderText = "";
+            this.tbManMileageOrigin.Size = new System.Drawing.Size(100, 20);
+            this.tbManMileageOrigin.TabIndex = 58;
+            // 
+            // tbManMileageIdMileage
+            // 
+            this.tbManMileageIdMileage.Location = new System.Drawing.Point(89, 322);
+            this.tbManMileageIdMileage.Name = "tbManMileageIdMileage";
+            this.tbManMileageIdMileage.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManMileageIdMileage.PlaceholderText = "";
+            this.tbManMileageIdMileage.Size = new System.Drawing.Size(100, 20);
+            this.tbManMileageIdMileage.TabIndex = 57;
+            // 
+            // tbManMileageSubcategory
+            // 
+            this.tbManMileageSubcategory.Location = new System.Drawing.Point(89, 284);
+            this.tbManMileageSubcategory.Name = "tbManMileageSubcategory";
+            this.tbManMileageSubcategory.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManMileageSubcategory.PlaceholderText = "";
+            this.tbManMileageSubcategory.Size = new System.Drawing.Size(100, 20);
+            this.tbManMileageSubcategory.TabIndex = 56;
+            // 
+            // tbManMileageDate
+            // 
+            this.tbManMileageDate.Location = new System.Drawing.Point(63, 250);
+            this.tbManMileageDate.Name = "tbManMileageDate";
+            this.tbManMileageDate.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManMileageDate.PlaceholderText = "";
+            this.tbManMileageDate.Size = new System.Drawing.Size(100, 20);
+            this.tbManMileageDate.TabIndex = 55;
+            // 
+            // tbManMileageTitle
+            // 
+            this.tbManMileageTitle.Location = new System.Drawing.Point(63, 213);
+            this.tbManMileageTitle.Name = "tbManMileageTitle";
+            this.tbManMileageTitle.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManMileageTitle.PlaceholderText = "";
+            this.tbManMileageTitle.Size = new System.Drawing.Size(100, 20);
+            this.tbManMileageTitle.TabIndex = 54;
+            // 
+            // tbManMileageEmail
+            // 
+            this.tbManMileageEmail.Location = new System.Drawing.Point(63, 185);
+            this.tbManMileageEmail.Name = "tbManMileageEmail";
+            this.tbManMileageEmail.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbManMileageEmail.PlaceholderText = "";
+            this.tbManMileageEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbManMileageEmail.TabIndex = 53;
             // 
             // btnManMileageRemoveMileage
             // 
@@ -1345,286 +1918,15 @@ namespace Tfg_NetFramework
             this.dataGridViewComboBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewComboBoxColumn1.Width = 125;
             // 
-            // pGestDietasDietas
-            // 
-            this.pGestDietasDietas.AutoScroll = true;
-            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesIdAllowance);
-            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesState);
-            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesEndHour);
-            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesStartHour);
-            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesDate);
-            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesObservations);
-            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesTitle);
-            this.pGestDietasDietas.Controls.Add(this.tbManAllowancesEmail);
-            this.pGestDietasDietas.Controls.Add(this.axAcroPDF1);
-            this.pGestDietasDietas.Controls.Add(this.btnManAllowancesAllowanceRemove);
-            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesIdAllowance);
-            this.pGestDietasDietas.Controls.Add(this.btnManAllowancesUpdateData);
-            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesNewState);
-            this.pGestDietasDietas.Controls.Add(this.cbStateDietas);
-            this.pGestDietasDietas.Controls.Add(this.btnManAllowancesDietasRefresh);
-            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesObservations);
-            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesDate);
-            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesStartHour);
-            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesEndHour);
-            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesState);
-            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesTitle);
-            this.pGestDietasDietas.Controls.Add(this.lbManAllowancesEmail);
-            this.pGestDietasDietas.Controls.Add(this.dgvAllowances);
-            this.pGestDietasDietas.Controls.Add(this.lbTitleManAllowance);
-            this.pGestDietasDietas.Location = new System.Drawing.Point(14, 56);
-            this.pGestDietasDietas.Name = "pGestDietasDietas";
-            this.pGestDietasDietas.Size = new System.Drawing.Size(1556, 1500);
-            this.pGestDietasDietas.TabIndex = 8;
-            // 
-            // axAcroPDF1
-            // 
-            this.axAcroPDF1.Enabled = true;
-            this.axAcroPDF1.Location = new System.Drawing.Point(0, 352);
-            this.axAcroPDF1.Margin = new System.Windows.Forms.Padding(2);
-            this.axAcroPDF1.Name = "axAcroPDF1";
-            this.axAcroPDF1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAcroPDF1.OcxState")));
-            this.axAcroPDF1.Size = new System.Drawing.Size(1216, 468);
-            this.axAcroPDF1.TabIndex = 30;
-            // 
-            // btnManAllowancesAllowanceRemove
-            // 
-            this.btnManAllowancesAllowanceRemove.Location = new System.Drawing.Point(600, 251);
-            this.btnManAllowancesAllowanceRemove.Name = "btnManAllowancesAllowanceRemove";
-            this.btnManAllowancesAllowanceRemove.Size = new System.Drawing.Size(145, 31);
-            this.btnManAllowancesAllowanceRemove.TabIndex = 13;
-            this.btnManAllowancesAllowanceRemove.Text = "Eliminar dieta";
-            this.btnManAllowancesAllowanceRemove.UseVisualStyleBackColor = true;
-            this.btnManAllowancesAllowanceRemove.Click += new System.EventHandler(this.btnAllowanceRemove_Click);
-            // 
-            // lbManAllowancesIdAllowance
-            // 
-            this.lbManAllowancesIdAllowance.AutoSize = true;
-            this.lbManAllowancesIdAllowance.Location = new System.Drawing.Point(1283, 950);
-            this.lbManAllowancesIdAllowance.Name = "lbManAllowancesIdAllowance";
-            this.lbManAllowancesIdAllowance.Size = new System.Drawing.Size(65, 13);
-            this.lbManAllowancesIdAllowance.TabIndex = 29;
-            this.lbManAllowancesIdAllowance.Text = "IdAllowance";
-            // 
-            // btnManAllowancesUpdateData
-            // 
-            this.btnManAllowancesUpdateData.Location = new System.Drawing.Point(450, 243);
-            this.btnManAllowancesUpdateData.Name = "btnManAllowancesUpdateData";
-            this.btnManAllowancesUpdateData.Size = new System.Drawing.Size(121, 40);
-            this.btnManAllowancesUpdateData.TabIndex = 11;
-            this.btnManAllowancesUpdateData.Text = "Actualizar datos";
-            this.btnManAllowancesUpdateData.UseVisualStyleBackColor = true;
-            this.btnManAllowancesUpdateData.Click += new System.EventHandler(this.btnGestDietasUpdate_Click);
-            // 
-            // lbManAllowancesNewState
-            // 
-            this.lbManAllowancesNewState.AutoSize = true;
-            this.lbManAllowancesNewState.Location = new System.Drawing.Point(1302, 618);
-            this.lbManAllowancesNewState.Name = "lbManAllowancesNewState";
-            this.lbManAllowancesNewState.Size = new System.Drawing.Size(43, 13);
-            this.lbManAllowancesNewState.TabIndex = 26;
-            this.lbManAllowancesNewState.Text = "Estado:";
-            // 
-            // cbStateDietas
-            // 
-            this.cbStateDietas.FormattingEnabled = true;
-            this.cbStateDietas.Items.AddRange(new object[] {
-            "Solicitado",
-            "En trámite",
-            "Aceptado"});
-            this.cbStateDietas.Location = new System.Drawing.Point(472, 199);
-            this.cbStateDietas.Name = "cbStateDietas";
-            this.cbStateDietas.Size = new System.Drawing.Size(115, 21);
-            this.cbStateDietas.TabIndex = 9;
-            this.cbStateDietas.SelectionChangeCommitted += new System.EventHandler(this.cbStateDietas_SelectionChangeCommitted);
-            // 
-            // btnManAllowancesDietasRefresh
-            // 
-            this.btnManAllowancesDietasRefresh.Location = new System.Drawing.Point(602, 193);
-            this.btnManAllowancesDietasRefresh.Name = "btnManAllowancesDietasRefresh";
-            this.btnManAllowancesDietasRefresh.Size = new System.Drawing.Size(145, 35);
-            this.btnManAllowancesDietasRefresh.TabIndex = 12;
-            this.btnManAllowancesDietasRefresh.Text = "Refrescar tabla";
-            this.btnManAllowancesDietasRefresh.UseVisualStyleBackColor = true;
-            this.btnManAllowancesDietasRefresh.Click += new System.EventHandler(this.btnGestDietasDietasRefresh_Click);
-            // 
-            // lbManAllowancesObservations
-            // 
-            this.lbManAllowancesObservations.AutoSize = true;
-            this.lbManAllowancesObservations.Location = new System.Drawing.Point(-1, 823);
-            this.lbManAllowancesObservations.Name = "lbManAllowancesObservations";
-            this.lbManAllowancesObservations.Size = new System.Drawing.Size(78, 13);
-            this.lbManAllowancesObservations.TabIndex = 23;
-            this.lbManAllowancesObservations.Text = "Observaciones";
-            // 
-            // lbManAllowancesDate
-            // 
-            this.lbManAllowancesDate.AutoSize = true;
-            this.lbManAllowancesDate.Location = new System.Drawing.Point(638, 610);
-            this.lbManAllowancesDate.Name = "lbManAllowancesDate";
-            this.lbManAllowancesDate.Size = new System.Drawing.Size(30, 13);
-            this.lbManAllowancesDate.TabIndex = 21;
-            this.lbManAllowancesDate.Text = "Date";
-            // 
-            // lbManAllowancesStartHour
-            // 
-            this.lbManAllowancesStartHour.AutoSize = true;
-            this.lbManAllowancesStartHour.Location = new System.Drawing.Point(667, 712);
-            this.lbManAllowancesStartHour.Name = "lbManAllowancesStartHour";
-            this.lbManAllowancesStartHour.Size = new System.Drawing.Size(55, 13);
-            this.lbManAllowancesStartHour.TabIndex = 19;
-            this.lbManAllowancesStartHour.Text = "Start Hour";
-            // 
-            // lbManAllowancesEndHour
-            // 
-            this.lbManAllowancesEndHour.AutoSize = true;
-            this.lbManAllowancesEndHour.Location = new System.Drawing.Point(671, 849);
-            this.lbManAllowancesEndHour.Name = "lbManAllowancesEndHour";
-            this.lbManAllowancesEndHour.Size = new System.Drawing.Size(52, 13);
-            this.lbManAllowancesEndHour.TabIndex = 17;
-            this.lbManAllowancesEndHour.Text = "End Hour";
-            // 
-            // lbManAllowancesState
-            // 
-            this.lbManAllowancesState.AutoSize = true;
-            this.lbManAllowancesState.Location = new System.Drawing.Point(671, 965);
-            this.lbManAllowancesState.Name = "lbManAllowancesState";
-            this.lbManAllowancesState.Size = new System.Drawing.Size(32, 13);
-            this.lbManAllowancesState.TabIndex = 15;
-            this.lbManAllowancesState.Text = "State";
-            // 
-            // lbManAllowancesTitle
-            // 
-            this.lbManAllowancesTitle.AutoSize = true;
-            this.lbManAllowancesTitle.Location = new System.Drawing.Point(8, 712);
-            this.lbManAllowancesTitle.Name = "lbManAllowancesTitle";
-            this.lbManAllowancesTitle.Size = new System.Drawing.Size(35, 13);
-            this.lbManAllowancesTitle.TabIndex = 13;
-            this.lbManAllowancesTitle.Text = "Título";
-            // 
-            // lbManAllowancesEmail
-            // 
-            this.lbManAllowancesEmail.AutoSize = true;
-            this.lbManAllowancesEmail.Location = new System.Drawing.Point(10, 626);
-            this.lbManAllowancesEmail.Name = "lbManAllowancesEmail";
-            this.lbManAllowancesEmail.Size = new System.Drawing.Size(32, 13);
-            this.lbManAllowancesEmail.TabIndex = 11;
-            this.lbManAllowancesEmail.Text = "Email";
-            // 
-            // dgvAllowances
-            // 
-            this.dgvAllowances.AllowUserToAddRows = false;
-            this.dgvAllowances.AllowUserToDeleteRows = false;
-            this.dgvAllowances.AllowUserToOrderColumns = true;
-            this.dgvAllowances.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllowances.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.observations,
-            this.cDate,
-            this.startHour,
-            this.endHour,
-            this.invoice,
-            this.state});
-            this.dgvAllowances.Location = new System.Drawing.Point(0, 26);
-            this.dgvAllowances.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvAllowances.Name = "dgvAllowances";
-            this.dgvAllowances.RowHeadersWidth = 51;
-            this.dgvAllowances.RowTemplate.Height = 29;
-            this.dgvAllowances.Size = new System.Drawing.Size(1186, 157);
-            this.dgvAllowances.TabIndex = 14;
-            this.dgvAllowances.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDietas_CellClick);
-            this.dgvAllowances.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAllowances_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "idAllowance";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Title";
-            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // observations
-            // 
-            this.observations.HeaderText = "Observations";
-            this.observations.MinimumWidth = 6;
-            this.observations.Name = "observations";
-            this.observations.Width = 125;
-            // 
-            // cDate
-            // 
-            this.cDate.HeaderText = "Date";
-            this.cDate.MinimumWidth = 6;
-            this.cDate.Name = "cDate";
-            this.cDate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.cDate.Width = 125;
-            // 
-            // startHour
-            // 
-            this.startHour.HeaderText = "Start Hour";
-            this.startHour.MinimumWidth = 6;
-            this.startHour.Name = "startHour";
-            this.startHour.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.startHour.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.startHour.Width = 125;
-            // 
-            // endHour
-            // 
-            this.endHour.HeaderText = "End Hour";
-            this.endHour.MinimumWidth = 6;
-            this.endHour.Name = "endHour";
-            this.endHour.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.endHour.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.endHour.Width = 125;
-            // 
-            // invoice
-            // 
-            this.invoice.HeaderText = "Invoice";
-            this.invoice.MinimumWidth = 6;
-            this.invoice.Name = "invoice";
-            this.invoice.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.invoice.Text = "Abrir";
-            this.invoice.UseColumnTextForButtonValue = true;
-            this.invoice.Width = 125;
-            // 
-            // state
-            // 
-            this.state.HeaderText = "State";
-            this.state.MinimumWidth = 6;
-            this.state.Name = "state";
-            this.state.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.state.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.state.Width = 125;
-            // 
-            // lbTitleManAllowance
-            // 
-            this.lbTitleManAllowance.AutoSize = true;
-            this.lbTitleManAllowance.Location = new System.Drawing.Point(10, 24);
-            this.lbTitleManAllowance.Name = "lbTitleManAllowance";
-            this.lbTitleManAllowance.Size = new System.Drawing.Size(37, 13);
-            this.lbTitleManAllowance.TabIndex = 4;
-            this.lbTitleManAllowance.Text = "Dietas";
-            // 
             // pUsuarios
             // 
             this.pUsuarios.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pUsuarios.Controls.Add(this.cbUserNewDepartment);
+            this.pUsuarios.Controls.Add(this.cbUserNewRole);
+            this.pUsuarios.Controls.Add(this.btnUpdateUser);
             this.pUsuarios.Controls.Add(this.tbEmail);
             this.pUsuarios.Controls.Add(this.tbIdUser);
-            this.pUsuarios.Controls.Add(this.tbOcupacion);
+            this.pUsuarios.Controls.Add(this.tbJob);
             this.pUsuarios.Controls.Add(this.tbDepartment);
             this.pUsuarios.Controls.Add(this.tbPassword);
             this.pUsuarios.Controls.Add(this.btnEliminarUser);
@@ -1644,6 +1946,84 @@ namespace Tfg_NetFramework
             this.pUsuarios.TabIndex = 2;
             this.pUsuarios.Visible = false;
             // 
+            // cbUserNewDepartment
+            // 
+            this.cbUserNewDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUserNewDepartment.FormattingEnabled = true;
+            this.cbUserNewDepartment.Location = new System.Drawing.Point(226, 358);
+            this.cbUserNewDepartment.Name = "cbUserNewDepartment";
+            this.cbUserNewDepartment.Size = new System.Drawing.Size(104, 21);
+            this.cbUserNewDepartment.TabIndex = 8;
+            // 
+            // cbUserNewRole
+            // 
+            this.cbUserNewRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUserNewRole.FormattingEnabled = true;
+            this.cbUserNewRole.Location = new System.Drawing.Point(232, 405);
+            this.cbUserNewRole.Name = "cbUserNewRole";
+            this.cbUserNewRole.Size = new System.Drawing.Size(104, 21);
+            this.cbUserNewRole.TabIndex = 9;
+            // 
+            // btnUpdateUser
+            // 
+            this.btnUpdateUser.Location = new System.Drawing.Point(270, 310);
+            this.btnUpdateUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateUser.Name = "btnUpdateUser";
+            this.btnUpdateUser.Size = new System.Drawing.Size(95, 41);
+            this.btnUpdateUser.TabIndex = 23;
+            this.btnUpdateUser.Text = "Actualizar usuario";
+            this.btnUpdateUser.UseVisualStyleBackColor = true;
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.Location = new System.Drawing.Point(113, 292);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbEmail.PlaceholderText = "";
+            this.tbEmail.Size = new System.Drawing.Size(100, 20);
+            this.tbEmail.TabIndex = 9;
+            // 
+            // tbIdUser
+            // 
+            this.tbIdUser.ForeColor = System.Drawing.Color.Gray;
+            this.tbIdUser.Location = new System.Drawing.Point(113, 263);
+            this.tbIdUser.Name = "tbIdUser";
+            this.tbIdUser.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbIdUser.PlaceholderText = "";
+            this.tbIdUser.ReadOnly = true;
+            this.tbIdUser.Size = new System.Drawing.Size(100, 20);
+            this.tbIdUser.TabIndex = 8;
+            // 
+            // tbJob
+            // 
+            this.tbJob.Location = new System.Drawing.Point(101, 403);
+            this.tbJob.Name = "tbJob";
+            this.tbJob.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbJob.PlaceholderText = "";
+            this.tbJob.ReadOnly = true;
+            this.tbJob.Size = new System.Drawing.Size(100, 20);
+            this.tbJob.TabIndex = 12;
+            // 
+            // tbDepartment
+            // 
+            this.tbDepartment.Location = new System.Drawing.Point(104, 358);
+            this.tbDepartment.Name = "tbDepartment";
+            this.tbDepartment.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbDepartment.PlaceholderText = "";
+            this.tbDepartment.ReadOnly = true;
+            this.tbDepartment.Size = new System.Drawing.Size(100, 20);
+            this.tbDepartment.TabIndex = 11;
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.Location = new System.Drawing.Point(113, 328);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbPassword.PlaceholderText = "";
+            this.tbPassword.Size = new System.Drawing.Size(100, 20);
+            this.tbPassword.TabIndex = 10;
+            // 
             // btnEliminarUser
             // 
             this.btnEliminarUser.Location = new System.Drawing.Point(167, 216);
@@ -1662,7 +2042,7 @@ namespace Tfg_NetFramework
             this.btnUpdateDtgUsers.Name = "btnUpdateDtgUsers";
             this.btnUpdateDtgUsers.Size = new System.Drawing.Size(103, 35);
             this.btnUpdateDtgUsers.TabIndex = 6;
-            this.btnUpdateDtgUsers.Text = "Actualizar";
+            this.btnUpdateDtgUsers.Text = "Actualizar tabla";
             this.btnUpdateDtgUsers.UseVisualStyleBackColor = true;
             this.btnUpdateDtgUsers.Click += new System.EventHandler(this.btnUpdateDtgUsers_Click);
             // 
@@ -1725,18 +2105,19 @@ namespace Tfg_NetFramework
             this.role});
             this.dgvUser.Location = new System.Drawing.Point(293, 19);
             this.dgvUser.Name = "dgvUser";
+            this.dgvUser.ReadOnly = true;
             this.dgvUser.RowHeadersWidth = 51;
             this.dgvUser.RowTemplate.Height = 25;
             this.dgvUser.Size = new System.Drawing.Size(612, 222);
             this.dgvUser.TabIndex = 6;
             this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
-            this.dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
             // 
             // idUser
             // 
             this.idUser.HeaderText = "Id User";
             this.idUser.MinimumWidth = 6;
             this.idUser.Name = "idUser";
+            this.idUser.ReadOnly = true;
             this.idUser.Width = 125;
             // 
             // email
@@ -1744,6 +2125,7 @@ namespace Tfg_NetFramework
             this.email.HeaderText = "Email";
             this.email.MinimumWidth = 6;
             this.email.Name = "email";
+            this.email.ReadOnly = true;
             this.email.Width = 125;
             // 
             // password
@@ -1751,6 +2133,7 @@ namespace Tfg_NetFramework
             this.password.HeaderText = "Password";
             this.password.MinimumWidth = 6;
             this.password.Name = "password";
+            this.password.ReadOnly = true;
             this.password.Width = 125;
             // 
             // dept
@@ -1758,6 +2141,7 @@ namespace Tfg_NetFramework
             this.dept.HeaderText = "Departamento";
             this.dept.MinimumWidth = 6;
             this.dept.Name = "dept";
+            this.dept.ReadOnly = true;
             this.dept.Width = 125;
             // 
             // role
@@ -1765,6 +2149,7 @@ namespace Tfg_NetFramework
             this.role.HeaderText = "Ocupación";
             this.role.MinimumWidth = 6;
             this.role.Name = "role";
+            this.role.ReadOnly = true;
             this.role.Width = 125;
             // 
             // lbGestUsers
@@ -1818,6 +2203,15 @@ namespace Tfg_NetFramework
             this.lbRegisterUser.TabIndex = 7;
             this.lbRegisterUser.Text = "Register";
             // 
+            // tbRPassword
+            // 
+            this.tbRPassword.Location = new System.Drawing.Point(9, 92);
+            this.tbRPassword.Name = "tbRPassword";
+            this.tbRPassword.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbRPassword.PlaceholderText = "";
+            this.tbRPassword.Size = new System.Drawing.Size(100, 20);
+            this.tbRPassword.TabIndex = 2;
+            // 
             // cbDepartamento
             // 
             this.cbDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1826,6 +2220,15 @@ namespace Tfg_NetFramework
             this.cbDepartamento.Name = "cbDepartamento";
             this.cbDepartamento.Size = new System.Drawing.Size(104, 21);
             this.cbDepartamento.TabIndex = 4;
+            // 
+            // tbREmail
+            // 
+            this.tbREmail.Location = new System.Drawing.Point(9, 47);
+            this.tbREmail.Name = "tbREmail";
+            this.tbREmail.PlaceholderColor = System.Drawing.Color.Gray;
+            this.tbREmail.PlaceholderText = "";
+            this.tbREmail.Size = new System.Drawing.Size(100, 20);
+            this.tbREmail.TabIndex = 1;
             // 
             // opfSeleccionarArchivo
             // 
@@ -1836,9 +2239,9 @@ namespace Tfg_NetFramework
             this.pCRMGest.BackColor = System.Drawing.Color.SandyBrown;
             this.pCRMGest.Controls.Add(this.tabControl1);
             this.pCRMGest.Location = new System.Drawing.Point(166, 61);
-            this.pCRMGest.Margin = new System.Windows.Forms.Padding(2);
+            this.pCRMGest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pCRMGest.Name = "pCRMGest";
-            this.pCRMGest.Size = new System.Drawing.Size(1010, 504);
+            this.pCRMGest.Size = new System.Drawing.Size(1066, 607);
             this.pCRMGest.TabIndex = 11;
             // 
             // tabControl1
@@ -1847,7 +2250,7 @@ namespace Tfg_NetFramework
             this.tabControl1.Controls.Add(this.Customers);
             this.tabControl1.Controls.Add(this.teams);
             this.tabControl1.Location = new System.Drawing.Point(14, 15);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1216, 592);
@@ -1855,6 +2258,8 @@ namespace Tfg_NetFramework
             // 
             // pipeline
             // 
+            this.pipeline.Controls.Add(this.lbSales);
+            this.pipeline.Controls.Add(this.flpSale);
             this.pipeline.Controls.Add(this.btnUpdateFlps);
             this.pipeline.Controls.Add(this.btnPipelineAddLead);
             this.pipeline.Controls.Add(this.flpWon);
@@ -1867,18 +2272,40 @@ namespace Tfg_NetFramework
             this.pipeline.Controls.Add(this.flpQualified);
             this.pipeline.Controls.Add(this.flpNew);
             this.pipeline.Location = new System.Drawing.Point(4, 22);
-            this.pipeline.Margin = new System.Windows.Forms.Padding(2);
+            this.pipeline.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pipeline.Name = "pipeline";
-            this.pipeline.Padding = new System.Windows.Forms.Padding(2);
+            this.pipeline.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pipeline.Size = new System.Drawing.Size(1208, 566);
             this.pipeline.TabIndex = 0;
             this.pipeline.Text = "Pipeline";
             this.pipeline.UseVisualStyleBackColor = true;
             // 
+            // lbSales
+            // 
+            this.lbSales.AutoSize = true;
+            this.lbSales.Location = new System.Drawing.Point(896, 69);
+            this.lbSales.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbSales.Name = "lbSales";
+            this.lbSales.Size = new System.Drawing.Size(33, 13);
+            this.lbSales.TabIndex = 15;
+            this.lbSales.Text = "Sales";
+            // 
+            // flpSale
+            // 
+            this.flpSale.AllowDrop = true;
+            this.flpSale.BackColor = System.Drawing.Color.Gray;
+            this.flpSale.Location = new System.Drawing.Point(893, 84);
+            this.flpSale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpSale.Name = "flpSale";
+            this.flpSale.Size = new System.Drawing.Size(183, 438);
+            this.flpSale.TabIndex = 14;
+            this.flpSale.DragDrop += new System.Windows.Forms.DragEventHandler(this.flp_DragDrop);
+            this.flpSale.DragEnter += new System.Windows.Forms.DragEventHandler(this.flp_DragEnter);
+            // 
             // btnUpdateFlps
             // 
             this.btnUpdateFlps.Location = new System.Drawing.Point(395, 7);
-            this.btnUpdateFlps.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateFlps.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdateFlps.Name = "btnUpdateFlps";
             this.btnUpdateFlps.Size = new System.Drawing.Size(105, 44);
             this.btnUpdateFlps.TabIndex = 13;
@@ -1903,7 +2330,7 @@ namespace Tfg_NetFramework
             this.flpWon.AllowDrop = true;
             this.flpWon.BackColor = System.Drawing.Color.Gray;
             this.flpWon.Location = new System.Drawing.Point(666, 86);
-            this.flpWon.Margin = new System.Windows.Forms.Padding(2);
+            this.flpWon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flpWon.Name = "flpWon";
             this.flpWon.Size = new System.Drawing.Size(183, 438);
             this.flpWon.TabIndex = 9;
@@ -1953,7 +2380,7 @@ namespace Tfg_NetFramework
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(248, 7);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 44);
             this.button1.TabIndex = 3;
@@ -1966,7 +2393,7 @@ namespace Tfg_NetFramework
             this.flpProposition.AllowDrop = true;
             this.flpProposition.BackColor = System.Drawing.Color.Gray;
             this.flpProposition.Location = new System.Drawing.Point(446, 86);
-            this.flpProposition.Margin = new System.Windows.Forms.Padding(2);
+            this.flpProposition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flpProposition.Name = "flpProposition";
             this.flpProposition.Size = new System.Drawing.Size(159, 439);
             this.flpProposition.TabIndex = 2;
@@ -1978,7 +2405,7 @@ namespace Tfg_NetFramework
             this.flpQualified.AllowDrop = true;
             this.flpQualified.BackColor = System.Drawing.Color.Gray;
             this.flpQualified.Location = new System.Drawing.Point(249, 86);
-            this.flpQualified.Margin = new System.Windows.Forms.Padding(2);
+            this.flpQualified.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flpQualified.Name = "flpQualified";
             this.flpQualified.Size = new System.Drawing.Size(158, 439);
             this.flpQualified.TabIndex = 1;
@@ -1990,7 +2417,7 @@ namespace Tfg_NetFramework
             this.flpNew.AllowDrop = true;
             this.flpNew.BackColor = System.Drawing.Color.Gray;
             this.flpNew.Location = new System.Drawing.Point(45, 86);
-            this.flpNew.Margin = new System.Windows.Forms.Padding(2);
+            this.flpNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flpNew.Name = "flpNew";
             this.flpNew.Size = new System.Drawing.Size(176, 438);
             this.flpNew.TabIndex = 0;
@@ -1999,11 +2426,11 @@ namespace Tfg_NetFramework
             // 
             // Customers
             // 
+            this.Customers.Controls.Add(this.lbStateDateLead);
             this.Customers.Controls.Add(this.lbDateEnd);
             this.Customers.Controls.Add(this.lbDateStart);
             this.Customers.Controls.Add(this.dgvCustomer_Lead);
             this.Customers.Controls.Add(this.lbLeadName);
-            this.Customers.Controls.Add(this.btnMoreInfoCustomer);
             this.Customers.Controls.Add(this.dgvCustomer);
             this.Customers.Controls.Add(this.btnUpdateDgvCustomer);
             this.Customers.Controls.Add(this.btnCustomersRemoveCustomers);
@@ -2014,13 +2441,22 @@ namespace Tfg_NetFramework
             this.Customers.Controls.Add(this.label2);
             this.Customers.Controls.Add(this.label1);
             this.Customers.Location = new System.Drawing.Point(4, 22);
-            this.Customers.Margin = new System.Windows.Forms.Padding(2);
+            this.Customers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Customers.Name = "Customers";
-            this.Customers.Padding = new System.Windows.Forms.Padding(2);
+            this.Customers.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Customers.Size = new System.Drawing.Size(1208, 566);
             this.Customers.TabIndex = 1;
             this.Customers.Text = "Customers";
             this.Customers.UseVisualStyleBackColor = true;
+            // 
+            // lbStateDateLead
+            // 
+            this.lbStateDateLead.AutoSize = true;
+            this.lbStateDateLead.Location = new System.Drawing.Point(352, 347);
+            this.lbStateDateLead.Name = "lbStateDateLead";
+            this.lbStateDateLead.Size = new System.Drawing.Size(35, 13);
+            this.lbStateDateLead.TabIndex = 30;
+            this.lbStateDateLead.Text = "label4";
             // 
             // lbDateEnd
             // 
@@ -2057,16 +2493,19 @@ namespace Tfg_NetFramework
             this.dgvCustomer_Lead.Location = new System.Drawing.Point(9, 366);
             this.dgvCustomer_Lead.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvCustomer_Lead.Name = "dgvCustomer_Lead";
+            this.dgvCustomer_Lead.ReadOnly = true;
             this.dgvCustomer_Lead.RowHeadersWidth = 51;
             this.dgvCustomer_Lead.RowTemplate.Height = 29;
             this.dgvCustomer_Lead.Size = new System.Drawing.Size(941, 157);
             this.dgvCustomer_Lead.TabIndex = 27;
+            this.dgvCustomer_Lead.DoubleClick += new System.EventHandler(this.dgvCustomer_Lead_DoubleClick);
             // 
             // dataGridViewTextBoxColumn16
             // 
             this.dataGridViewTextBoxColumn16.HeaderText = "idLead";
             this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.ReadOnly = true;
             this.dataGridViewTextBoxColumn16.Width = 125;
             // 
             // dataGridViewTextBoxColumn17
@@ -2074,6 +2513,7 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn17.HeaderText = "Name";
             this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.ReadOnly = true;
             this.dataGridViewTextBoxColumn17.Width = 125;
             // 
             // dataGridViewTextBoxColumn18
@@ -2081,6 +2521,7 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn18.HeaderText = "Date";
             this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.ReadOnly = true;
             this.dataGridViewTextBoxColumn18.Width = 125;
             // 
             // dataGridViewTextBoxColumn19
@@ -2088,6 +2529,7 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn19.HeaderText = "Stage";
             this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.ReadOnly = true;
             this.dataGridViewTextBoxColumn19.Width = 125;
             // 
             // dataGridViewTextBoxColumn20
@@ -2095,6 +2537,7 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn20.HeaderText = "Amount";
             this.dataGridViewTextBoxColumn20.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.ReadOnly = true;
             this.dataGridViewTextBoxColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn20.Width = 125;
             // 
@@ -2103,6 +2546,7 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn21.HeaderText = "Assigned To";
             this.dataGridViewTextBoxColumn21.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.ReadOnly = true;
             this.dataGridViewTextBoxColumn21.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn21.Width = 125;
@@ -2112,6 +2556,7 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn22.HeaderText = "Created At";
             this.dataGridViewTextBoxColumn22.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.ReadOnly = true;
             this.dataGridViewTextBoxColumn22.Width = 125;
             // 
             // lbLeadName
@@ -2124,20 +2569,6 @@ namespace Tfg_NetFramework
             this.lbLeadName.Size = new System.Drawing.Size(44, 20);
             this.lbLeadName.TabIndex = 26;
             this.lbLeadName.Text = "Date";
-            // 
-            // btnMoreInfoCustomer
-            // 
-            this.btnMoreInfoCustomer.BackColor = System.Drawing.Color.White;
-            this.btnMoreInfoCustomer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMoreInfoCustomer.BackgroundImage")));
-            this.btnMoreInfoCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMoreInfoCustomer.FlatAppearance.BorderSize = 0;
-            this.btnMoreInfoCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMoreInfoCustomer.Location = new System.Drawing.Point(6, 252);
-            this.btnMoreInfoCustomer.Name = "btnMoreInfoCustomer";
-            this.btnMoreInfoCustomer.Size = new System.Drawing.Size(30, 30);
-            this.btnMoreInfoCustomer.TabIndex = 16;
-            this.btnMoreInfoCustomer.UseVisualStyleBackColor = false;
-            this.btnMoreInfoCustomer.Click += new System.EventHandler(this.btnMoreInfoCustomer_Click);
             // 
             // dgvCustomer
             // 
@@ -2158,17 +2589,20 @@ namespace Tfg_NetFramework
             this.dgvCustomer.Location = new System.Drawing.Point(8, 83);
             this.dgvCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.ReadOnly = true;
             this.dgvCustomer.RowHeadersWidth = 51;
             this.dgvCustomer.RowTemplate.Height = 29;
             this.dgvCustomer.Size = new System.Drawing.Size(1182, 157);
             this.dgvCustomer.TabIndex = 15;
             this.dgvCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellClick);
+            this.dgvCustomer.DoubleClick += new System.EventHandler(this.dgvCustomer_DoubleClick);
             // 
             // dataGridViewTextBoxColumn9
             // 
             this.dataGridViewTextBoxColumn9.HeaderText = "idCustomer";
             this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.Width = 125;
             // 
             // dataGridViewTextBoxColumn11
@@ -2176,6 +2610,7 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn11.HeaderText = "Name";
             this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Width = 125;
             // 
             // dataGridViewTextBoxColumn12
@@ -2183,6 +2618,7 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn12.HeaderText = "Phone";
             this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
             this.dataGridViewTextBoxColumn12.Width = 125;
             // 
             // dataGridViewTextBoxColumn10
@@ -2190,6 +2626,7 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn10.HeaderText = "Email";
             this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Width = 125;
             // 
             // dataGridViewTextBoxColumn13
@@ -2197,6 +2634,7 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn13.HeaderText = "Department";
             this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
             this.dataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn13.Width = 125;
             // 
@@ -2205,6 +2643,7 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn14.HeaderText = "City";
             this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
             this.dataGridViewTextBoxColumn14.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn14.Width = 125;
@@ -2214,6 +2653,7 @@ namespace Tfg_NetFramework
             this.country.HeaderText = "Country";
             this.country.MinimumWidth = 6;
             this.country.Name = "country";
+            this.country.ReadOnly = true;
             this.country.Width = 125;
             // 
             // dataGridViewTextBoxColumn15
@@ -2221,6 +2661,7 @@ namespace Tfg_NetFramework
             this.dataGridViewTextBoxColumn15.HeaderText = "Type";
             this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.ReadOnly = true;
             this.dataGridViewTextBoxColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewTextBoxColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewTextBoxColumn15.Width = 125;
@@ -2230,6 +2671,7 @@ namespace Tfg_NetFramework
             this.dataGridViewButtonColumn1.HeaderText = "Leads";
             this.dataGridViewButtonColumn1.MinimumWidth = 6;
             this.dataGridViewButtonColumn1.Name = "dataGridViewButtonColumn1";
+            this.dataGridViewButtonColumn1.ReadOnly = true;
             this.dataGridViewButtonColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewButtonColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.dataGridViewButtonColumn1.Width = 125;
@@ -2237,7 +2679,7 @@ namespace Tfg_NetFramework
             // btnUpdateDgvCustomer
             // 
             this.btnUpdateDgvCustomer.Location = new System.Drawing.Point(238, 18);
-            this.btnUpdateDgvCustomer.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateDgvCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdateDgvCustomer.Name = "btnUpdateDgvCustomer";
             this.btnUpdateDgvCustomer.Size = new System.Drawing.Size(154, 33);
             this.btnUpdateDgvCustomer.TabIndex = 15;
@@ -2319,7 +2761,7 @@ namespace Tfg_NetFramework
             this.teams.Controls.Add(this.dataGridView3);
             this.teams.Controls.Add(this.label3);
             this.teams.Location = new System.Drawing.Point(4, 22);
-            this.teams.Margin = new System.Windows.Forms.Padding(2);
+            this.teams.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.teams.Name = "teams";
             this.teams.Size = new System.Drawing.Size(1208, 566);
             this.teams.TabIndex = 2;
@@ -2343,7 +2785,7 @@ namespace Tfg_NetFramework
             this.teamLostLeads,
             this.teamWonLeads});
             this.dataGridView3.Location = new System.Drawing.Point(22, 73);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
@@ -2485,332 +2927,623 @@ namespace Tfg_NetFramework
             this.lbSettings.TabIndex = 0;
             this.lbSettings.Text = "Settings";
             // 
-            // tbReqMileagePricePerKilometer
-            // 
-            this.tbReqMileagePricePerKilometer.Location = new System.Drawing.Point(102, 260);
-            this.tbReqMileagePricePerKilometer.Name = "tbReqMileagePricePerKilometer";
-            this.tbReqMileagePricePerKilometer.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbReqMileagePricePerKilometer.PlaceholderText = "";
-            this.tbReqMileagePricePerKilometer.Size = new System.Drawing.Size(100, 20);
-            this.tbReqMileagePricePerKilometer.TabIndex = 35;
-            // 
-            // tbReqMileageTotal
-            // 
-            this.tbReqMileageTotal.Location = new System.Drawing.Point(102, 235);
-            this.tbReqMileageTotal.Name = "tbReqMileageTotal";
-            this.tbReqMileageTotal.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbReqMileageTotal.PlaceholderText = "";
-            this.tbReqMileageTotal.Size = new System.Drawing.Size(100, 20);
-            this.tbReqMileageTotal.TabIndex = 34;
-            // 
-            // tbReqMileageDestination
-            // 
-            this.tbReqMileageDestination.Location = new System.Drawing.Point(102, 206);
-            this.tbReqMileageDestination.Name = "tbReqMileageDestination";
-            this.tbReqMileageDestination.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbReqMileageDestination.PlaceholderText = "";
-            this.tbReqMileageDestination.Size = new System.Drawing.Size(100, 20);
-            this.tbReqMileageDestination.TabIndex = 33;
-            // 
-            // tbReqMileageOrigin
-            // 
-            this.tbReqMileageOrigin.Location = new System.Drawing.Point(102, 175);
-            this.tbReqMileageOrigin.Name = "tbReqMileageOrigin";
-            this.tbReqMileageOrigin.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbReqMileageOrigin.PlaceholderText = "";
-            this.tbReqMileageOrigin.Size = new System.Drawing.Size(100, 20);
-            this.tbReqMileageOrigin.TabIndex = 32;
-            // 
-            // tbReqMileageTitle
-            // 
-            this.tbReqMileageTitle.Location = new System.Drawing.Point(102, 74);
-            this.tbReqMileageTitle.Name = "tbReqMileageTitle";
-            this.tbReqMileageTitle.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbReqMileageTitle.PlaceholderText = "";
-            this.tbReqMileageTitle.Size = new System.Drawing.Size(100, 20);
-            this.tbReqMileageTitle.TabIndex = 31;
-            // 
-            // tbReqMileageMileage
-            // 
-            this.tbReqMileageMileage.Location = new System.Drawing.Point(102, 34);
-            this.tbReqMileageMileage.Name = "tbReqMileageMileage";
-            this.tbReqMileageMileage.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbReqMileageMileage.PlaceholderText = "";
-            this.tbReqMileageMileage.Size = new System.Drawing.Size(100, 20);
-            this.tbReqMileageMileage.TabIndex = 30;
-            // 
-            // tbReqAllowancesObservations
-            // 
-            this.tbReqAllowancesObservations.Location = new System.Drawing.Point(69, 74);
-            this.tbReqAllowancesObservations.Multiline = true;
-            this.tbReqAllowancesObservations.Name = "tbReqAllowancesObservations";
-            this.tbReqAllowancesObservations.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbReqAllowancesObservations.PlaceholderText = "";
-            this.tbReqAllowancesObservations.Size = new System.Drawing.Size(197, 83);
-            this.tbReqAllowancesObservations.TabIndex = 20;
-            // 
-            // tbReqAllowancesTitle
-            // 
-            this.tbReqAllowancesTitle.Location = new System.Drawing.Point(65, 41);
-            this.tbReqAllowancesTitle.Name = "tbReqAllowancesTitle";
-            this.tbReqAllowancesTitle.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbReqAllowancesTitle.PlaceholderText = "";
-            this.tbReqAllowancesTitle.Size = new System.Drawing.Size(100, 20);
-            this.tbReqAllowancesTitle.TabIndex = 19;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.Location = new System.Drawing.Point(113, 292);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbEmail.PlaceholderText = "";
-            this.tbEmail.ReadOnly = true;
-            this.tbEmail.Size = new System.Drawing.Size(100, 20);
-            this.tbEmail.TabIndex = 29;
-            // 
-            // tbIdUser
-            // 
-            this.tbIdUser.Location = new System.Drawing.Point(113, 263);
-            this.tbIdUser.Name = "tbIdUser";
-            this.tbIdUser.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbIdUser.PlaceholderText = "";
-            this.tbIdUser.ReadOnly = true;
-            this.tbIdUser.Size = new System.Drawing.Size(100, 20);
-            this.tbIdUser.TabIndex = 28;
-            // 
-            // tbOcupacion
-            // 
-            this.tbOcupacion.Location = new System.Drawing.Point(113, 397);
-            this.tbOcupacion.Name = "tbOcupacion";
-            this.tbOcupacion.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbOcupacion.PlaceholderText = "";
-            this.tbOcupacion.ReadOnly = true;
-            this.tbOcupacion.Size = new System.Drawing.Size(100, 20);
-            this.tbOcupacion.TabIndex = 27;
-            // 
-            // tbDepartment
-            // 
-            this.tbDepartment.Location = new System.Drawing.Point(113, 360);
-            this.tbDepartment.Name = "tbDepartment";
-            this.tbDepartment.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbDepartment.PlaceholderText = "";
-            this.tbDepartment.ReadOnly = true;
-            this.tbDepartment.Size = new System.Drawing.Size(100, 20);
-            this.tbDepartment.TabIndex = 26;
-            // 
-            // tbPassword
-            // 
-            this.tbPassword.Location = new System.Drawing.Point(113, 328);
-            this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbPassword.PlaceholderText = "";
-            this.tbPassword.ReadOnly = true;
-            this.tbPassword.Size = new System.Drawing.Size(100, 20);
-            this.tbPassword.TabIndex = 25;
-            // 
-            // tbRPassword
-            // 
-            this.tbRPassword.Location = new System.Drawing.Point(9, 92);
-            this.tbRPassword.Name = "tbRPassword";
-            this.tbRPassword.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbRPassword.PlaceholderText = "";
-            this.tbRPassword.Size = new System.Drawing.Size(100, 20);
-            this.tbRPassword.TabIndex = 24;
-            // 
-            // tbREmail
-            // 
-            this.tbREmail.Location = new System.Drawing.Point(9, 47);
-            this.tbREmail.Name = "tbREmail";
-            this.tbREmail.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbREmail.PlaceholderText = "";
-            this.tbREmail.Size = new System.Drawing.Size(100, 20);
-            this.tbREmail.TabIndex = 23;
-            // 
-            // tbManAllowancesEmail
-            // 
-            this.tbManAllowancesEmail.Location = new System.Drawing.Point(42, 201);
-            this.tbManAllowancesEmail.Name = "tbManAllowancesEmail";
-            this.tbManAllowancesEmail.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManAllowancesEmail.PlaceholderText = "";
-            this.tbManAllowancesEmail.Size = new System.Drawing.Size(100, 20);
-            this.tbManAllowancesEmail.TabIndex = 31;
-            // 
-            // tbManAllowancesTitle
-            // 
-            this.tbManAllowancesTitle.Location = new System.Drawing.Point(42, 235);
-            this.tbManAllowancesTitle.Name = "tbManAllowancesTitle";
-            this.tbManAllowancesTitle.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManAllowancesTitle.PlaceholderText = "";
-            this.tbManAllowancesTitle.Size = new System.Drawing.Size(100, 20);
-            this.tbManAllowancesTitle.TabIndex = 32;
-            // 
-            // tbManAllowancesObservations
-            // 
-            this.tbManAllowancesObservations.Location = new System.Drawing.Point(42, 269);
-            this.tbManAllowancesObservations.Multiline = true;
-            this.tbManAllowancesObservations.Name = "tbManAllowancesObservations";
-            this.tbManAllowancesObservations.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManAllowancesObservations.PlaceholderText = "";
-            this.tbManAllowancesObservations.Size = new System.Drawing.Size(121, 69);
-            this.tbManAllowancesObservations.TabIndex = 33;
-            // 
-            // tbManAllowancesDate
-            // 
-            this.tbManAllowancesDate.Location = new System.Drawing.Point(276, 198);
-            this.tbManAllowancesDate.Name = "tbManAllowancesDate";
-            this.tbManAllowancesDate.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManAllowancesDate.PlaceholderText = "";
-            this.tbManAllowancesDate.Size = new System.Drawing.Size(100, 20);
-            this.tbManAllowancesDate.TabIndex = 34;
-            // 
-            // tbManAllowancesStartHour
-            // 
-            this.tbManAllowancesStartHour.Location = new System.Drawing.Point(276, 233);
-            this.tbManAllowancesStartHour.Name = "tbManAllowancesStartHour";
-            this.tbManAllowancesStartHour.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManAllowancesStartHour.PlaceholderText = "";
-            this.tbManAllowancesStartHour.Size = new System.Drawing.Size(100, 20);
-            this.tbManAllowancesStartHour.TabIndex = 35;
-            // 
-            // tbManAllowancesEndHour
-            // 
-            this.tbManAllowancesEndHour.Location = new System.Drawing.Point(276, 269);
-            this.tbManAllowancesEndHour.Name = "tbManAllowancesEndHour";
-            this.tbManAllowancesEndHour.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManAllowancesEndHour.PlaceholderText = "";
-            this.tbManAllowancesEndHour.Size = new System.Drawing.Size(100, 20);
-            this.tbManAllowancesEndHour.TabIndex = 36;
-            // 
-            // tbManAllowancesState
-            // 
-            this.tbManAllowancesState.Location = new System.Drawing.Point(276, 305);
-            this.tbManAllowancesState.Name = "tbManAllowancesState";
-            this.tbManAllowancesState.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManAllowancesState.PlaceholderText = "";
-            this.tbManAllowancesState.Size = new System.Drawing.Size(100, 20);
-            this.tbManAllowancesState.TabIndex = 37;
-            // 
-            // tbManAllowancesIdAllowance
-            // 
-            this.tbManAllowancesIdAllowance.Location = new System.Drawing.Point(450, 304);
-            this.tbManAllowancesIdAllowance.Name = "tbManAllowancesIdAllowance";
-            this.tbManAllowancesIdAllowance.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManAllowancesIdAllowance.PlaceholderText = "";
-            this.tbManAllowancesIdAllowance.Size = new System.Drawing.Size(100, 20);
-            this.tbManAllowancesIdAllowance.TabIndex = 38;
-            // 
-            // tbManMileageEmail
-            // 
-            this.tbManMileageEmail.Location = new System.Drawing.Point(63, 185);
-            this.tbManMileageEmail.Name = "tbManMileageEmail";
-            this.tbManMileageEmail.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManMileageEmail.PlaceholderText = "";
-            this.tbManMileageEmail.Size = new System.Drawing.Size(100, 20);
-            this.tbManMileageEmail.TabIndex = 53;
-            // 
-            // tbManMileageTitle
-            // 
-            this.tbManMileageTitle.Location = new System.Drawing.Point(63, 213);
-            this.tbManMileageTitle.Name = "tbManMileageTitle";
-            this.tbManMileageTitle.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManMileageTitle.PlaceholderText = "";
-            this.tbManMileageTitle.Size = new System.Drawing.Size(100, 20);
-            this.tbManMileageTitle.TabIndex = 54;
-            // 
-            // tbManMileageDate
-            // 
-            this.tbManMileageDate.Location = new System.Drawing.Point(63, 250);
-            this.tbManMileageDate.Name = "tbManMileageDate";
-            this.tbManMileageDate.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManMileageDate.PlaceholderText = "";
-            this.tbManMileageDate.Size = new System.Drawing.Size(100, 20);
-            this.tbManMileageDate.TabIndex = 55;
-            // 
-            // tbManMileageSubcategory
-            // 
-            this.tbManMileageSubcategory.Location = new System.Drawing.Point(89, 284);
-            this.tbManMileageSubcategory.Name = "tbManMileageSubcategory";
-            this.tbManMileageSubcategory.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManMileageSubcategory.PlaceholderText = "";
-            this.tbManMileageSubcategory.Size = new System.Drawing.Size(100, 20);
-            this.tbManMileageSubcategory.TabIndex = 56;
-            // 
-            // tbManMileageIdMileage
-            // 
-            this.tbManMileageIdMileage.Location = new System.Drawing.Point(89, 322);
-            this.tbManMileageIdMileage.Name = "tbManMileageIdMileage";
-            this.tbManMileageIdMileage.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManMileageIdMileage.PlaceholderText = "";
-            this.tbManMileageIdMileage.Size = new System.Drawing.Size(100, 20);
-            this.tbManMileageIdMileage.TabIndex = 57;
-            // 
-            // tbManMileageOrigin
-            // 
-            this.tbManMileageOrigin.Location = new System.Drawing.Point(262, 185);
-            this.tbManMileageOrigin.Name = "tbManMileageOrigin";
-            this.tbManMileageOrigin.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManMileageOrigin.PlaceholderText = "";
-            this.tbManMileageOrigin.Size = new System.Drawing.Size(100, 20);
-            this.tbManMileageOrigin.TabIndex = 58;
-            // 
-            // tbManMileageDestination
-            // 
-            this.tbManMileageDestination.Location = new System.Drawing.Point(262, 224);
-            this.tbManMileageDestination.Name = "tbManMileageDestination";
-            this.tbManMileageDestination.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManMileageDestination.PlaceholderText = "";
-            this.tbManMileageDestination.Size = new System.Drawing.Size(100, 20);
-            this.tbManMileageDestination.TabIndex = 59;
-            // 
-            // tbManMileageKilometers
-            // 
-            this.tbManMileageKilometers.Location = new System.Drawing.Point(262, 254);
-            this.tbManMileageKilometers.Name = "tbManMileageKilometers";
-            this.tbManMileageKilometers.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManMileageKilometers.PlaceholderText = "";
-            this.tbManMileageKilometers.Size = new System.Drawing.Size(100, 20);
-            this.tbManMileageKilometers.TabIndex = 60;
-            // 
-            // tbManMileagePricePerKilometer
-            // 
-            this.tbManMileagePricePerKilometer.Location = new System.Drawing.Point(309, 288);
-            this.tbManMileagePricePerKilometer.Name = "tbManMileagePricePerKilometer";
-            this.tbManMileagePricePerKilometer.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManMileagePricePerKilometer.PlaceholderText = "";
-            this.tbManMileagePricePerKilometer.Size = new System.Drawing.Size(100, 20);
-            this.tbManMileagePricePerKilometer.TabIndex = 61;
-            // 
-            // tbManMileageFinal
-            // 
-            this.tbManMileageFinal.Location = new System.Drawing.Point(262, 322);
-            this.tbManMileageFinal.Name = "tbManMileageFinal";
-            this.tbManMileageFinal.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManMileageFinal.PlaceholderText = "";
-            this.tbManMileageFinal.Size = new System.Drawing.Size(100, 20);
-            this.tbManMileageFinal.TabIndex = 62;
-            // 
-            // tbManMileageState
-            // 
-            this.tbManMileageState.Location = new System.Drawing.Point(452, 185);
-            this.tbManMileageState.Name = "tbManMileageState";
-            this.tbManMileageState.PlaceholderColor = System.Drawing.Color.Gray;
-            this.tbManMileageState.PlaceholderText = "";
-            this.tbManMileageState.Size = new System.Drawing.Size(100, 20);
-            this.tbManMileageState.TabIndex = 65;
+            // pInventory
+            // 
+            this.pInventory.BackColor = System.Drawing.Color.Sienna;
+            this.pInventory.Controls.Add(this.blbMaxQuantity);
+            this.pInventory.Controls.Add(this.blbAmountUpdate);
+            this.pInventory.Controls.Add(this.bdStoreIntoWarehouses);
+            this.pInventory.Controls.Add(this.btbStoreAmount);
+            this.pInventory.Controls.Add(this.blbTitleProductsAboutType);
+            this.pInventory.Controls.Add(this.blbTitleStateProducts);
+            this.pInventory.Controls.Add(this.bbtnAddProduct);
+            this.pInventory.Controls.Add(this.bbtnAddProductToWarehouse);
+            this.pInventory.Controls.Add(this.bdgvItemsPerType);
+            this.pInventory.Controls.Add(this.bdgvStoredProducts);
+            this.pInventory.Controls.Add(this.lbInventory);
+            this.pInventory.Location = new System.Drawing.Point(166, 61);
+            this.pInventory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pInventory.Name = "pInventory";
+            this.pInventory.Size = new System.Drawing.Size(1066, 604);
+            this.pInventory.TabIndex = 1;
+            this.pInventory.VisibleChanged += new System.EventHandler(this.pInventory_VisibleChanged);
+            // 
+            // blbMaxQuantity
+            // 
+            this.blbMaxQuantity.AllowParentOverrides = false;
+            this.blbMaxQuantity.AutoEllipsis = false;
+            this.blbMaxQuantity.Cursor = System.Windows.Forms.Cursors.Default;
+            this.blbMaxQuantity.CursorType = System.Windows.Forms.Cursors.Default;
+            this.blbMaxQuantity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.blbMaxQuantity.Location = new System.Drawing.Point(323, 432);
+            this.blbMaxQuantity.Name = "blbMaxQuantity";
+            this.blbMaxQuantity.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.blbMaxQuantity.Size = new System.Drawing.Size(26, 15);
+            this.blbMaxQuantity.TabIndex = 23;
+            this.blbMaxQuantity.Text = "Max: ";
+            this.blbMaxQuantity.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.blbMaxQuantity.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.blbMaxQuantity.Visible = false;
+            // 
+            // blbAmountUpdate
+            // 
+            this.blbAmountUpdate.AllowParentOverrides = false;
+            this.blbAmountUpdate.AutoEllipsis = false;
+            this.blbAmountUpdate.Cursor = System.Windows.Forms.Cursors.Default;
+            this.blbAmountUpdate.CursorType = System.Windows.Forms.Cursors.Default;
+            this.blbAmountUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.blbAmountUpdate.Location = new System.Drawing.Point(323, 408);
+            this.blbAmountUpdate.Name = "blbAmountUpdate";
+            this.blbAmountUpdate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.blbAmountUpdate.Size = new System.Drawing.Size(93, 15);
+            this.blbAmountUpdate.TabIndex = 22;
+            this.blbAmountUpdate.Text = "Quantity to Store:";
+            this.blbAmountUpdate.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.blbAmountUpdate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.blbAmountUpdate.Visible = false;
+            // 
+            // bdStoreIntoWarehouses
+            // 
+            this.bdStoreIntoWarehouses.BackColor = System.Drawing.Color.Transparent;
+            this.bdStoreIntoWarehouses.BackgroundColor = System.Drawing.Color.White;
+            this.bdStoreIntoWarehouses.BorderColor = System.Drawing.Color.Silver;
+            this.bdStoreIntoWarehouses.BorderRadius = 1;
+            this.bdStoreIntoWarehouses.Color = System.Drawing.Color.Silver;
+            this.bdStoreIntoWarehouses.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.bdStoreIntoWarehouses.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.bdStoreIntoWarehouses.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bdStoreIntoWarehouses.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.bdStoreIntoWarehouses.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.bdStoreIntoWarehouses.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.bdStoreIntoWarehouses.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.bdStoreIntoWarehouses.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.bdStoreIntoWarehouses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bdStoreIntoWarehouses.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.bdStoreIntoWarehouses.FillDropDown = true;
+            this.bdStoreIntoWarehouses.FillIndicator = false;
+            this.bdStoreIntoWarehouses.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bdStoreIntoWarehouses.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bdStoreIntoWarehouses.ForeColor = System.Drawing.Color.Black;
+            this.bdStoreIntoWarehouses.FormattingEnabled = true;
+            this.bdStoreIntoWarehouses.Icon = null;
+            this.bdStoreIntoWarehouses.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.bdStoreIntoWarehouses.IndicatorColor = System.Drawing.Color.DarkGray;
+            this.bdStoreIntoWarehouses.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.bdStoreIntoWarehouses.IndicatorThickness = 2;
+            this.bdStoreIntoWarehouses.IsDropdownOpened = false;
+            this.bdStoreIntoWarehouses.ItemBackColor = System.Drawing.Color.White;
+            this.bdStoreIntoWarehouses.ItemBorderColor = System.Drawing.Color.White;
+            this.bdStoreIntoWarehouses.ItemForeColor = System.Drawing.Color.Black;
+            this.bdStoreIntoWarehouses.ItemHeight = 26;
+            this.bdStoreIntoWarehouses.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.bdStoreIntoWarehouses.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.bdStoreIntoWarehouses.ItemTopMargin = 3;
+            this.bdStoreIntoWarehouses.Location = new System.Drawing.Point(590, 401);
+            this.bdStoreIntoWarehouses.Name = "bdStoreIntoWarehouses";
+            this.bdStoreIntoWarehouses.Size = new System.Drawing.Size(172, 32);
+            this.bdStoreIntoWarehouses.TabIndex = 21;
+            this.bdStoreIntoWarehouses.Text = null;
+            this.bdStoreIntoWarehouses.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.bdStoreIntoWarehouses.TextLeftMargin = 5;
+            this.bdStoreIntoWarehouses.Visible = false;
+            // 
+            // btbStoreAmount
+            // 
+            this.btbStoreAmount.AcceptsReturn = false;
+            this.btbStoreAmount.AcceptsTab = false;
+            this.btbStoreAmount.AnimationSpeed = 200;
+            this.btbStoreAmount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.btbStoreAmount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.btbStoreAmount.AutoSizeHeight = true;
+            this.btbStoreAmount.BackColor = System.Drawing.Color.Transparent;
+            this.btbStoreAmount.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btbStoreAmount.BackgroundImage")));
+            this.btbStoreAmount.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.btbStoreAmount.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btbStoreAmount.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btbStoreAmount.BorderColorIdle = System.Drawing.Color.Silver;
+            this.btbStoreAmount.BorderRadius = 1;
+            this.btbStoreAmount.BorderThickness = 1;
+            this.btbStoreAmount.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.btbStoreAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.btbStoreAmount.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.btbStoreAmount.DefaultText = "";
+            this.btbStoreAmount.FillColor = System.Drawing.Color.White;
+            this.btbStoreAmount.HideSelection = true;
+            this.btbStoreAmount.IconLeft = null;
+            this.btbStoreAmount.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.btbStoreAmount.IconPadding = 10;
+            this.btbStoreAmount.IconRight = null;
+            this.btbStoreAmount.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.btbStoreAmount.Lines = new string[0];
+            this.btbStoreAmount.Location = new System.Drawing.Point(427, 401);
+            this.btbStoreAmount.MaxLength = 32767;
+            this.btbStoreAmount.MinimumSize = new System.Drawing.Size(1, 1);
+            this.btbStoreAmount.Modified = false;
+            this.btbStoreAmount.Multiline = false;
+            this.btbStoreAmount.Name = "btbStoreAmount";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.btbStoreAmount.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.btbStoreAmount.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.btbStoreAmount.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.btbStoreAmount.OnIdleState = stateProperties4;
+            this.btbStoreAmount.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.btbStoreAmount.PasswordChar = '\0';
+            this.btbStoreAmount.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.btbStoreAmount.PlaceholderText = "Enter text";
+            this.btbStoreAmount.ReadOnly = false;
+            this.btbStoreAmount.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.btbStoreAmount.SelectedText = "";
+            this.btbStoreAmount.SelectionLength = 0;
+            this.btbStoreAmount.SelectionStart = 0;
+            this.btbStoreAmount.ShortcutsEnabled = true;
+            this.btbStoreAmount.Size = new System.Drawing.Size(132, 25);
+            this.btbStoreAmount.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.btbStoreAmount.TabIndex = 20;
+            this.btbStoreAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btbStoreAmount.TextMarginBottom = 0;
+            this.btbStoreAmount.TextMarginLeft = 3;
+            this.btbStoreAmount.TextMarginTop = 1;
+            this.btbStoreAmount.TextPlaceholder = "Enter text";
+            this.btbStoreAmount.UseSystemPasswordChar = false;
+            this.btbStoreAmount.Visible = false;
+            this.btbStoreAmount.WordWrap = true;
+            // 
+            // blbTitleProductsAboutType
+            // 
+            this.blbTitleProductsAboutType.AllowParentOverrides = false;
+            this.blbTitleProductsAboutType.AutoEllipsis = false;
+            this.blbTitleProductsAboutType.CursorType = null;
+            this.blbTitleProductsAboutType.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.blbTitleProductsAboutType.Location = new System.Drawing.Point(323, 139);
+            this.blbTitleProductsAboutType.Name = "blbTitleProductsAboutType";
+            this.blbTitleProductsAboutType.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.blbTitleProductsAboutType.Size = new System.Drawing.Size(64, 15);
+            this.blbTitleProductsAboutType.TabIndex = 18;
+            this.blbTitleProductsAboutType.Text = "Warehouses";
+            this.blbTitleProductsAboutType.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.blbTitleProductsAboutType.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // blbTitleStateProducts
+            // 
+            this.blbTitleStateProducts.AllowParentOverrides = false;
+            this.blbTitleStateProducts.AutoEllipsis = false;
+            this.blbTitleStateProducts.Cursor = System.Windows.Forms.Cursors.Default;
+            this.blbTitleStateProducts.CursorType = System.Windows.Forms.Cursors.Default;
+            this.blbTitleStateProducts.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.blbTitleStateProducts.Location = new System.Drawing.Point(46, 139);
+            this.blbTitleStateProducts.Name = "blbTitleStateProducts";
+            this.blbTitleStateProducts.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.blbTitleStateProducts.Size = new System.Drawing.Size(89, 15);
+            this.blbTitleStateProducts.TabIndex = 17;
+            this.blbTitleStateProducts.Text = "Stored Products?";
+            this.blbTitleStateProducts.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.blbTitleStateProducts.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bbtnAddProduct
+            // 
+            this.bbtnAddProduct.AllowAnimations = true;
+            this.bbtnAddProduct.AllowMouseEffects = true;
+            this.bbtnAddProduct.AllowToggling = false;
+            this.bbtnAddProduct.AnimationSpeed = 200;
+            this.bbtnAddProduct.AutoGenerateColors = false;
+            this.bbtnAddProduct.AutoRoundBorders = false;
+            this.bbtnAddProduct.AutoSizeLeftIcon = true;
+            this.bbtnAddProduct.AutoSizeRightIcon = true;
+            this.bbtnAddProduct.BackColor = System.Drawing.Color.Transparent;
+            this.bbtnAddProduct.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddProduct.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bbtnAddProduct.BackgroundImage")));
+            this.bbtnAddProduct.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bbtnAddProduct.ButtonText = "Add New Product";
+            this.bbtnAddProduct.ButtonTextMarginLeft = 0;
+            this.bbtnAddProduct.ColorContrastOnClick = 45;
+            this.bbtnAddProduct.ColorContrastOnHover = 45;
+            this.bbtnAddProduct.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.bbtnAddProduct.CustomizableEdges = borderEdges1;
+            this.bbtnAddProduct.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bbtnAddProduct.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bbtnAddProduct.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bbtnAddProduct.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bbtnAddProduct.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.bbtnAddProduct.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bbtnAddProduct.ForeColor = System.Drawing.Color.White;
+            this.bbtnAddProduct.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bbtnAddProduct.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bbtnAddProduct.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.bbtnAddProduct.IconMarginLeft = 11;
+            this.bbtnAddProduct.IconPadding = 10;
+            this.bbtnAddProduct.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bbtnAddProduct.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bbtnAddProduct.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.bbtnAddProduct.IconSize = 25;
+            this.bbtnAddProduct.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddProduct.IdleBorderRadius = 1;
+            this.bbtnAddProduct.IdleBorderThickness = 1;
+            this.bbtnAddProduct.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddProduct.IdleIconLeftImage = null;
+            this.bbtnAddProduct.IdleIconRightImage = null;
+            this.bbtnAddProduct.IndicateFocus = false;
+            this.bbtnAddProduct.Location = new System.Drawing.Point(43, 78);
+            this.bbtnAddProduct.Name = "bbtnAddProduct";
+            this.bbtnAddProduct.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bbtnAddProduct.OnDisabledState.BorderRadius = 1;
+            this.bbtnAddProduct.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bbtnAddProduct.OnDisabledState.BorderThickness = 1;
+            this.bbtnAddProduct.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bbtnAddProduct.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bbtnAddProduct.OnDisabledState.IconLeftImage = null;
+            this.bbtnAddProduct.OnDisabledState.IconRightImage = null;
+            this.bbtnAddProduct.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bbtnAddProduct.onHoverState.BorderRadius = 1;
+            this.bbtnAddProduct.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bbtnAddProduct.onHoverState.BorderThickness = 1;
+            this.bbtnAddProduct.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bbtnAddProduct.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.bbtnAddProduct.onHoverState.IconLeftImage = null;
+            this.bbtnAddProduct.onHoverState.IconRightImage = null;
+            this.bbtnAddProduct.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddProduct.OnIdleState.BorderRadius = 1;
+            this.bbtnAddProduct.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bbtnAddProduct.OnIdleState.BorderThickness = 1;
+            this.bbtnAddProduct.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddProduct.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.bbtnAddProduct.OnIdleState.IconLeftImage = null;
+            this.bbtnAddProduct.OnIdleState.IconRightImage = null;
+            this.bbtnAddProduct.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bbtnAddProduct.OnPressedState.BorderRadius = 1;
+            this.bbtnAddProduct.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bbtnAddProduct.OnPressedState.BorderThickness = 1;
+            this.bbtnAddProduct.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bbtnAddProduct.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.bbtnAddProduct.OnPressedState.IconLeftImage = null;
+            this.bbtnAddProduct.OnPressedState.IconRightImage = null;
+            this.bbtnAddProduct.Size = new System.Drawing.Size(150, 39);
+            this.bbtnAddProduct.TabIndex = 16;
+            this.bbtnAddProduct.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bbtnAddProduct.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bbtnAddProduct.TextMarginLeft = 0;
+            this.bbtnAddProduct.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bbtnAddProduct.UseDefaultRadiusAndThickness = true;
+            this.bbtnAddProduct.Click += new System.EventHandler(this.bbtnAddProduct_Click);
+            // 
+            // bbtnAddProductToWarehouse
+            // 
+            this.bbtnAddProductToWarehouse.AllowAnimations = true;
+            this.bbtnAddProductToWarehouse.AllowMouseEffects = true;
+            this.bbtnAddProductToWarehouse.AllowToggling = false;
+            this.bbtnAddProductToWarehouse.AnimationSpeed = 200;
+            this.bbtnAddProductToWarehouse.AutoGenerateColors = false;
+            this.bbtnAddProductToWarehouse.AutoRoundBorders = false;
+            this.bbtnAddProductToWarehouse.AutoSizeLeftIcon = true;
+            this.bbtnAddProductToWarehouse.AutoSizeRightIcon = true;
+            this.bbtnAddProductToWarehouse.BackColor = System.Drawing.Color.Transparent;
+            this.bbtnAddProductToWarehouse.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddProductToWarehouse.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bbtnAddProductToWarehouse.BackgroundImage")));
+            this.bbtnAddProductToWarehouse.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bbtnAddProductToWarehouse.ButtonText = "Add Product to Warehouse";
+            this.bbtnAddProductToWarehouse.ButtonTextMarginLeft = 0;
+            this.bbtnAddProductToWarehouse.ColorContrastOnClick = 45;
+            this.bbtnAddProductToWarehouse.ColorContrastOnHover = 45;
+            this.bbtnAddProductToWarehouse.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.bbtnAddProductToWarehouse.CustomizableEdges = borderEdges2;
+            this.bbtnAddProductToWarehouse.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.bbtnAddProductToWarehouse.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bbtnAddProductToWarehouse.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bbtnAddProductToWarehouse.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bbtnAddProductToWarehouse.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.bbtnAddProductToWarehouse.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bbtnAddProductToWarehouse.ForeColor = System.Drawing.Color.White;
+            this.bbtnAddProductToWarehouse.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bbtnAddProductToWarehouse.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bbtnAddProductToWarehouse.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.bbtnAddProductToWarehouse.IconMarginLeft = 11;
+            this.bbtnAddProductToWarehouse.IconPadding = 10;
+            this.bbtnAddProductToWarehouse.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.bbtnAddProductToWarehouse.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bbtnAddProductToWarehouse.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.bbtnAddProductToWarehouse.IconSize = 25;
+            this.bbtnAddProductToWarehouse.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddProductToWarehouse.IdleBorderRadius = 1;
+            this.bbtnAddProductToWarehouse.IdleBorderThickness = 1;
+            this.bbtnAddProductToWarehouse.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddProductToWarehouse.IdleIconLeftImage = null;
+            this.bbtnAddProductToWarehouse.IdleIconRightImage = null;
+            this.bbtnAddProductToWarehouse.IndicateFocus = false;
+            this.bbtnAddProductToWarehouse.Location = new System.Drawing.Point(355, 458);
+            this.bbtnAddProductToWarehouse.Name = "bbtnAddProductToWarehouse";
+            this.bbtnAddProductToWarehouse.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.bbtnAddProductToWarehouse.OnDisabledState.BorderRadius = 1;
+            this.bbtnAddProductToWarehouse.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bbtnAddProductToWarehouse.OnDisabledState.BorderThickness = 1;
+            this.bbtnAddProductToWarehouse.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.bbtnAddProductToWarehouse.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.bbtnAddProductToWarehouse.OnDisabledState.IconLeftImage = null;
+            this.bbtnAddProductToWarehouse.OnDisabledState.IconRightImage = null;
+            this.bbtnAddProductToWarehouse.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bbtnAddProductToWarehouse.onHoverState.BorderRadius = 1;
+            this.bbtnAddProductToWarehouse.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bbtnAddProductToWarehouse.onHoverState.BorderThickness = 1;
+            this.bbtnAddProductToWarehouse.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.bbtnAddProductToWarehouse.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.bbtnAddProductToWarehouse.onHoverState.IconLeftImage = null;
+            this.bbtnAddProductToWarehouse.onHoverState.IconRightImage = null;
+            this.bbtnAddProductToWarehouse.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddProductToWarehouse.OnIdleState.BorderRadius = 1;
+            this.bbtnAddProductToWarehouse.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bbtnAddProductToWarehouse.OnIdleState.BorderThickness = 1;
+            this.bbtnAddProductToWarehouse.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnAddProductToWarehouse.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.bbtnAddProductToWarehouse.OnIdleState.IconLeftImage = null;
+            this.bbtnAddProductToWarehouse.OnIdleState.IconRightImage = null;
+            this.bbtnAddProductToWarehouse.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bbtnAddProductToWarehouse.OnPressedState.BorderRadius = 1;
+            this.bbtnAddProductToWarehouse.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.bbtnAddProductToWarehouse.OnPressedState.BorderThickness = 1;
+            this.bbtnAddProductToWarehouse.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.bbtnAddProductToWarehouse.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.bbtnAddProductToWarehouse.OnPressedState.IconLeftImage = null;
+            this.bbtnAddProductToWarehouse.OnPressedState.IconRightImage = null;
+            this.bbtnAddProductToWarehouse.Size = new System.Drawing.Size(150, 39);
+            this.bbtnAddProductToWarehouse.TabIndex = 15;
+            this.bbtnAddProductToWarehouse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bbtnAddProductToWarehouse.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bbtnAddProductToWarehouse.TextMarginLeft = 0;
+            this.bbtnAddProductToWarehouse.TextPadding = new System.Windows.Forms.Padding(0);
+            this.bbtnAddProductToWarehouse.UseDefaultRadiusAndThickness = true;
+            this.bbtnAddProductToWarehouse.Visible = false;
+            this.bbtnAddProductToWarehouse.Click += new System.EventHandler(this.bbtnAddProductToWarehouse_Click);
+            // 
+            // bdgvItemsPerType
+            // 
+            this.bdgvItemsPerType.AllowCustomTheming = false;
+            this.bdgvItemsPerType.AllowUserToAddRows = false;
+            this.bdgvItemsPerType.AllowUserToDeleteRows = false;
+            this.bdgvItemsPerType.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.bdgvItemsPerType.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.bdgvItemsPerType.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bdgvItemsPerType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bdgvItemsPerType.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.bdgvItemsPerType.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bdgvItemsPerType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.bdgvItemsPerType.ColumnHeadersHeight = 40;
+            this.bdgvItemsPerType.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idProduct,
+            this.dataGridViewTextBoxColumn4,
+            this.pricePerUnit,
+            this.amount,
+            this.unitOfMeasure,
+            this.productCategory,
+            this.stateProduct});
+            this.bdgvItemsPerType.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.bdgvItemsPerType.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bdgvItemsPerType.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bdgvItemsPerType.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bdgvItemsPerType.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.bdgvItemsPerType.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.bdgvItemsPerType.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bdgvItemsPerType.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bdgvItemsPerType.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.bdgvItemsPerType.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.bdgvItemsPerType.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.bdgvItemsPerType.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.bdgvItemsPerType.CurrentTheme.Name = null;
+            this.bdgvItemsPerType.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.bdgvItemsPerType.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bdgvItemsPerType.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bdgvItemsPerType.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bdgvItemsPerType.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bdgvItemsPerType.DefaultCellStyle = dataGridViewCellStyle3;
+            this.bdgvItemsPerType.EnableHeadersVisualStyles = false;
+            this.bdgvItemsPerType.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bdgvItemsPerType.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.bdgvItemsPerType.HeaderBgColor = System.Drawing.Color.Empty;
+            this.bdgvItemsPerType.HeaderForeColor = System.Drawing.Color.White;
+            this.bdgvItemsPerType.Location = new System.Drawing.Point(323, 162);
+            this.bdgvItemsPerType.Name = "bdgvItemsPerType";
+            this.bdgvItemsPerType.ReadOnly = true;
+            this.bdgvItemsPerType.RowHeadersVisible = false;
+            this.bdgvItemsPerType.RowHeadersWidth = 51;
+            this.bdgvItemsPerType.RowTemplate.Height = 40;
+            this.bdgvItemsPerType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bdgvItemsPerType.Size = new System.Drawing.Size(721, 227);
+            this.bdgvItemsPerType.TabIndex = 14;
+            this.bdgvItemsPerType.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bdgvItemsPerType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgvItemsPerType_CellClick);
+            // 
+            // idProduct
+            // 
+            this.idProduct.HeaderText = "Id Product";
+            this.idProduct.MinimumWidth = 6;
+            this.idProduct.Name = "idProduct";
+            this.idProduct.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // pricePerUnit
+            // 
+            this.pricePerUnit.HeaderText = "Price Per Unit";
+            this.pricePerUnit.MinimumWidth = 6;
+            this.pricePerUnit.Name = "pricePerUnit";
+            this.pricePerUnit.ReadOnly = true;
+            // 
+            // amount
+            // 
+            this.amount.HeaderText = "Amount";
+            this.amount.MinimumWidth = 6;
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            // 
+            // unitOfMeasure
+            // 
+            this.unitOfMeasure.HeaderText = "Unit Of Measure";
+            this.unitOfMeasure.MinimumWidth = 6;
+            this.unitOfMeasure.Name = "unitOfMeasure";
+            this.unitOfMeasure.ReadOnly = true;
+            // 
+            // productCategory
+            // 
+            this.productCategory.HeaderText = "Product Category";
+            this.productCategory.MinimumWidth = 6;
+            this.productCategory.Name = "productCategory";
+            this.productCategory.ReadOnly = true;
+            // 
+            // stateProduct
+            // 
+            this.stateProduct.HeaderText = "State";
+            this.stateProduct.MinimumWidth = 6;
+            this.stateProduct.Name = "stateProduct";
+            this.stateProduct.ReadOnly = true;
+            // 
+            // bdgvStoredProducts
+            // 
+            this.bdgvStoredProducts.AllowCustomTheming = false;
+            this.bdgvStoredProducts.AllowUserToAddRows = false;
+            this.bdgvStoredProducts.AllowUserToDeleteRows = false;
+            this.bdgvStoredProducts.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.bdgvStoredProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.bdgvStoredProducts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.bdgvStoredProducts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bdgvStoredProducts.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.bdgvStoredProducts.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bdgvStoredProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.bdgvStoredProducts.ColumnHeadersHeight = 40;
+            this.bdgvStoredProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.name});
+            this.bdgvStoredProducts.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            this.bdgvStoredProducts.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bdgvStoredProducts.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bdgvStoredProducts.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bdgvStoredProducts.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.bdgvStoredProducts.CurrentTheme.BackColor = System.Drawing.Color.White;
+            this.bdgvStoredProducts.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bdgvStoredProducts.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bdgvStoredProducts.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            this.bdgvStoredProducts.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.bdgvStoredProducts.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            this.bdgvStoredProducts.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.bdgvStoredProducts.CurrentTheme.Name = null;
+            this.bdgvStoredProducts.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.bdgvStoredProducts.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            this.bdgvStoredProducts.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.bdgvStoredProducts.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            this.bdgvStoredProducts.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bdgvStoredProducts.DefaultCellStyle = dataGridViewCellStyle6;
+            this.bdgvStoredProducts.EnableHeadersVisualStyles = false;
+            this.bdgvStoredProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
+            this.bdgvStoredProducts.HeaderBackColor = System.Drawing.Color.DodgerBlue;
+            this.bdgvStoredProducts.HeaderBgColor = System.Drawing.Color.Empty;
+            this.bdgvStoredProducts.HeaderForeColor = System.Drawing.Color.White;
+            this.bdgvStoredProducts.Location = new System.Drawing.Point(46, 162);
+            this.bdgvStoredProducts.Name = "bdgvStoredProducts";
+            this.bdgvStoredProducts.ReadOnly = true;
+            this.bdgvStoredProducts.RowHeadersVisible = false;
+            this.bdgvStoredProducts.RowHeadersWidth = 51;
+            this.bdgvStoredProducts.RowTemplate.Height = 40;
+            this.bdgvStoredProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.bdgvStoredProducts.Size = new System.Drawing.Size(236, 227);
+            this.bdgvStoredProducts.TabIndex = 13;
+            this.bdgvStoredProducts.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
+            this.bdgvStoredProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.bdgvStoredProducts_CellClick);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "Name";
+            this.name.MinimumWidth = 6;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // lbInventory
+            // 
+            this.lbInventory.AutoSize = true;
+            this.lbInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbInventory.Location = new System.Drawing.Point(28, 25);
+            this.lbInventory.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbInventory.Name = "lbInventory";
+            this.lbInventory.Size = new System.Drawing.Size(74, 20);
+            this.lbInventory.TabIndex = 1;
+            this.lbInventory.Text = "Inventory";
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1440, 700);
+            this.ClientSize = new System.Drawing.Size(1152, 683);
             this.Controls.Add(this.sidebar);
             this.Controls.Add(this.pHeader);
+            this.Controls.Add(this.pInventory);
+            this.Controls.Add(this.pCRMGest);
             this.Controls.Add(this.pGestionDietas);
             this.Controls.Add(this.pSolicitudDieta);
             this.Controls.Add(this.pUsuarios);
             this.Controls.Add(this.pSettingsModule);
-            this.Controls.Add(this.pCRMGest);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "HomePage";
             this.Text = "Home Page";
@@ -2831,20 +3564,20 @@ namespace Tfg_NetFramework
             this.pHeader.PerformLayout();
             this.pSolicitudDieta.ResumeLayout(false);
             this.pSolicitudDieta.PerformLayout();
-            this.pSolKilometraje.ResumeLayout(false);
-            this.pSolKilometraje.PerformLayout();
             this.pSolSolicitudDietas.ResumeLayout(false);
             this.pSolSolicitudDietas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.thumbNailInvoice)).EndInit();
+            this.pSolKilometraje.ResumeLayout(false);
+            this.pSolKilometraje.PerformLayout();
             this.pGestionDietas.ResumeLayout(false);
             this.pGestionDietas.PerformLayout();
-            this.pGestDietasKilometraje.ResumeLayout(false);
-            this.pGestDietasKilometraje.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMileage)).EndInit();
             this.pGestDietasDietas.ResumeLayout(false);
             this.pGestDietasDietas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axAcroPDF1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllowances)).EndInit();
+            this.pGestDietasKilometraje.ResumeLayout(false);
+            this.pGestDietasKilometraje.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMileage)).EndInit();
             this.pUsuarios.ResumeLayout(false);
             this.pUsuarios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
@@ -2863,6 +3596,10 @@ namespace Tfg_NetFramework
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.pSettingsModule.ResumeLayout(false);
             this.pSettingsModule.PerformLayout();
+            this.pInventory.ResumeLayout(false);
+            this.pInventory.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgvItemsPerType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdgvStoredProducts)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2934,11 +3671,9 @@ namespace Tfg_NetFramework
         private Panel pGestDietasDietas;
         private Panel pHome;
         private Button btnHome;
-        private Label lbManAllowancesObservations;
         private Label lbManAllowancesDate;
         private Label lbManAllowancesStartHour;
         private Label lbManAllowancesEndHour;
-        private Label lbManAllowancesState;
         private Label lbManAllowancesTitle;
         private Label lbManAllowancesEmail;
         private Label lbManMileageState;
@@ -3048,7 +3783,6 @@ namespace Tfg_NetFramework
         private Button btnUpdateFlps;
         private Button btnUpdateDgvCustomer;
         private DataGridView dgvCustomer;
-        private Button btnMoreInfoCustomer;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
@@ -3073,7 +3807,7 @@ namespace Tfg_NetFramework
         private Label lbSettings;
         private Button btnRestoreBackup;
         private Button btnSettingsSaveBackup;
-        private tbPlaceHolder tbOcupacion;
+        private tbPlaceHolder tbJob;
         private tbPlaceHolder tbDepartment;
         private tbPlaceHolder tbPassword;
         private tbPlaceHolder tbRPassword;
@@ -3107,5 +3841,35 @@ namespace Tfg_NetFramework
         private tbPlaceHolder tbManMileageDate;
         private tbPlaceHolder tbManMileageTitle;
         private tbPlaceHolder tbManMileageEmail;
+        private Button btnUpdateUser;
+        private ComboBox cbUserNewDepartment;
+        private ComboBox cbUserNewRole;
+        private Label lbStateDateLead;
+        private Label lbManAllowanceObservation;
+        private Label lbManAllowanceState;
+        private Label lbManAllowanceEndHour;
+        private Label lbSales;
+        private FlowLayoutPanel flpSale;
+        private Panel pInventory;
+        private Label lbInventory;
+        private Bunifu.UI.WinForms.BunifuDataGridView bdgvItemsPerType;
+        private Bunifu.UI.WinForms.BunifuDataGridView bdgvStoredProducts;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bbtnAddProduct;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bbtnAddProductToWarehouse;
+        private Bunifu.UI.WinForms.BunifuLabel blbTitleProductsAboutType;
+        private Bunifu.UI.WinForms.BunifuLabel blbTitleStateProducts;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn name;
+        private DataGridViewTextBoxColumn idProduct;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn pricePerUnit;
+        private DataGridViewTextBoxColumn amount;
+        private DataGridViewTextBoxColumn unitOfMeasure;
+        private DataGridViewTextBoxColumn productCategory;
+        private DataGridViewTextBoxColumn stateProduct;
+        private Bunifu.UI.WinForms.BunifuLabel blbAmountUpdate;
+        private Bunifu.UI.WinForms.BunifuDropdown bdStoreIntoWarehouses;
+        private Bunifu.UI.WinForms.BunifuTextBox btbStoreAmount;
+        private Bunifu.UI.WinForms.BunifuLabel blbMaxQuantity;
     }
 }

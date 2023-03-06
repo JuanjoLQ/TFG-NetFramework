@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace capaDatos
 {
@@ -85,6 +86,50 @@ namespace capaDatos
                 cmd.ExecuteNonQuery();
             }
             MessageBox.Show("Dieta eliminada", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            conn.Close();
+        }
+
+        public void uploadFile(ceAllowance allowance, string fileName)
+        {
+            MySqlConnection conn = new MySqlConnection(cadenaConexion);
+            MySqlCommand cmd;
+            conn.Open();
+
+            /*
+            System.IO.FileStream fileStream = File.OpenRead(file);
+            byte[] contents = new byte[fileStream.Length];
+            fileStream.Read(contents, 0, (int)fileStream.Length);
+            fileStream.Close();
+            */
+
+            //
+            string name = Path.GetFileName(fileName);
+            string newPath = @"C:\Users\Jesus\Tfg Net Framework\Tfg NetFramework\files\";
+            string locationCopy = newPath + name;
+            MessageBox.Show("Location Copy: " + locationCopy + "\nFileName: " + fileName);
+
+            if (File.Exists(fileName))
+            {
+                File.Copy(fileName, locationCopy, true);
+                MessageBox.Show("File Copied");
+            }
+            //
+
+            using (cmd = new MySqlCommand("insert into allowance(User_idUser, Title, Observations, State, StartTime, StartHour, EndHour, Invoice) " +
+                "values(@idUser, @title, @observations, @state, @startTime, @startHour, @endHour, @invoice)", conn))
+            {
+                cmd.Parameters.AddWithValue("@idUser", allowance.User_idUser);
+                cmd.Parameters.AddWithValue("@title", allowance.title);
+                cmd.Parameters.AddWithValue("@observations", allowance.observations);
+                cmd.Parameters.AddWithValue("@state", allowance.state);
+                cmd.Parameters.AddWithValue("@startTime", allowance.startTime);
+                cmd.Parameters.AddWithValue("@startHour", allowance.startHour);
+                cmd.Parameters.AddWithValue("@endHour", allowance.endHour);
+                cmd.Parameters.AddWithValue("@invoice", locationCopy);
+                cmd.ExecuteNonQuery();
+            }
+            MessageBox.Show("Finished uploading files", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             conn.Close();
         }

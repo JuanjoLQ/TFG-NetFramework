@@ -95,10 +95,13 @@
     <Compile Include="cnLead.cs" />
     <Compile Include="cnMileage.cs" />
     <Compile Include="cnPipelineFlps.cs" />
+    <Compile Include="cnProduct.cs" />
     <Compile Include="cnRestoreBackUp.cs" />
     <Compile Include="cnRole.cs" />
     <Compile Include="cnRoleUser.cs" />
+    <Compile Include="cnSale.cs" />
     <Compile Include="cnUser.cs" />
+    <Compile Include="cnWarehouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

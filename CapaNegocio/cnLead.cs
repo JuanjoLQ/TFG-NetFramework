@@ -33,9 +33,14 @@ namespace CapaNegocio
             cdLead.deleteLead(idLead);
         }
 
-        public void leadsByDate(DataGridView dgvLead_Date, int idCustomer, DateTime startDate, DateTime endDate)
+        public void leadsByDate(Label lbDateLead,DataGridView dgvLead_Date, int idCustomer, DateTime startDate, DateTime endDate)
         {
-            cdLead.leadsByDate(dgvLead_Date, idCustomer, startDate, endDate);
+            cdLead.leadsByDate(lbDateLead, dgvLead_Date, idCustomer, startDate, endDate);
+        }
+
+        public ceDescripcionItem getLead(int idLead)
+        {
+            return cdLead.getLead(idLead);
         }
     }
 }

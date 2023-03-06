@@ -1,20 +1,11 @@
 ﻿using capaEntidad;
 using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI;
-using Org.BouncyCastle.Asn1.Mozilla;
-using System.Data;
 using System.Diagnostics;
 using System.Text;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Windows.Forms;
 using System;
 using System.Collections;
-using System.Runtime.Remoting.Messaging;
-using Org.BouncyCastle.Utilities;
-using System.Reflection;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
-using System.Security.Cryptography;
 
 namespace capaDatos
 {
@@ -162,8 +153,6 @@ namespace capaDatos
             command.ExecuteNonQuery();
             conn.Close();
 
-            MessageBox.Show("Registro de user creado");
-
             if (assignRole2User(user.Email, role) == false)
             {
                 Debug.WriteLine("CrearUsuario -assignRole2User error");
@@ -227,11 +216,8 @@ namespace capaDatos
             if (dr.HasRows)
             {
                 dr.Read();// Get first record.
-                idDepartment = int.Parse(dr.GetString(0));// Get value of first column as string.
-                MessageBox.Show("Id del usuario: " + idDepartment);
+                idDepartment = int.Parse(dr.GetString(0));
             }
-
-            MessageBox.Show("Registro de user creado");
 
             dr.Close();// Close reader.
             conn.Close();// Close connection.
@@ -242,8 +228,6 @@ namespace capaDatos
             }
             return idDepartment;
         }
-
-
 
         public bool assignRole2User(string email, string role)
         {
@@ -291,11 +275,8 @@ namespace capaDatos
             if (dr.HasRows)
             {
                 dr.Read();// Get first record.
-                idRole = int.Parse(dr.GetString(0));// Get value of first column as string.
-                MessageBox.Show("Id del usuario: " + idRole);
+                idRole = int.Parse(dr.GetString(0));
             }
-
-            MessageBox.Show("Registro de user creado");
 
             dr.Close();// Close reader.
             conn.Close();// Close connection.
@@ -321,12 +302,9 @@ namespace capaDatos
             if (dr.HasRows)
             {
                 dr.Read();// Get first record.
-                idUser = int.Parse(dr.GetString(0));// Get value of first column as string.
-                MessageBox.Show("Id del usuario: " + idUser);
+                idUser = int.Parse(dr.GetString(0));
             }
             
-            MessageBox.Show("Registro de user creado");
-
             dr.Close();// Close reader.
             conn.Close();// Close connection.
 
@@ -350,7 +328,6 @@ namespace capaDatos
 
         public bool LogUsuario(ceUser user)
         {
-            Debug.WriteLine("Capa datos logUser");
             MySqlConnection conn = new MySqlConnection(cadenaConexion);
             conn.Open();
             string query = "SELECT COUNT(*) FROM user where email='" + user.Email + "';";
@@ -402,7 +379,7 @@ namespace capaDatos
             return namesRole.ToString();
         }
 
-        public bool deteteUser(int idUser)
+        public bool deleteUser(int idUser)
         {
             try
             {
@@ -540,6 +517,51 @@ namespace capaDatos
             }
 
             return departments_employees;
+        }
+
+        public void updateUser(ceUser user)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                MySqlCommand cmd;
+                conn.Open();
+
+                using (cmd = new MySqlCommand("UPDATE user SET email = @email, password = @password " +
+                    "WHERE idUser = @idUser;", conn))
+                {
+                    cmd.Parameters.AddWithValue("@idUser", user.idUser);
+                    cmd.Parameters.AddWithValue("@email", user.Email);
+                    cmd.Parameters.AddWithValue("@password", user.Password);
+                    cmd.ExecuteNonQuery();
+                }
+
+                int idDepartment = obtainIdDepartment(user.Department);
+
+                using (cmd = new MySqlCommand("UPDATE Department_User SET Department_idDepartment = @idDepartment " +
+                    "WHERE User_idUser = @idUser;", conn))
+                {
+                    cmd.Parameters.AddWithValue("@idUser", user.idUser);
+                    cmd.Parameters.AddWithValue("@idDepartment", idDepartment);
+                    cmd.ExecuteNonQuery();
+                }
+                
+                int idRole = obtainIdRole(user.Job);
+
+                using (cmd = new MySqlCommand("UPDATE Role_User SET Role_idRole = @idRole " +
+                    "WHERE User_idUser = @idUser;", conn))
+                {
+                    cmd.Parameters.AddWithValue("@idUser", user.idUser);
+                    cmd.Parameters.AddWithValue("@idRole", idRole);
+                    cmd.ExecuteNonQuery();
+                }
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

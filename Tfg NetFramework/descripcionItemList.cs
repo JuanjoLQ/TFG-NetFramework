@@ -11,6 +11,7 @@ namespace Tfg_NetFramework
         int idLead;
         string stageLead;
         cnLead cnLead = new cnLead();
+        ceDescripcionItem descrItem = null;
         private void descripcionItemList_Load(object sender, EventArgs e)
         {
             
@@ -21,6 +22,8 @@ namespace Tfg_NetFramework
             InitializeComponent();
 
             stageLead = descripcionItem.Lead.Stage;
+
+            this.descrItem = descripcionItem;
 
             if(stageLead == "New")
             {
@@ -38,6 +41,7 @@ namespace Tfg_NetFramework
             else
             {
                 btnWon.BackColor = Color.FromArgb(107, 107, 114);
+                bbtnLeadToSale.Visible = true;
             }
             idLead = descripcionItem.Lead.Idlead;
             lbLeadName.Text = descripcionItem.Lead.Name;
@@ -117,6 +121,18 @@ namespace Tfg_NetFramework
         private void btnLeadRemove_Click(object sender, EventArgs e)
         {
             cnLead.deleteLead(idLead);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bbtnLeadToSale_Click(object sender, EventArgs e)
+        {
+            Form doSale = new doSale(descrItem);
+
+            doSale.Show();
         }
     }
 }

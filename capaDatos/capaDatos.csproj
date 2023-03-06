@@ -104,10 +104,13 @@
     <Compile Include="cdLead.cs" />
     <Compile Include="cdMileage.cs" />
     <Compile Include="cdPipelineFlps.cs" />
+    <Compile Include="cdProduct.cs" />
     <Compile Include="cdRestoreBackUp.cs" />
     <Compile Include="cdRole.cs" />
     <Compile Include="cdRoleUser.cs" />
+    <Compile Include="cdSale.cs" />
     <Compile Include="cdUser.cs" />
+    <Compile Include="cdWarehouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

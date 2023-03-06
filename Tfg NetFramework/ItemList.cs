@@ -158,7 +158,8 @@ namespace Tfg_NetFramework
 
         private void btnMoreInfo_Click(object sender, EventArgs e)
         {
-            descripcionItemList descripcionItemList = new descripcionItemList(new ceDescripcionItem(this.user, this.lead, this.customer));
+            descripcionItemList descripcionItemList = new descripcionItemList
+                (new ceDescripcionItem(this.user, this.lead, this.customer));
             descripcionItemList.Show();
         }
         

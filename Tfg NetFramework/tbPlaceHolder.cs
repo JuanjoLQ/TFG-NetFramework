@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tfg_NetFramework
@@ -25,13 +21,19 @@ namespace Tfg_NetFramework
             this.ForeColor = this.PlaceholderColor;
         }
 
+        public void defectColor(Color color)
+        {
+            this.ForeColor = color;
+        }
+
         protected override void OnEnter(EventArgs e)
         {
             if (this.Text == PlaceholderText)
             {
                 this.Text = "";
-                this.ForeColor = this.ForeColor;
+                this.ForeColor = Color.Black;
             }
+
         }
 
         protected override void OnLeave(EventArgs e)

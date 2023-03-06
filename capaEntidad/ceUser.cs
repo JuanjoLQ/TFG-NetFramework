@@ -29,9 +29,21 @@
             this.Password = password;
         }
 
+        public ceUser(int idUser, string email, string password, string department, string job)
+        {
+            this.idUser = idUser;
+            this.Email = email;
+            this.Password = password;
+            this.Department = department;
+            this.Job = job;
+        }
+
         public int idUser { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public string Department { get; set; }
+        public string Job { get; set; }
+
         public int isAdmin { get; set; }
 
         public override string ToString()

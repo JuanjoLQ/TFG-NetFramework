@@ -79,12 +79,17 @@ namespace capaNegocio
 
         public bool delUser(int idUser)
         {
-            return cdUser.deteteUser(idUser);
+            return cdUser.deleteUser(idUser);
         }
 
         public Dictionary<Tuple<string, string>, string> obtainEmployeesPerDepartment (Dictionary<Tuple<string, string>, string> departments_employees)
         {
             return cdUser.obtainEmployeesPerDepartment(departments_employees);
+        }
+
+        public void updateUser(ceUser user)
+        {
+            cdUser.updateUser(user);
         }
 
     }

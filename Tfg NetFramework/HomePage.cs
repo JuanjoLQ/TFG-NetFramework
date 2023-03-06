@@ -6,8 +6,6 @@ using System.Windows.Forms;
 using capaDatos;
 using capaEntidad;
 using capaNegocio;
-using System.Diagnostics;
-using MySql.Data.MySqlClient;
 using System.IO;
 using System.Collections;
 using CapaNegocio;
@@ -33,6 +31,9 @@ namespace Tfg_NetFramework
         cnRestoreBackUp cnRestoreBackUp = new cnRestoreBackUp();
         cnRole cnRole = new cnRole();
         cnDepartment cnDepartment = new cnDepartment();
+        cnWarehouse cnWarehouse = new cnWarehouse();
+        cnProduct cnProduct = new cnProduct();
+        cnSale cnSale = new cnSale();
 
         cdGlobals cdGlobals = new cdGlobals();
         Hashtable pdfs = new Hashtable();
@@ -50,6 +51,7 @@ namespace Tfg_NetFramework
             pUsuarios.Visible = false;
             pGestionDietas.Visible = false;
             pCRMGest.Visible = false;
+            pInventory.Visible = false;
 
             pGestDietasDietas.Visible = false;
             pGestDietasKilometraje.Visible = false;
@@ -102,6 +104,9 @@ namespace Tfg_NetFramework
 
             cnRole.getRoles(this.cbRole);
             cnDepartment.getDepartments(this.cbDepartamento);
+
+            cnRole.getRoles(this.cbUserNewRole);
+            cnDepartment.getDepartments(this.cbUserNewDepartment);
 
             cdGlobals.newLogEntry(emailUser, "Inicio de sesión de " + emailUser);
         }
@@ -157,7 +162,7 @@ namespace Tfg_NetFramework
             tbPassword.start(Res.Pass);
             tbDepartment.start(Res.department);
             tbIdUser.start(Res.idUser);
-            tbOcupacion.start(Res.job);
+            tbJob.start(Res.job);
 
             // Buttons
             btnRRegistrar.Text = Res.btnRegistrar;
@@ -241,11 +246,11 @@ namespace Tfg_NetFramework
             // Labels
             lbManAllowancesEmail.Text = Res.Email;
             lbManAllowancesTitle.Text = Res.title;
-            lbManAllowancesObservations.Text = Res.observations;
+            lbManAllowanceObservation.Text = Res.observations;
             lbManAllowancesDate.Text = Res.date;
             lbManAllowancesStartHour.Text = Res.startHour;
             lbManAllowancesEndHour.Text = Res.endHour;
-            lbManAllowancesState.Text = Res.state;
+            lbManAllowanceState.Text = Res.state;
             lbManAllowancesNewState.Text = Res.newState;
             lbManAllowancesIdAllowance.Text = Res.idAllowance;
 
@@ -402,67 +407,43 @@ namespace Tfg_NetFramework
 
          */
 
-
-
         private void btnRRegistrar_Click(object sender, EventArgs e)
         {
-            string role, departamento;
-            ceUser user = new ceUser(0, tbREmail.Text, tbRPassword.Text);
+            try
+            {
+                string role, departament;
+                ceUser user = new ceUser(0, tbREmail.Text, tbRPassword.Text);
 
-            Debug.WriteLine(tbREmail.Text);
-            Debug.WriteLine(tbRPassword.Text);
-            Debug.WriteLine(cbRole.SelectedItem.ToString());
-            role = cbRole.SelectedItem.ToString();
-            departamento = cbDepartamento.SelectedItem.ToString();
+                role = cbRole.SelectedItem == null ? String.Empty : 
+                    cbRole.SelectedItem.ToString();
 
-            if (cnUser.ValidarDatos(user) == false || role == null)
-            {
-                return;
-            }
-            if (cnUser.CrearUser(user, role, departamento))
-            {
-                MessageBox.Show("Usuario creado con éxito.");
-                cdGlobals.newLogEntry(emailUser, "Usuario creado");
-            }
-            else
-            {
-                MessageBox.Show("Usuario NO creado con éxito");
-            }
-        }
+                departament = cbDepartamento.SelectedItem == null ? String.Empty :
+                    cbDepartamento.SelectedItem.ToString();
 
-        private void tbREmail_Focus(object sender, EventArgs e)
-        {
-            if (tbREmail.Text == Res.Email)
-            {
-                tbREmail.Text = string.Empty;
-                tbREmail.ForeColor = Color.Black;
-            }
-        }
-        private void tbREmail_LostFocus(object sender, EventArgs e)
-        {
-            if (tbREmail.Text == string.Empty)
-            {
-                tbREmail.Text = Res.Email;
-                tbREmail.ForeColor = Color.DimGray;
-            }
-        }
+                if (cnUser.ValidarDatos(user) == false || role == string.Empty || departament == string.Empty)
+                {
+                    MessageBox.Show("Faltan por rellenar campos");
+                    return;
+                }
+                if (cnUser.CrearUser(user, role, departament))
+                {
+                    MessageBox.Show("Usuario creado con éxito.");
+                    cdGlobals.newLogEntry(emailUser, "Usuario creado");
 
-        private void tbRPassword_Focus(object sender, EventArgs e)
-        {
-            if (tbRPassword.Text == Res.Pass)
-            {
-                tbRPassword.Text = string.Empty;
-                tbRPassword.ForeColor = Color.Black;
+                    tbREmail.Text = "";
+                    tbRPassword.Text = "";
+                    cbRole.SelectedItem = string.Empty;
+                    cbDepartamento.SelectedItem = string.Empty;
+                }
+                else
+                {
+                    MessageBox.Show("Usuario NO creado con éxito");
+                }
             }
-        }
-
-        private void tbRPassword_LostFocus(object sender, EventArgs e)
-        {
-            if (tbRPassword.Text == string.Empty)
+            catch (Exception)
             {
-                tbRPassword.Text = Res.Pass;
-                tbRPassword.ForeColor = Color.DimGray;
-
+                MessageBox.Show("Fallo");
+                throw;
             }
         }
 
@@ -473,6 +454,7 @@ namespace Tfg_NetFramework
             pSolicitudDieta.Visible = false;
             pCRMGest.Visible = false;
             pSettingsModule.Visible = false;
+            pInventory.Visible = false;
         }
 
         private void btnSolDietas_Click(object sender, EventArgs e)
@@ -482,6 +464,7 @@ namespace Tfg_NetFramework
             pSolicitudDieta.Visible = true;
             pCRMGest.Visible = false;
             pSettingsModule.Visible = false;
+            pInventory.Visible = false;
         }
 
         private void btnGestDietas_Click(object sender, EventArgs e)
@@ -491,6 +474,7 @@ namespace Tfg_NetFramework
             pSolicitudDieta.Visible = false;
             pCRMGest.Visible = false;
             pSettingsModule.Visible = false;
+            pInventory.Visible = false;
         }
 
         private void btnCRM_Click(object sender, EventArgs e)
@@ -500,6 +484,17 @@ namespace Tfg_NetFramework
             pSolicitudDieta.Visible = false;
             pCRMGest.Visible = true;
             pSettingsModule.Visible = false;
+            pInventory.Visible = false;
+        }
+
+        private void btnModuleAux_Click(object sender, EventArgs e)
+        {
+            pSettingsModule.Visible = false;
+            pUsuarios.Visible = false;
+            pGestionDietas.Visible = false;
+            pSolicitudDieta.Visible = false;
+            pCRMGest.Visible = false;
+            pInventory.Visible = true;
         }
 
         private void dgvKilometraje_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -507,22 +502,18 @@ namespace Tfg_NetFramework
 
         }
 
-        private void dgvUser_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //tbDepartment.Text = dgvUser.CurrentRow.Cells[0].Value.ToString();
-            //tbIdUser.Text = dgvUser.CurrentRow.Cells[1].Value.ToString();
-            //tbEmail.Text = dgvUser.CurrentRow.Cells[2].Value.ToString();
-            //tbPassword.Text = dgvUser.CurrentRow.Cells[3].Value.ToString();
-            //tbOcupacion.Text = dgvUser.CurrentRow.Cells[4].Value.ToString();
-        }
-
         private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             tbIdUser.Text = dgvUser.CurrentRow.Cells[0].Value.ToString();
+            //tbIdUser.defectColor(Color.Black);
             tbEmail.Text = dgvUser.CurrentRow.Cells[1].Value.ToString();
+            tbEmail.defectColor(Color.Black);
             tbPassword.Text = dgvUser.CurrentRow.Cells[2].Value.ToString();
+            tbPassword.defectColor(Color.Black);
             tbDepartment.Text = dgvUser.CurrentRow.Cells[3].Value.ToString();
-            tbOcupacion.Text = dgvUser.CurrentRow.Cells[4].Value.ToString();
+            tbDepartment.defectColor(Color.Black);
+            tbJob.Text = dgvUser.CurrentRow.Cells[4].Value.ToString();
+            tbJob.defectColor(Color.Black);
         }
 
         private void dgvDietas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -550,6 +541,27 @@ namespace Tfg_NetFramework
             tbManMileagePricePerKilometer.Text = dgvMileage.CurrentRow.Cells[8].Value.ToString();
             tbManMileageFinal.Text = dgvMileage.CurrentRow.Cells[9].Value.ToString();
             tbManMileageState.Text = dgvMileage.CurrentRow.Cells[10].Value.ToString();
+        }
+
+        private void btnUpdateUser_Click(object sender, EventArgs e)
+        {
+            string email = tbEmail.Text;
+            string password = tbPassword.Text;
+            string newDepartment = cbUserNewDepartment.SelectedItem == null ? String.Empty :
+                    cbUserNewDepartment.SelectedItem.ToString();
+            string newRole = cbUserNewRole.SelectedItem == null ? String.Empty :
+                    cbUserNewRole.SelectedItem.ToString();
+
+            if (email != string.Empty && password != string.Empty && newDepartment != string.Empty && newRole != string.Empty)
+            {
+                ceUser user = new ceUser(int.Parse(tbIdUser.Text) , email, password, newDepartment, newRole);
+                cnUser.updateUser(user);
+            }
+            else
+            {
+                MessageBox.Show("No ha rellenado todos los campos correspondientes");
+            }
+
         }
 
         /*
@@ -646,7 +658,7 @@ namespace Tfg_NetFramework
             dgvUser.Refresh();
             cnUser.dgvUsers(dgvUser);
             tbDepartment.Text = string.Empty;
-            tbOcupacion.Text = string.Empty;
+            tbJob.Text = string.Empty;
             tbIdUser.Text = string.Empty;
             tbPassword.Text = string.Empty;
             tbEmail.Text = string.Empty;
@@ -674,60 +686,64 @@ namespace Tfg_NetFramework
         private void btnEliminarUser_Click(object sender, EventArgs e)
         {
             string idUser = dgvUser.CurrentRow.Cells[0].Value.ToString();
-            cnUser.delUser(int.Parse(idUser));
-            cdGlobals.newLogEntry(emailUser, "Usuario eliminado");
-            tbDepartment.Text = string.Empty;
-            tbOcupacion.Text = string.Empty;
-            tbIdUser.Text = string.Empty;
-            tbPassword.Text = string.Empty;
-            tbEmail.Text = string.Empty;
+
+            if (cnUser.delUser(int.Parse(idUser)))
+            {
+                tbDepartment.Text = string.Empty;
+                tbJob.Text = string.Empty;
+                tbIdUser.Text = string.Empty;
+                tbPassword.Text = string.Empty;
+                tbEmail.Text = string.Empty;
+                cdGlobals.newLogEntry(emailUser, "Usuario eliminado");
+                MessageBox.Show("Usuario eliminado");
+            }
         }
 
-        string cadenaConexion = "Server=localhost;User=root;Password=TFG_ERP_C#;Port=3306;database=mydb;";
+        //string cadenaConexion = "Server=localhost;User=root;Password=TFG_ERP_C#;Port=3306;database=mydb;";
 
-        public void UploadFile(String file)
-        {
-            MySqlConnection conn = new MySqlConnection(cadenaConexion);
-            MySqlCommand cmd;
-            conn.Open();
+        //public void UploadFile(String file)
+        //{
+        //    MySqlConnection conn = new MySqlConnection(cadenaConexion);
+        //    MySqlCommand cmd;
+        //    conn.Open();
 
-            /*
-            System.IO.FileStream fileStream = File.OpenRead(file);
-            byte[] contents = new byte[fileStream.Length];
-            fileStream.Read(contents, 0, (int)fileStream.Length);
-            fileStream.Close();
-            */
+        //    /*
+        //    System.IO.FileStream fileStream = File.OpenRead(file);
+        //    byte[] contents = new byte[fileStream.Length];
+        //    fileStream.Read(contents, 0, (int)fileStream.Length);
+        //    fileStream.Close();
+        //    */
 
-            //
-            string name = Path.GetFileName(fileName);
-            string newPath = @"C:\Users\Jesus\Tfg Net Framework\Tfg NetFramework\files\";
-            string locationCopy = newPath + name;
-            MessageBox.Show("Location Copy: " + locationCopy + "\nFileName: " + fileName);
+        //    //
+        //    string name = Path.GetFileName(fileName);
+        //    string newPath = @"C:\Users\Jesus\Tfg Net Framework\Tfg NetFramework\files\";
+        //    string locationCopy = newPath + name;
+        //    MessageBox.Show("Location Copy: " + locationCopy + "\nFileName: " + fileName);
 
-            if (File.Exists(fileName))
-            {
-                File.Copy(fileName, locationCopy, true);
-                MessageBox.Show("File Copied");
-            }
-            //
+        //    if (File.Exists(fileName))
+        //    {
+        //        File.Copy(fileName, locationCopy, true);
+        //        MessageBox.Show("File Copied");
+        //    }
+        //    //
 
-            using (cmd = new MySqlCommand("insert into allowance(User_idUser, Title, Observations, State, StartTime, StartHour, EndHour, Invoice) " +
-                "values(@idUser, @title, @observations, @state, @startTime, @startHour, @endHour, @invoice)", conn))
-            {
-                cmd.Parameters.AddWithValue("@idUser", cnUser.idUser(ceGlobals.email));
-                cmd.Parameters.AddWithValue("@title", tbReqAllowancesTitle.Text);
-                cmd.Parameters.AddWithValue("@observations", tbReqAllowancesObservations.Text);
-                cmd.Parameters.AddWithValue("@state", "Solicitado");
-                cmd.Parameters.AddWithValue("@startTime", dtpReqAllowancesStartTime.Text);
-                cmd.Parameters.AddWithValue("@startHour", mtbReqAllowancesStartHour.Text);
-                cmd.Parameters.AddWithValue("@endHour", mtbReqAllowancesEndHour.Text);
-                cmd.Parameters.AddWithValue("@invoice", locationCopy);
-                cmd.ExecuteNonQuery();
-            }
-            MessageBox.Show("Finished uploading files", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    using (cmd = new MySqlCommand("insert into allowance(User_idUser, Title, Observations, State, StartTime, StartHour, EndHour, Invoice) " +
+        //        "values(@idUser, @title, @observations, @state, @startTime, @startHour, @endHour, @invoice)", conn))
+        //    {
+        //        cmd.Parameters.AddWithValue("@idUser", cnUser.idUser(ceGlobals.email));
+        //        cmd.Parameters.AddWithValue("@title", tbReqAllowancesTitle.Text);
+        //        cmd.Parameters.AddWithValue("@observations", tbReqAllowancesObservations.Text);
+        //        cmd.Parameters.AddWithValue("@state", "Solicitado");
+        //        cmd.Parameters.AddWithValue("@startTime", dtpReqAllowancesStartTime.Text);
+        //        cmd.Parameters.AddWithValue("@startHour", mtbReqAllowancesStartHour.Text);
+        //        cmd.Parameters.AddWithValue("@endHour", mtbReqAllowancesEndHour.Text);
+        //        cmd.Parameters.AddWithValue("@invoice", locationCopy);
+        //        cmd.ExecuteNonQuery();
+        //    }
+        //    MessageBox.Show("Finished uploading files", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            conn.Close();
-        }
+        //    conn.Close();
+        //}
 
         private string fileName = "";
         private void btnUploadFile_Click(object sender, EventArgs e)
@@ -756,7 +772,11 @@ namespace Tfg_NetFramework
             if (!tbReqAllowancesTitle.Equals("") && !tbReqAllowancesObservations.Equals("") && !dtpReqAllowancesStartTime.Equals("")
                 && !mtbReqAllowancesStartHour.Equals("") && !mtbReqAllowancesEndHour.Equals("") && !fileName.Equals(""))
             {
-                UploadFile(fileName);
+                ceAllowance allowance = new ceAllowance(0, int.Parse(cnUser.idUser(ceGlobals.email)), tbReqAllowancesTitle.Text, 
+                    tbReqAllowancesObservations.Text, "Solicitado", dtpReqAllowancesStartTime.Text, null,mtbReqAllowancesStartHour.Text, mtbReqAllowancesEndHour.Text, 
+                     "");
+                cnAllowance.uploadFile(allowance, fileName);
+                //UploadFile(fileName);
                 cdGlobals.newLogEntry(emailUser, "Dieta solicitada");
             }
             else
@@ -925,6 +945,7 @@ namespace Tfg_NetFramework
 
                 axAcroPDF1.Visible = true;
                 axAcroPDF1.src = pdfs[dgvAllowances.CurrentRow.Cells[0].Value.ToString()].ToString();
+                axAcroPDF1.src = pdfs[dgvAllowances.CurrentRow.Cells[0].Value.ToString()].ToString();
             }
 
         }
@@ -1047,6 +1068,7 @@ namespace Tfg_NetFramework
             flpQualified.Controls.Clear();
             flpProposition.Controls.Clear();
             flpWon.Controls.Clear();
+            flpSale.Controls.Clear();
 
             ArrayList arrayDescrItemList = new ArrayList();
             arrayDescrItemList = cnPipelineFlps.updateFpls();
@@ -1086,6 +1108,10 @@ namespace Tfg_NetFramework
                 {
                     flpWon.Controls.Add(itemFlp);
                 }
+                else if (item.Lead.Stage == "Sale")
+                {
+                    flpSale.Controls.Add(itemFlp);
+                }
             }
         }
 
@@ -1099,10 +1125,11 @@ namespace Tfg_NetFramework
         private void dgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             lbLeadName.Text = dgvCustomer.CurrentRow.Cells[1].Value.ToString();
+            lbStateDateLead.Text = "";
             cnDgvLead.updateDgvLead(int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString()), dgvCustomer_Lead);
         }
 
-        private void btnMoreInfoCustomer_Click(object sender, EventArgs e)
+        private void dgvCustomer_DoubleClick(object sender, EventArgs e)
         {
             ceCustomer customer = cnCustomer.getCustomer(int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString()));
 
@@ -1112,6 +1139,22 @@ namespace Tfg_NetFramework
 
         }
 
+        private void dgvCustomer_Lead_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvCustomer_Lead.CurrentRow == null)
+            {
+                MessageBox.Show("No lead seleccionado");
+            }
+            else
+            {
+                ceDescripcionItem description = cnLead.getLead(int.Parse(dgvCustomer_Lead.CurrentRow.Cells[0].Value.ToString()));
+
+                descripcionItemList descripcionItemList = new descripcionItemList
+                (description);
+                descripcionItemList.Show();
+            }
+        }
+
         private void dtpFechaInicio_ValueChanged(object sender, EventArgs e)
         {
             var startDate = DateTime.Parse(dtpFechaInicio.Value.ToString("yyyy-MM-dd"));
@@ -1119,11 +1162,11 @@ namespace Tfg_NetFramework
 
             if (startDate > endDate && dgvCustomer.CurrentRow != null)
             {
-                MessageBox.Show("La fecha inicio no puede ser más antigua que la fecha fin");
+                lbStateDateLead.Text = "La fecha inicio no puede ser más antigua que la fecha fin";
             }
             else
             {
-                cnLead.leadsByDate(dgvCustomer_Lead, int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString()), startDate, endDate);
+                cnLead.leadsByDate(lbStateDateLead, dgvCustomer_Lead, int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString()), startDate, endDate);
             }
         }
 
@@ -1175,5 +1218,160 @@ namespace Tfg_NetFramework
 
         }
 
+        /*        
+
+         .----------------.  .-----------------. .----------------.  .----------------.  .-----------------. .----------------.  .----------------.  .----------------.  .----------------. 
+        | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+        | |     _____    | || | ____ _____  | || | ____ ____  | || |  _________   | || | ____ _____  | || |  _________   | || |     ____     | || |  _______     | || |  ____ ____  | |
+        | |    |_ _|   | || ||_   \|_ _| | || ||_ _| |_ _| | || | |_ ___  |  | || ||_   \|_ _| | || | |  _ _  |  | || |   .'    `.   | || | |_   __ \    | || | |_  _||_  _| | |
+        | |      | |     | || |  |   \ | |   | || |  \ \   / /   | || |   | |_  \_|  | || |  |   \ | |   | || | |_/ | | \_|  | || |  /  .--.  \  | || |   | |__) |   | || |   \ \  / /   | |
+        | |      | |     | || |  | |\ \| |   | || |   \ \ / /    | || |   |  _|  _   | || |  | |\ \| |   | || |     | |      | || |  | |    | |  | || |   |  __ /    | || |    \ \/ /    | |
+        | |     _| |_    | || | _| |_\   |_  | || |    \ ' /     | || |  _| |___/ |  | || | _| |_\   |_  | || |    _| |_     | || |  \  `--'  /  | || |  _| |  \ \_  | || |    _|  |_    | |
+        | |    |_____|   | || ||_____|\____| | || |     \_/      | || | |_________|  | || ||_____|\____| | || |   |_____|    | || |   `.____.'   | || | |____| |___| | || |   |______|   | |
+        | |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | || |              | |
+        | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+         '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
+
+        */
+
+        private void bbtnAddProduct_Click(object sender, EventArgs e)
+        {
+            Form newInventoryItem = new newInventoryItem();
+
+            newInventoryItem.Show();
+        }
+
+        private void pInventory_VisibleChanged(object sender, EventArgs e)
+        {
+            if (pInventory.Visible == true)
+            {
+                ArrayList array = new ArrayList();
+                array = cnWarehouse.getWarehouses();
+                fillBdgvStoredProducts(array);
+
+            }
+        }
+
+        private void fillBdgvStoredProducts(ArrayList arr)
+        {
+            bdgvStoredProducts.RowCount = 0;
+            ceWarehouse warehouse = null;
+            for (int i = 0; i < arr.Count; i++)
+            {
+                DataGridViewRow newRow = new DataGridViewRow();
+
+                warehouse = (ceWarehouse) arr[i];
+
+                newRow.CreateCells(bdgvStoredProducts);
+                newRow.Cells[0].Value = warehouse.idWarehouse;
+                newRow.Cells[1].Value = warehouse.Name;
+                bdgvStoredProducts.Rows.Add(newRow);
+            }
+        }
+
+        private void bdgvStoredProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ArrayList arr = null;
+            int idWarehouse = int.Parse(bdgvStoredProducts.CurrentRow.Cells[0].Value.ToString());
+            blbTitleProductsAboutType.Text = bdgvStoredProducts.CurrentRow.Cells[1].Value.ToString();
+            
+            if (bdgvStoredProducts.CurrentRow.Cells[1].Value.ToString() == "No stored")
+            {
+                blbMaxQuantity.Visible = true;
+                blbAmountUpdate.Visible = true;
+                btbStoreAmount.Visible = true;
+                bdStoreIntoWarehouses.Visible = true;
+                bbtnAddProductToWarehouse.Visible = true;
+
+                bdStoreIntoWarehouses.Items.Clear();
+                arr = cnWarehouse.getWarehouses();
+                foreach (ceWarehouse i in arr)
+                {
+                    if (i.Name != "No stored")
+                        bdStoreIntoWarehouses.Items.Add(i.Name);
+                }
+                
+            }
+            else
+            {
+                blbMaxQuantity.Visible = false;
+                blbAmountUpdate.Visible = false;
+                btbStoreAmount.Visible = false;
+                bdStoreIntoWarehouses.Visible = false;
+                bbtnAddProductToWarehouse.Visible = false;
+            }
+
+            if (idWarehouse != 0)
+            {
+                arr = cnWarehouse.obtainProductsFromWarehouses(idWarehouse);
+            }
+            else
+            {
+                arr = cnProduct.obtainNoStoredProducts();
+            }
+
+            fillBdgvItemsPerType(arr);
+        }
+
+        private void fillBdgvItemsPerType(ArrayList arr)
+        {
+            bdgvItemsPerType.RowCount = 0;
+            ceProduct p = null;
+            for (int i = 0; i < arr.Count; i++)
+            {
+                DataGridViewRow newRow = new DataGridViewRow();
+
+                p = (ceProduct) arr[i];
+
+                newRow.CreateCells(bdgvItemsPerType);
+                newRow.Cells[0].Value = p.idProduct;
+                newRow.Cells[1].Value = p.name;
+                newRow.Cells[2].Value = p.pricePerUnit;
+                newRow.Cells[3].Value = p.amount;
+                newRow.Cells[4].Value = p.unitOfMeasure;
+                newRow.Cells[5].Value = p.productCategory;
+                newRow.Cells[6].Value = p.state;
+
+                bdgvItemsPerType.Rows.Add(newRow);
+            }
+        }
+
+        private void bbtnAddProductToWarehouse_Click(object sender, EventArgs e)
+        {
+            int idProduct = int.Parse(bdgvItemsPerType.CurrentRow.Cells[0].Value.ToString());
+            int amount = int.Parse(btbStoreAmount.Text);
+            string newWarehouse = bdStoreIntoWarehouses.SelectedItem == null ? String.Empty :
+                    bdStoreIntoWarehouses.SelectedItem.ToString();
+            int maxQt = int.Parse(bdgvItemsPerType.CurrentRow.Cells[3].Value.ToString());
+
+            if (newWarehouse != string.Empty && newWarehouse != "No stored" && maxQt >= amount)
+            {
+                if(maxQt == amount)
+                {
+                    cnWarehouse.productNoStoredToStored(idProduct, amount, newWarehouse);
+                }
+                    
+                if (maxQt > amount)
+                {
+                    string name = bdgvItemsPerType.CurrentRow.Cells[1].Value.ToString();
+                    float pricePerUnit = float.Parse(bdgvItemsPerType.CurrentRow.Cells[2].Value.ToString());
+                    float actualAmount = float.Parse(bdgvItemsPerType.CurrentRow.Cells[3].Value.ToString());
+                    string unitOfMeasure = bdgvItemsPerType.CurrentRow.Cells[4].Value.ToString();
+                    string productCategory = bdgvItemsPerType.CurrentRow.Cells[5].Value.ToString();
+                    string state = "Stored";
+
+                    ceProduct p = new ceProduct(name, pricePerUnit, actualAmount, unitOfMeasure, productCategory, state);
+                    cnWarehouse.splitProductNoStoredAndStored(p, idProduct, amount, maxQt, newWarehouse);
+                }
+                                    
+            }
+
+        }
+
+        private void bdgvItemsPerType_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            blbMaxQuantity.Text = "Max: " + bdgvItemsPerType.CurrentRow.Cells[3].Value.ToString();
+
+        }
     }
 }

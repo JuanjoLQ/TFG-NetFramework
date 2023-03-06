@@ -1,10 +1,5 @@
 ﻿using capaDatos;
 using capaEntidad;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace capaNegocio
 {
@@ -25,6 +20,11 @@ namespace capaNegocio
         public void deleteAllowance(int idAllowance)
         {
             cdAllowance.deleteAllowance(idAllowance);
+        }
+
+        public void uploadFile(ceAllowance allowance, string fileName)
+        {
+            cdAllowance.uploadFile(allowance, fileName);
         }
 
     }
