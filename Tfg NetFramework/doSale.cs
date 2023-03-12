@@ -17,6 +17,7 @@ namespace Tfg_NetFramework
     {
         cnWarehouse cnWarehouse = new cnWarehouse();
         cnSale cnSale = new cnSale();
+        cnLead cnLead = new cnLead();
         ceDescripcionItem descrItem = null;
         public doSale(ceDescripcionItem descripcionItem)
         {
@@ -63,14 +64,18 @@ namespace Tfg_NetFramework
             int idProduct;
             if (bdgvProductsIntoSale.Rows.Count > 0)
             {
-                string dt = DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+                string dt = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                MessageBox.Show("Datetime today: " + dt);
                 cnSale.createSale(dt);
                 int idSale = cnSale.idSale(dt);
+                MessageBox.Show("idSale:" + idSale);
                 foreach (DataGridViewRow row in bdgvProductsIntoSale.Rows)
                 {
-                    idProduct = int.Parse(row.Cells[0].Value.ToString();
+                    idProduct = int.Parse(row.Cells[0].Value.ToString());
+                    MessageBox.Show("idProduct: " + idProduct);
                     cnSale.addSale(idProduct, idSale);
                 }
+                cnLead.leadToSale(descrItem.Lead.Idlead,idSale);
             }
             
         }

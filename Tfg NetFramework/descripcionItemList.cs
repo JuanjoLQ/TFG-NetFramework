@@ -9,8 +9,12 @@ namespace Tfg_NetFramework
     public partial class descripcionItemList : Form
     {
         int idLead;
+        int idSale;
         string stageLead;
+
         cnLead cnLead = new cnLead();
+        cnSale cnSale = new cnSale();
+
         ceDescripcionItem descrItem = null;
         private void descripcionItemList_Load(object sender, EventArgs e)
         {
@@ -38,6 +42,12 @@ namespace Tfg_NetFramework
             {
                 btnProposition.BackColor = Color.FromArgb(107, 107, 114);
             }
+            else if (stageLead == "Sale")
+            {
+                btnSale.BackColor = Color.FromArgb(107, 107, 114);
+                bbtnDetailsSale.Visible = true;
+                idSale = cnSale.getidSaleFromIdLead(descripcionItem.Lead.Idlead);
+            }
             else
             {
                 btnWon.BackColor = Color.FromArgb(107, 107, 114);
@@ -63,6 +73,8 @@ namespace Tfg_NetFramework
             tbCustomerDepartment.Text = descripcionItem.Customer.Department;
             tbCustomerType.Text = descripcionItem.Customer.Type;
             tbCustomerDate.Text = descripcionItem.Customer.Date;
+
+
         }
 
         private void btnNew_Click(object sender, EventArgs e)
@@ -133,6 +145,13 @@ namespace Tfg_NetFramework
             Form doSale = new doSale(descrItem);
 
             doSale.Show();
+        }
+
+        private void bbtnDetailsSale_Click(object sender, EventArgs e)
+        {
+            Form detailsSale = new detailsSale(descrItem, this.idSale);
+
+            detailsSale.Show();
         }
     }
 }

@@ -27,9 +27,10 @@ namespace capaDatos
                 {
                     cmd.Parameters.AddWithValue("@idSale", idSale);
                     cmd.Parameters.AddWithValue("@state", "Sold");
+                    cmd.Parameters.AddWithValue("@idProduct", idProduct);
                     cmd.ExecuteNonQuery();
                 }
-                MessageBox.Show("Lead Actualizado", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Producto añadido a venta.", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 conn.Close();
             }
@@ -98,6 +99,80 @@ namespace capaDatos
                 MessageBox.Show(ex.Message);
             }
             return identSale;
+        }
+
+        public int getidSaleFromIdLead(int idLead)
+        {
+            int idSale = 0;
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                conn.Open();
+                string query = "SELECT Sales_idSale FROM mydb.lead WHERE idLead = ?idLead;";
+
+                MySqlCommand command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("?idLead", idLead);
+
+                var row = command.ExecuteReader();
+
+                if (row.HasRows)
+                {
+                    while (row.Read())
+                    {
+                        idSale = int.Parse(row["Sales_idSale"].ToString());
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay Sales.");
+                }
+
+                row.Close();// Close reader.
+                conn.Close();// Close connection.
+                return idSale;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return idSale;
+        }
+
+        public string datetimeSale(int idSale)
+        {
+            string datetime = string.Empty;
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                conn.Open();
+                string query = "SELECT Date FROM Sales WHERE idSale = ?idSale;";
+
+                MySqlCommand command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("?idSale", idSale);
+
+                var row = command.ExecuteReader();
+
+                if (row.HasRows)
+                {
+                    while (row.Read())
+                    {
+                        datetime = row["Date"].ToString();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay Sales.");
+                }
+
+                row.Close();// Close reader.
+                conn.Close();// Close connection.
+                return datetime;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return datetime;
         }
 
     }

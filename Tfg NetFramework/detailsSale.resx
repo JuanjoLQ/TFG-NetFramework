@@ -117,32 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnLeadRemove.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAJdJREFUWEftl80NQEAUhLcL3ThpQSMqcFQLJXBXiEKYSUg2ssJj4y/zJV+yeS87
-        5sCBEyfJYL6Ss1uo4LhhCaPQwNADrsjMwzxeoIC8sNjBwSjv+BnMFCZS2EaSWWb4bYdepjMyy8zrCtRw
-        gWd/t7dXARVQARVQARX4R4F+nlGe/d3enjMzvOSHXPGbBRLI360YMksEcG4C7dhqbEARK10AAAAASUVO
-        RK5CYII=
-</value>
+  <data name="blbDetailsSale.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
-  <data name="bbtnLeadToSale.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJ0AAAAxCAYAAADA+KtDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVHhe7dKhAYAwAMCwXbKX4b+dgR9wAJaqiKjajnnu
-        Nc/7hsZe73RfAf5jOnKmI2c6cqYjZzpypiNnOnKmI2c6cqYjZzpypiNnOnKmI2c6cqYjZzpypiNnOnKm
-        I2c6cqYjZzpypiNnOnKmI2c6cqYjZzpypiNnOnKmI2c6cqYjZzpypiNnOnKmI2c6cqYjZzpypiNnOnKm
-        I2c6cqYjN+axr68Avzj29QDQk08H53QuSQAAAABJRU5ErkJggg==
-</value>
+  <metadata name="idProduct.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dataGridViewTextBoxColumn4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pricePerUnit.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="amount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="unitOfMeasure.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="productCategory.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="stateProduct.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="blbDetailsSaleNameCustomer.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
-  <data name="bbtnDetailsSale.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAJ0AAAAxCAYAAADA+KtDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACqSURBVHhe7dKhAYAwAMCwXbKX4b+dgR9wAJaqiKjajnnu
-        Nc/7hsZe73RfAf5jOnKmI2c6cqYjZzpypiNnOnKmI2c6cqYjZzpypiNnOnKmI2c6cqYjZzpypiNnOnKm
-        I2c6cqYjZzpypiNnOnKmI2c6cqYjZzpypiNnOnKmI2c6cqYjZzpypiNnOnKmI2c6cqYjZzpypiNnOnKm
-        I2c6cqYjN+axr68Avzj29QDQk08H53QuSQAAAABJRU5ErkJggg==
-</value>
+  <data name="blbDetailsSaleNameLead.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="blbDetailsSaleDate.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
 </root>

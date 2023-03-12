@@ -2,10 +2,6 @@
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace capaDatos
@@ -140,6 +136,64 @@ namespace capaDatos
                 else
                 {
                     MessageBox.Show("No hay Warehouses.");
+                }
+
+                row.Close();// Close reader.
+                conn.Close();// Close connection.
+
+                return array;
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.ToString());
+            }
+
+            return array;
+        }
+
+        public ArrayList obtainSoldProducts(int idSale)
+        {
+            ArrayList array = new ArrayList();
+            try
+            {
+                array.Clear();
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                conn.Open();
+                string query = "SELECT idProduct, Name, PricePerUnit, Amount, UnitOfMeasure, ProductCategory, State FROM Product " +
+                    "WHERE Sales_idSale1 = ?idSale;";
+
+                MySqlCommand command = new MySqlCommand(query, conn);
+                command.Parameters.AddWithValue("?idSale", idSale);
+
+                var row = command.ExecuteReader();
+                int idProduct;
+                string nameProduct = string.Empty;
+                float pricePerUnit;
+                float amount;
+                string unitOfMeasure = string.Empty;
+                string productCategory = string.Empty;
+                string state = string.Empty;
+
+                ceProduct p = null;
+                if (row.HasRows)
+                {
+                    while (row.Read())
+                    {
+                        idProduct = int.Parse(row["idProduct"].ToString());
+                        nameProduct = row["Name"].ToString();
+                        pricePerUnit = float.Parse(row["PricePerUnit"].ToString());
+                        amount = float.Parse(row["Amount"].ToString());
+                        unitOfMeasure = row["UnitOfMeasure"].ToString();
+                        productCategory = row["ProductCategory"].ToString();
+                        state = row["state"].ToString();
+
+                        p = new ceProduct(idProduct, nameProduct, pricePerUnit, amount, unitOfMeasure, productCategory, state);
+                        array.Add(p);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No hay Productos.");
                 }
 
                 row.Close();// Close reader.

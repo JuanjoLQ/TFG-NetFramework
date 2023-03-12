@@ -255,6 +255,12 @@
     <Compile Include="descripcionItemList.Designer.cs">
       <DependentUpon>descripcionItemList.cs</DependentUpon>
     </Compile>
+    <Compile Include="detailsSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="detailsSale.Designer.cs">
+      <DependentUpon>detailsSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="doSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -317,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="descripcionItemList.resx">
       <DependentUpon>descripcionItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="detailsSale.resx">
+      <DependentUpon>detailsSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="doSale.resx">
       <DependentUpon>doSale.cs</DependentUpon>

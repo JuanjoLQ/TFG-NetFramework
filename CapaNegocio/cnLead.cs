@@ -42,5 +42,11 @@ namespace CapaNegocio
         {
             return cdLead.getLead(idLead);
         }
+
+        public void leadToSale(int idLead, int idSale)
+        {
+            cdLead.leadToSale(idLead, idSale);
+        }
+
     }
 }

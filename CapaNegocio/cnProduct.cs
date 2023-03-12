@@ -1,11 +1,6 @@
 ﻿using capaDatos;
 using capaEntidad;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
@@ -30,6 +25,11 @@ namespace CapaNegocio
         public ArrayList obtainNoStoredProducts()
         {
             return cdProduct.obtainNoStoredProducts();
+        }
+
+        public ArrayList obtainSoldProducts(int idSale)
+        {
+            return cdProduct.obtainSoldProducts(idSale);
         }
 
     }

@@ -26,6 +26,16 @@ namespace CapaNegocio
             return cdSale.idSale(datetime);
         }
 
+        public int getidSaleFromIdLead(int idLead)
+        {
+            return cdSale.getidSaleFromIdLead(idLead);
+        }
+
+        public string datetimeSale(int idSale)
+        {
+            return cdSale.datetimeSale(idSale);
+        }
+
 
     }
 }

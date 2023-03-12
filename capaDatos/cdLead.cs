@@ -314,5 +314,30 @@ namespace capaDatos
             return null;
         }
 
+        public void leadToSale(int idLead, int idSale)
+        {
+            try
+            {
+                MySqlConnection conn = new MySqlConnection(cadenaConexion);
+                MySqlCommand cmd;
+                conn.Open();
+
+                using (cmd = new MySqlCommand("UPDATE mydb.lead SET stage = @newStage, Sales_idSale = @idSale WHERE idLead = @idLead;", conn))
+                {
+                    cmd.Parameters.AddWithValue("@newStage", "Sale");
+                    cmd.Parameters.AddWithValue("@idSale", idSale);                    
+                    cmd.Parameters.AddWithValue("@idLead", idLead);
+                    cmd.ExecuteNonQuery();
+                }
+                MessageBox.Show("Lead a Sale", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

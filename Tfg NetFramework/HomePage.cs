@@ -156,13 +156,17 @@ namespace Tfg_NetFramework
             lbRegisterUser.Text = Res.lbRegisterUser;
 
             // Textboxs
-            tbREmail.start(Res.Email);
-            tbRPassword.start(Res.Pass);
-            tbEmail.start(Res.Email);
-            tbPassword.start(Res.Pass);
-            tbDepartment.start(Res.department);
-            tbIdUser.start(Res.idUser);
-            tbJob.start(Res.job);
+            tbREmail.PlaceholderText = Res.Email;
+            tbRPassword.PlaceholderText = Res.Pass;
+
+            tbIdUser.PlaceholderText = Res.idUser;
+            tbEmail.PlaceholderText = Res.Email;
+
+            //tbEmail.PlaceholderText(Res.Email);
+            tbPassword.PlaceholderText = Res.Pass;
+            tbDepartment.PlaceholderText = Res.department;
+            //tbIdUser.start(Res.idUser);
+            tbJob.PlaceholderText = Res.job;
 
             // Buttons
             btnRRegistrar.Text = Res.btnRegistrar;
@@ -177,6 +181,7 @@ namespace Tfg_NetFramework
             dgvUser.Columns[4].HeaderText = Res.job;
 
         }
+
         private void translateSolAllowances()
         {
             lbTitleSolDieta.Text = Res.lbTitleReqAllowances;
@@ -184,7 +189,7 @@ namespace Tfg_NetFramework
 
             // Allowances
             // Labels
-            lbReqAllowancesTitleAllowances.Text = Res.allowances;
+            lbReqAllowancesTitleAllowances.Text = "<h3>" + Res.allowances + "</h3>";
             lbReqAllowancesTitle.Text = Res.title;
             lbReqAllowancesObservations.Text = Res.observations;
             lbReqAllowancesStartHour.Text = Res.startHour;
@@ -192,8 +197,8 @@ namespace Tfg_NetFramework
             lbReqAllowancesDate.Text = Res.date;
 
             // TextBoxs
-            tbReqAllowancesTitle.start(Res.title);
-            tbReqAllowancesObservations.start(Res.observations);
+            tbReqAllowancesTitle.PlaceholderText = Res.title;
+            tbReqAllowancesObservations.PlaceholderText = Res.observations;
 
             // Buttons
             btnReqAllowancesUploadFile.Text = Res.UploadFile;
@@ -212,12 +217,12 @@ namespace Tfg_NetFramework
             lbReqMileagePricePerKilometer.Text = Res.pricePerKilometer;
 
             // Textboxs
-            tbReqMileageMileage.start(Res.kilometers);
-            tbReqMileageTitle.start(Res.title);
-            tbReqMileageOrigin.start(Res.origin);
-            tbReqMileageDestination.start(Res.destination);
-            tbReqMileageTotal.start(Res.total);
-            tbReqMileagePricePerKilometer.start(Res.pricePerKilometer);
+            tbReqMileageMileage.PlaceholderText = Res.kilometers;
+            tbReqMileageTitle.PlaceholderText = Res.title;
+            tbReqMileageOrigin.PlaceholderText = Res.origin;
+            tbReqMileageDestination.PlaceholderText = Res.destination;
+            tbReqMileageTotal.PlaceholderText = Res.total;
+            tbReqMileagePricePerKilometer.PlaceholderText = Res.pricePerKilometer;
 
             // Button
             btnSolDietasSolKilometraje.Text = Res.requestMileage;
@@ -249,20 +254,20 @@ namespace Tfg_NetFramework
             lbManAllowanceObservation.Text = Res.observations;
             lbManAllowancesDate.Text = Res.date;
             lbManAllowancesStartHour.Text = Res.startHour;
-            lbManAllowancesEndHour.Text = Res.endHour;
+            lbManAllowanceEndHour.Text = Res.endHour;
             lbManAllowanceState.Text = Res.state;
-            lbManAllowancesNewState.Text = Res.newState;
+            lbManAllowanceNewState.Text = Res.newState;
             lbManAllowancesIdAllowance.Text = Res.idAllowance;
 
             // Textboxs
-            tbManAllowancesEmail.start(Res.Email);
-            tbManAllowancesTitle.start(Res.title);
-            tbManAllowancesObservations.start(Res.observations);
-            tbManAllowancesDate.start(Res.date);
-            tbManAllowancesStartHour.start(Res.startHour);
-            tbManAllowancesEndHour.start(Res.endHour);
-            tbManAllowancesState.start(Res.state);
-            tbManAllowancesIdAllowance.start(Res.idAllowance);
+            tbManAllowancesEmail.PlaceholderText = Res.Email;
+            tbManAllowancesTitle.PlaceholderText = Res.title;
+            tbManAllowancesObservations.PlaceholderText = Res.observations;
+            tbManAllowancesDate.PlaceholderText = Res.date;
+            tbManAllowancesStartHour.PlaceholderText = Res.startHour;
+            tbManAllowancesEndHour.PlaceholderText = Res.endHour;
+            tbManAllowancesState.PlaceholderText = Res.state;
+            tbManAllowancesIdAllowance.PlaceholderText = Res.idAllowance;
 
             // Buttons
             btnManAllowancesDietasRefresh.Text = Res.updateTable;
@@ -300,17 +305,17 @@ namespace Tfg_NetFramework
             lbManMileageNewState.Text = Res.newState;
 
             // Textboxs
-            tbManMileageEmail.start(Res.Email);
-            tbManMileageTitle.start(Res.title);
-            tbManMileageDate.start(Res.date);
-            tbManMileageSubcategory.start(Res.subcategory);
-            tbManMileageIdMileage.start(Res.idMileage);
-            tbManMileageOrigin.start(Res.origin);
-            tbManMileageDestination.start(Res.destination);
-            tbManMileageKilometers.start(Res.kilometers);
-            tbManMileagePricePerKilometer.start(Res.pricePerKilometer);
-            tbManMileageFinal.start(Res.final);
-            tbManMileageState.start(Res.state);
+            tbManMileageEmail.PlaceholderText = Res.Email;
+            tbManMileageTitle.PlaceholderText = Res.title;
+            tbManMileageDate.PlaceholderText = Res.date;
+            tbManMileageSubcategory.PlaceholderText = Res.subcategory;
+            tbManMileageIdMileage.PlaceholderText = Res.idMileage;
+            tbManMileageOrigin.PlaceholderText = Res.origin;
+            tbManMileageDestination.PlaceholderText = Res.destination;
+            tbManMileageKilometers.PlaceholderText = Res.kilometers;
+            tbManMileagePricePerKilometer.PlaceholderText = Res.pricePerKilometer;
+            tbManMileageFinal.PlaceholderText = Res.final;
+            tbManMileageState.PlaceholderText = Res.state;
 
             // Buttons
             btnManMileageRefreshDgvMileage.Text = Res.updateTable;
@@ -507,13 +512,13 @@ namespace Tfg_NetFramework
             tbIdUser.Text = dgvUser.CurrentRow.Cells[0].Value.ToString();
             //tbIdUser.defectColor(Color.Black);
             tbEmail.Text = dgvUser.CurrentRow.Cells[1].Value.ToString();
-            tbEmail.defectColor(Color.Black);
+            //tbEmail.defectColor(Color.Black);
             tbPassword.Text = dgvUser.CurrentRow.Cells[2].Value.ToString();
-            tbPassword.defectColor(Color.Black);
+            //tbPassword.defectColor(Color.Black);
             tbDepartment.Text = dgvUser.CurrentRow.Cells[3].Value.ToString();
-            tbDepartment.defectColor(Color.Black);
+            //tbDepartment.defectColor(Color.Black);
             tbJob.Text = dgvUser.CurrentRow.Cells[4].Value.ToString();
-            tbJob.defectColor(Color.Black);
+            //tbJob.defectColor(Color.Black);
         }
 
         private void dgvDietas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -552,10 +557,21 @@ namespace Tfg_NetFramework
             string newRole = cbUserNewRole.SelectedItem == null ? String.Empty :
                     cbUserNewRole.SelectedItem.ToString();
 
-            if (email != string.Empty && password != string.Empty && newDepartment != string.Empty && newRole != string.Empty)
+            if (email != string.Empty && password != string.Empty)
             {
+                if (newDepartment == string.Empty)
+                {
+                    newDepartment = tbDepartment.Text;
+                }
+                if (newRole == string.Empty)
+                {
+                    newRole = tbJob.Text;
+                }
+
                 ceUser user = new ceUser(int.Parse(tbIdUser.Text) , email, password, newDepartment, newRole);
                 cnUser.updateUser(user);
+
+                btnUpdateDtgUsers_Click(sender, e);
             }
             else
             {
@@ -965,20 +981,6 @@ namespace Tfg_NetFramework
         */
 
         private int aux = 0;
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            ItemList item = new ItemList();
-
-            item.Id = aux;
-            item.Name = aux.ToString();
-            //item.Customer = "Customer: " + aux.ToString();
-            item.Amount = 100;
-            //item.Type = "Product";
-
-            aux++;
-
-            flpNew.Controls.Add(item);
-        }
 
         private void control_MouseDown(object sender, MouseEventArgs e)
         {
