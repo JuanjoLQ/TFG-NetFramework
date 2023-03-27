@@ -5,6 +5,8 @@ using System;
 using System.Collections;
 using System.Windows.Forms;
 
+using Bunifu.UI.WinForms;
+
 namespace capaDatos
 {
     public class cdLead
@@ -75,7 +77,7 @@ namespace capaDatos
             }
 
         }
-
+        
         public ArrayList getLeads (ArrayList array)
         {
             try

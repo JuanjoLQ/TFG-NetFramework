@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(descripcionItemList));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.lbCustomerName = new System.Windows.Forms.Label();
             this.lbAssignedTo = new System.Windows.Forms.Label();
             this.lbCustomerEmail = new System.Windows.Forms.Label();
@@ -77,10 +78,10 @@
             this.lbLeadCreatedAt = new System.Windows.Forms.Label();
             this.lbLeadDate = new System.Windows.Forms.Label();
             this.btnLeadRemove = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.bbtnLeadToSale = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bbtnDetailsSale = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.btnClose = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.gbLeadStages.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageNotes.SuspendLayout();
@@ -587,16 +588,6 @@
             this.btnLeadRemove.UseVisualStyleBackColor = false;
             this.btnLeadRemove.Click += new System.EventHandler(this.btnLeadRemove_Click);
             // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(513, 624);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(78, 37);
-            this.btnClose.TabIndex = 28;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -788,16 +779,106 @@
             this.bbtnDetailsSale.Visible = false;
             this.bbtnDetailsSale.Click += new System.EventHandler(this.bbtnDetailsSale_Click);
             // 
+            // btnClose
+            // 
+            this.btnClose.AllowAnimations = true;
+            this.btnClose.AllowMouseEffects = true;
+            this.btnClose.AllowToggling = false;
+            this.btnClose.AnimationSpeed = 200;
+            this.btnClose.AutoGenerateColors = false;
+            this.btnClose.AutoRoundBorders = false;
+            this.btnClose.AutoSizeLeftIcon = true;
+            this.btnClose.AutoSizeRightIcon = true;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackColor1 = System.Drawing.Color.Red;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.ButtonText = "Close";
+            this.btnClose.ButtonTextMarginLeft = 0;
+            this.btnClose.ColorContrastOnClick = 45;
+            this.btnClose.ColorContrastOnHover = 45;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnClose.CustomizableEdges = borderEdges3;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnClose.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnClose.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnClose.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnClose.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnClose.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnClose.IconMarginLeft = 11;
+            this.btnClose.IconPadding = 10;
+            this.btnClose.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnClose.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnClose.IconSize = 25;
+            this.btnClose.IdleBorderColor = System.Drawing.Color.Red;
+            this.btnClose.IdleBorderRadius = 10;
+            this.btnClose.IdleBorderThickness = 1;
+            this.btnClose.IdleFillColor = System.Drawing.Color.Red;
+            this.btnClose.IdleIconLeftImage = null;
+            this.btnClose.IdleIconRightImage = null;
+            this.btnClose.IndicateFocus = false;
+            this.btnClose.Location = new System.Drawing.Point(496, 619);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnClose.OnDisabledState.BorderRadius = 10;
+            this.btnClose.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.OnDisabledState.BorderThickness = 1;
+            this.btnClose.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnClose.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnClose.OnDisabledState.IconLeftImage = null;
+            this.btnClose.OnDisabledState.IconRightImage = null;
+            this.btnClose.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnClose.onHoverState.BorderRadius = 10;
+            this.btnClose.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.onHoverState.BorderThickness = 1;
+            this.btnClose.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnClose.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnClose.onHoverState.IconLeftImage = null;
+            this.btnClose.onHoverState.IconRightImage = null;
+            this.btnClose.OnIdleState.BorderColor = System.Drawing.Color.Red;
+            this.btnClose.OnIdleState.BorderRadius = 10;
+            this.btnClose.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.OnIdleState.BorderThickness = 1;
+            this.btnClose.OnIdleState.FillColor = System.Drawing.Color.Red;
+            this.btnClose.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnClose.OnIdleState.IconLeftImage = null;
+            this.btnClose.OnIdleState.IconRightImage = null;
+            this.btnClose.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnClose.OnPressedState.BorderRadius = 10;
+            this.btnClose.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.OnPressedState.BorderThickness = 1;
+            this.btnClose.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnClose.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnClose.OnPressedState.IconLeftImage = null;
+            this.btnClose.OnPressedState.IconRightImage = null;
+            this.btnClose.Size = new System.Drawing.Size(91, 42);
+            this.btnClose.TabIndex = 32;
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClose.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnClose.TextMarginLeft = 0;
+            this.btnClose.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnClose.UseDefaultRadiusAndThickness = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // descripcionItemList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
             this.ClientSize = new System.Drawing.Size(599, 679);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.bbtnDetailsSale);
             this.Controls.Add(this.bbtnLeadToSale);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLeadRemove);
             this.Controls.Add(this.lbLeadDate);
             this.Controls.Add(this.lbLeadCreatedAt);
@@ -873,10 +954,10 @@
         private System.Windows.Forms.Label lbLeadCreatedAt;
         private System.Windows.Forms.Label lbLeadDate;
         private System.Windows.Forms.Button btnLeadRemove;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bbtnLeadToSale;
         private System.Windows.Forms.Button btnSale;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bbtnDetailsSale;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnClose;
     }
 }

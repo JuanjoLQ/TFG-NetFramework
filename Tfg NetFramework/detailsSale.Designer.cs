@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(detailsSale));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.blbDetailsSale = new Bunifu.UI.WinForms.BunifuLabel();
             this.bdgvDetailsSale = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.idProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +45,7 @@
             this.blbDetailsSaleNameCustomer = new Bunifu.UI.WinForms.BunifuLabel();
             this.blbDetailsSaleNameLead = new Bunifu.UI.WinForms.BunifuLabel();
             this.blbDetailsSaleDate = new Bunifu.UI.WinForms.BunifuLabel();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnClose = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             ((System.ComponentModel.ISupportInitialize)(this.bdgvDetailsSale)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,21 +71,21 @@
             this.bdgvDetailsSale.AllowUserToAddRows = false;
             this.bdgvDetailsSale.AllowUserToDeleteRows = false;
             this.bdgvDetailsSale.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.bdgvDetailsSale.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(251)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.bdgvDetailsSale.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.bdgvDetailsSale.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.bdgvDetailsSale.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.bdgvDetailsSale.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.bdgvDetailsSale.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.bdgvDetailsSale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.bdgvDetailsSale.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.bdgvDetailsSale.ColumnHeadersHeight = 40;
             this.bdgvDetailsSale.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idProduct,
@@ -112,14 +113,14 @@
             this.bdgvDetailsSale.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.bdgvDetailsSale.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             this.bdgvDetailsSale.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.bdgvDetailsSale.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.bdgvDetailsSale.DefaultCellStyle = dataGridViewCellStyle3;
             this.bdgvDetailsSale.EnableHeadersVisualStyles = false;
             this.bdgvDetailsSale.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(238)))), ((int)(((byte)(255)))));
             this.bdgvDetailsSale.HeaderBackColor = System.Drawing.Color.DodgerBlue;
@@ -189,6 +190,7 @@
             // 
             this.blbDetailsSaleNameCustomer.AllowParentOverrides = false;
             this.blbDetailsSaleNameCustomer.AutoEllipsis = false;
+            this.blbDetailsSaleNameCustomer.Cursor = System.Windows.Forms.Cursors.Default;
             this.blbDetailsSaleNameCustomer.CursorType = System.Windows.Forms.Cursors.Default;
             this.blbDetailsSaleNameCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.blbDetailsSaleNameCustomer.Location = new System.Drawing.Point(184, 25);
@@ -232,12 +234,92 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(677, 369);
+            this.btnClose.AllowAnimations = true;
+            this.btnClose.AllowMouseEffects = true;
+            this.btnClose.AllowToggling = false;
+            this.btnClose.AnimationSpeed = 200;
+            this.btnClose.AutoGenerateColors = false;
+            this.btnClose.AutoRoundBorders = false;
+            this.btnClose.AutoSizeLeftIcon = true;
+            this.btnClose.AutoSizeRightIcon = true;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackColor1 = System.Drawing.Color.Red;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.ButtonText = "Close";
+            this.btnClose.ButtonTextMarginLeft = 0;
+            this.btnClose.ColorContrastOnClick = 45;
+            this.btnClose.ColorContrastOnHover = 45;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnClose.CustomizableEdges = borderEdges1;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnClose.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnClose.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnClose.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnClose.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnClose.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnClose.IconMarginLeft = 11;
+            this.btnClose.IconPadding = 10;
+            this.btnClose.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnClose.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnClose.IconSize = 25;
+            this.btnClose.IdleBorderColor = System.Drawing.Color.Red;
+            this.btnClose.IdleBorderRadius = 1;
+            this.btnClose.IdleBorderThickness = 1;
+            this.btnClose.IdleFillColor = System.Drawing.Color.Red;
+            this.btnClose.IdleIconLeftImage = null;
+            this.btnClose.IdleIconRightImage = null;
+            this.btnClose.IndicateFocus = false;
+            this.btnClose.Location = new System.Drawing.Point(669, 369);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(83, 42);
-            this.btnClose.TabIndex = 30;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnClose.OnDisabledState.BorderRadius = 1;
+            this.btnClose.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.OnDisabledState.BorderThickness = 1;
+            this.btnClose.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnClose.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnClose.OnDisabledState.IconLeftImage = null;
+            this.btnClose.OnDisabledState.IconRightImage = null;
+            this.btnClose.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnClose.onHoverState.BorderRadius = 1;
+            this.btnClose.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.onHoverState.BorderThickness = 1;
+            this.btnClose.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnClose.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnClose.onHoverState.IconLeftImage = null;
+            this.btnClose.onHoverState.IconRightImage = null;
+            this.btnClose.OnIdleState.BorderColor = System.Drawing.Color.Red;
+            this.btnClose.OnIdleState.BorderRadius = 1;
+            this.btnClose.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.OnIdleState.BorderThickness = 1;
+            this.btnClose.OnIdleState.FillColor = System.Drawing.Color.Red;
+            this.btnClose.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnClose.OnIdleState.IconLeftImage = null;
+            this.btnClose.OnIdleState.IconRightImage = null;
+            this.btnClose.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnClose.OnPressedState.BorderRadius = 1;
+            this.btnClose.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.OnPressedState.BorderThickness = 1;
+            this.btnClose.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnClose.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnClose.OnPressedState.IconLeftImage = null;
+            this.btnClose.OnPressedState.IconRightImage = null;
+            this.btnClose.Size = new System.Drawing.Size(91, 42);
+            this.btnClose.TabIndex = 31;
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClose.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnClose.TextMarginLeft = 0;
+            this.btnClose.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnClose.UseDefaultRadiusAndThickness = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // detailsSale
@@ -273,6 +355,6 @@
         private Bunifu.UI.WinForms.BunifuLabel blbDetailsSaleNameCustomer;
         private Bunifu.UI.WinForms.BunifuLabel blbDetailsSaleNameLead;
         private Bunifu.UI.WinForms.BunifuLabel blbDetailsSaleDate;
-        private System.Windows.Forms.Button btnClose;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnClose;
     }
 }

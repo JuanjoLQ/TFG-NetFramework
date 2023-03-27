@@ -150,4 +150,14 @@
   <data name="blbDetailsSaleDate.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnClose.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAFsAAAAqCAYAAADcSCf9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACISURBVGhD7duhFYAwFATB33+LlBFPePhIWDVi1Ln1N/fM
+        tWc2/3o7z2ngH2KHxA6JHRI7JHZI7JDYIbFDYofEDokdEjskdkjskNghsUNih8QOiR0SOyR2SOyQ2CGx
+        Q2KHxA6JHRI7JHZI7JDYIbFDYofEDokdEjskdkjskNih93S6TgPfumfWA1NXv3QCFLYwAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
 </root>

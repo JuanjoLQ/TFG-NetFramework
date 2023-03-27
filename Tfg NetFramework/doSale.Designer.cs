@@ -36,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             this.bdgvProductsIntoSale = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.idProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,7 +57,7 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.blbTitleProductsIntoWarehouses = new Bunifu.UI.WinForms.BunifuLabel();
             this.blbTitleTableToSale = new Bunifu.UI.WinForms.BunifuLabel();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnClose = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             ((System.ComponentModel.ISupportInitialize)(this.bdgvProductsIntoSale)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgvProductsIntoWarehouse)).BeginInit();
             this.SuspendLayout();
@@ -129,7 +130,7 @@
             this.bdgvProductsIntoSale.RowHeadersWidth = 51;
             this.bdgvProductsIntoSale.RowTemplate.Height = 40;
             this.bdgvProductsIntoSale.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bdgvProductsIntoSale.Size = new System.Drawing.Size(721, 227);
+            this.bdgvProductsIntoSale.Size = new System.Drawing.Size(758, 227);
             this.bdgvProductsIntoSale.TabIndex = 15;
             this.bdgvProductsIntoSale.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bdgvProductsIntoSale.DoubleClick += new System.EventHandler(this.bdgvProductsIntoSale_DoubleClick);
@@ -224,7 +225,7 @@
             this.bbtnDoSale.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.bbtnDoSale.IconSize = 25;
             this.bbtnDoSale.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.bbtnDoSale.IdleBorderRadius = 1;
+            this.bbtnDoSale.IdleBorderRadius = 10;
             this.bbtnDoSale.IdleBorderThickness = 1;
             this.bbtnDoSale.IdleFillColor = System.Drawing.Color.DodgerBlue;
             this.bbtnDoSale.IdleIconLeftImage = null;
@@ -233,7 +234,7 @@
             this.bbtnDoSale.Location = new System.Drawing.Point(832, 373);
             this.bbtnDoSale.Name = "bbtnDoSale";
             this.bbtnDoSale.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bbtnDoSale.OnDisabledState.BorderRadius = 1;
+            this.bbtnDoSale.OnDisabledState.BorderRadius = 10;
             this.bbtnDoSale.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnDoSale.OnDisabledState.BorderThickness = 1;
             this.bbtnDoSale.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -241,7 +242,7 @@
             this.bbtnDoSale.OnDisabledState.IconLeftImage = null;
             this.bbtnDoSale.OnDisabledState.IconRightImage = null;
             this.bbtnDoSale.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bbtnDoSale.onHoverState.BorderRadius = 1;
+            this.bbtnDoSale.onHoverState.BorderRadius = 10;
             this.bbtnDoSale.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnDoSale.onHoverState.BorderThickness = 1;
             this.bbtnDoSale.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
@@ -249,7 +250,7 @@
             this.bbtnDoSale.onHoverState.IconLeftImage = null;
             this.bbtnDoSale.onHoverState.IconRightImage = null;
             this.bbtnDoSale.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.bbtnDoSale.OnIdleState.BorderRadius = 1;
+            this.bbtnDoSale.OnIdleState.BorderRadius = 10;
             this.bbtnDoSale.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnDoSale.OnIdleState.BorderThickness = 1;
             this.bbtnDoSale.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
@@ -257,7 +258,7 @@
             this.bbtnDoSale.OnIdleState.IconLeftImage = null;
             this.bbtnDoSale.OnIdleState.IconRightImage = null;
             this.bbtnDoSale.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bbtnDoSale.OnPressedState.BorderRadius = 1;
+            this.bbtnDoSale.OnPressedState.BorderRadius = 10;
             this.bbtnDoSale.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnDoSale.OnPressedState.BorderThickness = 1;
             this.bbtnDoSale.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -357,7 +358,7 @@
             this.bdgvProductsIntoWarehouse.RowHeadersWidth = 51;
             this.bdgvProductsIntoWarehouse.RowTemplate.Height = 40;
             this.bdgvProductsIntoWarehouse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bdgvProductsIntoWarehouse.Size = new System.Drawing.Size(721, 227);
+            this.bdgvProductsIntoWarehouse.Size = new System.Drawing.Size(758, 227);
             this.bdgvProductsIntoWarehouse.TabIndex = 18;
             this.bdgvProductsIntoWarehouse.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bdgvProductsIntoWarehouse.DoubleClick += new System.EventHandler(this.bdgvProductsIntoWarehouse_DoubleClick);
@@ -443,12 +444,92 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(908, 521);
+            this.btnClose.AllowAnimations = true;
+            this.btnClose.AllowMouseEffects = true;
+            this.btnClose.AllowToggling = false;
+            this.btnClose.AnimationSpeed = 200;
+            this.btnClose.AutoGenerateColors = true;
+            this.btnClose.AutoRoundBorders = false;
+            this.btnClose.AutoSizeLeftIcon = true;
+            this.btnClose.AutoSizeRightIcon = true;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackColor1 = System.Drawing.Color.Red;
+            this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
+            this.btnClose.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.ButtonText = "Close";
+            this.btnClose.ButtonTextMarginLeft = 0;
+            this.btnClose.ColorContrastOnClick = 45;
+            this.btnClose.ColorContrastOnHover = 45;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnClose.CustomizableEdges = borderEdges2;
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnClose.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnClose.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnClose.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnClose.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.ButtonStates.Pressed;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnClose.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnClose.IconMarginLeft = 11;
+            this.btnClose.IconPadding = 10;
+            this.btnClose.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnClose.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnClose.IconSize = 25;
+            this.btnClose.IdleBorderColor = System.Drawing.Color.Red;
+            this.btnClose.IdleBorderRadius = 10;
+            this.btnClose.IdleBorderThickness = 1;
+            this.btnClose.IdleFillColor = System.Drawing.Color.Red;
+            this.btnClose.IdleIconLeftImage = null;
+            this.btnClose.IdleIconRightImage = null;
+            this.btnClose.IndicateFocus = false;
+            this.btnClose.Location = new System.Drawing.Point(887, 506);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(83, 42);
-            this.btnClose.TabIndex = 29;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnClose.OnDisabledState.BorderRadius = 10;
+            this.btnClose.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.OnDisabledState.BorderThickness = 1;
+            this.btnClose.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnClose.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnClose.OnDisabledState.IconLeftImage = null;
+            this.btnClose.OnDisabledState.IconRightImage = null;
+            this.btnClose.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.btnClose.onHoverState.BorderRadius = 10;
+            this.btnClose.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.onHoverState.BorderThickness = 1;
+            this.btnClose.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.btnClose.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnClose.onHoverState.IconLeftImage = null;
+            this.btnClose.onHoverState.IconRightImage = null;
+            this.btnClose.OnIdleState.BorderColor = System.Drawing.Color.Red;
+            this.btnClose.OnIdleState.BorderRadius = 10;
+            this.btnClose.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.OnIdleState.BorderThickness = 1;
+            this.btnClose.OnIdleState.FillColor = System.Drawing.Color.Red;
+            this.btnClose.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnClose.OnIdleState.IconLeftImage = null;
+            this.btnClose.OnIdleState.IconRightImage = null;
+            this.btnClose.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnClose.OnPressedState.BorderRadius = 10;
+            this.btnClose.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
+            this.btnClose.OnPressedState.BorderThickness = 1;
+            this.btnClose.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnClose.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnClose.OnPressedState.IconLeftImage = null;
+            this.btnClose.OnPressedState.IconRightImage = null;
+            this.btnClose.Size = new System.Drawing.Size(95, 57);
+            this.btnClose.TabIndex = 30;
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClose.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnClose.TextMarginLeft = 0;
+            this.btnClose.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnClose.UseDefaultRadiusAndThickness = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // doSale
@@ -495,6 +576,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private Bunifu.UI.WinForms.BunifuLabel blbTitleProductsIntoWarehouses;
         private Bunifu.UI.WinForms.BunifuLabel blbTitleTableToSale;
-        private System.Windows.Forms.Button btnClose;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnClose;
     }
 }

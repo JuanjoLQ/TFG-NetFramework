@@ -9,6 +9,7 @@ using capaNegocio;
 using System.IO;
 using System.Collections;
 using CapaNegocio;
+using Bunifu.UI.WinForms;
 
 namespace Tfg_NetFramework
 {
@@ -147,13 +148,22 @@ namespace Tfg_NetFramework
             translateUsers();
             translateSolAllowances();
             translateManageAllowances();
+            translateCrm();
+            translateInventory();
+            translateSettings();
         }
 
         private void translateUsers()
         {
             // Labels
-            lbGestUsers.Text = Res.lbGestUsers;
-            lbRegisterUser.Text = Res.lbRegisterUser;
+            lbGestUsers.Text = "<h2>" + Res.lbGestUsers + "</h2>";
+            lbRegisterUser.Text = "<h3>" + Res.lbRegisterUser + "</h3>";
+
+            //lbIdUser
+            //lbEmail
+            //lbPassword
+            //lbDepartment
+            //lbJob
 
             // Textboxs
             tbREmail.PlaceholderText = Res.Email;
@@ -184,17 +194,17 @@ namespace Tfg_NetFramework
 
         private void translateSolAllowances()
         {
-            lbTitleSolDieta.Text = Res.lbTitleReqAllowances;
-            lbReqAllowancesOptions.Text = Res.lbReqAllowancesOptions;
+            lbTitleSolDieta.Text = "<h2>" + Res.lbTitleReqAllowances + "</h2>";
+            lbReqAllowancesOptions.Text = "<h3>" + Res.lbReqAllowancesOptions + "</h3>";
 
             // Allowances
             // Labels
             lbReqAllowancesTitleAllowances.Text = "<h3>" + Res.allowances + "</h3>";
-            lbReqAllowancesTitle.Text = Res.title;
-            lbReqAllowancesObservations.Text = Res.observations;
-            lbReqAllowancesStartHour.Text = Res.startHour;
-            lbReqAllowancesEndHour.Text = Res.endHour;
-            lbReqAllowancesDate.Text = Res.date;
+            lbReqAllowancesTitle.Text = "<h4>" + Res.title + "</h4>";
+            lbReqAllowancesObservations.Text = "<h4>" + Res.observations + "</h4>";
+            lbReqAllowancesStartHour.Text = "<h4>" + Res.startHour + "</h4>";
+            lbReqAllowancesEndHour.Text = "<h4>" + Res.endHour + "</h4>";
+            lbReqAllowancesDate.Text = "<h4>" + Res.date + "</h4>";
 
             // TextBoxs
             tbReqAllowancesTitle.PlaceholderText = Res.title;
@@ -206,15 +216,15 @@ namespace Tfg_NetFramework
 
             // Mileages
             // Labels
-            lbMileageTitle.Text = Res.mileage;
-            lbReqMileage.Text = Res.mileage;
-            lbTitleMileage.Text = Res.title;
-            lbReqMileageDate.Text = Res.date;
-            lbReqMileageSubcategory.Text = Res.subcategory;
-            lbReqMileageOrigin.Text = Res.origin;
-            lbReqMileageDestination.Text = Res.destination;
-            lbReqMileageTotal.Text = Res.total;
-            lbReqMileagePricePerKilometer.Text = Res.pricePerKilometer;
+            lbMileageTitle.Text = "<h3>" + Res.mileage + "</h3>";
+            lbReqMileage.Text = "<h3>" + Res.mileage + "</h3>";
+            lbTitleMileage.Text = "<h3>" + Res.title + "</h3>";
+            lbReqMileageDate.Text = "<h3>" + Res.date + "</h3>";
+            lbReqMileageSubcategory.Text = "<h3>" + Res.subcategory + "</h3>";
+            lbReqMileageOrigin.Text = "<h3>" + Res.origin + "</h3>";
+            lbReqMileageDestination.Text = "<h3>" + Res.destination + "</h3>";
+            lbReqMileageTotal.Text = "<h3>" + Res.total + "</h3>";
+            lbReqMileagePricePerKilometer.Text = "<h3>" + Res.pricePerKilometer + "</h3>";
 
             // Textboxs
             tbReqMileageMileage.PlaceholderText = Res.kilometers;
@@ -231,11 +241,11 @@ namespace Tfg_NetFramework
 
         private void translateManageAllowances()
         {
-            lbManAllowances.Text = Res.manageAllowances;
-            lbManAllowancesOptions.Text = Res.lbReqAllowancesOptions;
+            lbManAllowances.Text = "<h2>" + Res.manageAllowances + "</h2>";
+            lbManAllowancesOptions.Text = "<h3>" + Res.lbReqAllowancesOptions + "</h3>";
 
             // Allowances
-            lbTitleManAllowance.Text = Res.allowances;
+            lbTitleManAllowance.Text = "<h2>" + Res.allowances + "</h2>";
 
             // dgvAllowances
             dgvAllowances.Columns[0].HeaderText = Res.idAllowance;
@@ -249,15 +259,15 @@ namespace Tfg_NetFramework
             dgvAllowances.Columns[8].HeaderText = Res.state;
 
             // Labels
-            lbManAllowancesEmail.Text = Res.Email;
-            lbManAllowancesTitle.Text = Res.title;
-            lbManAllowanceObservation.Text = Res.observations;
-            lbManAllowancesDate.Text = Res.date;
-            lbManAllowancesStartHour.Text = Res.startHour;
-            lbManAllowanceEndHour.Text = Res.endHour;
-            lbManAllowanceState.Text = Res.state;
-            lbManAllowanceNewState.Text = Res.newState;
-            lbManAllowancesIdAllowance.Text = Res.idAllowance;
+            lbManAllowancesEmail.Text = "<h3>" + Res.Email + "</h3>";
+            lbManAllowancesTitle.Text = "<h3>" + Res.title + "</h3>";
+            lbManAllowanceObservation.Text = "<h3>" + Res.observations + "</h3>";
+            lbManAllowancesDate.Text = "<h3>" + Res.date + "</h3>";
+            lbManAllowancesStartHour.Text = "<h3>" + Res.startHour + "</h3>";
+            lbManAllowanceEndHour.Text = "<h3>" + Res.endHour + "</h3>";
+            lbManAllowanceState.Text = "<h3>" + Res.state + "</h3>";
+            lbManAllowanceNewState.Text = "<h3>" + Res.newState + "</h3>";
+            lbManAllowancesIdAllowance.Text = "<h3>" + Res.idAllowance + "</h3>";
 
             // Textboxs
             tbManAllowancesEmail.PlaceholderText = Res.Email;
@@ -275,7 +285,7 @@ namespace Tfg_NetFramework
             btnManAllowancesAllowanceRemove.Text = Res.removeAllowance;
 
             // Mileages
-            lbTitleManMileage.Text = Res.mileage;
+            lbTitleManMileage.Text = "<h2>" + Res.mileage + "</h2>";
 
             // dgvMileage
             dgvMileage.Columns[0].HeaderText = Res.idMileage;
@@ -291,18 +301,18 @@ namespace Tfg_NetFramework
             dgvMileage.Columns[10].HeaderText = Res.state;
 
             // Labels
-            lbManMileageEmail.Text = Res.Email;
-            lbManMileageTitle.Text = Res.title;
-            lbManMileageDate.Text = Res.date;
-            lbManMileageSubcategory.Text = Res.subcategory;
-            lbManMileageIdMileage.Text = Res.idMileage;
-            lbManMileageOrigin.Text = Res.origin;
-            lbManMileageDestination.Text = Res.destination;
-            lbManMileageKilometers.Text = Res.kilometers;
-            lbManMileagePricePerKilometer.Text = Res.pricePerKilometer;
-            lbManMileageFinal.Text = Res.final;
-            lbManMileageState.Text = Res.state;
-            lbManMileageNewState.Text = Res.newState;
+            lbManMileageEmail.Text = "<h3>" + Res.Email + "</h3>";
+            lbManMileageTitle.Text = "<h3>" + Res.title + "</h3>";
+            lbManMileageDate.Text = "<h3>" + Res.date + "</h3>";
+            lbManMileageSubcategory.Text = "<h3>" + Res.subcategory + "</h3>";
+            lbManMileageIdMileage.Text = "<h3>" + Res.idMileage + "</h3>";
+            lbManMileageOrigin.Text = "<h3>" + Res.origin + "</h3>";
+            lbManMileageDestination.Text = "<h3>" + Res.destination + "</h3>";
+            lbManMileageKilometers.Text = "<h3>" + Res.kilometers + "</h3>";
+            lbManMileagePricePerKilometer.Text = "<h3>" + Res.pricePerKilometer + "</h3>";
+            lbManMileageFinal.Text = "<h3>" + Res.final + "</h3>";
+            lbManMileageState.Text = "<h3>" + Res.state + "</h3>";
+            lbManMileageNewState.Text = "<h3>" + Res.newState + "</h3>";
 
             // Textboxs
             tbManMileageEmail.PlaceholderText = Res.Email;
@@ -321,6 +331,63 @@ namespace Tfg_NetFramework
             btnManMileageRefreshDgvMileage.Text = Res.updateTable;
             btnManMileageUpdateStateMileage.Text = Res.updateMileage;
             btnManMileageRemoveMileage.Text = Res.removeMileage;
+
+        }
+
+        private void translateCrm()
+        {
+            // Labels Pipeline
+            lbNew.Text = "<h2>" + Res.new + "</h2>";
+            lbQualified.Text = "<h2>" + Res.qualified + "</h2>";
+            lbProposition.Text = "<h2>" + Res.proposition + "</h2>";
+            lbWon.Text = "<h2>" + Res.won + "</h2>";
+            lbSales.Text = "<h2>" + Res.sales + "</h2>";
+
+            // Buttons Pipeline
+            btnPipelineAddLead.Text = Res.addLeadToPipeline;
+            btnUpdateFlps.Text = Res.updatePipeline;
+
+            // Labels Customers
+            blbCrmTitleCustomers.Text = "<h2>" + Res.customers + "</h2>";
+            lbDateStart.Text = "<h3>" + Res.startDate + "</h3>";
+            lbDateEnd.Text = "<h3>" + Res.endDate + "</h3>";
+            blbCrmTitleLeads.Text = "<h2>" + "" + "</h2>";
+            lbCustomerName.Text = "<h3>" + Res.nameCustomer + "</h3>";
+            lbStateDateLead.Text = "<h3>" + "" + "</h3>";
+
+            // Buttons Customers
+            btnCustomersAddCustomers.Text = Res.addCustomer;
+            btnCustomersRemoveCustomers.Text = Res.deleteCustomer;
+            btnUpdateDgvCustomer.Text = Res.updateTable;
+
+        }
+
+        private void translateInventory()
+        {
+            // Labels Inventory
+            lbInventory.Text = "<h2>" + Res.inventory + "</h2>";
+            blbTitleStateProducts.Text = "<h3>" + Res.storedProducts + "</h3>";
+            blbTitleProductsAboutType.Text = "<h3>" + Res.warehouses + "</h3>";
+            blbAmountUpdate.Text = "<h4>" + Res.quantityToStore + " </4h>";
+            blbMaxQuantity.Text = "<h4>" + Res.max + "</h4>";
+
+            // TextBoxs
+            btbStoreAmount.PlaceholderText = Res.quantityToStore;
+
+            // Buttons
+            bbtnAddProductToWarehouse.Text = Res.addNewProduct;
+            bbtnAddProductToWarehouse.Text = Res.addProductToWarehouse;
+
+        }
+
+        private void translateSettings()
+        {
+            // Labels
+            lbSettings.Text = "<h2>" + Res.settings + "</h2>";
+
+            // Buttons
+            btnSettingsSaveBackup.Text = Res.doBackUp;
+            btnRestoreBackup.Text = Res.restoreBackUp;
 
         }
 
@@ -419,7 +486,7 @@ namespace Tfg_NetFramework
                 string role, departament;
                 ceUser user = new ceUser(0, tbREmail.Text, tbRPassword.Text);
 
-                role = cbRole.SelectedItem == null ? String.Empty : 
+                role = cbRole.SelectedItem == null ? String.Empty :
                     cbRole.SelectedItem.ToString();
 
                 departament = cbDepartamento.SelectedItem == null ? String.Empty :
@@ -568,7 +635,7 @@ namespace Tfg_NetFramework
                     newRole = tbJob.Text;
                 }
 
-                ceUser user = new ceUser(int.Parse(tbIdUser.Text) , email, password, newDepartment, newRole);
+                ceUser user = new ceUser(int.Parse(tbIdUser.Text), email, password, newDepartment, newRole);
                 cnUser.updateUser(user);
 
                 btnUpdateDtgUsers_Click(sender, e);
@@ -788,8 +855,8 @@ namespace Tfg_NetFramework
             if (!tbReqAllowancesTitle.Equals("") && !tbReqAllowancesObservations.Equals("") && !dtpReqAllowancesStartTime.Equals("")
                 && !mtbReqAllowancesStartHour.Equals("") && !mtbReqAllowancesEndHour.Equals("") && !fileName.Equals(""))
             {
-                ceAllowance allowance = new ceAllowance(0, int.Parse(cnUser.idUser(ceGlobals.email)), tbReqAllowancesTitle.Text, 
-                    tbReqAllowancesObservations.Text, "Solicitado", dtpReqAllowancesStartTime.Text, null,mtbReqAllowancesStartHour.Text, mtbReqAllowancesEndHour.Text, 
+                ceAllowance allowance = new ceAllowance(0, int.Parse(cnUser.idUser(ceGlobals.email)), tbReqAllowancesTitle.Text,
+                    tbReqAllowancesObservations.Text, "Solicitado", dtpReqAllowancesStartTime.Text, null, mtbReqAllowancesStartHour.Text, mtbReqAllowancesEndHour.Text,
                      "");
                 cnAllowance.uploadFile(allowance, fileName);
                 //UploadFile(fileName);
@@ -1027,7 +1094,7 @@ namespace Tfg_NetFramework
             Form newLead = new newLead(emailUser);
 
             newLead.Show();
-            
+
         }
 
         private void btnCustomersAddCustomers_Click(object sender, EventArgs e)
@@ -1056,7 +1123,7 @@ namespace Tfg_NetFramework
             {
                 //do something else
             }
-            
+
         }
 
         private void stageNew(ItemList item)
@@ -1075,11 +1142,11 @@ namespace Tfg_NetFramework
             ArrayList arrayDescrItemList = new ArrayList();
             arrayDescrItemList = cnPipelineFlps.updateFpls();
             MessageBox.Show(arrayDescrItemList.Count.ToString());
-            
+
             foreach (ceDescripcionItem item in arrayDescrItemList)
             {
                 ItemList itemFlp = new ItemList(item.User, item.Lead, item.Customer);
-                
+
                 itemFlp.Id = item.Lead.Idlead;
                 itemFlp.Name = item.Lead.Name;
                 itemFlp.Date = item.Lead.Date;
@@ -1097,7 +1164,7 @@ namespace Tfg_NetFramework
                 if (item.Lead.Stage == "New")
                 {
                     flpNew.Controls.Add(itemFlp);
-                }                
+                }
                 else if (item.Lead.Stage == "Qualified")
                 {
                     flpQualified.Controls.Add(itemFlp);
@@ -1126,7 +1193,7 @@ namespace Tfg_NetFramework
 
         private void dgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            lbLeadName.Text = dgvCustomer.CurrentRow.Cells[1].Value.ToString();
+            lbCustomerName.Text = dgvCustomer.CurrentRow.Cells[1].Value.ToString();
             lbStateDateLead.Text = "";
             cnDgvLead.updateDgvLead(int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString()), dgvCustomer_Lead);
         }
@@ -1262,7 +1329,7 @@ namespace Tfg_NetFramework
             {
                 DataGridViewRow newRow = new DataGridViewRow();
 
-                warehouse = (ceWarehouse) arr[i];
+                warehouse = (ceWarehouse)arr[i];
 
                 newRow.CreateCells(bdgvStoredProducts);
                 newRow.Cells[0].Value = warehouse.idWarehouse;
@@ -1276,7 +1343,7 @@ namespace Tfg_NetFramework
             ArrayList arr = null;
             int idWarehouse = int.Parse(bdgvStoredProducts.CurrentRow.Cells[0].Value.ToString());
             blbTitleProductsAboutType.Text = bdgvStoredProducts.CurrentRow.Cells[1].Value.ToString();
-            
+
             if (bdgvStoredProducts.CurrentRow.Cells[1].Value.ToString() == "No stored")
             {
                 blbMaxQuantity.Visible = true;
@@ -1292,7 +1359,7 @@ namespace Tfg_NetFramework
                     if (i.Name != "No stored")
                         bdStoreIntoWarehouses.Items.Add(i.Name);
                 }
-                
+
             }
             else
             {
@@ -1323,7 +1390,7 @@ namespace Tfg_NetFramework
             {
                 DataGridViewRow newRow = new DataGridViewRow();
 
-                p = (ceProduct) arr[i];
+                p = (ceProduct)arr[i];
 
                 newRow.CreateCells(bdgvItemsPerType);
                 newRow.Cells[0].Value = p.idProduct;
@@ -1348,11 +1415,11 @@ namespace Tfg_NetFramework
 
             if (newWarehouse != string.Empty && newWarehouse != "No stored" && maxQt >= amount)
             {
-                if(maxQt == amount)
+                if (maxQt == amount)
                 {
                     cnWarehouse.productNoStoredToStored(idProduct, amount, newWarehouse);
                 }
-                    
+
                 if (maxQt > amount)
                 {
                     string name = bdgvItemsPerType.CurrentRow.Cells[1].Value.ToString();
@@ -1365,7 +1432,7 @@ namespace Tfg_NetFramework
                     ceProduct p = new ceProduct(name, pricePerUnit, actualAmount, unitOfMeasure, productCategory, state);
                     cnWarehouse.splitProductNoStoredAndStored(p, idProduct, amount, maxQt, newWarehouse);
                 }
-                                    
+
             }
 
         }

@@ -117,14 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="addCustomer" xml:space="preserve">
+    <value>Add Customer</value>
+  </data>
+  <data name="addLeadToPipeline" xml:space="preserve">
+    <value>Add Lead to Pipeline</value>
+  </data>
+  <data name="addNewProduct" xml:space="preserve">
+    <value>Add New Product</value>
+  </data>
+  <data name="addProductToWarehouse" xml:space="preserve">
+    <value>Add Product to Warehouse</value>
+  </data>
   <data name="allowances" xml:space="preserve">
     <value>Allowances</value>
   </data>
   <data name="btnRegistrar" xml:space="preserve">
     <value>Sign Up</value>
   </data>
+  <data name="customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
   <data name="date" xml:space="preserve">
     <value>Date</value>
+  </data>
+  <data name="deleteCustomer" xml:space="preserve">
+    <value>Delete Customer</value>
   </data>
   <data name="department" xml:space="preserve">
     <value>Department</value>
@@ -132,11 +150,17 @@
   <data name="destination" xml:space="preserve">
     <value>Destination</value>
   </data>
+  <data name="doBackUp" xml:space="preserve">
+    <value>Do BackUp</value>
+  </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
   <data name="Email1" xml:space="preserve">
     <value>Email</value>
+  </data>
+  <data name="endDate" xml:space="preserve">
+    <value>End Date</value>
   </data>
   <data name="endHour" xml:space="preserve">
     <value>End Hour</value>
@@ -158,6 +182,9 @@
   </data>
   <data name="idUser" xml:space="preserve">
     <value>Id User</value>
+  </data>
+  <data name="inventory" xml:space="preserve">
+    <value>Inventory</value>
   </data>
   <data name="invoice" xml:space="preserve">
     <value>Invoice</value>
@@ -201,11 +228,20 @@
   <data name="manageAllowances" xml:space="preserve">
     <value>Allowance Management</value>
   </data>
+  <data name="max" xml:space="preserve">
+    <value>Max</value>
+  </data>
   <data name="mileage" xml:space="preserve">
     <value>Mileage</value>
   </data>
   <data name="modules" xml:space="preserve">
     <value>Modules</value>
+  </data>
+  <data name="nameCustomer" xml:space="preserve">
+    <value>Name Customer</value>
+  </data>
+  <data name="new" xml:space="preserve">
+    <value>New</value>
   </data>
   <data name="newState" xml:space="preserve">
     <value>New State: </value>
@@ -234,11 +270,20 @@
   <data name="pricePerKilometer" xml:space="preserve">
     <value>Price per Kilometer</value>
   </data>
+  <data name="proposition" xml:space="preserve">
+    <value>Proposition</value>
+  </data>
   <data name="pSettings" xml:space="preserve">
     <value>Settings</value>
   </data>
   <data name="pSolAllowance" xml:space="preserve">
     <value>Request Allowance</value>
+  </data>
+  <data name="qualified" xml:space="preserve">
+    <value>Qualified</value>
+  </data>
+  <data name="quantityToStore" xml:space="preserve">
+    <value>Quantity to Store</value>
   </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>
@@ -258,11 +303,26 @@
   <data name="requestMileage" xml:space="preserve">
     <value>Mileage Claim</value>
   </data>
+  <data name="restoreBackUp" xml:space="preserve">
+    <value>Restore BackUp</value>
+  </data>
+  <data name="sales" xml:space="preserve">
+    <value>Sales</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="startDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
   <data name="startHour" xml:space="preserve">
     <value>Start Hour</value>
   </data>
   <data name="state" xml:space="preserve">
     <value>State</value>
+  </data>
+  <data name="storedProducts" xml:space="preserve">
+    <value>Stored Products?</value>
   </data>
   <data name="subcategory" xml:space="preserve">
     <value>Sucategory</value>
@@ -279,6 +339,9 @@
   <data name="updateMileage" xml:space="preserve">
     <value>Update Mileage</value>
   </data>
+  <data name="updatePipeline" xml:space="preserve">
+    <value>Update Pipeline</value>
+  </data>
   <data name="updateTable" xml:space="preserve">
     <value>Update Table</value>
   </data>
@@ -287,5 +350,11 @@
   </data>
   <data name="user" xml:space="preserve">
     <value>pedro@gmail.com</value>
+  </data>
+  <data name="warehouses" xml:space="preserve">
+    <value>Warehouses</value>
+  </data>
+  <data name="won" xml:space="preserve">
+    <value>Won</value>
   </data>
 </root>

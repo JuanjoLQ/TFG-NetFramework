@@ -61,6 +61,51 @@ namespace Tfg_NetFramework {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Nuevo.
+        /// </summary>
+        internal static string _new {
+            get {
+                return ResourceManager.GetString("new", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Añadir Cliente.
+        /// </summary>
+        internal static string addCustomer {
+            get {
+                return ResourceManager.GetString("addCustomer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Añadir Lead al Pipeline.
+        /// </summary>
+        internal static string addLeadToPipeline {
+            get {
+                return ResourceManager.GetString("addLeadToPipeline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Añadir nuevo Producto.
+        /// </summary>
+        internal static string addNewProduct {
+            get {
+                return ResourceManager.GetString("addNewProduct", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Añadir Producto a Almacén.
+        /// </summary>
+        internal static string addProductToWarehouse {
+            get {
+                return ResourceManager.GetString("addProductToWarehouse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Dietas.
         /// </summary>
         internal static string allowances {
@@ -79,11 +124,29 @@ namespace Tfg_NetFramework {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Clientes.
+        /// </summary>
+        internal static string customers {
+            get {
+                return ResourceManager.GetString("customers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Fecha.
         /// </summary>
         internal static string date {
             get {
                 return ResourceManager.GetString("date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Eliminar Cliente.
+        /// </summary>
+        internal static string deleteCustomer {
+            get {
+                return ResourceManager.GetString("deleteCustomer", resourceCulture);
             }
         }
         
@@ -106,11 +169,29 @@ namespace Tfg_NetFramework {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Crear Copia de Seguridad.
+        /// </summary>
+        internal static string doBackUp {
+            get {
+                return ResourceManager.GetString("doBackUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Email.
         /// </summary>
         internal static string Email {
             get {
                 return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha tope.
+        /// </summary>
+        internal static string endDate {
+            get {
+                return ResourceManager.GetString("endDate", resourceCulture);
             }
         }
         
@@ -174,6 +255,15 @@ namespace Tfg_NetFramework {
         internal static string idUser {
             get {
                 return ResourceManager.GetString("idUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Inventario.
+        /// </summary>
+        internal static string inventory {
+            get {
+                return ResourceManager.GetString("inventory", resourceCulture);
             }
         }
         
@@ -295,6 +385,15 @@ namespace Tfg_NetFramework {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Máximo.
+        /// </summary>
+        internal static string max {
+            get {
+                return ResourceManager.GetString("max", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Kilometraje.
         /// </summary>
         internal static string mileage {
@@ -309,6 +408,15 @@ namespace Tfg_NetFramework {
         internal static string modules {
             get {
                 return ResourceManager.GetString("modules", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Nombre del Cliente.
+        /// </summary>
+        internal static string nameCustomer {
+            get {
+                return ResourceManager.GetString("nameCustomer", resourceCulture);
             }
         }
         
@@ -394,6 +502,15 @@ namespace Tfg_NetFramework {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Proponer.
+        /// </summary>
+        internal static string proposition {
+            get {
+                return ResourceManager.GetString("proposition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Ajustes.
         /// </summary>
         internal static string pSettings {
@@ -408,6 +525,24 @@ namespace Tfg_NetFramework {
         internal static string pSolAllowance {
             get {
                 return ResourceManager.GetString("pSolAllowance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Preparado.
+        /// </summary>
+        internal static string qualified {
+            get {
+                return ResourceManager.GetString("qualified", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Cantidad para almacenar.
+        /// </summary>
+        internal static string quantityToStore {
+            get {
+                return ResourceManager.GetString("quantityToStore", resourceCulture);
             }
         }
         
@@ -466,6 +601,42 @@ namespace Tfg_NetFramework {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Restaurar Copia de Seguridad.
+        /// </summary>
+        internal static string restoreBackUp {
+            get {
+                return ResourceManager.GetString("restoreBackUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ventas.
+        /// </summary>
+        internal static string sales {
+            get {
+                return ResourceManager.GetString("sales", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ajustes.
+        /// </summary>
+        internal static string settings {
+            get {
+                return ResourceManager.GetString("settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Fecha de Inicio.
+        /// </summary>
+        internal static string startDate {
+            get {
+                return ResourceManager.GetString("startDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Hora de inicio.
         /// </summary>
         internal static string startHour {
@@ -480,6 +651,15 @@ namespace Tfg_NetFramework {
         internal static string state {
             get {
                 return ResourceManager.GetString("state", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a ¿Productos guardados?.
+        /// </summary>
+        internal static string storedProducts {
+            get {
+                return ResourceManager.GetString("storedProducts", resourceCulture);
             }
         }
         
@@ -529,6 +709,15 @@ namespace Tfg_NetFramework {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Actualizar Pipeline.
+        /// </summary>
+        internal static string updatePipeline {
+            get {
+                return ResourceManager.GetString("updatePipeline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Actualizar Tabla.
         /// </summary>
         internal static string updateTable {
@@ -552,6 +741,24 @@ namespace Tfg_NetFramework {
         internal static string user {
             get {
                 return ResourceManager.GetString("user", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Almacenes.
+        /// </summary>
+        internal static string warehouses {
+            get {
+                return ResourceManager.GetString("warehouses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ganado.
+        /// </summary>
+        internal static string won {
+            get {
+                return ResourceManager.GetString("won", resourceCulture);
             }
         }
     }
