@@ -1,8 +1,10 @@
-﻿using capaEntidad;
+﻿using capaDatos;
+using capaEntidad;
 using CapaNegocio;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Tfg_NetFramework
 {
@@ -16,6 +18,7 @@ namespace Tfg_NetFramework
         cnSale cnSale = new cnSale();
 
         ceDescripcionItem descrItem = null;
+
         private void descripcionItemList_Load(object sender, EventArgs e)
         {
             
@@ -53,16 +56,45 @@ namespace Tfg_NetFramework
                 btnWon.BackColor = Color.FromArgb(107, 107, 114);
                 bbtnLeadToSale.Visible = true;
             }
-            idLead = descripcionItem.Lead.Idlead;
-            lbLeadName.Text = descripcionItem.Lead.Name;
-            lbUserAssignedTo.Text = descripcionItem.Lead.AssignedTo;
-            lbAmountLead.Text = descripcionItem.Lead.Amount.ToString();
-            lbNameCustomer.Text = descripcionItem.Customer.Name;
-            lbEmailCustomer.Text = descripcionItem.Customer.Email;
-            lbLeadDate.Text = descripcionItem.Lead.Date;
-            tbLeadNotes.Text = descripcionItem.Lead.Notes;
-            lbLeadCreatedAt.Text = descripcionItem.Lead.CreatedAt;
 
+            idLead = descripcionItem.Lead.Idlead;
+
+            //Labels
+
+            lbLeadName.Text = "<h2>" + descripcionItem.Lead.Name + "</h2>";
+            lbAssignedTo.Text = "<h3>" + Res.AssignedTo + ":" + "</h3>";
+            lbUserAssignedTo.Text = "<h3>" + descripcionItem.Lead.AssignedTo + "</h3>";
+            blbAmount.Text = "<h3>" + Res.Amount + ":" + "</h3>";
+            lbAmountLead.Text = "<h4>" + descripcionItem.Lead.Amount.ToString() + "</h4>";
+
+            lbCustomer.Text = "<h2>" + Res.Customer + "</h2>";
+            lbCustomerName.Text = "<h4>" + Res.nameCustomer + ":" + "</h4>";
+            lbNameCustomer.Text = "<h4>" + descripcionItem.Customer.Name + "</h4>";
+            lbCustomerEmail.Text = "<h4>" + Res.CustomerEmail + ":" + "</h4>";
+            lbEmailCustomer.Text = "<h4>" + descripcionItem.Customer.Email + "</h4>";
+            lbLeadExpDate.Text = "<h4>" + Res.ExpDate + ":" + "</h4>";
+            lbLeadDate.Text = "<h4>" + descripcionItem.Lead.Date + "</h4>";
+
+            //tabPageNotes
+            lbNotes.Text = "<h2>" + Res.Notes + "</h2>";
+            tbLeadNotes.PlaceholderText = descripcionItem.Lead.Notes;
+
+            //tabPageExtraInfo
+            lbContactInfo.Text = "<h3>" + Res.ContactInfo + "</h3>";
+            lbCompanyName.Text = "<h4>" + Res.NameCompany + ":" + "</h4>";
+            lbPhone.Text = "<h4>" + Res.Phone + ":" + "</h4>";
+            lbAddress1.Text = "<h4>" + Res.MainAddress + ":" + "</h4>";
+            lbSecondaryAddress.Text = "<h4>" + Res.SecondaryAddress + ":" + "</h4>";
+            lbCity.Text = "<h4>" + Res.City + ":" + "</h4>";
+            lbCountry.Text = "<h4>" + Res.Country + ":" + "</h4>";
+            lbZip.Text = "<h4>" + Res.Zip + ":" + "</h4>";
+
+            lbCustomerInformation.Text = "<h3>" + Res.CustomerInfo + "</h3>";
+            lbDepartment.Text = "<h4>" + Res.department + ":" + "</h4>";
+            lbType.Text = "<h4>" + Res.Type + ":" + "</h4>";
+            lbDate.Text = "<h4>" + Res.date + ":" + "</h4>";
+
+            
             tbCustomerCompanyName.Text = descripcionItem.Customer.Name;
             tbCustomerPhone.Text = descripcionItem.Customer.Phone;
             tbCustomerAddress1.Text = descripcionItem.Customer.Adress1;
@@ -70,10 +102,12 @@ namespace Tfg_NetFramework
             tbCustomerCity.Text = descripcionItem.Customer.City;
             tbCustomerCountry.Text = descripcionItem.Customer.Country;
             tbCustomerZip.Text = descripcionItem.Customer.Zip;
+
             tbCustomerDepartment.Text = descripcionItem.Customer.Department;
             tbCustomerType.Text = descripcionItem.Customer.Type;
             tbCustomerDate.Text = descripcionItem.Customer.Date;
 
+            lbLeadCreatedAt.Text = "<h2>" + descripcionItem.Lead.CreatedAt + "</h2>";
 
         }
 

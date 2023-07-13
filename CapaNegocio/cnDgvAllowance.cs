@@ -1,11 +1,6 @@
-﻿using capaDatos;
-using System;
+﻿using Bunifu.UI.WinForms;
+using capaDatos;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace capaNegocio
 {
@@ -13,7 +8,7 @@ namespace capaNegocio
     {
         cdDgvAllowance cdDgvAllowance = new cdDgvAllowance();
 
-        public void dgvAllowance(DataGridView dgvAllowance, Hashtable pdfs)
+        public void dgvAllowance(BunifuDataGridView dgvAllowance, Hashtable pdfs)
         {
             cdDgvAllowance.GetData();
             cdDgvAllowance.updateDatagrid(dgvAllowance, pdfs);

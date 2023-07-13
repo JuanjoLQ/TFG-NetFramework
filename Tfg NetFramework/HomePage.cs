@@ -9,7 +9,6 @@ using capaNegocio;
 using System.IO;
 using System.Collections;
 using CapaNegocio;
-using Bunifu.UI.WinForms;
 
 namespace Tfg_NetFramework
 {
@@ -34,7 +33,7 @@ namespace Tfg_NetFramework
         cnDepartment cnDepartment = new cnDepartment();
         cnWarehouse cnWarehouse = new cnWarehouse();
         cnProduct cnProduct = new cnProduct();
-        cnSale cnSale = new cnSale();
+        cnReminder cnReminder = new cnReminder();
 
         cdGlobals cdGlobals = new cdGlobals();
         Hashtable pdfs = new Hashtable();
@@ -44,6 +43,24 @@ namespace Tfg_NetFramework
         public HomePage()
         {
             InitializeComponent();
+
+            OnTimerTick(null, null);
+
+            timer = new Timer();
+            timer.Interval = 60000; // Intervalo de tiempo en milisegundos (1 minuto = 60000 ms)
+            timer.Tick += new EventHandler(OnTimerTick);
+            timer.Start();
+
+        }
+
+        private void OnTimerTick(object sender, EventArgs e)
+        {
+            // Se revisan los recordatorios
+            //cnReminder.checkReminder(int.Parse(cnUser.idUser(emailUser)), notifyIcon1);
+
+            // Se revisan los productos que estan en tránsito
+            cnWarehouse.checkInTransitProducts();
+                        
         }
 
         private void HomePage_Load(object sender, EventArgs e)
@@ -134,7 +151,6 @@ namespace Tfg_NetFramework
                 btnGestDietas.Text = Res.pManAllowance.Replace(" ", "\n");
                 btnSettings.Text = Res.pSettings;
             }
-            btnSalirHome.Text = Res.Exit;
             btnSubMenu.Text = Res.modules;
             lbTitle.Text = Res.lbHomePage;
             lbRole.Text = Res.lbRole;
@@ -159,11 +175,16 @@ namespace Tfg_NetFramework
             lbGestUsers.Text = "<h2>" + Res.lbGestUsers + "</h2>";
             lbRegisterUser.Text = "<h3>" + Res.lbRegisterUser + "</h3>";
 
-            //lbIdUser
-            //lbEmail
-            //lbPassword
-            //lbDepartment
-            //lbJob
+            blbEmail.Text = "<h4>" + Res.Email + "</h4>";
+            blbPass.Text = "<h4>" + Res.Pass + "</h4>";
+            blbJob.Text = "<h4>" + Res.job + "</h4>";
+            blbDepartment.Text = "<h4>" + Res.department + "</h4>";
+
+            lbIdUser.Text = "<h4>" + Res.idUser + "</h4>";
+            lbEmail.Text = "<h4>" + Res.Email + "</h4>";
+            lbPassword.Text = "<h4>" + Res.Pass+ "</h4>";
+            lbDepartment.Text = "<h4>" + Res.department + "</h4>";
+            lbJob.Text = "<h4>" + Res.job + "</h4>";
 
             // Textboxs
             tbREmail.PlaceholderText = Res.Email;
@@ -337,7 +358,7 @@ namespace Tfg_NetFramework
         private void translateCrm()
         {
             // Labels Pipeline
-            lbNew.Text = "<h2>" + Res.new + "</h2>";
+            lbNew.Text = "<h2>" + Res.New + "</h2>";
             lbQualified.Text = "<h2>" + Res.qualified + "</h2>";
             lbProposition.Text = "<h2>" + Res.proposition + "</h2>";
             lbWon.Text = "<h2>" + Res.won + "</h2>";
@@ -351,8 +372,8 @@ namespace Tfg_NetFramework
             blbCrmTitleCustomers.Text = "<h2>" + Res.customers + "</h2>";
             lbDateStart.Text = "<h3>" + Res.startDate + "</h3>";
             lbDateEnd.Text = "<h3>" + Res.endDate + "</h3>";
-            blbCrmTitleLeads.Text = "<h2>" + "" + "</h2>";
-            lbCustomerName.Text = "<h3>" + Res.nameCustomer + "</h3>";
+            blbCrmTitleLeads.Text = "<h2>" + "Leads" + "</h2>";
+            //lbCustomerName.Text = "<h3>" + Res.nameCustomer + "</h3>";
             lbStateDateLead.Text = "<h3>" + "" + "</h3>";
 
             // Buttons Customers
@@ -559,7 +580,7 @@ namespace Tfg_NetFramework
             pInventory.Visible = false;
         }
 
-        private void btnModuleAux_Click(object sender, EventArgs e)
+        private void btnInventory_Click(object sender, EventArgs e)
         {
             pSettingsModule.Visible = false;
             pUsuarios.Visible = false;
@@ -569,23 +590,13 @@ namespace Tfg_NetFramework
             pInventory.Visible = true;
         }
 
-        private void dgvKilometraje_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             tbIdUser.Text = dgvUser.CurrentRow.Cells[0].Value.ToString();
-            //tbIdUser.defectColor(Color.Black);
             tbEmail.Text = dgvUser.CurrentRow.Cells[1].Value.ToString();
-            //tbEmail.defectColor(Color.Black);
             tbPassword.Text = dgvUser.CurrentRow.Cells[2].Value.ToString();
-            //tbPassword.defectColor(Color.Black);
             tbDepartment.Text = dgvUser.CurrentRow.Cells[3].Value.ToString();
-            //tbDepartment.defectColor(Color.Black);
             tbJob.Text = dgvUser.CurrentRow.Cells[4].Value.ToString();
-            //tbJob.defectColor(Color.Black);
         }
 
         private void dgvDietas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -597,7 +608,12 @@ namespace Tfg_NetFramework
             tbManAllowancesDate.Text = dgvAllowances.CurrentRow.Cells[4].Value.ToString();
             tbManAllowancesStartHour.Text = dgvAllowances.CurrentRow.Cells[5].Value.ToString();
             tbManAllowancesEndHour.Text = dgvAllowances.CurrentRow.Cells[6].Value.ToString();
+
             tbManAllowancesState.Text = dgvAllowances.CurrentRow.Cells[8].Value.ToString();
+
+            axAcroPDF1.Visible = true;
+            axAcroPDF1.src = pdfs[dgvAllowances.CurrentRow.Cells[0].Value.ToString()].ToString();
+
         }
 
         private void dgvKilometraje_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -720,7 +736,7 @@ namespace Tfg_NetFramework
             if (int.Parse(arr[0].ToString()) > 2 || int.Parse(arr[1].ToString()) > 4 || int.Parse(arr[3].ToString()) > 5)
             {
                 mtbReqAllowancesStartHour.Text = "";
-                MessageBox.Show("Fecha no válida");
+                MessageBox.Show("Hora no válida");
             }
         }
 
@@ -730,8 +746,8 @@ namespace Tfg_NetFramework
 
             if (int.Parse(arr[0].ToString()) > 2 || int.Parse(arr[1].ToString()) > 4 || int.Parse(arr[3].ToString()) > 5)
             {
-                mtbReqAllowancesStartHour.Text = "";
-                MessageBox.Show("Fecha no válida");
+                mtbReqAllowancesEndHour.Text = "";
+                MessageBox.Show("Hora no válida");
             }
         }
 
@@ -752,9 +768,7 @@ namespace Tfg_NetFramework
             dgvAllowances.Update();
             dgvAllowances.Refresh();
             cnDgvAllowance.dgvAllowance(dgvAllowances, pdfs);
-            dgvUser.Update();
-            dgvUser.Refresh();
-            cnUser.dgvUsers(dgvUser);
+
             tbManAllowancesEmail.Text = string.Empty;
             tbManAllowancesTitle.Text = string.Empty;
             tbManAllowancesObservations.Text = string.Empty;
@@ -778,7 +792,8 @@ namespace Tfg_NetFramework
                 tbPassword.Text = string.Empty;
                 tbEmail.Text = string.Empty;
                 cdGlobals.newLogEntry(emailUser, "Usuario eliminado");
-                MessageBox.Show("Usuario eliminado");
+                // MessageBox.Show("Usuario eliminado");
+                btnUpdateDtgUsers_Click(sender, e);
             }
         }
 
@@ -891,6 +906,9 @@ namespace Tfg_NetFramework
             tbManAllowancesState.Text = string.Empty;
             tbManAllowancesIdAllowance.Text = string.Empty;
             cbStateDietas.Text = string.Empty;
+
+            btnGestDietasDietasRefresh_Click(sender, e);
+
         }
 
         private void btnAllowanceRemove_Click(object sender, EventArgs e)
@@ -909,6 +927,8 @@ namespace Tfg_NetFramework
             tbManAllowancesState.Text = string.Empty;
             tbManAllowancesIdAllowance.Text = string.Empty;
             cbStateDietas.Text = string.Empty;
+
+            btnGestDietasDietasRefresh_Click(sender, e);
         }
 
         /*
@@ -934,8 +954,15 @@ namespace Tfg_NetFramework
 
         private void btnUpdateStateMileage_Click(object sender, EventArgs e)
         {
-            cnMileage.updateMileage(int.Parse(dgvMileage.CurrentRow.Cells[0].Value.ToString()), tbManMileageState.Text);
-            cdGlobals.newLogEntry(emailUser, "Kilometraje actualizado");
+            int idMileage = int.Parse(dgvMileage.CurrentRow.Cells[0].Value.ToString());
+            string state = tbManMileageState.Text;
+            if (idMileage != 0 && state != string.Empty)
+            {
+                cnMileage.updateMileage(idMileage, state);
+                cdGlobals.newLogEntry(emailUser, "Kilometraje actualizado");
+                btnRefreshDgvMileage_Click(sender, e);
+            }
+            
         }
 
         private void btnRefreshDgvMileage_Click(object sender, EventArgs e)
@@ -955,7 +982,19 @@ namespace Tfg_NetFramework
             tbManMileagePricePerKilometer.Text = string.Empty;
             tbManMileageFinal.Text = string.Empty;
             tbManMileageState.Text = string.Empty;
-            cbManMileageNewState.Text = string.Empty;
+
+            tbManMileageEmail.PlaceholderText = Res.Email;
+            tbManMileageTitle.PlaceholderText = Res.title;
+            tbManMileageDate.PlaceholderText = Res.date;
+            tbManMileageSubcategory.PlaceholderText = Res.subcategory;
+            tbManMileageIdMileage.PlaceholderText = Res.idMileage;
+            tbManMileageOrigin.PlaceholderText = Res.origin;
+            tbManMileageDestination.PlaceholderText = Res.destination;
+            tbManMileageKilometers.PlaceholderText = Res.kilometers;
+            tbManMileagePricePerKilometer.PlaceholderText = Res.pricePerKilometer;
+            tbManMileageFinal.PlaceholderText = Res.final;
+            tbManMileageState.PlaceholderText = Res.state;
+
         }
 
         private void btnKilometrajeEliminar_Click(object sender, EventArgs e)
@@ -975,15 +1014,39 @@ namespace Tfg_NetFramework
             tbManMileageFinal.Text = string.Empty;
             tbManMileageState.Text = string.Empty;
             cbManMileageNewState.Text = string.Empty;
+
+            btnRefreshDgvMileage_Click(sender, e);
         }
 
         private void btnSolDietasSolKilometraje_Click(object sender, EventArgs e)
         {
-            cnMileage.insertMileage(new ceMileage(0, int.Parse(ceGlobals.id),
-                tbReqMileageTitle.Text, dtpReqDietasMileageDate.Text, cbReqMileageSubCategory.SelectedItem.ToString(),
-                tbReqMileageOrigin.Text, tbReqMileageDestination.Text, float.Parse(tbReqMileageMileage.Text),
-                float.Parse(tbReqMileagePricePerKilometer.Text), float.Parse(tbReqMileageTotal.Text), "Solicitado"));
-            cdGlobals.newLogEntry(emailUser, "Kilometraje solicitado");
+            string subCategoryMileage = cbReqMileageSubCategory.SelectedItem == null ? String.Empty :
+                    cbReqMileageSubCategory.SelectedItem.ToString();
+
+            if (tbReqMileageMileage.Text != String.Empty && subCategoryMileage != String.Empty &&
+                tbReqMileageTitle.Text != String.Empty && tbReqMileageOrigin.Text != String.Empty && 
+                tbReqMileageDestination.Text != String.Empty && tbReqMileageTotal.Text != String.Empty)
+            {
+
+                int idUser = int.Parse(ceGlobals.id);
+                string title = tbReqMileageTitle.Text;
+                string date = dtpReqDietasMileageDate.Text;
+                string origin = tbReqMileageOrigin.Text;
+                string destination = tbReqMileageDestination.Text;
+                float kilometers = float.Parse(tbReqMileageMileage.Text);
+                float pricePerKilometer = float.Parse(tbReqMileagePricePerKilometer.Text);
+                float final = float.Parse(tbReqMileageTotal.Text);                
+
+                cnMileage.insertMileage(new ceMileage(0, idUser, title
+                , date, subCategoryMileage, origin, destination, kilometers, 
+                pricePerKilometer, final, "Solicitado"));
+                cdGlobals.newLogEntry(emailUser, "Kilometraje solicitado");
+            }
+            else
+            {
+                MessageBox.Show("Faltan campos por rellenar.");
+            }
+
         }
 
         private void cbMileageSubCategory_SelectionChangeCommitted(object sender, EventArgs e)
@@ -1008,11 +1071,28 @@ namespace Tfg_NetFramework
             }
         }
 
+        private void tbReqMileageMileage_Leave(object sender, EventArgs e)
+        {
+            int numericValue;
+            bool isNumber = int.TryParse(tbReqMileageMileage.Text, out numericValue);
+
+            if(isNumber == false && tbReqMileageMileage.Text != "")
+            {
+                tbReqMileageMileage.Text = "";
+                MessageBox.Show("Introduzca un valor numérico.");
+            }
+            else
+            {
+                tbSolMileageMileage_Leave(sender, e);
+            }
+
+        }
+
         private void tbSolMileageMileage_Leave(object sender, EventArgs e)
         {
             if (tbReqMileageMileage.Text != string.Empty && tbReqMileagePricePerKilometer.Text != string.Empty)
             {
-                tbReqMileageTotal.Text = (float.Parse(tbReqMileageMileage.Text) * float.Parse(tbReqMileagePricePerKilometer.Text)).ToString("0.00€");
+                tbReqMileageTotal.Text = (float.Parse(tbReqMileageMileage.Text) * float.Parse(tbReqMileagePricePerKilometer.Text)).ToString("0.00");
             }
         }
 
@@ -1065,7 +1145,6 @@ namespace Tfg_NetFramework
             if (control != null)
             {
                 e.Effect = DragDropEffects.Move;
-
             }
         }
 
@@ -1085,8 +1164,35 @@ namespace Tfg_NetFramework
             if (control != null)
             {
                 var panel = sender as FlowLayoutPanel;
+                
+                string nameColumn = ((FlowLayoutPanel)sender).Name;
+
+                if(nameColumn == "flpNew")
+                {
+                    nameColumn = "New";
+                }else if(nameColumn == "flpProposition")
+                {
+                    nameColumn = "Proposition";
+                }
+                else if (nameColumn == "flpQualified")
+                {
+                    nameColumn = "Qualified";
+                }
+                else if (nameColumn == "flpWon")
+                {
+                    nameColumn = "Won";
+                }
+
+                updateStageLead(int.Parse(name), nameColumn);
+
                 ((FlowLayoutPanel)sender).Controls.Add(control);
+                btnUpdateFlps_Click(sender, e);
             }
+        }
+
+        private void updateStageLead(int idLead, string newStage)
+        {
+            cnLead.updateStageLead(idLead, newStage);
         }
 
         private void btnPipelineAddLead_Click(object sender, EventArgs e)
@@ -1094,7 +1200,6 @@ namespace Tfg_NetFramework
             Form newLead = new newLead(emailUser);
 
             newLead.Show();
-
         }
 
         private void btnCustomersAddCustomers_Click(object sender, EventArgs e)
@@ -1102,6 +1207,7 @@ namespace Tfg_NetFramework
             Form newCustomer = new newCustomer(emailUser);
 
             newCustomer.Show();
+            btnUpdateDgvCustomer_Click(sender, e);
         }
 
         private void btnCustomersRemoveCustomers_Click(object sender, EventArgs e)
@@ -1117,6 +1223,7 @@ namespace Tfg_NetFramework
                     dgvCustomer_Lead.RowCount = 0;
                     btnUpdateDgvCustomer_Click(sender, e);
                     cdGlobals.newLogEntry(emailUser, "Customer y leads asociados eliminados");
+                    
                 }
             }
             else if (dialogResult == DialogResult.No)
@@ -1141,7 +1248,7 @@ namespace Tfg_NetFramework
 
             ArrayList arrayDescrItemList = new ArrayList();
             arrayDescrItemList = cnPipelineFlps.updateFpls();
-            MessageBox.Show(arrayDescrItemList.Count.ToString());
+            //MessageBox.Show(arrayDescrItemList.Count.ToString());
 
             foreach (ceDescripcionItem item in arrayDescrItemList)
             {
@@ -1193,7 +1300,7 @@ namespace Tfg_NetFramework
 
         private void dgvCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            lbCustomerName.Text = dgvCustomer.CurrentRow.Cells[1].Value.ToString();
+            //lbCustomerName.Text = dgvCustomer.CurrentRow.Cells[1].Value.ToString();
             lbStateDateLead.Text = "";
             cnDgvLead.updateDgvLead(int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString()), dgvCustomer_Lead);
         }
@@ -1231,7 +1338,7 @@ namespace Tfg_NetFramework
 
             if (startDate > endDate && dgvCustomer.CurrentRow != null)
             {
-                lbStateDateLead.Text = "La fecha inicio no puede ser más antigua que la fecha fin";
+                lbStateDateLead.Text = "La fecha inicio no puede ser más antigua que la fecha fin.";
             }
             else
             {
@@ -1251,6 +1358,7 @@ namespace Tfg_NetFramework
             pGestionDietas.Visible = false;
             pSolicitudDieta.Visible = false;
             pCRMGest.Visible = false;
+            pInventory.Visible = false;
         }
 
         private void btnSettingsSaveBackup_Click(object sender, EventArgs e)
@@ -1342,16 +1450,13 @@ namespace Tfg_NetFramework
         {
             ArrayList arr = null;
             int idWarehouse = int.Parse(bdgvStoredProducts.CurrentRow.Cells[0].Value.ToString());
-            blbTitleProductsAboutType.Text = bdgvStoredProducts.CurrentRow.Cells[1].Value.ToString();
+            string warehouseOrigin = bdgvStoredProducts.CurrentRow.Cells[1].Value.ToString();
+            blbTitleProductsAboutType.Text = "<h3>" + bdgvStoredProducts.CurrentRow.Cells[1].Value.ToString() + "</h3>";
 
             if (bdgvStoredProducts.CurrentRow.Cells[1].Value.ToString() == "No stored")
             {
-                blbMaxQuantity.Visible = true;
-                blbAmountUpdate.Visible = true;
-                btbStoreAmount.Visible = true;
-                bdStoreIntoWarehouses.Visible = true;
-                bbtnAddProductToWarehouse.Visible = true;
-
+                pProductToWarehouse.Visible = true;
+                pProductsInTransit.Visible = false;
                 bdStoreIntoWarehouses.Items.Clear();
                 arr = cnWarehouse.getWarehouses();
                 foreach (ceWarehouse i in arr)
@@ -1363,11 +1468,17 @@ namespace Tfg_NetFramework
             }
             else
             {
-                blbMaxQuantity.Visible = false;
-                blbAmountUpdate.Visible = false;
-                btbStoreAmount.Visible = false;
-                bdStoreIntoWarehouses.Visible = false;
-                bbtnAddProductToWarehouse.Visible = false;
+                pProductToWarehouse.Visible = false;
+                pProductsInTransit.Visible = true;
+
+                bdTransitWarehouse.Items.Clear();
+                arr = cnWarehouse.getWarehouses();
+                foreach (ceWarehouse i in arr)
+                {
+                    if (i.Name != "No stored" && i.Name != warehouseOrigin)
+                        bdTransitWarehouse.Items.Add(i.Name);
+                }
+                
             }
 
             if (idWarehouse != 0)
@@ -1440,6 +1551,43 @@ namespace Tfg_NetFramework
         private void bdgvItemsPerType_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             blbMaxQuantity.Text = "Max: " + bdgvItemsPerType.CurrentRow.Cells[3].Value.ToString();
+
+        }
+
+        private void btnReminder_Click(object sender, EventArgs e)
+        {
+            Form reminderList = new reminderList(emailUser);
+
+            reminderList.Show();
+        }
+
+        private void btnTransferProduct_Click(object sender, EventArgs e)
+        {
+            int idProduct = int.Parse(bdgvItemsPerType.CurrentRow.Cells[0].Value.ToString());
+            string warehouseOrigin = bdgvStoredProducts.CurrentRow.Cells[1].Value.ToString();
+
+            string destinationWarehouse = bdTransitWarehouse.SelectedItem == null ? String.Empty :
+                    bdTransitWarehouse.SelectedItem.ToString();
+            string fechaInicio = dtpFechaSalida.Text;
+            string fechaLlegada = dtpFechaLlegada.Text;
+
+            MessageBox.Show("Fecha inicio: " + fechaInicio);
+            MessageBox.Show("Fecha lleagda: " + fechaLlegada);
+
+            if (idProduct != 0 && warehouseOrigin != string.Empty && destinationWarehouse != string.Empty && 
+                fechaInicio != string.Empty && fechaLlegada != string.Empty)
+            {
+                cnWarehouse.transferProductOtherWarehouse(idProduct, warehouseOrigin, destinationWarehouse, fechaInicio, fechaLlegada);
+            }
+            else
+            {
+                MessageBox.Show("Faltan por rellenar campos");
+            }
+
+        }
+
+        private void lbRegisterUser_Click(object sender, EventArgs e)
+        {
 
         }
     }

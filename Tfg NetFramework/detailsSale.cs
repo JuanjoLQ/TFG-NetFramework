@@ -2,13 +2,6 @@
 using CapaNegocio;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tfg_NetFramework
@@ -25,11 +18,20 @@ namespace Tfg_NetFramework
             InitializeComponent();
             this.descrItem = descriptionItem;
 
-            blbDetailsSaleNameCustomer.Text = descrItem.Customer.Name;
-            blbDetailsSaleNameLead.Text = descrItem.Lead.Name;
-            blbDetailsSaleDate.Text = cnSale.datetimeSale(idSale);
+            blbDetailsSaleNameCustomer.Text = "<h4>" + descrItem.Customer.Name + "</h4>";
+            blbDetailsSaleNameLead.Text = "<h4>" + descrItem.Lead.Name + "</h4>";
+            blbDetailsSaleDate.Text = "<h4>" + cnSale.datetimeSale(idSale) + "</h4>";
 
             fillBdgvDetailsSale(cnProduct.obtainSoldProducts(idSale));
+
+            //Labels
+            blbDetailsSale.Text = "<h3>" + Res.DetailsSale + "</h3>";
+        }
+
+        private void detailsSale_Load(object sender, EventArgs e)
+        {
+            //Buttons
+            btnClose.Text = Res.Exit;
         }
 
         private void fillBdgvDetailsSale(ArrayList arr)
@@ -59,5 +61,6 @@ namespace Tfg_NetFramework
         {
             this.Close();
         }
+
     }
 }

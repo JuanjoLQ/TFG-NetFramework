@@ -30,7 +30,7 @@ namespace CapaNegocio
             cdLead.deleteLead(idLead);
         }
 
-        public void leadsByDate(Label lbDateLead,DataGridView dgvLead_Date, int idCustomer, DateTime startDate, DateTime endDate)
+        public void leadsByDate(BunifuLabel lbDateLead,DataGridView dgvLead_Date, int idCustomer, DateTime startDate, DateTime endDate)
         {
             cdLead.leadsByDate(lbDateLead, dgvLead_Date, idCustomer, startDate, endDate);
         }

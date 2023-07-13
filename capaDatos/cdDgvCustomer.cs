@@ -1,12 +1,7 @@
 ﻿using capaEntidad;
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Utilities;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace capaDatos
@@ -33,7 +28,7 @@ namespace capaDatos
                     "c.type, COUNT(mydb.lead.idLead) AS leads " +
                     "FROM customer AS c " +
                     "LEFT JOIN mydb.lead ON c.idCustomer = mydb.lead.Customer_idCustomer " +
-                    "GROUP BY c.name;";
+                    "GROUP BY c.idCustomer;";
 
                 MySqlCommand command = new MySqlCommand(query, conn);
 
@@ -62,7 +57,7 @@ namespace capaDatos
                         country = row["country"].ToString();
                         type = row["type"].ToString();
                         leads = row["leads"].ToString();
-
+                        //MessageBox.Show(name);
                         ceCustomer customer = new ceCustomer(idCustomer, name, phone, email, department, city, country, type, leads);
 
                         arrayCustomers.Add(customer);

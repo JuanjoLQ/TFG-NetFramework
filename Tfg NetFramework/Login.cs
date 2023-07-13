@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using capaEntidad;
 using capaNegocio;
+using K4os.Hash.xxHash;
 
 namespace Tfg_NetFramework
 {
@@ -92,9 +87,14 @@ namespace Tfg_NetFramework
             gbLogin.Text = Res.gbLogin;
             tbEmail.Text = Res.user;
             tbPassword.Text = Res.passwd;
-            btnLogin.Text = Res.Login;
+            bbtnLogin.Text = Res.Login;
+            
 
-            /*º
+            // Labels
+            lbEmail.Text = "<h3>" + Res.Email + ":" + "</h3>";
+            lbPassword.Text = "<h3>" + Res.Pass + ":" + "</h3>";
+
+            /*
             lbRegister.Text = Res.Register;
             tbREmail.Text = Res.Email;
             tbRPassword.Text= Res.Pass;
@@ -122,11 +122,6 @@ namespace Tfg_NetFramework
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void btnSalir_ControlAdded(object sender, ControlEventArgs e)
-        {
-            btnSalir.BackColor = Color.Red;
         }
 
         private void cbLanguage_SelectedIndexChanged(object sender, EventArgs e)

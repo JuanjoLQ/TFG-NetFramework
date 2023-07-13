@@ -1,10 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using capaEntidad;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
@@ -12,7 +7,6 @@ namespace capaDatos
 {
     public class cdAllowance
     {
-        
         string cadenaConexion = "Server=localhost;User=root;Password=TFG_ERP_C#;Port=3306;database=mydb;";
 
         public bool insertAllowance(ceAllowance allowance)
@@ -107,14 +101,13 @@ namespace capaDatos
             string name = Path.GetFileName(fileName);
             string newPath = @"C:\Users\Jesus\Tfg Net Framework\Tfg NetFramework\files\";
             string locationCopy = newPath + name;
-            MessageBox.Show("Location Copy: " + locationCopy + "\nFileName: " + fileName);
+            // MessageBox.Show("Location Copy: " + locationCopy + "\nFileName: " + fileName);
 
             if (File.Exists(fileName))
             {
                 File.Copy(fileName, locationCopy, true);
-                MessageBox.Show("File Copied");
+                // MessageBox.Show("File Copied");
             }
-            //
 
             using (cmd = new MySqlCommand("insert into allowance(User_idUser, Title, Observations, State, StartTime, StartHour, EndHour, Invoice) " +
                 "values(@idUser, @title, @observations, @state, @startTime, @startHour, @endHour, @invoice)", conn))
@@ -126,6 +119,7 @@ namespace capaDatos
                 cmd.Parameters.AddWithValue("@startTime", allowance.startTime);
                 cmd.Parameters.AddWithValue("@startHour", allowance.startHour);
                 cmd.Parameters.AddWithValue("@endHour", allowance.endHour);
+                MessageBox.Show("location pdf: " + locationCopy);
                 cmd.Parameters.AddWithValue("@invoice", locationCopy);
                 cmd.ExecuteNonQuery();
             }

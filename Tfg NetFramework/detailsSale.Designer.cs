@@ -53,15 +53,16 @@
             // 
             this.blbDetailsSale.AllowParentOverrides = false;
             this.blbDetailsSale.AutoEllipsis = false;
+            this.blbDetailsSale.AutoSize = false;
             this.blbDetailsSale.Cursor = System.Windows.Forms.Cursors.Default;
             this.blbDetailsSale.CursorType = System.Windows.Forms.Cursors.Default;
             this.blbDetailsSale.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.blbDetailsSale.Location = new System.Drawing.Point(21, 25);
+            this.blbDetailsSale.Location = new System.Drawing.Point(21, 3);
             this.blbDetailsSale.Name = "blbDetailsSale";
             this.blbDetailsSale.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.blbDetailsSale.Size = new System.Drawing.Size(59, 15);
+            this.blbDetailsSale.Size = new System.Drawing.Size(118, 58);
             this.blbDetailsSale.TabIndex = 0;
-            this.blbDetailsSale.Text = "Details Sale";
+            this.blbDetailsSale.Text = "<h3>Details Sale</h3>";
             this.blbDetailsSale.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.blbDetailsSale.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -190,15 +191,16 @@
             // 
             this.blbDetailsSaleNameCustomer.AllowParentOverrides = false;
             this.blbDetailsSaleNameCustomer.AutoEllipsis = false;
+            this.blbDetailsSaleNameCustomer.AutoSize = false;
             this.blbDetailsSaleNameCustomer.Cursor = System.Windows.Forms.Cursors.Default;
             this.blbDetailsSaleNameCustomer.CursorType = System.Windows.Forms.Cursors.Default;
             this.blbDetailsSaleNameCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.blbDetailsSaleNameCustomer.Location = new System.Drawing.Point(184, 25);
+            this.blbDetailsSaleNameCustomer.Location = new System.Drawing.Point(174, 4);
             this.blbDetailsSaleNameCustomer.Name = "blbDetailsSaleNameCustomer";
             this.blbDetailsSaleNameCustomer.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.blbDetailsSaleNameCustomer.Size = new System.Drawing.Size(87, 15);
+            this.blbDetailsSaleNameCustomer.Size = new System.Drawing.Size(117, 36);
             this.blbDetailsSaleNameCustomer.TabIndex = 17;
-            this.blbDetailsSaleNameCustomer.Text = "Name Customer";
+            this.blbDetailsSaleNameCustomer.Text = "<h4>Name Customer</h4>";
             this.blbDetailsSaleNameCustomer.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.blbDetailsSaleNameCustomer.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -206,14 +208,15 @@
             // 
             this.blbDetailsSaleNameLead.AllowParentOverrides = false;
             this.blbDetailsSaleNameLead.AutoEllipsis = false;
+            this.blbDetailsSaleNameLead.AutoSize = false;
             this.blbDetailsSaleNameLead.CursorType = null;
             this.blbDetailsSaleNameLead.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.blbDetailsSaleNameLead.Location = new System.Drawing.Point(325, 25);
+            this.blbDetailsSaleNameLead.Location = new System.Drawing.Point(351, 4);
             this.blbDetailsSaleNameLead.Name = "blbDetailsSaleNameLead";
             this.blbDetailsSaleNameLead.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.blbDetailsSaleNameLead.Size = new System.Drawing.Size(63, 15);
+            this.blbDetailsSaleNameLead.Size = new System.Drawing.Size(88, 36);
             this.blbDetailsSaleNameLead.TabIndex = 18;
-            this.blbDetailsSaleNameLead.Text = "Name Label";
+            this.blbDetailsSaleNameLead.Text = "<h4>Name Lead</h4>";
             this.blbDetailsSaleNameLead.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.blbDetailsSaleNameLead.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -221,14 +224,15 @@
             // 
             this.blbDetailsSaleDate.AllowParentOverrides = false;
             this.blbDetailsSaleDate.AutoEllipsis = false;
+            this.blbDetailsSaleDate.AutoSize = false;
             this.blbDetailsSaleDate.CursorType = null;
             this.blbDetailsSaleDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.blbDetailsSaleDate.Location = new System.Drawing.Point(428, 25);
+            this.blbDetailsSaleDate.Location = new System.Drawing.Point(511, 3);
             this.blbDetailsSaleDate.Name = "blbDetailsSaleDate";
             this.blbDetailsSaleDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.blbDetailsSaleDate.Size = new System.Drawing.Size(62, 15);
+            this.blbDetailsSaleDate.Size = new System.Drawing.Size(90, 36);
             this.blbDetailsSaleDate.TabIndex = 21;
-            this.blbDetailsSaleDate.Text = "Date of Sale";
+            this.blbDetailsSaleDate.Text = "<h4>Date of Sale</h4>";
             this.blbDetailsSaleDate.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.blbDetailsSaleDate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -243,7 +247,7 @@
             this.btnClose.AutoSizeLeftIcon = true;
             this.btnClose.AutoSizeRightIcon = true;
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackColor1 = System.Drawing.Color.Red;
+            this.btnClose.BackColor1 = System.Drawing.Color.Crimson;
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnClose.ButtonText = "Close";
@@ -272,17 +276,17 @@
             this.btnClose.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnClose.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnClose.IconSize = 25;
-            this.btnClose.IdleBorderColor = System.Drawing.Color.Red;
-            this.btnClose.IdleBorderRadius = 1;
+            this.btnClose.IdleBorderColor = System.Drawing.Color.Crimson;
+            this.btnClose.IdleBorderRadius = 10;
             this.btnClose.IdleBorderThickness = 1;
-            this.btnClose.IdleFillColor = System.Drawing.Color.Red;
+            this.btnClose.IdleFillColor = System.Drawing.Color.Crimson;
             this.btnClose.IdleIconLeftImage = null;
             this.btnClose.IdleIconRightImage = null;
             this.btnClose.IndicateFocus = false;
-            this.btnClose.Location = new System.Drawing.Point(669, 369);
+            this.btnClose.Location = new System.Drawing.Point(351, 369);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnClose.OnDisabledState.BorderRadius = 1;
+            this.btnClose.OnDisabledState.BorderRadius = 10;
             this.btnClose.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnClose.OnDisabledState.BorderThickness = 1;
             this.btnClose.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -290,23 +294,23 @@
             this.btnClose.OnDisabledState.IconLeftImage = null;
             this.btnClose.OnDisabledState.IconRightImage = null;
             this.btnClose.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btnClose.onHoverState.BorderRadius = 1;
+            this.btnClose.onHoverState.BorderRadius = 10;
             this.btnClose.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnClose.onHoverState.BorderThickness = 1;
             this.btnClose.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.btnClose.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnClose.onHoverState.IconLeftImage = null;
             this.btnClose.onHoverState.IconRightImage = null;
-            this.btnClose.OnIdleState.BorderColor = System.Drawing.Color.Red;
-            this.btnClose.OnIdleState.BorderRadius = 1;
+            this.btnClose.OnIdleState.BorderColor = System.Drawing.Color.Crimson;
+            this.btnClose.OnIdleState.BorderRadius = 10;
             this.btnClose.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnClose.OnIdleState.BorderThickness = 1;
-            this.btnClose.OnIdleState.FillColor = System.Drawing.Color.Red;
+            this.btnClose.OnIdleState.FillColor = System.Drawing.Color.Crimson;
             this.btnClose.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnClose.OnIdleState.IconLeftImage = null;
             this.btnClose.OnIdleState.IconRightImage = null;
             this.btnClose.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btnClose.OnPressedState.BorderRadius = 1;
+            this.btnClose.OnPressedState.BorderRadius = 10;
             this.btnClose.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnClose.OnPressedState.BorderThickness = 1;
             this.btnClose.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -333,11 +337,12 @@
             this.Controls.Add(this.blbDetailsSaleNameCustomer);
             this.Controls.Add(this.bdgvDetailsSale);
             this.Controls.Add(this.blbDetailsSale);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "detailsSale";
             this.Text = "detailsSale";
+            this.Load += new System.EventHandler(this.detailsSale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bdgvDetailsSale)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

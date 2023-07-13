@@ -1,13 +1,6 @@
-﻿using capaEntidad;
-using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Utilities;
+﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace capaDatos

@@ -11,6 +11,7 @@ namespace Tfg_NetFramework
         cnProduct cnProduct = new cnProduct();
         cnWarehouse cnWarehouse = new cnWarehouse();
         ArrayList arr = new ArrayList();
+
         public newInventoryItem()
         {
             InitializeComponent();
@@ -18,7 +19,24 @@ namespace Tfg_NetFramework
 
         private void newInventoryItem_Load(object sender, EventArgs e)
         {
-            
+            //Labels
+            blbNewInventoryItem.Text = "<h2>" + Res.NewInventoryItem + "</h2>";
+            blbInventoryItemName.Text = "<h3>" + Res.ItemName + ":" + "</h3>";
+            blbInventoryItemPricePerItem.Text = "<h3>" + Res.PricePerItem + ":" + "</h3>";
+            blbInventoryItemAmount.Text = "<h3>" + Res.ItemAmount + ":" + "</h3>";
+            blbInventoryItemUnitOfMeasure.Text = "<h3>" + Res.UnitOfMeasure + ":" + "</h3>";
+            blbInventoryItemProductCategory.Text = "<h3>" + Res.ProductCategory + ":" + "</h3>";
+            blbInventoryItemState.Text = "<h3>" + Res.storedProducts + ":" + "</h3>";
+
+            //Textboxs
+            btbInventoryItemName.PlaceholderText = Res.ItemName ;
+            btbInventoryItemPricePerItem.PlaceholderText = Res.PricePerItem ;
+            btbInventoryItemAmount.PlaceholderText = Res.Amount ;
+
+            //Buttons
+            bbInventoryItemClose.Text = Res.Exit ;
+            bbInventoryItemCreate.Text = Res.CreateItem ;
+
         }
 
         private void bdInventoryItemState_SelectedIndexChanged(object sender, EventArgs e)
@@ -61,7 +79,7 @@ namespace Tfg_NetFramework
                 float pricePerUnit = float.Parse(btbInventoryItemPricePerItem.Text);
                 float amount = float.Parse(btbInventoryItemAmount.Text);
                 
-                if (nameWarehouse == string.Empty)
+                if (nameWarehouse == String.Empty)
                 {
                     ceProduct product = new ceProduct(itemName, pricePerUnit, amount, unitMeasure, productCategory, "No stored");
                     cnProduct.addProduct(product);
@@ -69,9 +87,9 @@ namespace Tfg_NetFramework
                 else
                 {
                     int idWarehouse = cnWarehouse.idWarehouse(nameWarehouse);
-
-                    ceProduct product = new ceProduct(idWarehouse, itemName, pricePerUnit, amount, unitMeasure, productCategory, "Stored");
+                    ceProduct product = new ceProduct(idWarehouse, 0, itemName, pricePerUnit, amount, unitMeasure, productCategory, "Stored");
                     cnWarehouse.addProductWarehouse(product);
+
                 }
             }
             else

@@ -103,15 +103,16 @@
             this.lbNotes = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbDate = new Bunifu.UI.WinForms.BunifuLabel();
             this.tbNewCustomerName = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.blbNewCustomerTitle = new Bunifu.UI.WinForms.BunifuLabel();
             this.SuspendLayout();
             // 
             // dtpNewCustomer
             // 
             this.dtpNewCustomer.CustomFormat = "yyyy-MM-dd hh:mm:ss";
             this.dtpNewCustomer.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNewCustomer.Location = new System.Drawing.Point(90, 611);
+            this.dtpNewCustomer.Location = new System.Drawing.Point(131, 619);
             this.dtpNewCustomer.Name = "dtpNewCustomer";
-            this.dtpNewCustomer.Size = new System.Drawing.Size(252, 20);
+            this.dtpNewCustomer.Size = new System.Drawing.Size(196, 20);
             this.dtpNewCustomer.TabIndex = 22;
             // 
             // tbNewCustomerPhone
@@ -142,7 +143,7 @@
             this.tbNewCustomerPhone.IconRight = null;
             this.tbNewCustomerPhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewCustomerPhone.Lines = new string[0];
-            this.tbNewCustomerPhone.Location = new System.Drawing.Point(90, 75);
+            this.tbNewCustomerPhone.Location = new System.Drawing.Point(131, 83);
             this.tbNewCustomerPhone.MaxLength = 32767;
             this.tbNewCustomerPhone.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNewCustomerPhone.Modified = false;
@@ -178,7 +179,7 @@
             this.tbNewCustomerPhone.SelectionLength = 0;
             this.tbNewCustomerPhone.SelectionStart = 0;
             this.tbNewCustomerPhone.ShortcutsEnabled = true;
-            this.tbNewCustomerPhone.Size = new System.Drawing.Size(147, 26);
+            this.tbNewCustomerPhone.Size = new System.Drawing.Size(196, 26);
             this.tbNewCustomerPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNewCustomerPhone.TabIndex = 29;
             this.tbNewCustomerPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -217,7 +218,7 @@
             this.tbNewCustomerCity.IconRight = null;
             this.tbNewCustomerCity.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewCustomerCity.Lines = new string[0];
-            this.tbNewCustomerCity.Location = new System.Drawing.Point(90, 195);
+            this.tbNewCustomerCity.Location = new System.Drawing.Point(131, 203);
             this.tbNewCustomerCity.MaxLength = 32767;
             this.tbNewCustomerCity.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNewCustomerCity.Modified = false;
@@ -253,7 +254,7 @@
             this.tbNewCustomerCity.SelectionLength = 0;
             this.tbNewCustomerCity.SelectionStart = 0;
             this.tbNewCustomerCity.ShortcutsEnabled = true;
-            this.tbNewCustomerCity.Size = new System.Drawing.Size(147, 26);
+            this.tbNewCustomerCity.Size = new System.Drawing.Size(196, 26);
             this.tbNewCustomerCity.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNewCustomerCity.TabIndex = 30;
             this.tbNewCustomerCity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -292,7 +293,7 @@
             this.tbNewCustomerDepartment.IconRight = null;
             this.tbNewCustomerDepartment.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewCustomerDepartment.Lines = new string[0];
-            this.tbNewCustomerDepartment.Location = new System.Drawing.Point(90, 155);
+            this.tbNewCustomerDepartment.Location = new System.Drawing.Point(131, 163);
             this.tbNewCustomerDepartment.MaxLength = 32767;
             this.tbNewCustomerDepartment.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNewCustomerDepartment.Modified = false;
@@ -328,7 +329,7 @@
             this.tbNewCustomerDepartment.SelectionLength = 0;
             this.tbNewCustomerDepartment.SelectionStart = 0;
             this.tbNewCustomerDepartment.ShortcutsEnabled = true;
-            this.tbNewCustomerDepartment.Size = new System.Drawing.Size(147, 26);
+            this.tbNewCustomerDepartment.Size = new System.Drawing.Size(196, 26);
             this.tbNewCustomerDepartment.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNewCustomerDepartment.TabIndex = 31;
             this.tbNewCustomerDepartment.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -367,7 +368,7 @@
             this.tbNewCustomerZip.IconRight = null;
             this.tbNewCustomerZip.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewCustomerZip.Lines = new string[0];
-            this.tbNewCustomerZip.Location = new System.Drawing.Point(90, 275);
+            this.tbNewCustomerZip.Location = new System.Drawing.Point(131, 283);
             this.tbNewCustomerZip.MaxLength = 32767;
             this.tbNewCustomerZip.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNewCustomerZip.Modified = false;
@@ -403,7 +404,7 @@
             this.tbNewCustomerZip.SelectionLength = 0;
             this.tbNewCustomerZip.SelectionStart = 0;
             this.tbNewCustomerZip.ShortcutsEnabled = true;
-            this.tbNewCustomerZip.Size = new System.Drawing.Size(147, 26);
+            this.tbNewCustomerZip.Size = new System.Drawing.Size(196, 26);
             this.tbNewCustomerZip.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNewCustomerZip.TabIndex = 32;
             this.tbNewCustomerZip.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -442,7 +443,7 @@
             this.tbNewCustomerState.IconRight = null;
             this.tbNewCustomerState.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewCustomerState.Lines = new string[0];
-            this.tbNewCustomerState.Location = new System.Drawing.Point(90, 235);
+            this.tbNewCustomerState.Location = new System.Drawing.Point(131, 243);
             this.tbNewCustomerState.MaxLength = 32767;
             this.tbNewCustomerState.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNewCustomerState.Modified = false;
@@ -478,7 +479,7 @@
             this.tbNewCustomerState.SelectionLength = 0;
             this.tbNewCustomerState.SelectionStart = 0;
             this.tbNewCustomerState.ShortcutsEnabled = true;
-            this.tbNewCustomerState.Size = new System.Drawing.Size(147, 26);
+            this.tbNewCustomerState.Size = new System.Drawing.Size(196, 26);
             this.tbNewCustomerState.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNewCustomerState.TabIndex = 33;
             this.tbNewCustomerState.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -517,7 +518,7 @@
             this.tbNewCustomerNotes.IconRight = null;
             this.tbNewCustomerNotes.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewCustomerNotes.Lines = new string[0];
-            this.tbNewCustomerNotes.Location = new System.Drawing.Point(90, 475);
+            this.tbNewCustomerNotes.Location = new System.Drawing.Point(131, 483);
             this.tbNewCustomerNotes.MaxLength = 32767;
             this.tbNewCustomerNotes.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNewCustomerNotes.Modified = false;
@@ -592,7 +593,7 @@
             this.tbNewCustomerAdress2.IconRight = null;
             this.tbNewCustomerAdress2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewCustomerAdress2.Lines = new string[0];
-            this.tbNewCustomerAdress2.Location = new System.Drawing.Point(90, 395);
+            this.tbNewCustomerAdress2.Location = new System.Drawing.Point(131, 403);
             this.tbNewCustomerAdress2.MaxLength = 32767;
             this.tbNewCustomerAdress2.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNewCustomerAdress2.Modified = false;
@@ -628,7 +629,7 @@
             this.tbNewCustomerAdress2.SelectionLength = 0;
             this.tbNewCustomerAdress2.SelectionStart = 0;
             this.tbNewCustomerAdress2.ShortcutsEnabled = true;
-            this.tbNewCustomerAdress2.Size = new System.Drawing.Size(147, 26);
+            this.tbNewCustomerAdress2.Size = new System.Drawing.Size(196, 26);
             this.tbNewCustomerAdress2.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNewCustomerAdress2.TabIndex = 35;
             this.tbNewCustomerAdress2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -667,7 +668,7 @@
             this.tbNewCustomerAdress1.IconRight = null;
             this.tbNewCustomerAdress1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewCustomerAdress1.Lines = new string[0];
-            this.tbNewCustomerAdress1.Location = new System.Drawing.Point(90, 355);
+            this.tbNewCustomerAdress1.Location = new System.Drawing.Point(131, 363);
             this.tbNewCustomerAdress1.MaxLength = 32767;
             this.tbNewCustomerAdress1.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNewCustomerAdress1.Modified = false;
@@ -703,7 +704,7 @@
             this.tbNewCustomerAdress1.SelectionLength = 0;
             this.tbNewCustomerAdress1.SelectionStart = 0;
             this.tbNewCustomerAdress1.ShortcutsEnabled = true;
-            this.tbNewCustomerAdress1.Size = new System.Drawing.Size(147, 26);
+            this.tbNewCustomerAdress1.Size = new System.Drawing.Size(196, 26);
             this.tbNewCustomerAdress1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNewCustomerAdress1.TabIndex = 36;
             this.tbNewCustomerAdress1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -742,7 +743,7 @@
             this.tbNewCustomerCountry.IconRight = null;
             this.tbNewCustomerCountry.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewCustomerCountry.Lines = new string[0];
-            this.tbNewCustomerCountry.Location = new System.Drawing.Point(90, 315);
+            this.tbNewCustomerCountry.Location = new System.Drawing.Point(131, 323);
             this.tbNewCustomerCountry.MaxLength = 32767;
             this.tbNewCustomerCountry.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNewCustomerCountry.Modified = false;
@@ -778,7 +779,7 @@
             this.tbNewCustomerCountry.SelectionLength = 0;
             this.tbNewCustomerCountry.SelectionStart = 0;
             this.tbNewCustomerCountry.ShortcutsEnabled = true;
-            this.tbNewCustomerCountry.Size = new System.Drawing.Size(147, 26);
+            this.tbNewCustomerCountry.Size = new System.Drawing.Size(196, 26);
             this.tbNewCustomerCountry.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNewCustomerCountry.TabIndex = 37;
             this.tbNewCustomerCountry.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -817,7 +818,7 @@
             this.tbNewCustomerEmail.IconRight = null;
             this.tbNewCustomerEmail.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewCustomerEmail.Lines = new string[0];
-            this.tbNewCustomerEmail.Location = new System.Drawing.Point(90, 115);
+            this.tbNewCustomerEmail.Location = new System.Drawing.Point(131, 123);
             this.tbNewCustomerEmail.MaxLength = 32767;
             this.tbNewCustomerEmail.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNewCustomerEmail.Modified = false;
@@ -853,7 +854,7 @@
             this.tbNewCustomerEmail.SelectionLength = 0;
             this.tbNewCustomerEmail.SelectionStart = 0;
             this.tbNewCustomerEmail.ShortcutsEnabled = true;
-            this.tbNewCustomerEmail.Size = new System.Drawing.Size(147, 26);
+            this.tbNewCustomerEmail.Size = new System.Drawing.Size(196, 26);
             this.tbNewCustomerEmail.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNewCustomerEmail.TabIndex = 38;
             this.tbNewCustomerEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -907,9 +908,9 @@
             "Organization",
             "Other"});
             this.cbNewCustomerType.ItemTopMargin = 3;
-            this.cbNewCustomerType.Location = new System.Drawing.Point(90, 435);
+            this.cbNewCustomerType.Location = new System.Drawing.Point(131, 443);
             this.cbNewCustomerType.Name = "cbNewCustomerType";
-            this.cbNewCustomerType.Size = new System.Drawing.Size(160, 28);
+            this.cbNewCustomerType.Size = new System.Drawing.Size(196, 28);
             this.cbNewCustomerType.TabIndex = 40;
             this.cbNewCustomerType.Text = null;
             this.cbNewCustomerType.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -926,7 +927,7 @@
             this.btnNewCustomerSave.AutoSizeLeftIcon = true;
             this.btnNewCustomerSave.AutoSizeRightIcon = true;
             this.btnNewCustomerSave.BackColor = System.Drawing.Color.Transparent;
-            this.btnNewCustomerSave.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btnNewCustomerSave.BackColor1 = System.Drawing.Color.RoyalBlue;
             this.btnNewCustomerSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNewCustomerSave.BackgroundImage")));
             this.btnNewCustomerSave.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnNewCustomerSave.ButtonText = "Save";
@@ -955,14 +956,14 @@
             this.btnNewCustomerSave.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnNewCustomerSave.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnNewCustomerSave.IconSize = 25;
-            this.btnNewCustomerSave.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnNewCustomerSave.IdleBorderColor = System.Drawing.Color.RoyalBlue;
             this.btnNewCustomerSave.IdleBorderRadius = 10;
             this.btnNewCustomerSave.IdleBorderThickness = 1;
-            this.btnNewCustomerSave.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnNewCustomerSave.IdleFillColor = System.Drawing.Color.RoyalBlue;
             this.btnNewCustomerSave.IdleIconLeftImage = null;
             this.btnNewCustomerSave.IdleIconRightImage = null;
             this.btnNewCustomerSave.IndicateFocus = false;
-            this.btnNewCustomerSave.Location = new System.Drawing.Point(192, 739);
+            this.btnNewCustomerSave.Location = new System.Drawing.Point(222, 672);
             this.btnNewCustomerSave.Name = "btnNewCustomerSave";
             this.btnNewCustomerSave.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnNewCustomerSave.OnDisabledState.BorderRadius = 10;
@@ -980,11 +981,11 @@
             this.btnNewCustomerSave.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnNewCustomerSave.onHoverState.IconLeftImage = null;
             this.btnNewCustomerSave.onHoverState.IconRightImage = null;
-            this.btnNewCustomerSave.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnNewCustomerSave.OnIdleState.BorderColor = System.Drawing.Color.RoyalBlue;
             this.btnNewCustomerSave.OnIdleState.BorderRadius = 10;
             this.btnNewCustomerSave.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnNewCustomerSave.OnIdleState.BorderThickness = 1;
-            this.btnNewCustomerSave.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnNewCustomerSave.OnIdleState.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnNewCustomerSave.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnNewCustomerSave.OnIdleState.IconLeftImage = null;
             this.btnNewCustomerSave.OnIdleState.IconRightImage = null;
@@ -1045,14 +1046,14 @@
             this.btnNewCustomerCancel.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnNewCustomerCancel.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnNewCustomerCancel.IconSize = 25;
-            this.btnNewCustomerCancel.IdleBorderColor = System.Drawing.Color.Red;
+            this.btnNewCustomerCancel.IdleBorderColor = System.Drawing.Color.Crimson;
             this.btnNewCustomerCancel.IdleBorderRadius = 10;
             this.btnNewCustomerCancel.IdleBorderThickness = 1;
             this.btnNewCustomerCancel.IdleFillColor = System.Drawing.Color.Red;
             this.btnNewCustomerCancel.IdleIconLeftImage = null;
             this.btnNewCustomerCancel.IdleIconRightImage = null;
             this.btnNewCustomerCancel.IndicateFocus = false;
-            this.btnNewCustomerCancel.Location = new System.Drawing.Point(26, 739);
+            this.btnNewCustomerCancel.Location = new System.Drawing.Point(56, 672);
             this.btnNewCustomerCancel.Name = "btnNewCustomerCancel";
             this.btnNewCustomerCancel.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnNewCustomerCancel.OnDisabledState.BorderRadius = 10;
@@ -1070,7 +1071,7 @@
             this.btnNewCustomerCancel.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnNewCustomerCancel.onHoverState.IconLeftImage = null;
             this.btnNewCustomerCancel.onHoverState.IconRightImage = null;
-            this.btnNewCustomerCancel.OnIdleState.BorderColor = System.Drawing.Color.Red;
+            this.btnNewCustomerCancel.OnIdleState.BorderColor = System.Drawing.Color.Crimson;
             this.btnNewCustomerCancel.OnIdleState.BorderRadius = 10;
             this.btnNewCustomerCancel.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnNewCustomerCancel.OnIdleState.BorderThickness = 1;
@@ -1099,15 +1100,16 @@
             // 
             this.lbName.AllowParentOverrides = false;
             this.lbName.AutoEllipsis = false;
+            this.lbName.AutoSize = false;
             this.lbName.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbName.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbName.Location = new System.Drawing.Point(20, 40);
+            this.lbName.Location = new System.Drawing.Point(42, 35);
             this.lbName.Name = "lbName";
             this.lbName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbName.Size = new System.Drawing.Size(37, 15);
+            this.lbName.Size = new System.Drawing.Size(64, 34);
             this.lbName.TabIndex = 43;
-            this.lbName.Text = "Name*";
+            this.lbName.Text = "<h4>Name*</h4>";
             this.lbName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1115,14 +1117,15 @@
             // 
             this.lbCity.AllowParentOverrides = false;
             this.lbCity.AutoEllipsis = false;
+            this.lbCity.AutoSize = false;
             this.lbCity.CursorType = null;
             this.lbCity.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbCity.Location = new System.Drawing.Point(20, 200);
+            this.lbCity.Location = new System.Drawing.Point(42, 195);
             this.lbCity.Name = "lbCity";
             this.lbCity.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbCity.Size = new System.Drawing.Size(21, 15);
+            this.lbCity.Size = new System.Drawing.Size(64, 34);
             this.lbCity.TabIndex = 44;
-            this.lbCity.Text = "City";
+            this.lbCity.Text = "<h4>City</h4>";
             this.lbCity.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbCity.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1130,14 +1133,15 @@
             // 
             this.lbDepartmentNewCustomer.AllowParentOverrides = false;
             this.lbDepartmentNewCustomer.AutoEllipsis = false;
+            this.lbDepartmentNewCustomer.AutoSize = false;
             this.lbDepartmentNewCustomer.CursorType = null;
             this.lbDepartmentNewCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbDepartmentNewCustomer.Location = new System.Drawing.Point(20, 160);
+            this.lbDepartmentNewCustomer.Location = new System.Drawing.Point(42, 155);
             this.lbDepartmentNewCustomer.Name = "lbDepartmentNewCustomer";
             this.lbDepartmentNewCustomer.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbDepartmentNewCustomer.Size = new System.Drawing.Size(63, 15);
+            this.lbDepartmentNewCustomer.Size = new System.Drawing.Size(83, 34);
             this.lbDepartmentNewCustomer.TabIndex = 45;
-            this.lbDepartmentNewCustomer.Text = "Department";
+            this.lbDepartmentNewCustomer.Text = "<h4>Department</h4>";
             this.lbDepartmentNewCustomer.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbDepartmentNewCustomer.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1145,14 +1149,15 @@
             // 
             this.lbEmailNewCustomer.AllowParentOverrides = false;
             this.lbEmailNewCustomer.AutoEllipsis = false;
+            this.lbEmailNewCustomer.AutoSize = false;
             this.lbEmailNewCustomer.CursorType = null;
             this.lbEmailNewCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbEmailNewCustomer.Location = new System.Drawing.Point(20, 120);
+            this.lbEmailNewCustomer.Location = new System.Drawing.Point(42, 115);
             this.lbEmailNewCustomer.Name = "lbEmailNewCustomer";
             this.lbEmailNewCustomer.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbEmailNewCustomer.Size = new System.Drawing.Size(29, 15);
+            this.lbEmailNewCustomer.Size = new System.Drawing.Size(56, 34);
             this.lbEmailNewCustomer.TabIndex = 46;
-            this.lbEmailNewCustomer.Text = "Email";
+            this.lbEmailNewCustomer.Text = "<h4>Email</h4>";
             this.lbEmailNewCustomer.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbEmailNewCustomer.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1160,14 +1165,15 @@
             // 
             this.lbState.AllowParentOverrides = false;
             this.lbState.AutoEllipsis = false;
+            this.lbState.AutoSize = false;
             this.lbState.CursorType = null;
             this.lbState.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbState.Location = new System.Drawing.Point(20, 240);
+            this.lbState.Location = new System.Drawing.Point(42, 235);
             this.lbState.Name = "lbState";
             this.lbState.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbState.Size = new System.Drawing.Size(26, 15);
+            this.lbState.Size = new System.Drawing.Size(64, 34);
             this.lbState.TabIndex = 47;
-            this.lbState.Text = "State";
+            this.lbState.Text = "<h4>State</h4>";
             this.lbState.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbState.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1175,14 +1181,15 @@
             // 
             this.lbAddress1.AllowParentOverrides = false;
             this.lbAddress1.AutoEllipsis = false;
+            this.lbAddress1.AutoSize = false;
             this.lbAddress1.CursorType = null;
             this.lbAddress1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbAddress1.Location = new System.Drawing.Point(20, 360);
+            this.lbAddress1.Location = new System.Drawing.Point(40, 355);
             this.lbAddress1.Name = "lbAddress1";
             this.lbAddress1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbAddress1.Size = new System.Drawing.Size(48, 15);
+            this.lbAddress1.Size = new System.Drawing.Size(74, 34);
             this.lbAddress1.TabIndex = 48;
-            this.lbAddress1.Text = "Address1";
+            this.lbAddress1.Text = "<h4>Address1</h4>";
             this.lbAddress1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbAddress1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1190,14 +1197,15 @@
             // 
             this.lbCountry.AllowParentOverrides = false;
             this.lbCountry.AutoEllipsis = false;
+            this.lbCountry.AutoSize = false;
             this.lbCountry.CursorType = null;
             this.lbCountry.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbCountry.Location = new System.Drawing.Point(20, 320);
+            this.lbCountry.Location = new System.Drawing.Point(40, 315);
             this.lbCountry.Name = "lbCountry";
             this.lbCountry.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbCountry.Size = new System.Drawing.Size(43, 15);
+            this.lbCountry.Size = new System.Drawing.Size(64, 34);
             this.lbCountry.TabIndex = 49;
-            this.lbCountry.Text = "Country";
+            this.lbCountry.Text = "<h4>Country</h4>";
             this.lbCountry.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbCountry.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1205,14 +1213,15 @@
             // 
             this.lbZip.AllowParentOverrides = false;
             this.lbZip.AutoEllipsis = false;
+            this.lbZip.AutoSize = false;
             this.lbZip.CursorType = null;
             this.lbZip.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbZip.Location = new System.Drawing.Point(20, 280);
+            this.lbZip.Location = new System.Drawing.Point(42, 275);
             this.lbZip.Name = "lbZip";
             this.lbZip.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbZip.Size = new System.Drawing.Size(17, 15);
+            this.lbZip.Size = new System.Drawing.Size(48, 34);
             this.lbZip.TabIndex = 50;
-            this.lbZip.Text = "Zip";
+            this.lbZip.Text = "<h4>Zip</h4>";
             this.lbZip.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbZip.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1220,14 +1229,15 @@
             // 
             this.lbAddress2.AllowParentOverrides = false;
             this.lbAddress2.AutoEllipsis = false;
+            this.lbAddress2.AutoSize = false;
             this.lbAddress2.CursorType = null;
             this.lbAddress2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbAddress2.Location = new System.Drawing.Point(20, 400);
+            this.lbAddress2.Location = new System.Drawing.Point(40, 395);
             this.lbAddress2.Name = "lbAddress2";
             this.lbAddress2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbAddress2.Size = new System.Drawing.Size(48, 15);
+            this.lbAddress2.Size = new System.Drawing.Size(64, 34);
             this.lbAddress2.TabIndex = 51;
-            this.lbAddress2.Text = "Address2";
+            this.lbAddress2.Text = "<h4>Address2</h4>";
             this.lbAddress2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbAddress2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1235,14 +1245,15 @@
             // 
             this.lbPhone.AllowParentOverrides = false;
             this.lbPhone.AutoEllipsis = false;
+            this.lbPhone.AutoSize = false;
             this.lbPhone.CursorType = null;
             this.lbPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbPhone.Location = new System.Drawing.Point(20, 80);
+            this.lbPhone.Location = new System.Drawing.Point(42, 75);
             this.lbPhone.Name = "lbPhone";
             this.lbPhone.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbPhone.Size = new System.Drawing.Size(34, 15);
+            this.lbPhone.Size = new System.Drawing.Size(51, 34);
             this.lbPhone.TabIndex = 52;
-            this.lbPhone.Text = "Phone";
+            this.lbPhone.Text = "<h4>Phone</h4>";
             this.lbPhone.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbPhone.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1250,14 +1261,15 @@
             // 
             this.lbType.AllowParentOverrides = false;
             this.lbType.AutoEllipsis = false;
+            this.lbType.AutoSize = false;
             this.lbType.CursorType = null;
             this.lbType.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbType.Location = new System.Drawing.Point(20, 440);
+            this.lbType.Location = new System.Drawing.Point(40, 432);
             this.lbType.Name = "lbType";
             this.lbType.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbType.Size = new System.Drawing.Size(30, 15);
+            this.lbType.Size = new System.Drawing.Size(62, 39);
             this.lbType.TabIndex = 53;
-            this.lbType.Text = "Type*";
+            this.lbType.Text = "<h4>Type*</h4>";
             this.lbType.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbType.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1268,12 +1280,12 @@
             this.lbNotes.AutoSize = false;
             this.lbNotes.CursorType = null;
             this.lbNotes.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbNotes.Location = new System.Drawing.Point(20, 480);
+            this.lbNotes.Location = new System.Drawing.Point(37, 465);
             this.lbNotes.Name = "lbNotes";
             this.lbNotes.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbNotes.Size = new System.Drawing.Size(31, 15);
+            this.lbNotes.Size = new System.Drawing.Size(56, 40);
             this.lbNotes.TabIndex = 54;
-            this.lbNotes.Text = "Notes";
+            this.lbNotes.Text = "<h4>Notes</h4>";
             this.lbNotes.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbNotes.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1281,14 +1293,15 @@
             // 
             this.lbDate.AllowParentOverrides = false;
             this.lbDate.AutoEllipsis = false;
+            this.lbDate.AutoSize = false;
             this.lbDate.CursorType = null;
             this.lbDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbDate.Location = new System.Drawing.Point(20, 611);
+            this.lbDate.Location = new System.Drawing.Point(34, 604);
             this.lbDate.Name = "lbDate";
             this.lbDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbDate.Size = new System.Drawing.Size(24, 15);
+            this.lbDate.Size = new System.Drawing.Size(56, 35);
             this.lbDate.TabIndex = 55;
-            this.lbDate.Text = "Date";
+            this.lbDate.Text = "<h4>Date</h4>";
             this.lbDate.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbDate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -1320,7 +1333,7 @@
             this.tbNewCustomerName.IconRight = null;
             this.tbNewCustomerName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.tbNewCustomerName.Lines = new string[0];
-            this.tbNewCustomerName.Location = new System.Drawing.Point(90, 35);
+            this.tbNewCustomerName.Location = new System.Drawing.Point(131, 43);
             this.tbNewCustomerName.MaxLength = 32767;
             this.tbNewCustomerName.MinimumSize = new System.Drawing.Size(1, 1);
             this.tbNewCustomerName.Modified = false;
@@ -1356,7 +1369,7 @@
             this.tbNewCustomerName.SelectionLength = 0;
             this.tbNewCustomerName.SelectionStart = 0;
             this.tbNewCustomerName.ShortcutsEnabled = true;
-            this.tbNewCustomerName.Size = new System.Drawing.Size(147, 26);
+            this.tbNewCustomerName.Size = new System.Drawing.Size(196, 26);
             this.tbNewCustomerName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.tbNewCustomerName.TabIndex = 56;
             this.tbNewCustomerName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1367,13 +1380,31 @@
             this.tbNewCustomerName.UseSystemPasswordChar = false;
             this.tbNewCustomerName.WordWrap = true;
             // 
+            // blbNewCustomerTitle
+            // 
+            this.blbNewCustomerTitle.AllowParentOverrides = false;
+            this.blbNewCustomerTitle.AutoEllipsis = false;
+            this.blbNewCustomerTitle.AutoSize = false;
+            this.blbNewCustomerTitle.Cursor = System.Windows.Forms.Cursors.Default;
+            this.blbNewCustomerTitle.CursorType = System.Windows.Forms.Cursors.Default;
+            this.blbNewCustomerTitle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.blbNewCustomerTitle.Location = new System.Drawing.Point(20, -20);
+            this.blbNewCustomerTitle.Name = "blbNewCustomerTitle";
+            this.blbNewCustomerTitle.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.blbNewCustomerTitle.Size = new System.Drawing.Size(139, 49);
+            this.blbNewCustomerTitle.TabIndex = 57;
+            this.blbNewCustomerTitle.Text = "<h2>New Customer</h2>";
+            this.blbNewCustomerTitle.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.blbNewCustomerTitle.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // newCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            this.ClientSize = new System.Drawing.Size(458, 788);
+            this.ClientSize = new System.Drawing.Size(433, 731);
+            this.Controls.Add(this.blbNewCustomerTitle);
             this.Controls.Add(this.lbDate);
             this.Controls.Add(this.lbNotes);
             this.Controls.Add(this.lbType);
@@ -1402,10 +1433,11 @@
             this.Controls.Add(this.tbNewCustomerPhone);
             this.Controls.Add(this.dtpNewCustomer);
             this.Controls.Add(this.tbNewCustomerName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "newCustomer";
             this.Text = "newCustomer";
+            this.Load += new System.EventHandler(this.newCustomer_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1438,5 +1470,6 @@
         private Bunifu.UI.WinForms.BunifuLabel lbNotes;
         private Bunifu.UI.WinForms.BunifuLabel lbDate;
         private Bunifu.UI.WinForms.BunifuTextBox tbNewCustomerName;
+        private Bunifu.UI.WinForms.BunifuLabel blbNewCustomerTitle;
     }
 }

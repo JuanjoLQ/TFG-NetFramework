@@ -2,12 +2,6 @@
 using capaEntidad;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
 using System.Data.SqlClient;
@@ -35,6 +29,29 @@ namespace Tfg_NetFramework
 
         private void newLead_Load(object sender, EventArgs e)
         {
+
+            //Labels
+            blbNewLeadTitle.Text = "<h2>" + Res.NewLead + "</h2>";
+            lbNewLeadName.Text = "<h4>" + Res.LeadName + "*:" + "</h4>";
+            lbNewLeadDate.Text = "<h4>" + Res.date + "*:" + "</h4>";
+            lbNewLeadStage.Text = "<h4>" + Res.Stage + "*:" + "</h4>";
+            lbNewLeadAmount.Text = "<h4>" + Res.Amount + "</h4>";
+            lbNewLeadNotes.Text = "<h4>" + Res.Notes + "</h4>";
+            lbNewLeadAssignedTo.Text = "<h4>" + Res.AssignedTo + "*:" + "</h4>";
+            lbNewLeadDepartment.Text = "<h4>" + Res.department + "</h4>";
+            lbNewLeadEmployee.Text = "<h4>" +  Res.Employees + "</h4>";
+            lbNewLeadCustomer.Text = "<h4>" + Res.Customer + "</h4>";
+            lbNewLeadCreatedAt.Text = "<h4>" + Res.CreatedAt + "*:" + "</h4>";
+
+            //Textboxs
+            tbNewLeadName.PlaceholderText = Res.LeadName ;
+            tbNewLeadAmount.PlaceholderText = Res.LeadAmount ;
+            tbNewLeadNotes.PlaceholderText = Res.LeadNotes ;
+
+            //Buttons
+            bbtnCancel.Text = Res.Exit;
+            bbtnSave.Text = Res.Save;
+
             ArrayList array = new ArrayList();
             try
             {
@@ -81,9 +98,19 @@ namespace Tfg_NetFramework
         {
             var idCustomer = string.Empty;
             var idUser = string.Empty;
-            
-            if (tbNewLeadName.Text != string.Empty && cbNewLeadStage.SelectedItem.ToString() != string.Empty &&
-            lBNewLeadEmployees.SelectedItem.ToString() != string.Empty && lBNewLeadEmployees != null && lBNewLeadCustomers.SelectedItem.ToString() != string.Empty && lBNewLeadCustomers != null)
+
+            string newLeadStage = cbNewLeadStage.SelectedItem == null ? String.Empty :
+                    cbNewLeadStage.SelectedItem.ToString();
+
+            string newLeadEmployees = lBNewLeadEmployees.SelectedItem == null ? String.Empty :
+                    lBNewLeadEmployees.SelectedItem.ToString();
+
+            string newLeadCustomers = lBNewLeadCustomers.SelectedItem == null ? String.Empty :
+                    lBNewLeadCustomers.SelectedItem.ToString();
+
+            if (tbNewLeadName.Text != string.Empty && newLeadStage != string.Empty &&
+            newLeadEmployees != string.Empty
+            && newLeadCustomers != string.Empty)
             {
                 string[] words = lBNewLeadCustomers.SelectedItem.ToString().Split(' ');
                 
@@ -96,11 +123,11 @@ namespace Tfg_NetFramework
                     words[1] = words[words.Length - 1];
                 }
 
-                MessageBox.Show(words[0]);
+                //MessageBox.Show(words[0]);
                 
                 words[1] = words[1].Replace("(", string.Empty).Replace(")", string.Empty);
 
-                MessageBox.Show(words[1]);
+                //MessageBox.Show(words[1]);
 
                 foreach (Tuple<string, string, string> k in customers) if (k.Item1 == words[0] && k.Item2 == words[1])
                 {
@@ -149,6 +176,17 @@ namespace Tfg_NetFramework
         {
             this.Close();
         }
-        
+
+        private void tbNewLeadAmount_Leave(object sender, EventArgs e)
+        {
+            int numericValue;
+            bool isNumber = int.TryParse(tbNewLeadAmount.Text, out numericValue);
+
+            if (isNumber == false && tbNewLeadAmount.Text != "")
+            {
+                tbNewLeadAmount.Text = "";
+                MessageBox.Show("Introduzca un valor numérico.");
+            }            
+        }
     }
 }

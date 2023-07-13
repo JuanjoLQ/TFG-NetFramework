@@ -243,6 +243,7 @@
     <Compile Include="cnDeleteBBDD.cs" />
     <Compile Include="cnDepartment.cs" />
     <Compile Include="cnDepartmentUser.cs" />
+    <Compile Include="cnDgvReminder.cs" />
     <Compile Include="cnDoBackup.cs" />
     <Compile Include="cnCustomer.cs" />
     <Compile Include="cnDgvAllowance.cs" />
@@ -254,6 +255,7 @@
     <Compile Include="cnMileage.cs" />
     <Compile Include="cnPipelineFlps.cs" />
     <Compile Include="cnProduct.cs" />
+    <Compile Include="cnReminder.cs" />
     <Compile Include="cnRestoreBackUp.cs" />
     <Compile Include="cnRole.cs" />
     <Compile Include="cnRoleUser.cs" />

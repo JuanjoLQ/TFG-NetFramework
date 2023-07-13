@@ -1,16 +1,7 @@
-﻿using Google.Protobuf.Collections;
-using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI.Relational;
+﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace capaDatos
 {
@@ -95,51 +86,6 @@ namespace capaDatos
                 dgvUser.Rows.Add(newRow);
             }
         }
-
-        //public void dgvUser()
-        //{
-        //    MySqlCommand codigo = new MySqlCommand();
-        //    MySqlConnection conectanos = new MySqlConnection();
-        //    MySqlConnection coneccion = new MySqlConnection(cadenaConexion);
-
-
-        //    MySqlConnection conn = new MySqlConnection(cadenaConexion);
-        //    conn.Open();
-        //    string query = "SELECT idUser FROM user where email='" + email + "';";
-
-        //    MySqlCommand command = new MySqlCommand(query, conn);
-
-        //    //
-
-        //    coneccion.Open();
-        //    codigo.Connection = coneccion;
-        //    codigo.CommandText = ("select * from cliente");
-
-        //    try
-        //    {
-
-        //        MySqlDataAdapter seleccionar = new MySqlDataAdapter();
-        //        seleccionar.SelectCommand = codigo;
-        //        DataTable datostabla = new DataTable();
-        //        BindingSource formulario = new BindingSource();
-        //        formulario.DataSource = datostabla;
-        //        data.DataSource = formulario;
-        //        seleccionar.Update(datostabla);
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
-
-        //    //
-
-        //}
-
-
-
-
-
 
     }
 }

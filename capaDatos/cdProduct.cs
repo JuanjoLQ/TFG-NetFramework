@@ -28,7 +28,6 @@ namespace capaDatos
                     cmd.Parameters.AddWithValue("@unitOfMeasure", p.unitOfMeasure);
                     cmd.Parameters.AddWithValue("@productCategory", p.productCategory);
                     cmd.Parameters.AddWithValue("@state", p.state);
-                    cmd.Parameters.AddWithValue("@idWarehouse", p.idWarehouse);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -135,7 +134,7 @@ namespace capaDatos
                 }
                 else
                 {
-                    MessageBox.Show("No hay Warehouses.");
+                    MessageBox.Show("No hay Productos.");
                 }
 
                 row.Close();// Close reader.

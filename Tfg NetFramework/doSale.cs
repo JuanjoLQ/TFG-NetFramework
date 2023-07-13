@@ -2,13 +2,7 @@
 using CapaNegocio;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tfg_NetFramework
@@ -19,6 +13,7 @@ namespace Tfg_NetFramework
         cnSale cnSale = new cnSale();
         cnLead cnLead = new cnLead();
         ceDescripcionItem descrItem = null;
+
         public doSale(ceDescripcionItem descripcionItem)
         {
             InitializeComponent();
@@ -28,6 +23,19 @@ namespace Tfg_NetFramework
             arr = cnWarehouse.obtainAllProductsFromWarehouses();
 
             fillBdgvProductsIntoWarehouse(arr);
+
+        }
+
+        private void doSale_Load(object sender, EventArgs e)
+        {
+            //Labels
+            blbTitleDoSale.Text = "<h2>" + Res.DoSale + "</h2>";
+            blbTitleTableToSale.Text = "<h3>" + Res.ProductsIncludedInTheSale + "</h3>";
+            blbTitleProductsIntoWarehouses.Text = "<h3>" + Res.ProductsIntoWarehouses + "</h3>";
+
+            //Buttons
+            bbtnDoSale.Text = Res.DoSale;
+            btnClose.Text = Res.Exit;
 
         }
 
@@ -54,10 +62,6 @@ namespace Tfg_NetFramework
             }
         }
 
-        private void doSale_Load(object sender, EventArgs e)
-        {
-            
-        }
 
         private void bbtnDoSale_Click(object sender, EventArgs e)
         {
@@ -65,14 +69,14 @@ namespace Tfg_NetFramework
             if (bdgvProductsIntoSale.Rows.Count > 0)
             {
                 string dt = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                MessageBox.Show("Datetime today: " + dt);
+                //MessageBox.Show("Datetime today: " + dt);
                 cnSale.createSale(dt);
                 int idSale = cnSale.idSale(dt);
-                MessageBox.Show("idSale:" + idSale);
+                //MessageBox.Show("idSale:" + idSale);
                 foreach (DataGridViewRow row in bdgvProductsIntoSale.Rows)
                 {
                     idProduct = int.Parse(row.Cells[0].Value.ToString());
-                    MessageBox.Show("idProduct: " + idProduct);
+                    //MessageBox.Show("idProduct: " + idProduct);
                     cnSale.addSale(idProduct, idSale);
                 }
                 cnLead.leadToSale(descrItem.Lead.Idlead,idSale);

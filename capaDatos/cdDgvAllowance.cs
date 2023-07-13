@@ -1,10 +1,7 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Bunifu.UI.WinForms;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace capaDatos
@@ -80,7 +77,7 @@ namespace capaDatos
             }
         }
 
-        public void updateDatagrid(DataGridView dgvAllowance, Hashtable pdfs)
+        public void updateDatagrid(BunifuDataGridView dgvAllowance, Hashtable pdfs)
         {
             pdfs.Clear();
             dgvAllowance.RowCount = 0;

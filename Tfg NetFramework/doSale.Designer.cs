@@ -130,7 +130,7 @@
             this.bdgvProductsIntoSale.RowHeadersWidth = 51;
             this.bdgvProductsIntoSale.RowTemplate.Height = 40;
             this.bdgvProductsIntoSale.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bdgvProductsIntoSale.Size = new System.Drawing.Size(758, 227);
+            this.bdgvProductsIntoSale.Size = new System.Drawing.Size(839, 227);
             this.bdgvProductsIntoSale.TabIndex = 15;
             this.bdgvProductsIntoSale.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bdgvProductsIntoSale.DoubleClick += new System.EventHandler(this.bdgvProductsIntoSale_DoubleClick);
@@ -195,7 +195,7 @@
             this.bbtnDoSale.AutoSizeLeftIcon = true;
             this.bbtnDoSale.AutoSizeRightIcon = true;
             this.bbtnDoSale.BackColor = System.Drawing.Color.Transparent;
-            this.bbtnDoSale.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bbtnDoSale.BackColor1 = System.Drawing.Color.RoyalBlue;
             this.bbtnDoSale.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bbtnDoSale.BackgroundImage")));
             this.bbtnDoSale.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnDoSale.ButtonText = "Do Sale";
@@ -224,14 +224,14 @@
             this.bbtnDoSale.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.bbtnDoSale.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.bbtnDoSale.IconSize = 25;
-            this.bbtnDoSale.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnDoSale.IdleBorderColor = System.Drawing.Color.RoyalBlue;
             this.bbtnDoSale.IdleBorderRadius = 10;
             this.bbtnDoSale.IdleBorderThickness = 1;
-            this.bbtnDoSale.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnDoSale.IdleFillColor = System.Drawing.Color.RoyalBlue;
             this.bbtnDoSale.IdleIconLeftImage = null;
             this.bbtnDoSale.IdleIconRightImage = null;
             this.bbtnDoSale.IndicateFocus = false;
-            this.bbtnDoSale.Location = new System.Drawing.Point(832, 373);
+            this.bbtnDoSale.Location = new System.Drawing.Point(896, 439);
             this.bbtnDoSale.Name = "bbtnDoSale";
             this.bbtnDoSale.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bbtnDoSale.OnDisabledState.BorderRadius = 10;
@@ -249,11 +249,11 @@
             this.bbtnDoSale.onHoverState.ForeColor = System.Drawing.Color.White;
             this.bbtnDoSale.onHoverState.IconLeftImage = null;
             this.bbtnDoSale.onHoverState.IconRightImage = null;
-            this.bbtnDoSale.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnDoSale.OnIdleState.BorderColor = System.Drawing.Color.RoyalBlue;
             this.bbtnDoSale.OnIdleState.BorderRadius = 10;
             this.bbtnDoSale.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnDoSale.OnIdleState.BorderThickness = 1;
-            this.bbtnDoSale.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnDoSale.OnIdleState.FillColor = System.Drawing.Color.RoyalBlue;
             this.bbtnDoSale.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.bbtnDoSale.OnIdleState.IconLeftImage = null;
             this.bbtnDoSale.OnIdleState.IconRightImage = null;
@@ -265,7 +265,7 @@
             this.bbtnDoSale.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bbtnDoSale.OnPressedState.IconLeftImage = null;
             this.bbtnDoSale.OnPressedState.IconRightImage = null;
-            this.bbtnDoSale.Size = new System.Drawing.Size(150, 55);
+            this.bbtnDoSale.Size = new System.Drawing.Size(95, 57);
             this.bbtnDoSale.TabIndex = 16;
             this.bbtnDoSale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bbtnDoSale.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -278,15 +278,16 @@
             // 
             this.blbTitleDoSale.AllowParentOverrides = false;
             this.blbTitleDoSale.AutoEllipsis = false;
+            this.blbTitleDoSale.AutoSize = false;
             this.blbTitleDoSale.Cursor = System.Windows.Forms.Cursors.Default;
             this.blbTitleDoSale.CursorType = System.Windows.Forms.Cursors.Default;
             this.blbTitleDoSale.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.blbTitleDoSale.Location = new System.Drawing.Point(36, 12);
+            this.blbTitleDoSale.Location = new System.Drawing.Point(36, -9);
             this.blbTitleDoSale.Name = "blbTitleDoSale";
             this.blbTitleDoSale.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.blbTitleDoSale.Size = new System.Drawing.Size(39, 15);
+            this.blbTitleDoSale.Size = new System.Drawing.Size(88, 44);
             this.blbTitleDoSale.TabIndex = 17;
-            this.blbTitleDoSale.Text = "Do Sale";
+            this.blbTitleDoSale.Text = "<h2>Do Sale</h2>";
             this.blbTitleDoSale.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.blbTitleDoSale.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -358,7 +359,7 @@
             this.bdgvProductsIntoWarehouse.RowHeadersWidth = 51;
             this.bdgvProductsIntoWarehouse.RowTemplate.Height = 40;
             this.bdgvProductsIntoWarehouse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.bdgvProductsIntoWarehouse.Size = new System.Drawing.Size(758, 227);
+            this.bdgvProductsIntoWarehouse.Size = new System.Drawing.Size(839, 227);
             this.bdgvProductsIntoWarehouse.TabIndex = 18;
             this.bdgvProductsIntoWarehouse.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.bdgvProductsIntoWarehouse.DoubleClick += new System.EventHandler(this.bdgvProductsIntoWarehouse_DoubleClick);
@@ -416,14 +417,15 @@
             // 
             this.blbTitleProductsIntoWarehouses.AllowParentOverrides = false;
             this.blbTitleProductsIntoWarehouses.AutoEllipsis = false;
+            this.blbTitleProductsIntoWarehouses.AutoSize = false;
             this.blbTitleProductsIntoWarehouses.CursorType = null;
             this.blbTitleProductsIntoWarehouses.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.blbTitleProductsIntoWarehouses.Location = new System.Drawing.Point(36, 315);
+            this.blbTitleProductsIntoWarehouses.Location = new System.Drawing.Point(36, 295);
             this.blbTitleProductsIntoWarehouses.Name = "blbTitleProductsIntoWarehouses";
             this.blbTitleProductsIntoWarehouses.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.blbTitleProductsIntoWarehouses.Size = new System.Drawing.Size(138, 15);
+            this.blbTitleProductsIntoWarehouses.Size = new System.Drawing.Size(244, 39);
             this.blbTitleProductsIntoWarehouses.TabIndex = 19;
-            this.blbTitleProductsIntoWarehouses.Text = "Products Into Warehouses";
+            this.blbTitleProductsIntoWarehouses.Text = "<h3>Products Into Warehouses</h3>";
             this.blbTitleProductsIntoWarehouses.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.blbTitleProductsIntoWarehouses.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -431,14 +433,15 @@
             // 
             this.blbTitleTableToSale.AllowParentOverrides = false;
             this.blbTitleTableToSale.AutoEllipsis = false;
+            this.blbTitleTableToSale.AutoSize = false;
             this.blbTitleTableToSale.CursorType = null;
             this.blbTitleTableToSale.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.blbTitleTableToSale.Location = new System.Drawing.Point(36, 41);
+            this.blbTitleTableToSale.Location = new System.Drawing.Point(36, 24);
             this.blbTitleTableToSale.Name = "blbTitleTableToSale";
             this.blbTitleTableToSale.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.blbTitleTableToSale.Size = new System.Drawing.Size(152, 15);
+            this.blbTitleTableToSale.Size = new System.Drawing.Size(278, 41);
             this.blbTitleTableToSale.TabIndex = 20;
-            this.blbTitleTableToSale.Text = "Products included in the sale";
+            this.blbTitleTableToSale.Text = "<h3>Products included in the sale</h3>";
             this.blbTitleTableToSale.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.blbTitleTableToSale.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -453,7 +456,7 @@
             this.btnClose.AutoSizeLeftIcon = true;
             this.btnClose.AutoSizeRightIcon = true;
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackColor1 = System.Drawing.Color.Red;
+            this.btnClose.BackColor1 = System.Drawing.Color.Crimson;
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnClose.ButtonText = "Close";
@@ -482,14 +485,14 @@
             this.btnClose.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnClose.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnClose.IconSize = 25;
-            this.btnClose.IdleBorderColor = System.Drawing.Color.Red;
+            this.btnClose.IdleBorderColor = System.Drawing.Color.Crimson;
             this.btnClose.IdleBorderRadius = 10;
             this.btnClose.IdleBorderThickness = 1;
-            this.btnClose.IdleFillColor = System.Drawing.Color.Red;
+            this.btnClose.IdleFillColor = System.Drawing.Color.Crimson;
             this.btnClose.IdleIconLeftImage = null;
             this.btnClose.IdleIconRightImage = null;
             this.btnClose.IndicateFocus = false;
-            this.btnClose.Location = new System.Drawing.Point(887, 506);
+            this.btnClose.Location = new System.Drawing.Point(896, 500);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnClose.OnDisabledState.BorderRadius = 10;
@@ -499,27 +502,27 @@
             this.btnClose.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnClose.OnDisabledState.IconLeftImage = null;
             this.btnClose.OnDisabledState.IconRightImage = null;
-            this.btnClose.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.btnClose.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(125)))), ((int)(((byte)(147)))));
             this.btnClose.onHoverState.BorderRadius = 10;
             this.btnClose.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnClose.onHoverState.BorderThickness = 1;
-            this.btnClose.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(114)))), ((int)(((byte)(114)))));
+            this.btnClose.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(125)))), ((int)(((byte)(147)))));
             this.btnClose.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnClose.onHoverState.IconLeftImage = null;
             this.btnClose.onHoverState.IconRightImage = null;
-            this.btnClose.OnIdleState.BorderColor = System.Drawing.Color.Red;
+            this.btnClose.OnIdleState.BorderColor = System.Drawing.Color.Crimson;
             this.btnClose.OnIdleState.BorderRadius = 10;
             this.btnClose.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnClose.OnIdleState.BorderThickness = 1;
-            this.btnClose.OnIdleState.FillColor = System.Drawing.Color.Red;
+            this.btnClose.OnIdleState.FillColor = System.Drawing.Color.Crimson;
             this.btnClose.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnClose.OnIdleState.IconLeftImage = null;
             this.btnClose.OnIdleState.IconRightImage = null;
-            this.btnClose.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnClose.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))));
             this.btnClose.OnPressedState.BorderRadius = 10;
             this.btnClose.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnClose.OnPressedState.BorderThickness = 1;
-            this.btnClose.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnClose.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(121)))), ((int)(((byte)(11)))), ((int)(((byte)(33)))));
             this.btnClose.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnClose.OnPressedState.IconLeftImage = null;
             this.btnClose.OnPressedState.IconRightImage = null;
@@ -538,19 +541,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1003, 588);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.blbTitleTableToSale);
             this.Controls.Add(this.blbTitleProductsIntoWarehouses);
             this.Controls.Add(this.bdgvProductsIntoWarehouse);
             this.Controls.Add(this.blbTitleDoSale);
             this.Controls.Add(this.bbtnDoSale);
             this.Controls.Add(this.bdgvProductsIntoSale);
+            this.Controls.Add(this.blbTitleTableToSale);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "doSale";
             this.Text = "doSale";
             this.Load += new System.EventHandler(this.doSale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bdgvProductsIntoSale)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdgvProductsIntoWarehouse)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

@@ -1,11 +1,6 @@
 ﻿using capaDatos;
 using capaEntidad;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CapaNegocio
 {
@@ -50,6 +45,16 @@ namespace CapaNegocio
         public void splitProductNoStoredAndStored(ceProduct p, int idProduct, int amount, int maxQt, string newWarehouse)
         {
             cdWarehouse.splitProductNoStoredAndStored(p, idProduct, amount, maxQt, newWarehouse);
+        }
+
+        public void transferProductOtherWarehouse(int idProduct, string warehouseOrigin, string destinationWarehouse, string fechaInicio, string fechaLlegada)
+        {
+            cdWarehouse.transferProductOtherWarehouse(idProduct, warehouseOrigin, destinationWarehouse, fechaInicio, fechaLlegada);
+        }
+
+        public void checkInTransitProducts()
+        {
+            cdWarehouse.checkInTransitProducts();
         }
 
     }

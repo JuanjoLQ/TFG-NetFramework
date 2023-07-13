@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using System.Xml.Linq;
+using Bunifu.UI.WinForms;
+using MySqlX.XDevAPI.Relational;
 
 namespace capaDatos
 {
@@ -79,9 +81,11 @@ namespace capaDatos
             }
         }
 
-        public void updateDatagrid(DataGridView dgvCustomer_Lead)
+        public void updateDatagrid(BunifuDataGridView dgvCustomer_Lead)
         {
-            dgvCustomer_Lead.RowCount = 0;
+
+            //dgvCustomer_Lead.RowCount = 0;
+            dgvCustomer_Lead.Rows.Clear();
             ceLead lead = null;
 
             for (int i = 0; i < arrayLeads_Customer.Count; i++)

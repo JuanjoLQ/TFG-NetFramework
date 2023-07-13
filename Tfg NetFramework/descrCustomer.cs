@@ -22,21 +22,45 @@ namespace Tfg_NetFramework
 
         private void descrCustomer_Load(object sender, EventArgs e)
         {
-            tbCustomerName.Text = customer.Name;
-            tbCustomerDepartment.Text = customer.Department;
-            tbCustomerType.Text = customer.Type;
-            tbCustomerDate.Text = customer.Date;
-            tbCustomerState.Text = customer.State;
+            //Labels
+            lbCustomerInformation.Text = "<h3>" + Res.CustomerInfo + "</h3>";
+            lbCustomerName.Text = "<h4>" + Res.nameCustomer + ":" + "</h4>";
+            lbCustomerDepartment.Text = "<h4>" + Res.department + ":" + "</h4>";
+            lbCustomerType.Text = "<h4>" + Res.Type + ":" + "</h4>";
+            lbCustomerDate.Text = "<h4>" + Res.date + ":" + "</h4>";
+            lbCustomerState.Text = "<h4>" + Res.state + ":" + "</h4>";
 
-            tbCustomerEmail.Text = customer.Email;
-            tbCustomerPhone.Text = customer.Phone;
-            tbCustomerAddress1.Text = customer.Adress1;
-            tbCustomerAddress2.Text = customer.Adress2;
-            tbCustomerCity.Text = customer.City;
-            tbCustomerCountry.Text = customer.Country;
-            tbCustomerZip.Text = customer.Zip;
+            lbContactInfo.Text = "<h3>" + Res.ContactInfo + "</h3>";
+            lbCustomerEmail.Text = "<h4>" + Res.Email + ":" + "</h4>";
+            lbCustomerPhone.Text = "<h4>" + Res.Phone + ":" + "</h4>";
+            lbCustomerAddress1.Text = "<h4>" + Res.MainAddress + ":" + "</h4>";
+            lbCustomerAddress2.Text = "<h4>" + Res.SecondaryAddress + ":" + "</h4>";
+            lbCustomerCity.Text = "<h4>" + Res.City + ":" + "</h4>";
+            lbCustomerCountry.Text = "<h4>" + Res.Country + ":" + "</h4>";
+            lbCustomerZip.Text = "<h4>" + Res.Zip + ":" + "</h4>";
 
-            tbCustomerNotes.Text = customer.Notes;
+            lbCustomerNotes.Text = "<h3>" + Res.Notes + "</h3>";
+
+            //Textboxs
+            tbCustomerName.PlaceholderText = customer.Name;
+            tbCustomerDepartment.PlaceholderText = customer.Department;
+            tbCustomerType.PlaceholderText = customer.Type;
+            tbCustomerDate.PlaceholderText = customer.Date;
+            tbCustomerState.PlaceholderText = customer.State;
+
+            tbCustomerEmail.PlaceholderText = customer.Email;
+            tbCustomerPhone.PlaceholderText = customer.Phone;
+            tbCustomerAddress1.PlaceholderText = customer.Adress1;
+            tbCustomerAddress2.PlaceholderText = customer.Adress2;
+            tbCustomerCity.PlaceholderText = customer.City;
+            tbCustomerCountry.PlaceholderText = customer.Country;
+            tbCustomerZip.PlaceholderText = customer.Zip;
+
+            tbCustomerNotes.PlaceholderText = customer.Notes;
+
+            //Buttons
+            btnClose.Text = Res.Exit ;
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

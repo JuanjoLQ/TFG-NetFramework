@@ -29,129 +29,120 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(descripcionItemList));
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties33 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties34 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties35 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties36 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties37 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties38 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties39 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties40 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties41 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties42 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties43 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties44 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderEdges();
-            this.lbCustomerName = new System.Windows.Forms.Label();
-            this.lbAssignedTo = new System.Windows.Forms.Label();
-            this.lbCustomerEmail = new System.Windows.Forms.Label();
-            this.lbNameCustomer = new System.Windows.Forms.Label();
-            this.lbAmountLead = new System.Windows.Forms.Label();
-            this.lbEmailCustomer = new System.Windows.Forms.Label();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnQualified = new System.Windows.Forms.Button();
             this.btnProposition = new System.Windows.Forms.Button();
             this.btnWon = new System.Windows.Forms.Button();
             this.gbLeadStages = new System.Windows.Forms.GroupBox();
             this.btnSale = new System.Windows.Forms.Button();
-            this.tbLeadNotes = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageNotes = new System.Windows.Forms.TabPage();
-            this.lbNotes = new System.Windows.Forms.Label();
+            this.tbLeadNotes = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.lbNotes = new Bunifu.UI.WinForms.BunifuLabel();
             this.tabPageExtraInfo = new System.Windows.Forms.TabPage();
-            this.tbCustomerType = new System.Windows.Forms.TextBox();
-            this.tbCustomerDate = new System.Windows.Forms.TextBox();
-            this.tbCustomerDepartment = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbCustomerInformation = new System.Windows.Forms.Label();
-            this.tbCustomerPhone = new System.Windows.Forms.TextBox();
-            this.lbPhone = new System.Windows.Forms.Label();
-            this.tbCustomerCountry = new System.Windows.Forms.TextBox();
-            this.tbCustomerZip = new System.Windows.Forms.TextBox();
-            this.tbCustomerCity = new System.Windows.Forms.TextBox();
-            this.lbCountry = new System.Windows.Forms.Label();
-            this.lbZip = new System.Windows.Forms.Label();
-            this.tbCustomerAddress1 = new System.Windows.Forms.TextBox();
-            this.tbCustomerAddress2 = new System.Windows.Forms.TextBox();
-            this.tbCustomerCompanyName = new System.Windows.Forms.TextBox();
-            this.lbCompanyName = new System.Windows.Forms.Label();
-            this.lbAddress1 = new System.Windows.Forms.Label();
-            this.lbSecondaryAddress = new System.Windows.Forms.Label();
-            this.lbCity = new System.Windows.Forms.Label();
-            this.lbContactInfo = new System.Windows.Forms.Label();
-            this.lbUserAssignedTo = new System.Windows.Forms.Label();
-            this.lbCustomer = new System.Windows.Forms.Label();
-            this.lbLeadName = new System.Windows.Forms.Label();
-            this.lbLeadExpDate = new System.Windows.Forms.Label();
-            this.lbLeadCreatedAt = new System.Windows.Forms.Label();
-            this.lbLeadDate = new System.Windows.Forms.Label();
+            this.lbDate = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbType = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbCustomerInformation = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbZip = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbCountry = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbCity = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbSecondaryAddress = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbCompanyName = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbPhone = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbContactInfo = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbAddress1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.tbCustomerCountry = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.tbCustomerPhone = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.tbCustomerZip = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.tbCustomerCity = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.tbCustomerDate = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.tbCustomerDepartment = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.tbCustomerType = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.tbCustomerAddress2 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.tbCustomerAddress1 = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.tbCustomerCompanyName = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.lbDepartment = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnLeadRemove = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.bbtnLeadToSale = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.bbtnDetailsSale = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
             this.btnClose = new Bunifu.UI.WinForms.BunifuButton.BunifuButton2();
+            this.lbAssignedTo = new Bunifu.UI.WinForms.BunifuLabel();
+            this.blbAmount = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbCustomerName = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbLeadCreatedAt = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbLeadName = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbLeadExpDate = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbCustomer = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbCustomerEmail = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbUserAssignedTo = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbAmountLead = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbLeadDate = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbNameCustomer = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbEmailCustomer = new Bunifu.UI.WinForms.BunifuLabel();
             this.gbLeadStages.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageNotes.SuspendLayout();
             this.tabPageExtraInfo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbCustomerName
-            // 
-            this.lbCustomerName.AutoSize = true;
-            this.lbCustomerName.Location = new System.Drawing.Point(30, 138);
-            this.lbCustomerName.Name = "lbCustomerName";
-            this.lbCustomerName.Size = new System.Drawing.Size(87, 13);
-            this.lbCustomerName.TabIndex = 2;
-            this.lbCustomerName.Text = "lbCustomerName";
-            // 
-            // lbAssignedTo
-            // 
-            this.lbAssignedTo.AutoSize = true;
-            this.lbAssignedTo.Location = new System.Drawing.Point(30, 67);
-            this.lbAssignedTo.Name = "lbAssignedTo";
-            this.lbAssignedTo.Size = new System.Drawing.Size(69, 13);
-            this.lbAssignedTo.TabIndex = 5;
-            this.lbAssignedTo.Text = "Assigned To:";
-            // 
-            // lbCustomerEmail
-            // 
-            this.lbCustomerEmail.AutoSize = true;
-            this.lbCustomerEmail.Location = new System.Drawing.Point(30, 174);
-            this.lbCustomerEmail.Name = "lbCustomerEmail";
-            this.lbCustomerEmail.Size = new System.Drawing.Size(84, 13);
-            this.lbCustomerEmail.TabIndex = 9;
-            this.lbCustomerEmail.Text = "lbCustomerEmail";
-            // 
-            // lbNameCustomer
-            // 
-            this.lbNameCustomer.AutoSize = true;
-            this.lbNameCustomer.Location = new System.Drawing.Point(152, 138);
-            this.lbNameCustomer.Name = "lbNameCustomer";
-            this.lbNameCustomer.Size = new System.Drawing.Size(82, 13);
-            this.lbNameCustomer.TabIndex = 8;
-            this.lbNameCustomer.Text = "Name Customer";
-            // 
-            // lbAmountLead
-            // 
-            this.lbAmountLead.AutoSize = true;
-            this.lbAmountLead.Location = new System.Drawing.Point(284, 67);
-            this.lbAmountLead.Name = "lbAmountLead";
-            this.lbAmountLead.Size = new System.Drawing.Size(75, 13);
-            this.lbAmountLead.TabIndex = 11;
-            this.lbAmountLead.Text = "lbAmountLead";
-            // 
-            // lbEmailCustomer
-            // 
-            this.lbEmailCustomer.AutoSize = true;
-            this.lbEmailCustomer.Location = new System.Drawing.Point(152, 174);
-            this.lbEmailCustomer.Name = "lbEmailCustomer";
-            this.lbEmailCustomer.Size = new System.Drawing.Size(79, 13);
-            this.lbEmailCustomer.TabIndex = 10;
-            this.lbEmailCustomer.Text = "Email Customer";
-            // 
             // btnNew
             // 
-            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
+            this.btnNew.BackColor = System.Drawing.Color.DimGray;
             this.btnNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnNew.FlatAppearance.BorderSize = 0;
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.ForeColor = System.Drawing.SystemColors.Control;
             this.btnNew.Location = new System.Drawing.Point(8, 17);
             this.btnNew.Margin = new System.Windows.Forms.Padding(2);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(56, 24);
+            this.btnNew.Size = new System.Drawing.Size(69, 24);
             this.btnNew.TabIndex = 12;
             this.btnNew.Text = "New";
             this.btnNew.UseVisualStyleBackColor = false;
@@ -159,41 +150,47 @@
             // 
             // btnQualified
             // 
+            this.btnQualified.BackColor = System.Drawing.Color.DimGray;
             this.btnQualified.FlatAppearance.BorderSize = 0;
             this.btnQualified.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQualified.Location = new System.Drawing.Point(69, 17);
+            this.btnQualified.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnQualified.Location = new System.Drawing.Point(81, 17);
             this.btnQualified.Margin = new System.Windows.Forms.Padding(2);
             this.btnQualified.Name = "btnQualified";
-            this.btnQualified.Size = new System.Drawing.Size(56, 24);
+            this.btnQualified.Size = new System.Drawing.Size(69, 24);
             this.btnQualified.TabIndex = 13;
             this.btnQualified.Text = "Qualified";
-            this.btnQualified.UseVisualStyleBackColor = true;
+            this.btnQualified.UseVisualStyleBackColor = false;
             this.btnQualified.Click += new System.EventHandler(this.btnQualified_Click);
             // 
             // btnProposition
             // 
+            this.btnProposition.BackColor = System.Drawing.Color.DimGray;
             this.btnProposition.FlatAppearance.BorderSize = 0;
             this.btnProposition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProposition.Location = new System.Drawing.Point(130, 17);
+            this.btnProposition.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnProposition.Location = new System.Drawing.Point(154, 17);
             this.btnProposition.Margin = new System.Windows.Forms.Padding(2);
             this.btnProposition.Name = "btnProposition";
             this.btnProposition.Size = new System.Drawing.Size(69, 24);
             this.btnProposition.TabIndex = 14;
             this.btnProposition.Text = "Proposition";
-            this.btnProposition.UseVisualStyleBackColor = true;
+            this.btnProposition.UseVisualStyleBackColor = false;
             this.btnProposition.Click += new System.EventHandler(this.btnProposition_Click);
             // 
             // btnWon
             // 
+            this.btnWon.BackColor = System.Drawing.Color.DimGray;
             this.btnWon.FlatAppearance.BorderSize = 0;
             this.btnWon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWon.Location = new System.Drawing.Point(203, 17);
+            this.btnWon.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnWon.Location = new System.Drawing.Point(227, 17);
             this.btnWon.Margin = new System.Windows.Forms.Padding(2);
             this.btnWon.Name = "btnWon";
-            this.btnWon.Size = new System.Drawing.Size(56, 24);
+            this.btnWon.Size = new System.Drawing.Size(69, 24);
             this.btnWon.TabIndex = 15;
             this.btnWon.Text = "Won";
-            this.btnWon.UseVisualStyleBackColor = true;
+            this.btnWon.UseVisualStyleBackColor = false;
             this.btnWon.Click += new System.EventHandler(this.btnWon_Click);
             // 
             // gbLeadStages
@@ -203,36 +200,28 @@
             this.gbLeadStages.Controls.Add(this.btnWon);
             this.gbLeadStages.Controls.Add(this.btnQualified);
             this.gbLeadStages.Controls.Add(this.btnProposition);
-            this.gbLeadStages.Location = new System.Drawing.Point(227, 11);
+            this.gbLeadStages.Location = new System.Drawing.Point(475, 25);
             this.gbLeadStages.Margin = new System.Windows.Forms.Padding(2);
             this.gbLeadStages.Name = "gbLeadStages";
             this.gbLeadStages.Padding = new System.Windows.Forms.Padding(2);
-            this.gbLeadStages.Size = new System.Drawing.Size(326, 46);
+            this.gbLeadStages.Size = new System.Drawing.Size(380, 51);
             this.gbLeadStages.TabIndex = 16;
             this.gbLeadStages.TabStop = false;
             this.gbLeadStages.Text = "Stages";
             // 
             // btnSale
             // 
+            this.btnSale.BackColor = System.Drawing.Color.DimGray;
             this.btnSale.FlatAppearance.BorderSize = 0;
             this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSale.Location = new System.Drawing.Point(263, 17);
+            this.btnSale.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSale.Location = new System.Drawing.Point(300, 17);
             this.btnSale.Margin = new System.Windows.Forms.Padding(2);
             this.btnSale.Name = "btnSale";
-            this.btnSale.Size = new System.Drawing.Size(56, 24);
+            this.btnSale.Size = new System.Drawing.Size(69, 24);
             this.btnSale.TabIndex = 16;
             this.btnSale.Text = "Sale";
-            this.btnSale.UseVisualStyleBackColor = true;
-            // 
-            // tbLeadNotes
-            // 
-            this.tbLeadNotes.Location = new System.Drawing.Point(16, 39);
-            this.tbLeadNotes.Margin = new System.Windows.Forms.Padding(2);
-            this.tbLeadNotes.Multiline = true;
-            this.tbLeadNotes.Name = "tbLeadNotes";
-            this.tbLeadNotes.ReadOnly = true;
-            this.tbLeadNotes.Size = new System.Drawing.Size(270, 170);
-            this.tbLeadNotes.TabIndex = 17;
+            this.btnSale.UseVisualStyleBackColor = false;
             // 
             // tabControl1
             // 
@@ -242,360 +231,1110 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(312, 436);
+            this.tabControl1.Size = new System.Drawing.Size(646, 309);
             this.tabControl1.TabIndex = 18;
             // 
             // tabPageNotes
             // 
-            this.tabPageNotes.Controls.Add(this.lbNotes);
             this.tabPageNotes.Controls.Add(this.tbLeadNotes);
+            this.tabPageNotes.Controls.Add(this.lbNotes);
             this.tabPageNotes.Location = new System.Drawing.Point(4, 22);
             this.tabPageNotes.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageNotes.Name = "tabPageNotes";
             this.tabPageNotes.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPageNotes.Size = new System.Drawing.Size(304, 410);
+            this.tabPageNotes.Size = new System.Drawing.Size(638, 283);
             this.tabPageNotes.TabIndex = 0;
-            this.tabPageNotes.Text = "tabPageNotes";
+            this.tabPageNotes.Text = "Notes";
             this.tabPageNotes.UseVisualStyleBackColor = true;
+            // 
+            // tbLeadNotes
+            // 
+            this.tbLeadNotes.AcceptsReturn = false;
+            this.tbLeadNotes.AcceptsTab = false;
+            this.tbLeadNotes.AnimationSpeed = 200;
+            this.tbLeadNotes.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbLeadNotes.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbLeadNotes.AutoSizeHeight = true;
+            this.tbLeadNotes.BackColor = System.Drawing.Color.Transparent;
+            this.tbLeadNotes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbLeadNotes.BackgroundImage")));
+            this.tbLeadNotes.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tbLeadNotes.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbLeadNotes.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tbLeadNotes.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbLeadNotes.BorderRadius = 10;
+            this.tbLeadNotes.BorderThickness = 1;
+            this.tbLeadNotes.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbLeadNotes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbLeadNotes.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbLeadNotes.DefaultText = "";
+            this.tbLeadNotes.FillColor = System.Drawing.Color.White;
+            this.tbLeadNotes.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbLeadNotes.HideSelection = true;
+            this.tbLeadNotes.IconLeft = null;
+            this.tbLeadNotes.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbLeadNotes.IconPadding = 3;
+            this.tbLeadNotes.IconRight = null;
+            this.tbLeadNotes.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbLeadNotes.Lines = new string[0];
+            this.tbLeadNotes.Location = new System.Drawing.Point(16, 53);
+            this.tbLeadNotes.MaxLength = 32767;
+            this.tbLeadNotes.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbLeadNotes.Modified = false;
+            this.tbLeadNotes.Multiline = true;
+            this.tbLeadNotes.Name = "tbLeadNotes";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbLeadNotes.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbLeadNotes.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbLeadNotes.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbLeadNotes.OnIdleState = stateProperties4;
+            this.tbLeadNotes.Padding = new System.Windows.Forms.Padding(3);
+            this.tbLeadNotes.PasswordChar = '\0';
+            this.tbLeadNotes.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbLeadNotes.PlaceholderText = "Notes";
+            this.tbLeadNotes.ReadOnly = true;
+            this.tbLeadNotes.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbLeadNotes.SelectedText = "";
+            this.tbLeadNotes.SelectionLength = 0;
+            this.tbLeadNotes.SelectionStart = 0;
+            this.tbLeadNotes.ShortcutsEnabled = true;
+            this.tbLeadNotes.Size = new System.Drawing.Size(603, 208);
+            this.tbLeadNotes.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.tbLeadNotes.TabIndex = 78;
+            this.tbLeadNotes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbLeadNotes.TextMarginBottom = 0;
+            this.tbLeadNotes.TextMarginLeft = 3;
+            this.tbLeadNotes.TextMarginTop = 1;
+            this.tbLeadNotes.TextPlaceholder = "Notes";
+            this.tbLeadNotes.UseSystemPasswordChar = false;
+            this.tbLeadNotes.WordWrap = true;
             // 
             // lbNotes
             // 
-            this.lbNotes.AutoSize = true;
-            this.lbNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNotes.Location = new System.Drawing.Point(12, 16);
-            this.lbNotes.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbNotes.AllowParentOverrides = false;
+            this.lbNotes.AutoEllipsis = false;
+            this.lbNotes.AutoSize = false;
+            this.lbNotes.CursorType = null;
+            this.lbNotes.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbNotes.Location = new System.Drawing.Point(16, -1);
             this.lbNotes.Name = "lbNotes";
-            this.lbNotes.Size = new System.Drawing.Size(51, 20);
-            this.lbNotes.TabIndex = 20;
-            this.lbNotes.Text = "Notes";
+            this.lbNotes.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbNotes.Size = new System.Drawing.Size(96, 43);
+            this.lbNotes.TabIndex = 69;
+            this.lbNotes.Text = "<h2>Notas</h2>";
+            this.lbNotes.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbNotes.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // tabPageExtraInfo
             // 
-            this.tabPageExtraInfo.Controls.Add(this.tbCustomerType);
-            this.tabPageExtraInfo.Controls.Add(this.tbCustomerDate);
-            this.tabPageExtraInfo.Controls.Add(this.tbCustomerDepartment);
-            this.tabPageExtraInfo.Controls.Add(this.label1);
-            this.tabPageExtraInfo.Controls.Add(this.label2);
-            this.tabPageExtraInfo.Controls.Add(this.label3);
+            this.tabPageExtraInfo.Controls.Add(this.lbDate);
+            this.tabPageExtraInfo.Controls.Add(this.lbType);
             this.tabPageExtraInfo.Controls.Add(this.lbCustomerInformation);
-            this.tabPageExtraInfo.Controls.Add(this.tbCustomerPhone);
+            this.tabPageExtraInfo.Controls.Add(this.lbZip);
+            this.tabPageExtraInfo.Controls.Add(this.lbCountry);
+            this.tabPageExtraInfo.Controls.Add(this.lbCity);
+            this.tabPageExtraInfo.Controls.Add(this.lbSecondaryAddress);
+            this.tabPageExtraInfo.Controls.Add(this.lbCompanyName);
             this.tabPageExtraInfo.Controls.Add(this.lbPhone);
+            this.tabPageExtraInfo.Controls.Add(this.lbContactInfo);
+            this.tabPageExtraInfo.Controls.Add(this.lbAddress1);
             this.tabPageExtraInfo.Controls.Add(this.tbCustomerCountry);
+            this.tabPageExtraInfo.Controls.Add(this.tbCustomerPhone);
             this.tabPageExtraInfo.Controls.Add(this.tbCustomerZip);
             this.tabPageExtraInfo.Controls.Add(this.tbCustomerCity);
-            this.tabPageExtraInfo.Controls.Add(this.lbCountry);
-            this.tabPageExtraInfo.Controls.Add(this.lbZip);
-            this.tabPageExtraInfo.Controls.Add(this.tbCustomerAddress1);
+            this.tabPageExtraInfo.Controls.Add(this.tbCustomerDate);
+            this.tabPageExtraInfo.Controls.Add(this.tbCustomerDepartment);
+            this.tabPageExtraInfo.Controls.Add(this.tbCustomerType);
             this.tabPageExtraInfo.Controls.Add(this.tbCustomerAddress2);
+            this.tabPageExtraInfo.Controls.Add(this.tbCustomerAddress1);
             this.tabPageExtraInfo.Controls.Add(this.tbCustomerCompanyName);
-            this.tabPageExtraInfo.Controls.Add(this.lbCompanyName);
-            this.tabPageExtraInfo.Controls.Add(this.lbAddress1);
-            this.tabPageExtraInfo.Controls.Add(this.lbSecondaryAddress);
-            this.tabPageExtraInfo.Controls.Add(this.lbCity);
-            this.tabPageExtraInfo.Controls.Add(this.lbContactInfo);
+            this.tabPageExtraInfo.Controls.Add(this.lbDepartment);
             this.tabPageExtraInfo.Location = new System.Drawing.Point(4, 22);
             this.tabPageExtraInfo.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageExtraInfo.Name = "tabPageExtraInfo";
             this.tabPageExtraInfo.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPageExtraInfo.Size = new System.Drawing.Size(304, 410);
+            this.tabPageExtraInfo.Size = new System.Drawing.Size(638, 283);
             this.tabPageExtraInfo.TabIndex = 1;
-            this.tabPageExtraInfo.Text = "tabPageExtraInfo";
+            this.tabPageExtraInfo.Text = "ExtraInfo";
             this.tabPageExtraInfo.UseVisualStyleBackColor = true;
             // 
-            // tbCustomerType
+            // lbDate
             // 
-            this.tbCustomerType.Location = new System.Drawing.Point(110, 350);
-            this.tbCustomerType.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCustomerType.Name = "tbCustomerType";
-            this.tbCustomerType.ReadOnly = true;
-            this.tbCustomerType.Size = new System.Drawing.Size(146, 20);
-            this.tbCustomerType.TabIndex = 41;
+            this.lbDate.AllowParentOverrides = false;
+            this.lbDate.AutoEllipsis = false;
+            this.lbDate.AutoSize = false;
+            this.lbDate.CursorType = null;
+            this.lbDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbDate.Location = new System.Drawing.Point(329, 95);
+            this.lbDate.Name = "lbDate";
+            this.lbDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbDate.Size = new System.Drawing.Size(104, 38);
+            this.lbDate.TabIndex = 91;
+            this.lbDate.Text = "<h4>Fecha:</h4>";
+            this.lbDate.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbDate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // tbCustomerDate
+            // lbType
             // 
-            this.tbCustomerDate.Location = new System.Drawing.Point(110, 382);
-            this.tbCustomerDate.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCustomerDate.Name = "tbCustomerDate";
-            this.tbCustomerDate.ReadOnly = true;
-            this.tbCustomerDate.Size = new System.Drawing.Size(146, 20);
-            this.tbCustomerDate.TabIndex = 40;
-            // 
-            // tbCustomerDepartment
-            // 
-            this.tbCustomerDepartment.Location = new System.Drawing.Point(110, 318);
-            this.tbCustomerDepartment.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCustomerDepartment.Name = "tbCustomerDepartment";
-            this.tbCustomerDepartment.ReadOnly = true;
-            this.tbCustomerDepartment.Size = new System.Drawing.Size(146, 20);
-            this.tbCustomerDepartment.TabIndex = 39;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 353);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 38;
-            this.label1.Text = "Type:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 381);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 13);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Date:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(10, 318);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 13);
-            this.label3.TabIndex = 36;
-            this.label3.Text = "Department:";
+            this.lbType.AllowParentOverrides = false;
+            this.lbType.AutoEllipsis = false;
+            this.lbType.AutoSize = false;
+            this.lbType.CursorType = null;
+            this.lbType.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbType.Location = new System.Drawing.Point(329, 60);
+            this.lbType.Name = "lbType";
+            this.lbType.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbType.Size = new System.Drawing.Size(82, 36);
+            this.lbType.TabIndex = 92;
+            this.lbType.Text = "<h4>Tipo:</h4>";
+            this.lbType.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbType.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbCustomerInformation
             // 
-            this.lbCustomerInformation.AutoSize = true;
-            this.lbCustomerInformation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCustomerInformation.Location = new System.Drawing.Point(10, 282);
-            this.lbCustomerInformation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCustomerInformation.AllowParentOverrides = false;
+            this.lbCustomerInformation.AutoEllipsis = false;
+            this.lbCustomerInformation.AutoSize = false;
+            this.lbCustomerInformation.CursorType = null;
+            this.lbCustomerInformation.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbCustomerInformation.Location = new System.Drawing.Point(332, -4);
             this.lbCustomerInformation.Name = "lbCustomerInformation";
-            this.lbCustomerInformation.Size = new System.Drawing.Size(163, 20);
-            this.lbCustomerInformation.TabIndex = 35;
-            this.lbCustomerInformation.Text = "Customer Information";
-            // 
-            // tbCustomerPhone
-            // 
-            this.tbCustomerPhone.Location = new System.Drawing.Point(110, 80);
-            this.tbCustomerPhone.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCustomerPhone.Name = "tbCustomerPhone";
-            this.tbCustomerPhone.ReadOnly = true;
-            this.tbCustomerPhone.Size = new System.Drawing.Size(146, 20);
-            this.tbCustomerPhone.TabIndex = 34;
-            // 
-            // lbPhone
-            // 
-            this.lbPhone.AutoSize = true;
-            this.lbPhone.Location = new System.Drawing.Point(10, 82);
-            this.lbPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(41, 13);
-            this.lbPhone.TabIndex = 33;
-            this.lbPhone.Text = "Phone:";
-            // 
-            // tbCustomerCountry
-            // 
-            this.tbCustomerCountry.Location = new System.Drawing.Point(110, 208);
-            this.tbCustomerCountry.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCustomerCountry.Name = "tbCustomerCountry";
-            this.tbCustomerCountry.ReadOnly = true;
-            this.tbCustomerCountry.Size = new System.Drawing.Size(146, 20);
-            this.tbCustomerCountry.TabIndex = 32;
-            // 
-            // tbCustomerZip
-            // 
-            this.tbCustomerZip.Location = new System.Drawing.Point(110, 240);
-            this.tbCustomerZip.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCustomerZip.Name = "tbCustomerZip";
-            this.tbCustomerZip.ReadOnly = true;
-            this.tbCustomerZip.Size = new System.Drawing.Size(146, 20);
-            this.tbCustomerZip.TabIndex = 31;
-            // 
-            // tbCustomerCity
-            // 
-            this.tbCustomerCity.Location = new System.Drawing.Point(110, 176);
-            this.tbCustomerCity.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCustomerCity.Name = "tbCustomerCity";
-            this.tbCustomerCity.ReadOnly = true;
-            this.tbCustomerCity.Size = new System.Drawing.Size(146, 20);
-            this.tbCustomerCity.TabIndex = 30;
-            // 
-            // lbCountry
-            // 
-            this.lbCountry.AutoSize = true;
-            this.lbCountry.Location = new System.Drawing.Point(10, 211);
-            this.lbCountry.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbCountry.Name = "lbCountry";
-            this.lbCountry.Size = new System.Drawing.Size(46, 13);
-            this.lbCountry.TabIndex = 29;
-            this.lbCountry.Text = "Country:";
+            this.lbCustomerInformation.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbCustomerInformation.Size = new System.Drawing.Size(204, 35);
+            this.lbCustomerInformation.TabIndex = 94;
+            this.lbCustomerInformation.Text = "<h3>Información del Cliente</h3>";
+            this.lbCustomerInformation.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbCustomerInformation.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbZip
             // 
-            this.lbZip.AutoSize = true;
-            this.lbZip.Location = new System.Drawing.Point(10, 239);
-            this.lbZip.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbZip.AllowParentOverrides = false;
+            this.lbZip.AutoEllipsis = false;
+            this.lbZip.AutoSize = false;
+            this.lbZip.CursorType = null;
+            this.lbZip.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbZip.Location = new System.Drawing.Point(3, 224);
             this.lbZip.Name = "lbZip";
-            this.lbZip.Size = new System.Drawing.Size(25, 13);
-            this.lbZip.TabIndex = 28;
-            this.lbZip.Text = "Zip:";
+            this.lbZip.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbZip.Size = new System.Drawing.Size(95, 39);
+            this.lbZip.TabIndex = 95;
+            this.lbZip.Text = "<h4>Zip:</h4>";
+            this.lbZip.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbZip.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // tbCustomerAddress1
+            // lbCountry
             // 
-            this.tbCustomerAddress1.Location = new System.Drawing.Point(110, 111);
-            this.tbCustomerAddress1.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCustomerAddress1.Name = "tbCustomerAddress1";
-            this.tbCustomerAddress1.ReadOnly = true;
-            this.tbCustomerAddress1.Size = new System.Drawing.Size(146, 20);
-            this.tbCustomerAddress1.TabIndex = 27;
-            // 
-            // tbCustomerAddress2
-            // 
-            this.tbCustomerAddress2.Location = new System.Drawing.Point(110, 143);
-            this.tbCustomerAddress2.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCustomerAddress2.Name = "tbCustomerAddress2";
-            this.tbCustomerAddress2.ReadOnly = true;
-            this.tbCustomerAddress2.Size = new System.Drawing.Size(146, 20);
-            this.tbCustomerAddress2.TabIndex = 26;
-            // 
-            // tbCustomerCompanyName
-            // 
-            this.tbCustomerCompanyName.Location = new System.Drawing.Point(110, 47);
-            this.tbCustomerCompanyName.Margin = new System.Windows.Forms.Padding(2);
-            this.tbCustomerCompanyName.Name = "tbCustomerCompanyName";
-            this.tbCustomerCompanyName.ReadOnly = true;
-            this.tbCustomerCompanyName.Size = new System.Drawing.Size(146, 20);
-            this.tbCustomerCompanyName.TabIndex = 25;
-            // 
-            // lbCompanyName
-            // 
-            this.lbCompanyName.AutoSize = true;
-            this.lbCompanyName.Location = new System.Drawing.Point(10, 50);
-            this.lbCompanyName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbCompanyName.Name = "lbCompanyName";
-            this.lbCompanyName.Size = new System.Drawing.Size(85, 13);
-            this.lbCompanyName.TabIndex = 24;
-            this.lbCompanyName.Text = "Company Name:";
-            // 
-            // lbAddress1
-            // 
-            this.lbAddress1.AutoSize = true;
-            this.lbAddress1.Location = new System.Drawing.Point(10, 111);
-            this.lbAddress1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbAddress1.Name = "lbAddress1";
-            this.lbAddress1.Size = new System.Drawing.Size(85, 13);
-            this.lbAddress1.TabIndex = 23;
-            this.lbAddress1.Text = "Principal Adress:";
-            // 
-            // lbSecondaryAddress
-            // 
-            this.lbSecondaryAddress.AutoSize = true;
-            this.lbSecondaryAddress.Location = new System.Drawing.Point(10, 143);
-            this.lbSecondaryAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbSecondaryAddress.Name = "lbSecondaryAddress";
-            this.lbSecondaryAddress.Size = new System.Drawing.Size(102, 13);
-            this.lbSecondaryAddress.TabIndex = 22;
-            this.lbSecondaryAddress.Text = "Secondary Address:";
+            this.lbCountry.AllowParentOverrides = false;
+            this.lbCountry.AutoEllipsis = false;
+            this.lbCountry.AutoSize = false;
+            this.lbCountry.CursorType = null;
+            this.lbCountry.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbCountry.Location = new System.Drawing.Point(6, 193);
+            this.lbCountry.Name = "lbCountry";
+            this.lbCountry.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbCountry.Size = new System.Drawing.Size(118, 39);
+            this.lbCountry.TabIndex = 96;
+            this.lbCountry.Text = "<h4>País:</h4>";
+            this.lbCountry.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbCountry.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbCity
             // 
-            this.lbCity.AutoSize = true;
-            this.lbCity.Location = new System.Drawing.Point(10, 176);
-            this.lbCity.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCity.AllowParentOverrides = false;
+            this.lbCity.AutoEllipsis = false;
+            this.lbCity.AutoSize = false;
+            this.lbCity.CursorType = null;
+            this.lbCity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbCity.Location = new System.Drawing.Point(3, 163);
             this.lbCity.Name = "lbCity";
-            this.lbCity.Size = new System.Drawing.Size(27, 13);
-            this.lbCity.TabIndex = 20;
-            this.lbCity.Text = "City:";
+            this.lbCity.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbCity.Size = new System.Drawing.Size(105, 35);
+            this.lbCity.TabIndex = 97;
+            this.lbCity.Text = "<h4>Ciudad:</h4>";
+            this.lbCity.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbCity.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbSecondaryAddress
+            // 
+            this.lbSecondaryAddress.AllowParentOverrides = false;
+            this.lbSecondaryAddress.AutoEllipsis = false;
+            this.lbSecondaryAddress.AutoSize = false;
+            this.lbSecondaryAddress.CursorType = null;
+            this.lbSecondaryAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbSecondaryAddress.Location = new System.Drawing.Point(4, 132);
+            this.lbSecondaryAddress.Name = "lbSecondaryAddress";
+            this.lbSecondaryAddress.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbSecondaryAddress.Size = new System.Drawing.Size(133, 36);
+            this.lbSecondaryAddress.TabIndex = 99;
+            this.lbSecondaryAddress.Text = "<h4>Dirección Secundaria:</h4>";
+            this.lbSecondaryAddress.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbSecondaryAddress.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbCompanyName
+            // 
+            this.lbCompanyName.AllowParentOverrides = false;
+            this.lbCompanyName.AutoEllipsis = false;
+            this.lbCompanyName.AutoSize = false;
+            this.lbCompanyName.CursorType = null;
+            this.lbCompanyName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbCompanyName.Location = new System.Drawing.Point(3, 25);
+            this.lbCompanyName.Name = "lbCompanyName";
+            this.lbCompanyName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbCompanyName.Size = new System.Drawing.Size(121, 38);
+            this.lbCompanyName.TabIndex = 100;
+            this.lbCompanyName.Text = "<h4>Nombre Compañía:";
+            this.lbCompanyName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbCompanyName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbPhone
+            // 
+            this.lbPhone.AllowParentOverrides = false;
+            this.lbPhone.AutoEllipsis = false;
+            this.lbPhone.AutoSize = false;
+            this.lbPhone.CursorType = null;
+            this.lbPhone.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbPhone.Location = new System.Drawing.Point(3, 63);
+            this.lbPhone.Name = "lbPhone";
+            this.lbPhone.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbPhone.Size = new System.Drawing.Size(95, 37);
+            this.lbPhone.TabIndex = 98;
+            this.lbPhone.Text = "<h4>Teléfono:</h4>";
+            this.lbPhone.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbPhone.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbContactInfo
             // 
-            this.lbContactInfo.AutoSize = true;
-            this.lbContactInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbContactInfo.Location = new System.Drawing.Point(10, 19);
-            this.lbContactInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbContactInfo.AllowParentOverrides = false;
+            this.lbContactInfo.AutoEllipsis = false;
+            this.lbContactInfo.AutoSize = false;
+            this.lbContactInfo.CursorType = null;
+            this.lbContactInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbContactInfo.Location = new System.Drawing.Point(3, -9);
             this.lbContactInfo.Name = "lbContactInfo";
-            this.lbContactInfo.Size = new System.Drawing.Size(150, 20);
-            this.lbContactInfo.TabIndex = 19;
-            this.lbContactInfo.Text = "Contact Information";
+            this.lbContactInfo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbContactInfo.Size = new System.Drawing.Size(170, 40);
+            this.lbContactInfo.TabIndex = 70;
+            this.lbContactInfo.Text = "<h3>Información de Contacto</h3>";
+            this.lbContactInfo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbContactInfo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lbUserAssignedTo
+            // lbAddress1
             // 
-            this.lbUserAssignedTo.AutoSize = true;
-            this.lbUserAssignedTo.Location = new System.Drawing.Point(109, 67);
-            this.lbUserAssignedTo.Name = "lbUserAssignedTo";
-            this.lbUserAssignedTo.Size = new System.Drawing.Size(91, 13);
-            this.lbUserAssignedTo.TabIndex = 19;
-            this.lbUserAssignedTo.Text = "User Assigned To";
+            this.lbAddress1.AllowParentOverrides = false;
+            this.lbAddress1.AutoEllipsis = false;
+            this.lbAddress1.AutoSize = false;
+            this.lbAddress1.CursorType = null;
+            this.lbAddress1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbAddress1.Location = new System.Drawing.Point(3, 98);
+            this.lbAddress1.Name = "lbAddress1";
+            this.lbAddress1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbAddress1.Size = new System.Drawing.Size(134, 40);
+            this.lbAddress1.TabIndex = 61;
+            this.lbAddress1.Text = "<h4>Dirección Principal:</h4>";
+            this.lbAddress1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbAddress1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lbCustomer
+            // tbCustomerCountry
             // 
-            this.lbCustomer.AutoSize = true;
-            this.lbCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCustomer.Location = new System.Drawing.Point(28, 101);
-            this.lbCustomer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbCustomer.Name = "lbCustomer";
-            this.lbCustomer.Size = new System.Drawing.Size(78, 20);
-            this.lbCustomer.TabIndex = 21;
-            this.lbCustomer.Text = "Customer";
+            this.tbCustomerCountry.AcceptsReturn = false;
+            this.tbCustomerCountry.AcceptsTab = false;
+            this.tbCustomerCountry.AnimationSpeed = 200;
+            this.tbCustomerCountry.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbCustomerCountry.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbCustomerCountry.AutoSizeHeight = true;
+            this.tbCustomerCountry.BackColor = System.Drawing.Color.Transparent;
+            this.tbCustomerCountry.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbCustomerCountry.BackgroundImage")));
+            this.tbCustomerCountry.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tbCustomerCountry.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbCustomerCountry.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tbCustomerCountry.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbCustomerCountry.BorderRadius = 10;
+            this.tbCustomerCountry.BorderThickness = 1;
+            this.tbCustomerCountry.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCustomerCountry.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerCountry.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbCustomerCountry.DefaultText = "";
+            this.tbCustomerCountry.FillColor = System.Drawing.Color.White;
+            this.tbCustomerCountry.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbCustomerCountry.HideSelection = true;
+            this.tbCustomerCountry.IconLeft = null;
+            this.tbCustomerCountry.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerCountry.IconPadding = 3;
+            this.tbCustomerCountry.IconRight = null;
+            this.tbCustomerCountry.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerCountry.Lines = new string[0];
+            this.tbCustomerCountry.Location = new System.Drawing.Point(137, 208);
+            this.tbCustomerCountry.MaxLength = 32767;
+            this.tbCustomerCountry.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbCustomerCountry.Modified = false;
+            this.tbCustomerCountry.Multiline = false;
+            this.tbCustomerCountry.Name = "tbCustomerCountry";
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerCountry.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbCustomerCountry.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerCountry.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
+            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerCountry.OnIdleState = stateProperties8;
+            this.tbCustomerCountry.Padding = new System.Windows.Forms.Padding(3);
+            this.tbCustomerCountry.PasswordChar = '\0';
+            this.tbCustomerCountry.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbCustomerCountry.PlaceholderText = "Enter text";
+            this.tbCustomerCountry.ReadOnly = true;
+            this.tbCustomerCountry.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbCustomerCountry.SelectedText = "";
+            this.tbCustomerCountry.SelectionLength = 0;
+            this.tbCustomerCountry.SelectionStart = 0;
+            this.tbCustomerCountry.ShortcutsEnabled = true;
+            this.tbCustomerCountry.Size = new System.Drawing.Size(146, 27);
+            this.tbCustomerCountry.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.tbCustomerCountry.TabIndex = 89;
+            this.tbCustomerCountry.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCustomerCountry.TextMarginBottom = 0;
+            this.tbCustomerCountry.TextMarginLeft = 3;
+            this.tbCustomerCountry.TextMarginTop = 1;
+            this.tbCustomerCountry.TextPlaceholder = "Enter text";
+            this.tbCustomerCountry.UseSystemPasswordChar = false;
+            this.tbCustomerCountry.WordWrap = true;
             // 
-            // lbLeadName
+            // tbCustomerPhone
             // 
-            this.lbLeadName.AutoSize = true;
-            this.lbLeadName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLeadName.Location = new System.Drawing.Point(32, 31);
-            this.lbLeadName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbLeadName.Name = "lbLeadName";
-            this.lbLeadName.Size = new System.Drawing.Size(91, 20);
-            this.lbLeadName.TabIndex = 22;
-            this.lbLeadName.Text = "Lead Name";
+            this.tbCustomerPhone.AcceptsReturn = false;
+            this.tbCustomerPhone.AcceptsTab = false;
+            this.tbCustomerPhone.AnimationSpeed = 200;
+            this.tbCustomerPhone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbCustomerPhone.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbCustomerPhone.AutoSizeHeight = true;
+            this.tbCustomerPhone.BackColor = System.Drawing.Color.Transparent;
+            this.tbCustomerPhone.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbCustomerPhone.BackgroundImage")));
+            this.tbCustomerPhone.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tbCustomerPhone.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbCustomerPhone.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tbCustomerPhone.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbCustomerPhone.BorderRadius = 10;
+            this.tbCustomerPhone.BorderThickness = 1;
+            this.tbCustomerPhone.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCustomerPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerPhone.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbCustomerPhone.DefaultText = "";
+            this.tbCustomerPhone.FillColor = System.Drawing.Color.White;
+            this.tbCustomerPhone.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbCustomerPhone.HideSelection = true;
+            this.tbCustomerPhone.IconLeft = null;
+            this.tbCustomerPhone.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerPhone.IconPadding = 3;
+            this.tbCustomerPhone.IconRight = null;
+            this.tbCustomerPhone.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerPhone.Lines = new string[0];
+            this.tbCustomerPhone.Location = new System.Drawing.Point(137, 72);
+            this.tbCustomerPhone.MaxLength = 32767;
+            this.tbCustomerPhone.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbCustomerPhone.Modified = false;
+            this.tbCustomerPhone.Multiline = false;
+            this.tbCustomerPhone.Name = "tbCustomerPhone";
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerPhone.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbCustomerPhone.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerPhone.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerPhone.OnIdleState = stateProperties12;
+            this.tbCustomerPhone.Padding = new System.Windows.Forms.Padding(3);
+            this.tbCustomerPhone.PasswordChar = '\0';
+            this.tbCustomerPhone.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbCustomerPhone.PlaceholderText = "Enter text";
+            this.tbCustomerPhone.ReadOnly = true;
+            this.tbCustomerPhone.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbCustomerPhone.SelectedText = "";
+            this.tbCustomerPhone.SelectionLength = 0;
+            this.tbCustomerPhone.SelectionStart = 0;
+            this.tbCustomerPhone.ShortcutsEnabled = true;
+            this.tbCustomerPhone.Size = new System.Drawing.Size(146, 27);
+            this.tbCustomerPhone.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.tbCustomerPhone.TabIndex = 90;
+            this.tbCustomerPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCustomerPhone.TextMarginBottom = 0;
+            this.tbCustomerPhone.TextMarginLeft = 3;
+            this.tbCustomerPhone.TextMarginTop = 1;
+            this.tbCustomerPhone.TextPlaceholder = "Enter text";
+            this.tbCustomerPhone.UseSystemPasswordChar = false;
+            this.tbCustomerPhone.WordWrap = true;
             // 
-            // lbLeadExpDate
+            // tbCustomerZip
             // 
-            this.lbLeadExpDate.AutoSize = true;
-            this.lbLeadExpDate.Location = new System.Drawing.Point(311, 138);
-            this.lbLeadExpDate.Name = "lbLeadExpDate";
-            this.lbLeadExpDate.Size = new System.Drawing.Size(92, 13);
-            this.lbLeadExpDate.TabIndex = 23;
-            this.lbLeadExpDate.Text = "Expected Closing:";
+            this.tbCustomerZip.AcceptsReturn = false;
+            this.tbCustomerZip.AcceptsTab = false;
+            this.tbCustomerZip.AnimationSpeed = 200;
+            this.tbCustomerZip.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbCustomerZip.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbCustomerZip.AutoSizeHeight = true;
+            this.tbCustomerZip.BackColor = System.Drawing.Color.Transparent;
+            this.tbCustomerZip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbCustomerZip.BackgroundImage")));
+            this.tbCustomerZip.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tbCustomerZip.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbCustomerZip.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tbCustomerZip.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbCustomerZip.BorderRadius = 10;
+            this.tbCustomerZip.BorderThickness = 1;
+            this.tbCustomerZip.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCustomerZip.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerZip.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbCustomerZip.DefaultText = "";
+            this.tbCustomerZip.FillColor = System.Drawing.Color.White;
+            this.tbCustomerZip.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbCustomerZip.HideSelection = true;
+            this.tbCustomerZip.IconLeft = null;
+            this.tbCustomerZip.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerZip.IconPadding = 3;
+            this.tbCustomerZip.IconRight = null;
+            this.tbCustomerZip.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerZip.Lines = new string[0];
+            this.tbCustomerZip.Location = new System.Drawing.Point(137, 240);
+            this.tbCustomerZip.MaxLength = 32767;
+            this.tbCustomerZip.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbCustomerZip.Modified = false;
+            this.tbCustomerZip.Multiline = false;
+            this.tbCustomerZip.Name = "tbCustomerZip";
+            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerZip.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbCustomerZip.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties15.FillColor = System.Drawing.Color.Empty;
+            stateProperties15.ForeColor = System.Drawing.Color.Empty;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerZip.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.Silver;
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerZip.OnIdleState = stateProperties16;
+            this.tbCustomerZip.Padding = new System.Windows.Forms.Padding(3);
+            this.tbCustomerZip.PasswordChar = '\0';
+            this.tbCustomerZip.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbCustomerZip.PlaceholderText = "Enter text";
+            this.tbCustomerZip.ReadOnly = true;
+            this.tbCustomerZip.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbCustomerZip.SelectedText = "";
+            this.tbCustomerZip.SelectionLength = 0;
+            this.tbCustomerZip.SelectionStart = 0;
+            this.tbCustomerZip.ShortcutsEnabled = true;
+            this.tbCustomerZip.Size = new System.Drawing.Size(146, 27);
+            this.tbCustomerZip.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.tbCustomerZip.TabIndex = 88;
+            this.tbCustomerZip.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCustomerZip.TextMarginBottom = 0;
+            this.tbCustomerZip.TextMarginLeft = 3;
+            this.tbCustomerZip.TextMarginTop = 1;
+            this.tbCustomerZip.TextPlaceholder = "Enter text";
+            this.tbCustomerZip.UseSystemPasswordChar = false;
+            this.tbCustomerZip.WordWrap = true;
             // 
-            // lbLeadCreatedAt
+            // tbCustomerCity
             // 
-            this.lbLeadCreatedAt.AutoSize = true;
-            this.lbLeadCreatedAt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLeadCreatedAt.Location = new System.Drawing.Point(241, 652);
-            this.lbLeadCreatedAt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbLeadCreatedAt.Name = "lbLeadCreatedAt";
-            this.lbLeadCreatedAt.Size = new System.Drawing.Size(86, 20);
-            this.lbLeadCreatedAt.TabIndex = 21;
-            this.lbLeadCreatedAt.Text = "Created At";
+            this.tbCustomerCity.AcceptsReturn = false;
+            this.tbCustomerCity.AcceptsTab = false;
+            this.tbCustomerCity.AnimationSpeed = 200;
+            this.tbCustomerCity.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbCustomerCity.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbCustomerCity.AutoSizeHeight = true;
+            this.tbCustomerCity.BackColor = System.Drawing.Color.Transparent;
+            this.tbCustomerCity.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbCustomerCity.BackgroundImage")));
+            this.tbCustomerCity.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tbCustomerCity.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbCustomerCity.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tbCustomerCity.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbCustomerCity.BorderRadius = 10;
+            this.tbCustomerCity.BorderThickness = 1;
+            this.tbCustomerCity.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCustomerCity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerCity.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbCustomerCity.DefaultText = "";
+            this.tbCustomerCity.FillColor = System.Drawing.Color.White;
+            this.tbCustomerCity.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbCustomerCity.HideSelection = true;
+            this.tbCustomerCity.IconLeft = null;
+            this.tbCustomerCity.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerCity.IconPadding = 3;
+            this.tbCustomerCity.IconRight = null;
+            this.tbCustomerCity.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerCity.Lines = new string[0];
+            this.tbCustomerCity.Location = new System.Drawing.Point(137, 176);
+            this.tbCustomerCity.MaxLength = 32767;
+            this.tbCustomerCity.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbCustomerCity.Modified = false;
+            this.tbCustomerCity.Multiline = false;
+            this.tbCustomerCity.Name = "tbCustomerCity";
+            stateProperties17.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties17.FillColor = System.Drawing.Color.Empty;
+            stateProperties17.ForeColor = System.Drawing.Color.Empty;
+            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerCity.OnActiveState = stateProperties17;
+            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbCustomerCity.OnDisabledState = stateProperties18;
+            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties19.FillColor = System.Drawing.Color.Empty;
+            stateProperties19.ForeColor = System.Drawing.Color.Empty;
+            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerCity.OnHoverState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.Silver;
+            stateProperties20.FillColor = System.Drawing.Color.White;
+            stateProperties20.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerCity.OnIdleState = stateProperties20;
+            this.tbCustomerCity.Padding = new System.Windows.Forms.Padding(3);
+            this.tbCustomerCity.PasswordChar = '\0';
+            this.tbCustomerCity.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbCustomerCity.PlaceholderText = "Enter text";
+            this.tbCustomerCity.ReadOnly = true;
+            this.tbCustomerCity.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbCustomerCity.SelectedText = "";
+            this.tbCustomerCity.SelectionLength = 0;
+            this.tbCustomerCity.SelectionStart = 0;
+            this.tbCustomerCity.ShortcutsEnabled = true;
+            this.tbCustomerCity.Size = new System.Drawing.Size(146, 27);
+            this.tbCustomerCity.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.tbCustomerCity.TabIndex = 84;
+            this.tbCustomerCity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCustomerCity.TextMarginBottom = 0;
+            this.tbCustomerCity.TextMarginLeft = 3;
+            this.tbCustomerCity.TextMarginTop = 1;
+            this.tbCustomerCity.TextPlaceholder = "Enter text";
+            this.tbCustomerCity.UseSystemPasswordChar = false;
+            this.tbCustomerCity.WordWrap = true;
             // 
-            // lbLeadDate
+            // tbCustomerDate
             // 
-            this.lbLeadDate.AutoSize = true;
-            this.lbLeadDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLeadDate.Location = new System.Drawing.Point(403, 135);
-            this.lbLeadDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbLeadDate.Name = "lbLeadDate";
-            this.lbLeadDate.Size = new System.Drawing.Size(44, 20);
-            this.lbLeadDate.TabIndex = 25;
-            this.lbLeadDate.Text = "Date";
+            this.tbCustomerDate.AcceptsReturn = false;
+            this.tbCustomerDate.AcceptsTab = false;
+            this.tbCustomerDate.AnimationSpeed = 200;
+            this.tbCustomerDate.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbCustomerDate.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbCustomerDate.AutoSizeHeight = true;
+            this.tbCustomerDate.BackColor = System.Drawing.Color.Transparent;
+            this.tbCustomerDate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbCustomerDate.BackgroundImage")));
+            this.tbCustomerDate.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tbCustomerDate.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbCustomerDate.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tbCustomerDate.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbCustomerDate.BorderRadius = 10;
+            this.tbCustomerDate.BorderThickness = 1;
+            this.tbCustomerDate.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCustomerDate.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerDate.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbCustomerDate.DefaultText = "";
+            this.tbCustomerDate.FillColor = System.Drawing.Color.White;
+            this.tbCustomerDate.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbCustomerDate.HideSelection = true;
+            this.tbCustomerDate.IconLeft = null;
+            this.tbCustomerDate.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerDate.IconPadding = 3;
+            this.tbCustomerDate.IconRight = null;
+            this.tbCustomerDate.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerDate.Lines = new string[0];
+            this.tbCustomerDate.Location = new System.Drawing.Point(463, 107);
+            this.tbCustomerDate.MaxLength = 32767;
+            this.tbCustomerDate.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbCustomerDate.Modified = false;
+            this.tbCustomerDate.Multiline = false;
+            this.tbCustomerDate.Name = "tbCustomerDate";
+            stateProperties21.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties21.FillColor = System.Drawing.Color.Empty;
+            stateProperties21.ForeColor = System.Drawing.Color.Empty;
+            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerDate.OnActiveState = stateProperties21;
+            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbCustomerDate.OnDisabledState = stateProperties22;
+            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties23.FillColor = System.Drawing.Color.Empty;
+            stateProperties23.ForeColor = System.Drawing.Color.Empty;
+            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerDate.OnHoverState = stateProperties23;
+            stateProperties24.BorderColor = System.Drawing.Color.Silver;
+            stateProperties24.FillColor = System.Drawing.Color.White;
+            stateProperties24.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerDate.OnIdleState = stateProperties24;
+            this.tbCustomerDate.Padding = new System.Windows.Forms.Padding(3);
+            this.tbCustomerDate.PasswordChar = '\0';
+            this.tbCustomerDate.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbCustomerDate.PlaceholderText = "Enter text";
+            this.tbCustomerDate.ReadOnly = true;
+            this.tbCustomerDate.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbCustomerDate.SelectedText = "";
+            this.tbCustomerDate.SelectionLength = 0;
+            this.tbCustomerDate.SelectionStart = 0;
+            this.tbCustomerDate.ShortcutsEnabled = true;
+            this.tbCustomerDate.Size = new System.Drawing.Size(146, 27);
+            this.tbCustomerDate.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.tbCustomerDate.TabIndex = 83;
+            this.tbCustomerDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCustomerDate.TextMarginBottom = 0;
+            this.tbCustomerDate.TextMarginLeft = 3;
+            this.tbCustomerDate.TextMarginTop = 1;
+            this.tbCustomerDate.TextPlaceholder = "Enter text";
+            this.tbCustomerDate.UseSystemPasswordChar = false;
+            this.tbCustomerDate.WordWrap = true;
+            // 
+            // tbCustomerDepartment
+            // 
+            this.tbCustomerDepartment.AcceptsReturn = false;
+            this.tbCustomerDepartment.AcceptsTab = false;
+            this.tbCustomerDepartment.AnimationSpeed = 200;
+            this.tbCustomerDepartment.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbCustomerDepartment.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbCustomerDepartment.AutoSizeHeight = true;
+            this.tbCustomerDepartment.BackColor = System.Drawing.Color.Transparent;
+            this.tbCustomerDepartment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbCustomerDepartment.BackgroundImage")));
+            this.tbCustomerDepartment.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tbCustomerDepartment.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbCustomerDepartment.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tbCustomerDepartment.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbCustomerDepartment.BorderRadius = 10;
+            this.tbCustomerDepartment.BorderThickness = 1;
+            this.tbCustomerDepartment.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCustomerDepartment.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerDepartment.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbCustomerDepartment.DefaultText = "";
+            this.tbCustomerDepartment.FillColor = System.Drawing.Color.White;
+            this.tbCustomerDepartment.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbCustomerDepartment.HideSelection = true;
+            this.tbCustomerDepartment.IconLeft = null;
+            this.tbCustomerDepartment.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerDepartment.IconPadding = 3;
+            this.tbCustomerDepartment.IconRight = null;
+            this.tbCustomerDepartment.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerDepartment.Lines = new string[0];
+            this.tbCustomerDepartment.Location = new System.Drawing.Point(463, 37);
+            this.tbCustomerDepartment.MaxLength = 32767;
+            this.tbCustomerDepartment.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbCustomerDepartment.Modified = false;
+            this.tbCustomerDepartment.Multiline = false;
+            this.tbCustomerDepartment.Name = "tbCustomerDepartment";
+            stateProperties25.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties25.FillColor = System.Drawing.Color.Empty;
+            stateProperties25.ForeColor = System.Drawing.Color.Empty;
+            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerDepartment.OnActiveState = stateProperties25;
+            stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbCustomerDepartment.OnDisabledState = stateProperties26;
+            stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties27.FillColor = System.Drawing.Color.Empty;
+            stateProperties27.ForeColor = System.Drawing.Color.Empty;
+            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerDepartment.OnHoverState = stateProperties27;
+            stateProperties28.BorderColor = System.Drawing.Color.Silver;
+            stateProperties28.FillColor = System.Drawing.Color.White;
+            stateProperties28.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerDepartment.OnIdleState = stateProperties28;
+            this.tbCustomerDepartment.Padding = new System.Windows.Forms.Padding(3);
+            this.tbCustomerDepartment.PasswordChar = '\0';
+            this.tbCustomerDepartment.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbCustomerDepartment.PlaceholderText = "Enter text";
+            this.tbCustomerDepartment.ReadOnly = true;
+            this.tbCustomerDepartment.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbCustomerDepartment.SelectedText = "";
+            this.tbCustomerDepartment.SelectionLength = 0;
+            this.tbCustomerDepartment.SelectionStart = 0;
+            this.tbCustomerDepartment.ShortcutsEnabled = true;
+            this.tbCustomerDepartment.Size = new System.Drawing.Size(146, 27);
+            this.tbCustomerDepartment.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.tbCustomerDepartment.TabIndex = 82;
+            this.tbCustomerDepartment.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCustomerDepartment.TextMarginBottom = 0;
+            this.tbCustomerDepartment.TextMarginLeft = 3;
+            this.tbCustomerDepartment.TextMarginTop = 1;
+            this.tbCustomerDepartment.TextPlaceholder = "Enter text";
+            this.tbCustomerDepartment.UseSystemPasswordChar = false;
+            this.tbCustomerDepartment.WordWrap = true;
+            // 
+            // tbCustomerType
+            // 
+            this.tbCustomerType.AcceptsReturn = false;
+            this.tbCustomerType.AcceptsTab = false;
+            this.tbCustomerType.AnimationSpeed = 200;
+            this.tbCustomerType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbCustomerType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbCustomerType.AutoSizeHeight = true;
+            this.tbCustomerType.BackColor = System.Drawing.Color.Transparent;
+            this.tbCustomerType.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbCustomerType.BackgroundImage")));
+            this.tbCustomerType.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tbCustomerType.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbCustomerType.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tbCustomerType.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbCustomerType.BorderRadius = 10;
+            this.tbCustomerType.BorderThickness = 1;
+            this.tbCustomerType.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCustomerType.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerType.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbCustomerType.DefaultText = "";
+            this.tbCustomerType.FillColor = System.Drawing.Color.White;
+            this.tbCustomerType.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbCustomerType.HideSelection = true;
+            this.tbCustomerType.IconLeft = null;
+            this.tbCustomerType.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerType.IconPadding = 3;
+            this.tbCustomerType.IconRight = null;
+            this.tbCustomerType.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerType.Lines = new string[0];
+            this.tbCustomerType.Location = new System.Drawing.Point(463, 72);
+            this.tbCustomerType.MaxLength = 32767;
+            this.tbCustomerType.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbCustomerType.Modified = false;
+            this.tbCustomerType.Multiline = false;
+            this.tbCustomerType.Name = "tbCustomerType";
+            stateProperties29.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties29.FillColor = System.Drawing.Color.Empty;
+            stateProperties29.ForeColor = System.Drawing.Color.Empty;
+            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerType.OnActiveState = stateProperties29;
+            stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbCustomerType.OnDisabledState = stateProperties30;
+            stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties31.FillColor = System.Drawing.Color.Empty;
+            stateProperties31.ForeColor = System.Drawing.Color.Empty;
+            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerType.OnHoverState = stateProperties31;
+            stateProperties32.BorderColor = System.Drawing.Color.Silver;
+            stateProperties32.FillColor = System.Drawing.Color.White;
+            stateProperties32.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerType.OnIdleState = stateProperties32;
+            this.tbCustomerType.Padding = new System.Windows.Forms.Padding(3);
+            this.tbCustomerType.PasswordChar = '\0';
+            this.tbCustomerType.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbCustomerType.PlaceholderText = "Enter text";
+            this.tbCustomerType.ReadOnly = true;
+            this.tbCustomerType.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbCustomerType.SelectedText = "";
+            this.tbCustomerType.SelectionLength = 0;
+            this.tbCustomerType.SelectionStart = 0;
+            this.tbCustomerType.ShortcutsEnabled = true;
+            this.tbCustomerType.Size = new System.Drawing.Size(146, 27);
+            this.tbCustomerType.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.tbCustomerType.TabIndex = 81;
+            this.tbCustomerType.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCustomerType.TextMarginBottom = 0;
+            this.tbCustomerType.TextMarginLeft = 3;
+            this.tbCustomerType.TextMarginTop = 1;
+            this.tbCustomerType.TextPlaceholder = "Enter text";
+            this.tbCustomerType.UseSystemPasswordChar = false;
+            this.tbCustomerType.WordWrap = true;
+            // 
+            // tbCustomerAddress2
+            // 
+            this.tbCustomerAddress2.AcceptsReturn = false;
+            this.tbCustomerAddress2.AcceptsTab = false;
+            this.tbCustomerAddress2.AnimationSpeed = 200;
+            this.tbCustomerAddress2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbCustomerAddress2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbCustomerAddress2.AutoSizeHeight = true;
+            this.tbCustomerAddress2.BackColor = System.Drawing.Color.Transparent;
+            this.tbCustomerAddress2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbCustomerAddress2.BackgroundImage")));
+            this.tbCustomerAddress2.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tbCustomerAddress2.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbCustomerAddress2.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tbCustomerAddress2.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbCustomerAddress2.BorderRadius = 10;
+            this.tbCustomerAddress2.BorderThickness = 1;
+            this.tbCustomerAddress2.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCustomerAddress2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerAddress2.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbCustomerAddress2.DefaultText = "";
+            this.tbCustomerAddress2.FillColor = System.Drawing.Color.White;
+            this.tbCustomerAddress2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbCustomerAddress2.HideSelection = true;
+            this.tbCustomerAddress2.IconLeft = null;
+            this.tbCustomerAddress2.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerAddress2.IconPadding = 3;
+            this.tbCustomerAddress2.IconRight = null;
+            this.tbCustomerAddress2.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerAddress2.Lines = new string[0];
+            this.tbCustomerAddress2.Location = new System.Drawing.Point(137, 143);
+            this.tbCustomerAddress2.MaxLength = 32767;
+            this.tbCustomerAddress2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbCustomerAddress2.Modified = false;
+            this.tbCustomerAddress2.Multiline = false;
+            this.tbCustomerAddress2.Name = "tbCustomerAddress2";
+            stateProperties33.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties33.FillColor = System.Drawing.Color.Empty;
+            stateProperties33.ForeColor = System.Drawing.Color.Empty;
+            stateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerAddress2.OnActiveState = stateProperties33;
+            stateProperties34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties34.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties34.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbCustomerAddress2.OnDisabledState = stateProperties34;
+            stateProperties35.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties35.FillColor = System.Drawing.Color.Empty;
+            stateProperties35.ForeColor = System.Drawing.Color.Empty;
+            stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerAddress2.OnHoverState = stateProperties35;
+            stateProperties36.BorderColor = System.Drawing.Color.Silver;
+            stateProperties36.FillColor = System.Drawing.Color.White;
+            stateProperties36.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerAddress2.OnIdleState = stateProperties36;
+            this.tbCustomerAddress2.Padding = new System.Windows.Forms.Padding(3);
+            this.tbCustomerAddress2.PasswordChar = '\0';
+            this.tbCustomerAddress2.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbCustomerAddress2.PlaceholderText = "Enter text";
+            this.tbCustomerAddress2.ReadOnly = true;
+            this.tbCustomerAddress2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbCustomerAddress2.SelectedText = "";
+            this.tbCustomerAddress2.SelectionLength = 0;
+            this.tbCustomerAddress2.SelectionStart = 0;
+            this.tbCustomerAddress2.ShortcutsEnabled = true;
+            this.tbCustomerAddress2.Size = new System.Drawing.Size(146, 27);
+            this.tbCustomerAddress2.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.tbCustomerAddress2.TabIndex = 80;
+            this.tbCustomerAddress2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCustomerAddress2.TextMarginBottom = 0;
+            this.tbCustomerAddress2.TextMarginLeft = 3;
+            this.tbCustomerAddress2.TextMarginTop = 1;
+            this.tbCustomerAddress2.TextPlaceholder = "Enter text";
+            this.tbCustomerAddress2.UseSystemPasswordChar = false;
+            this.tbCustomerAddress2.WordWrap = true;
+            // 
+            // tbCustomerAddress1
+            // 
+            this.tbCustomerAddress1.AcceptsReturn = false;
+            this.tbCustomerAddress1.AcceptsTab = false;
+            this.tbCustomerAddress1.AnimationSpeed = 200;
+            this.tbCustomerAddress1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbCustomerAddress1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbCustomerAddress1.AutoSizeHeight = true;
+            this.tbCustomerAddress1.BackColor = System.Drawing.Color.Transparent;
+            this.tbCustomerAddress1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbCustomerAddress1.BackgroundImage")));
+            this.tbCustomerAddress1.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tbCustomerAddress1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbCustomerAddress1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tbCustomerAddress1.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbCustomerAddress1.BorderRadius = 10;
+            this.tbCustomerAddress1.BorderThickness = 1;
+            this.tbCustomerAddress1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCustomerAddress1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerAddress1.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbCustomerAddress1.DefaultText = "";
+            this.tbCustomerAddress1.FillColor = System.Drawing.Color.White;
+            this.tbCustomerAddress1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbCustomerAddress1.HideSelection = true;
+            this.tbCustomerAddress1.IconLeft = null;
+            this.tbCustomerAddress1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerAddress1.IconPadding = 3;
+            this.tbCustomerAddress1.IconRight = null;
+            this.tbCustomerAddress1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerAddress1.Lines = new string[0];
+            this.tbCustomerAddress1.Location = new System.Drawing.Point(137, 111);
+            this.tbCustomerAddress1.MaxLength = 32767;
+            this.tbCustomerAddress1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbCustomerAddress1.Modified = false;
+            this.tbCustomerAddress1.Multiline = false;
+            this.tbCustomerAddress1.Name = "tbCustomerAddress1";
+            stateProperties37.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties37.FillColor = System.Drawing.Color.Empty;
+            stateProperties37.ForeColor = System.Drawing.Color.Empty;
+            stateProperties37.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerAddress1.OnActiveState = stateProperties37;
+            stateProperties38.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties38.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties38.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbCustomerAddress1.OnDisabledState = stateProperties38;
+            stateProperties39.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties39.FillColor = System.Drawing.Color.Empty;
+            stateProperties39.ForeColor = System.Drawing.Color.Empty;
+            stateProperties39.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerAddress1.OnHoverState = stateProperties39;
+            stateProperties40.BorderColor = System.Drawing.Color.Silver;
+            stateProperties40.FillColor = System.Drawing.Color.White;
+            stateProperties40.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            stateProperties40.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerAddress1.OnIdleState = stateProperties40;
+            this.tbCustomerAddress1.Padding = new System.Windows.Forms.Padding(3);
+            this.tbCustomerAddress1.PasswordChar = '\0';
+            this.tbCustomerAddress1.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbCustomerAddress1.PlaceholderText = "Enter text";
+            this.tbCustomerAddress1.ReadOnly = true;
+            this.tbCustomerAddress1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbCustomerAddress1.SelectedText = "";
+            this.tbCustomerAddress1.SelectionLength = 0;
+            this.tbCustomerAddress1.SelectionStart = 0;
+            this.tbCustomerAddress1.ShortcutsEnabled = true;
+            this.tbCustomerAddress1.Size = new System.Drawing.Size(146, 27);
+            this.tbCustomerAddress1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.tbCustomerAddress1.TabIndex = 79;
+            this.tbCustomerAddress1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCustomerAddress1.TextMarginBottom = 0;
+            this.tbCustomerAddress1.TextMarginLeft = 3;
+            this.tbCustomerAddress1.TextMarginTop = 1;
+            this.tbCustomerAddress1.TextPlaceholder = "Enter text";
+            this.tbCustomerAddress1.UseSystemPasswordChar = false;
+            this.tbCustomerAddress1.WordWrap = true;
+            // 
+            // tbCustomerCompanyName
+            // 
+            this.tbCustomerCompanyName.AcceptsReturn = false;
+            this.tbCustomerCompanyName.AcceptsTab = false;
+            this.tbCustomerCompanyName.AnimationSpeed = 200;
+            this.tbCustomerCompanyName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.tbCustomerCompanyName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.tbCustomerCompanyName.AutoSizeHeight = true;
+            this.tbCustomerCompanyName.BackColor = System.Drawing.Color.Transparent;
+            this.tbCustomerCompanyName.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tbCustomerCompanyName.BackgroundImage")));
+            this.tbCustomerCompanyName.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.tbCustomerCompanyName.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.tbCustomerCompanyName.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.tbCustomerCompanyName.BorderColorIdle = System.Drawing.Color.Silver;
+            this.tbCustomerCompanyName.BorderRadius = 10;
+            this.tbCustomerCompanyName.BorderThickness = 1;
+            this.tbCustomerCompanyName.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.tbCustomerCompanyName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerCompanyName.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.tbCustomerCompanyName.DefaultText = "";
+            this.tbCustomerCompanyName.FillColor = System.Drawing.Color.White;
+            this.tbCustomerCompanyName.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.tbCustomerCompanyName.HideSelection = true;
+            this.tbCustomerCompanyName.IconLeft = null;
+            this.tbCustomerCompanyName.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerCompanyName.IconPadding = 3;
+            this.tbCustomerCompanyName.IconRight = null;
+            this.tbCustomerCompanyName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbCustomerCompanyName.Lines = new string[0];
+            this.tbCustomerCompanyName.Location = new System.Drawing.Point(137, 37);
+            this.tbCustomerCompanyName.MaxLength = 32767;
+            this.tbCustomerCompanyName.MinimumSize = new System.Drawing.Size(1, 1);
+            this.tbCustomerCompanyName.Modified = false;
+            this.tbCustomerCompanyName.Multiline = false;
+            this.tbCustomerCompanyName.Name = "tbCustomerCompanyName";
+            stateProperties41.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties41.FillColor = System.Drawing.Color.Empty;
+            stateProperties41.ForeColor = System.Drawing.Color.Empty;
+            stateProperties41.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerCompanyName.OnActiveState = stateProperties41;
+            stateProperties42.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties42.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties42.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.tbCustomerCompanyName.OnDisabledState = stateProperties42;
+            stateProperties43.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties43.FillColor = System.Drawing.Color.Empty;
+            stateProperties43.ForeColor = System.Drawing.Color.Empty;
+            stateProperties43.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerCompanyName.OnHoverState = stateProperties43;
+            stateProperties44.BorderColor = System.Drawing.Color.Silver;
+            stateProperties44.FillColor = System.Drawing.Color.White;
+            stateProperties44.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            stateProperties44.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.tbCustomerCompanyName.OnIdleState = stateProperties44;
+            this.tbCustomerCompanyName.Padding = new System.Windows.Forms.Padding(3);
+            this.tbCustomerCompanyName.PasswordChar = '\0';
+            this.tbCustomerCompanyName.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.tbCustomerCompanyName.PlaceholderText = "Enter text";
+            this.tbCustomerCompanyName.ReadOnly = true;
+            this.tbCustomerCompanyName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.tbCustomerCompanyName.SelectedText = "";
+            this.tbCustomerCompanyName.SelectionLength = 0;
+            this.tbCustomerCompanyName.SelectionStart = 0;
+            this.tbCustomerCompanyName.ShortcutsEnabled = true;
+            this.tbCustomerCompanyName.Size = new System.Drawing.Size(146, 27);
+            this.tbCustomerCompanyName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.tbCustomerCompanyName.TabIndex = 78;
+            this.tbCustomerCompanyName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tbCustomerCompanyName.TextMarginBottom = 0;
+            this.tbCustomerCompanyName.TextMarginLeft = 3;
+            this.tbCustomerCompanyName.TextMarginTop = 1;
+            this.tbCustomerCompanyName.TextPlaceholder = "Enter text";
+            this.tbCustomerCompanyName.UseSystemPasswordChar = false;
+            this.tbCustomerCompanyName.WordWrap = true;
+            // 
+            // lbDepartment
+            // 
+            this.lbDepartment.AllowParentOverrides = false;
+            this.lbDepartment.AutoEllipsis = false;
+            this.lbDepartment.AutoSize = false;
+            this.lbDepartment.CursorType = null;
+            this.lbDepartment.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbDepartment.Location = new System.Drawing.Point(329, 25);
+            this.lbDepartment.Name = "lbDepartment";
+            this.lbDepartment.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbDepartment.Size = new System.Drawing.Size(118, 38);
+            this.lbDepartment.TabIndex = 93;
+            this.lbDepartment.Text = "<h4>Departamento:</h4>";
+            this.lbDepartment.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbDepartment.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btnLeadRemove
             // 
             this.btnLeadRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(37)))), ((int)(((byte)(68)))));
             this.btnLeadRemove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLeadRemove.BackgroundImage")));
             this.btnLeadRemove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLeadRemove.Location = new System.Drawing.Point(430, 620);
+            this.btnLeadRemove.Location = new System.Drawing.Point(713, 473);
             this.btnLeadRemove.Name = "btnLeadRemove";
             this.btnLeadRemove.Size = new System.Drawing.Size(41, 41);
             this.btnLeadRemove.TabIndex = 27;
             this.btnLeadRemove.UseVisualStyleBackColor = false;
             this.btnLeadRemove.Click += new System.EventHandler(this.btnLeadRemove_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(224, 67);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 13);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "Amout:";
             // 
             // bbtnLeadToSale
             // 
@@ -608,7 +1347,7 @@
             this.bbtnLeadToSale.AutoSizeLeftIcon = true;
             this.bbtnLeadToSale.AutoSizeRightIcon = true;
             this.bbtnLeadToSale.BackColor = System.Drawing.Color.Transparent;
-            this.bbtnLeadToSale.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bbtnLeadToSale.BackColor1 = System.Drawing.Color.RoyalBlue;
             this.bbtnLeadToSale.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bbtnLeadToSale.BackgroundImage")));
             this.bbtnLeadToSale.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnLeadToSale.ButtonText = "Convert in a Sale";
@@ -637,17 +1376,17 @@
             this.bbtnLeadToSale.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.bbtnLeadToSale.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.bbtnLeadToSale.IconSize = 25;
-            this.bbtnLeadToSale.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.bbtnLeadToSale.IdleBorderRadius = 1;
+            this.bbtnLeadToSale.IdleBorderColor = System.Drawing.Color.RoyalBlue;
+            this.bbtnLeadToSale.IdleBorderRadius = 10;
             this.bbtnLeadToSale.IdleBorderThickness = 1;
-            this.bbtnLeadToSale.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnLeadToSale.IdleFillColor = System.Drawing.Color.RoyalBlue;
             this.bbtnLeadToSale.IdleIconLeftImage = null;
             this.bbtnLeadToSale.IdleIconRightImage = null;
             this.bbtnLeadToSale.IndicateFocus = false;
-            this.bbtnLeadToSale.Location = new System.Drawing.Point(430, 565);
+            this.bbtnLeadToSale.Location = new System.Drawing.Point(713, 418);
             this.bbtnLeadToSale.Name = "bbtnLeadToSale";
             this.bbtnLeadToSale.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bbtnLeadToSale.OnDisabledState.BorderRadius = 1;
+            this.bbtnLeadToSale.OnDisabledState.BorderRadius = 10;
             this.bbtnLeadToSale.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnLeadToSale.OnDisabledState.BorderThickness = 1;
             this.bbtnLeadToSale.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -655,23 +1394,23 @@
             this.bbtnLeadToSale.OnDisabledState.IconLeftImage = null;
             this.bbtnLeadToSale.OnDisabledState.IconRightImage = null;
             this.bbtnLeadToSale.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bbtnLeadToSale.onHoverState.BorderRadius = 1;
+            this.bbtnLeadToSale.onHoverState.BorderRadius = 10;
             this.bbtnLeadToSale.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnLeadToSale.onHoverState.BorderThickness = 1;
             this.bbtnLeadToSale.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.bbtnLeadToSale.onHoverState.ForeColor = System.Drawing.Color.White;
             this.bbtnLeadToSale.onHoverState.IconLeftImage = null;
             this.bbtnLeadToSale.onHoverState.IconRightImage = null;
-            this.bbtnLeadToSale.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.bbtnLeadToSale.OnIdleState.BorderRadius = 1;
+            this.bbtnLeadToSale.OnIdleState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.bbtnLeadToSale.OnIdleState.BorderRadius = 10;
             this.bbtnLeadToSale.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnLeadToSale.OnIdleState.BorderThickness = 1;
-            this.bbtnLeadToSale.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnLeadToSale.OnIdleState.FillColor = System.Drawing.Color.RoyalBlue;
             this.bbtnLeadToSale.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.bbtnLeadToSale.OnIdleState.IconLeftImage = null;
             this.bbtnLeadToSale.OnIdleState.IconRightImage = null;
             this.bbtnLeadToSale.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bbtnLeadToSale.OnPressedState.BorderRadius = 1;
+            this.bbtnLeadToSale.OnPressedState.BorderRadius = 10;
             this.bbtnLeadToSale.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnLeadToSale.OnPressedState.BorderThickness = 1;
             this.bbtnLeadToSale.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -699,7 +1438,7 @@
             this.bbtnDetailsSale.AutoSizeLeftIcon = true;
             this.bbtnDetailsSale.AutoSizeRightIcon = true;
             this.bbtnDetailsSale.BackColor = System.Drawing.Color.Transparent;
-            this.bbtnDetailsSale.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.bbtnDetailsSale.BackColor1 = System.Drawing.Color.RoyalBlue;
             this.bbtnDetailsSale.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bbtnDetailsSale.BackgroundImage")));
             this.bbtnDetailsSale.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnDetailsSale.ButtonText = "Details Sale";
@@ -728,17 +1467,17 @@
             this.bbtnDetailsSale.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.bbtnDetailsSale.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.bbtnDetailsSale.IconSize = 25;
-            this.bbtnDetailsSale.IdleBorderColor = System.Drawing.Color.DodgerBlue;
-            this.bbtnDetailsSale.IdleBorderRadius = 1;
+            this.bbtnDetailsSale.IdleBorderColor = System.Drawing.Color.RoyalBlue;
+            this.bbtnDetailsSale.IdleBorderRadius = 10;
             this.bbtnDetailsSale.IdleBorderThickness = 1;
-            this.bbtnDetailsSale.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnDetailsSale.IdleFillColor = System.Drawing.Color.RoyalBlue;
             this.bbtnDetailsSale.IdleIconLeftImage = null;
             this.bbtnDetailsSale.IdleIconRightImage = null;
             this.bbtnDetailsSale.IndicateFocus = false;
-            this.bbtnDetailsSale.Location = new System.Drawing.Point(430, 510);
+            this.bbtnDetailsSale.Location = new System.Drawing.Point(713, 363);
             this.bbtnDetailsSale.Name = "bbtnDetailsSale";
             this.bbtnDetailsSale.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.bbtnDetailsSale.OnDisabledState.BorderRadius = 1;
+            this.bbtnDetailsSale.OnDisabledState.BorderRadius = 10;
             this.bbtnDetailsSale.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnDetailsSale.OnDisabledState.BorderThickness = 1;
             this.bbtnDetailsSale.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -746,23 +1485,23 @@
             this.bbtnDetailsSale.OnDisabledState.IconLeftImage = null;
             this.bbtnDetailsSale.OnDisabledState.IconRightImage = null;
             this.bbtnDetailsSale.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bbtnDetailsSale.onHoverState.BorderRadius = 1;
+            this.bbtnDetailsSale.onHoverState.BorderRadius = 10;
             this.bbtnDetailsSale.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnDetailsSale.onHoverState.BorderThickness = 1;
             this.bbtnDetailsSale.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.bbtnDetailsSale.onHoverState.ForeColor = System.Drawing.Color.White;
             this.bbtnDetailsSale.onHoverState.IconLeftImage = null;
             this.bbtnDetailsSale.onHoverState.IconRightImage = null;
-            this.bbtnDetailsSale.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.bbtnDetailsSale.OnIdleState.BorderRadius = 1;
+            this.bbtnDetailsSale.OnIdleState.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.bbtnDetailsSale.OnIdleState.BorderRadius = 10;
             this.bbtnDetailsSale.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnDetailsSale.OnIdleState.BorderThickness = 1;
-            this.bbtnDetailsSale.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.bbtnDetailsSale.OnIdleState.FillColor = System.Drawing.Color.RoyalBlue;
             this.bbtnDetailsSale.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.bbtnDetailsSale.OnIdleState.IconLeftImage = null;
             this.bbtnDetailsSale.OnIdleState.IconRightImage = null;
             this.bbtnDetailsSale.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.bbtnDetailsSale.OnPressedState.BorderRadius = 1;
+            this.bbtnDetailsSale.OnPressedState.BorderRadius = 10;
             this.bbtnDetailsSale.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.bbtnDetailsSale.OnPressedState.BorderThickness = 1;
             this.bbtnDetailsSale.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -790,7 +1529,7 @@
             this.btnClose.AutoSizeLeftIcon = true;
             this.btnClose.AutoSizeRightIcon = true;
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.BackColor1 = System.Drawing.Color.Red;
+            this.btnClose.BackColor1 = System.Drawing.Color.Crimson;
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnClose.ButtonText = "Close";
@@ -819,14 +1558,14 @@
             this.btnClose.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btnClose.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
             this.btnClose.IconSize = 25;
-            this.btnClose.IdleBorderColor = System.Drawing.Color.Red;
+            this.btnClose.IdleBorderColor = System.Drawing.Color.Crimson;
             this.btnClose.IdleBorderRadius = 10;
             this.btnClose.IdleBorderThickness = 1;
-            this.btnClose.IdleFillColor = System.Drawing.Color.Red;
+            this.btnClose.IdleFillColor = System.Drawing.Color.Crimson;
             this.btnClose.IdleIconLeftImage = null;
             this.btnClose.IdleIconRightImage = null;
             this.btnClose.IndicateFocus = false;
-            this.btnClose.Location = new System.Drawing.Point(496, 619);
+            this.btnClose.Location = new System.Drawing.Point(779, 472);
             this.btnClose.Name = "btnClose";
             this.btnClose.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnClose.OnDisabledState.BorderRadius = 10;
@@ -844,11 +1583,11 @@
             this.btnClose.onHoverState.ForeColor = System.Drawing.Color.White;
             this.btnClose.onHoverState.IconLeftImage = null;
             this.btnClose.onHoverState.IconRightImage = null;
-            this.btnClose.OnIdleState.BorderColor = System.Drawing.Color.Red;
+            this.btnClose.OnIdleState.BorderColor = System.Drawing.Color.Crimson;
             this.btnClose.OnIdleState.BorderRadius = 10;
             this.btnClose.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton2.BorderStyles.Solid;
             this.btnClose.OnIdleState.BorderThickness = 1;
-            this.btnClose.OnIdleState.FillColor = System.Drawing.Color.Red;
+            this.btnClose.OnIdleState.FillColor = System.Drawing.Color.Crimson;
             this.btnClose.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btnClose.OnIdleState.IconLeftImage = null;
             this.btnClose.OnIdleState.IconRightImage = null;
@@ -869,95 +1608,302 @@
             this.btnClose.UseDefaultRadiusAndThickness = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lbAssignedTo
+            // 
+            this.lbAssignedTo.AllowParentOverrides = false;
+            this.lbAssignedTo.AutoEllipsis = false;
+            this.lbAssignedTo.AutoSize = false;
+            this.lbAssignedTo.CursorType = null;
+            this.lbAssignedTo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbAssignedTo.Location = new System.Drawing.Point(30, 52);
+            this.lbAssignedTo.Name = "lbAssignedTo";
+            this.lbAssignedTo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbAssignedTo.Size = new System.Drawing.Size(143, 64);
+            this.lbAssignedTo.TabIndex = 63;
+            this.lbAssignedTo.Text = "<h3>Assigned To:</h3>";
+            this.lbAssignedTo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbAssignedTo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // blbAmount
+            // 
+            this.blbAmount.AllowParentOverrides = false;
+            this.blbAmount.AutoEllipsis = false;
+            this.blbAmount.AutoSize = false;
+            this.blbAmount.CursorType = null;
+            this.blbAmount.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.blbAmount.Location = new System.Drawing.Point(287, 52);
+            this.blbAmount.Name = "blbAmount";
+            this.blbAmount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.blbAmount.Size = new System.Drawing.Size(80, 34);
+            this.blbAmount.TabIndex = 64;
+            this.blbAmount.Text = "<h3>Amount:</h3>";
+            this.blbAmount.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.blbAmount.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbCustomerName
+            // 
+            this.lbCustomerName.AllowParentOverrides = false;
+            this.lbCustomerName.AutoEllipsis = false;
+            this.lbCustomerName.AutoSize = false;
+            this.lbCustomerName.CursorType = null;
+            this.lbCustomerName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbCustomerName.Location = new System.Drawing.Point(30, 122);
+            this.lbCustomerName.Name = "lbCustomerName";
+            this.lbCustomerName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbCustomerName.Size = new System.Drawing.Size(111, 40);
+            this.lbCustomerName.TabIndex = 65;
+            this.lbCustomerName.Text = "<h4>lbCustomerName</h4>";
+            this.lbCustomerName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbCustomerName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbLeadCreatedAt
+            // 
+            this.lbLeadCreatedAt.AllowParentOverrides = false;
+            this.lbLeadCreatedAt.AutoEllipsis = false;
+            this.lbLeadCreatedAt.AutoSize = false;
+            this.lbLeadCreatedAt.CursorType = null;
+            this.lbLeadCreatedAt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbLeadCreatedAt.Location = new System.Drawing.Point(12, 540);
+            this.lbLeadCreatedAt.Name = "lbLeadCreatedAt";
+            this.lbLeadCreatedAt.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbLeadCreatedAt.Size = new System.Drawing.Size(276, 47);
+            this.lbLeadCreatedAt.TabIndex = 68;
+            this.lbLeadCreatedAt.Text = "<h2>Creado:</h2>";
+            this.lbLeadCreatedAt.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbLeadCreatedAt.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbLeadName
+            // 
+            this.lbLeadName.AllowParentOverrides = false;
+            this.lbLeadName.AutoEllipsis = false;
+            this.lbLeadName.AutoSize = false;
+            this.lbLeadName.CursorType = null;
+            this.lbLeadName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbLeadName.Location = new System.Drawing.Point(32, 2);
+            this.lbLeadName.Name = "lbLeadName";
+            this.lbLeadName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbLeadName.Size = new System.Drawing.Size(240, 50);
+            this.lbLeadName.TabIndex = 71;
+            this.lbLeadName.Text = "<h2>Nombre del Lead</h2>";
+            this.lbLeadName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbLeadName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbLeadExpDate
+            // 
+            this.lbLeadExpDate.AllowParentOverrides = false;
+            this.lbLeadExpDate.AutoEllipsis = false;
+            this.lbLeadExpDate.AutoSize = false;
+            this.lbLeadExpDate.CursorType = null;
+            this.lbLeadExpDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbLeadExpDate.Location = new System.Drawing.Point(287, 122);
+            this.lbLeadExpDate.Name = "lbLeadExpDate";
+            this.lbLeadExpDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbLeadExpDate.Size = new System.Drawing.Size(115, 35);
+            this.lbLeadExpDate.TabIndex = 72;
+            this.lbLeadExpDate.Text = "<h4>Expected Closing:</h4>";
+            this.lbLeadExpDate.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbLeadExpDate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbCustomer
+            // 
+            this.lbCustomer.AllowParentOverrides = false;
+            this.lbCustomer.AutoEllipsis = false;
+            this.lbCustomer.AutoSize = false;
+            this.lbCustomer.CursorType = null;
+            this.lbCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbCustomer.Location = new System.Drawing.Point(32, 85);
+            this.lbCustomer.Name = "lbCustomer";
+            this.lbCustomer.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbCustomer.Size = new System.Drawing.Size(88, 44);
+            this.lbCustomer.TabIndex = 73;
+            this.lbCustomer.Text = "<h2>Cliente</h2>";
+            this.lbCustomer.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbCustomer.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbCustomerEmail
+            // 
+            this.lbCustomerEmail.AllowParentOverrides = false;
+            this.lbCustomerEmail.AutoEllipsis = false;
+            this.lbCustomerEmail.AutoSize = false;
+            this.lbCustomerEmail.CursorType = null;
+            this.lbCustomerEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbCustomerEmail.Location = new System.Drawing.Point(30, 149);
+            this.lbCustomerEmail.Name = "lbCustomerEmail";
+            this.lbCustomerEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbCustomerEmail.Size = new System.Drawing.Size(116, 38);
+            this.lbCustomerEmail.TabIndex = 76;
+            this.lbCustomerEmail.Text = "<h4>lbCustomerEmail</h4>";
+            this.lbCustomerEmail.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbCustomerEmail.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbUserAssignedTo
+            // 
+            this.lbUserAssignedTo.AllowParentOverrides = false;
+            this.lbUserAssignedTo.AutoEllipsis = false;
+            this.lbUserAssignedTo.AutoSize = false;
+            this.lbUserAssignedTo.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbUserAssignedTo.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbUserAssignedTo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbUserAssignedTo.Location = new System.Drawing.Point(127, 52);
+            this.lbUserAssignedTo.Name = "lbUserAssignedTo";
+            this.lbUserAssignedTo.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbUserAssignedTo.Size = new System.Drawing.Size(118, 43);
+            this.lbUserAssignedTo.TabIndex = 77;
+            this.lbUserAssignedTo.Text = "<h4>User Assigned To</h4>";
+            this.lbUserAssignedTo.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbUserAssignedTo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbAmountLead
+            // 
+            this.lbAmountLead.AllowParentOverrides = false;
+            this.lbAmountLead.AutoEllipsis = false;
+            this.lbAmountLead.AutoSize = false;
+            this.lbAmountLead.CursorType = null;
+            this.lbAmountLead.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbAmountLead.Location = new System.Drawing.Point(353, 54);
+            this.lbAmountLead.Name = "lbAmountLead";
+            this.lbAmountLead.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbAmountLead.Size = new System.Drawing.Size(144, 43);
+            this.lbAmountLead.TabIndex = 78;
+            this.lbAmountLead.Text = "<h4>lbAmountLead</h4>";
+            this.lbAmountLead.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbAmountLead.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbLeadDate
+            // 
+            this.lbLeadDate.AllowParentOverrides = false;
+            this.lbLeadDate.AutoEllipsis = false;
+            this.lbLeadDate.AutoSize = false;
+            this.lbLeadDate.CursorType = null;
+            this.lbLeadDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbLeadDate.Location = new System.Drawing.Point(398, 122);
+            this.lbLeadDate.Name = "lbLeadDate";
+            this.lbLeadDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbLeadDate.Size = new System.Drawing.Size(218, 41);
+            this.lbLeadDate.TabIndex = 79;
+            this.lbLeadDate.Text = "<h4>Date</h4>";
+            this.lbLeadDate.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbLeadDate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbNameCustomer
+            // 
+            this.lbNameCustomer.AllowParentOverrides = false;
+            this.lbNameCustomer.AutoEllipsis = false;
+            this.lbNameCustomer.AutoSize = false;
+            this.lbNameCustomer.CursorType = null;
+            this.lbNameCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbNameCustomer.Location = new System.Drawing.Point(146, 122);
+            this.lbNameCustomer.Name = "lbNameCustomer";
+            this.lbNameCustomer.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbNameCustomer.Size = new System.Drawing.Size(125, 36);
+            this.lbNameCustomer.TabIndex = 80;
+            this.lbNameCustomer.Text = "<h4>Name Customer</h4>";
+            this.lbNameCustomer.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbNameCustomer.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbEmailCustomer
+            // 
+            this.lbEmailCustomer.AllowParentOverrides = false;
+            this.lbEmailCustomer.AutoEllipsis = false;
+            this.lbEmailCustomer.AutoSize = false;
+            this.lbEmailCustomer.CursorType = null;
+            this.lbEmailCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbEmailCustomer.Location = new System.Drawing.Point(146, 149);
+            this.lbEmailCustomer.Name = "lbEmailCustomer";
+            this.lbEmailCustomer.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbEmailCustomer.Size = new System.Drawing.Size(136, 40);
+            this.lbEmailCustomer.TabIndex = 81;
+            this.lbEmailCustomer.Text = "<h4>Email Customer</h4>";
+            this.lbEmailCustomer.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbEmailCustomer.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // descripcionItemList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(246)))), ((int)(((byte)(246)))));
-            this.ClientSize = new System.Drawing.Size(599, 679);
+            this.ClientSize = new System.Drawing.Size(901, 594);
+            this.Controls.Add(this.lbNameCustomer);
+            this.Controls.Add(this.lbLeadDate);
+            this.Controls.Add(this.lbUserAssignedTo);
+            this.Controls.Add(this.lbLeadCreatedAt);
+            this.Controls.Add(this.lbCustomer);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.bbtnDetailsSale);
             this.Controls.Add(this.bbtnLeadToSale);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnLeadRemove);
-            this.Controls.Add(this.lbLeadDate);
-            this.Controls.Add(this.lbLeadCreatedAt);
-            this.Controls.Add(this.lbLeadExpDate);
-            this.Controls.Add(this.lbLeadName);
-            this.Controls.Add(this.lbCustomer);
-            this.Controls.Add(this.lbUserAssignedTo);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.gbLeadStages);
-            this.Controls.Add(this.lbAmountLead);
-            this.Controls.Add(this.lbEmailCustomer);
-            this.Controls.Add(this.lbCustomerEmail);
-            this.Controls.Add(this.lbNameCustomer);
             this.Controls.Add(this.lbAssignedTo);
             this.Controls.Add(this.lbCustomerName);
+            this.Controls.Add(this.lbLeadExpDate);
+            this.Controls.Add(this.lbAmountLead);
+            this.Controls.Add(this.blbAmount);
+            this.Controls.Add(this.lbEmailCustomer);
+            this.Controls.Add(this.lbCustomerEmail);
+            this.Controls.Add(this.lbLeadName);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "descripcionItemList";
             this.Text = "descripcionItemList";
             this.Load += new System.EventHandler(this.descripcionItemList_Load);
             this.gbLeadStages.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPageNotes.ResumeLayout(false);
-            this.tabPageNotes.PerformLayout();
             this.tabPageExtraInfo.ResumeLayout(false);
-            this.tabPageExtraInfo.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lbCustomerName;
-        private System.Windows.Forms.Label lbAssignedTo;
-        private System.Windows.Forms.Label lbCustomerEmail;
-        private System.Windows.Forms.Label lbNameCustomer;
-        private System.Windows.Forms.Label lbAmountLead;
-        private System.Windows.Forms.Label lbEmailCustomer;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnQualified;
         private System.Windows.Forms.Button btnProposition;
         private System.Windows.Forms.Button btnWon;
         private System.Windows.Forms.GroupBox gbLeadStages;
-        private System.Windows.Forms.TextBox tbLeadNotes;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPageNotes;
         private System.Windows.Forms.TabPage tabPageExtraInfo;
-        private System.Windows.Forms.Label lbCountry;
-        private System.Windows.Forms.Label lbZip;
-        private System.Windows.Forms.TextBox tbCustomerAddress1;
-        private System.Windows.Forms.TextBox tbCustomerAddress2;
-        private System.Windows.Forms.TextBox tbCustomerCompanyName;
-        private System.Windows.Forms.Label lbCompanyName;
-        private System.Windows.Forms.Label lbAddress1;
-        private System.Windows.Forms.Label lbSecondaryAddress;
-        private System.Windows.Forms.Label lbCity;
-        private System.Windows.Forms.Label lbContactInfo;
-        private System.Windows.Forms.TextBox tbCustomerCountry;
-        private System.Windows.Forms.TextBox tbCustomerZip;
-        private System.Windows.Forms.TextBox tbCustomerCity;
-        private System.Windows.Forms.Label lbNotes;
-        private System.Windows.Forms.TextBox tbCustomerType;
-        private System.Windows.Forms.TextBox tbCustomerDate;
-        private System.Windows.Forms.TextBox tbCustomerDepartment;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lbCustomerInformation;
-        private System.Windows.Forms.TextBox tbCustomerPhone;
-        private System.Windows.Forms.Label lbPhone;
-        private System.Windows.Forms.Label lbUserAssignedTo;
-        private System.Windows.Forms.Label lbCustomer;
-        private System.Windows.Forms.Label lbLeadName;
-        private System.Windows.Forms.Label lbLeadExpDate;
-        private System.Windows.Forms.Label lbLeadCreatedAt;
-        private System.Windows.Forms.Label lbLeadDate;
         private System.Windows.Forms.Button btnLeadRemove;
-        private System.Windows.Forms.Label label4;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bbtnLeadToSale;
         private System.Windows.Forms.Button btnSale;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 bbtnDetailsSale;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton2 btnClose;
+        private Bunifu.UI.WinForms.BunifuTextBox tbLeadNotes;
+        private Bunifu.UI.WinForms.BunifuLabel lbContactInfo;
+        private Bunifu.UI.WinForms.BunifuLabel lbAddress1;
+        private Bunifu.UI.WinForms.BunifuLabel lbAssignedTo;
+        private Bunifu.UI.WinForms.BunifuLabel blbAmount;
+        private Bunifu.UI.WinForms.BunifuLabel lbCustomerName;
+        private Bunifu.UI.WinForms.BunifuLabel lbLeadCreatedAt;
+        private Bunifu.UI.WinForms.BunifuLabel lbNotes;
+        private Bunifu.UI.WinForms.BunifuLabel lbLeadName;
+        private Bunifu.UI.WinForms.BunifuLabel lbLeadExpDate;
+        private Bunifu.UI.WinForms.BunifuLabel lbCustomer;
+        private Bunifu.UI.WinForms.BunifuLabel lbCustomerEmail;
+        private Bunifu.UI.WinForms.BunifuLabel lbCompanyName;
+        private Bunifu.UI.WinForms.BunifuLabel lbPhone;
+        private Bunifu.UI.WinForms.BunifuLabel lbDate;
+        private Bunifu.UI.WinForms.BunifuLabel lbType;
+        private Bunifu.UI.WinForms.BunifuLabel lbDepartment;
+        private Bunifu.UI.WinForms.BunifuLabel lbCustomerInformation;
+        private Bunifu.UI.WinForms.BunifuLabel lbZip;
+        private Bunifu.UI.WinForms.BunifuLabel lbCountry;
+        private Bunifu.UI.WinForms.BunifuLabel lbCity;
+        private Bunifu.UI.WinForms.BunifuLabel lbSecondaryAddress;
+        private Bunifu.UI.WinForms.BunifuTextBox tbCustomerCountry;
+        private Bunifu.UI.WinForms.BunifuTextBox tbCustomerPhone;
+        private Bunifu.UI.WinForms.BunifuTextBox tbCustomerZip;
+        private Bunifu.UI.WinForms.BunifuTextBox tbCustomerCity;
+        private Bunifu.UI.WinForms.BunifuTextBox tbCustomerDate;
+        private Bunifu.UI.WinForms.BunifuTextBox tbCustomerDepartment;
+        private Bunifu.UI.WinForms.BunifuTextBox tbCustomerType;
+        private Bunifu.UI.WinForms.BunifuTextBox tbCustomerAddress2;
+        private Bunifu.UI.WinForms.BunifuTextBox tbCustomerAddress1;
+        private Bunifu.UI.WinForms.BunifuTextBox tbCustomerCompanyName;
+        private Bunifu.UI.WinForms.BunifuLabel lbUserAssignedTo;
+        private Bunifu.UI.WinForms.BunifuLabel lbAmountLead;
+        private Bunifu.UI.WinForms.BunifuLabel lbLeadDate;
+        private Bunifu.UI.WinForms.BunifuLabel lbNameCustomer;
+        private Bunifu.UI.WinForms.BunifuLabel lbEmailCustomer;
     }
 }

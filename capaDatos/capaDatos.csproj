@@ -244,6 +244,7 @@
     <Compile Include="cdDeleteBBDD.cs" />
     <Compile Include="cdDepartment.cs" />
     <Compile Include="cdDepartmentUser.cs" />
+    <Compile Include="cdDgvReminder.cs" />
     <Compile Include="cdDoBackup.cs" />
     <Compile Include="cdCustomer.cs" />
     <Compile Include="cdDgvAllowance.cs" />
@@ -256,6 +257,7 @@
     <Compile Include="cdMileage.cs" />
     <Compile Include="cdPipelineFlps.cs" />
     <Compile Include="cdProduct.cs" />
+    <Compile Include="cdReminder.cs" />
     <Compile Include="cdRestoreBackUp.cs" />
     <Compile Include="cdRole.cs" />
     <Compile Include="cdRoleUser.cs" />

@@ -132,8 +132,38 @@
   <data name="allowances" xml:space="preserve">
     <value>Allowances</value>
   </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="AssignedTo" xml:space="preserve">
+    <value>Assigned To</value>
+  </data>
   <data name="btnRegistrar" xml:space="preserve">
     <value>Sign Up</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="ContactInfo" xml:space="preserve">
+    <value>Contact Information</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="CreatedAt" xml:space="preserve">
+    <value>CreatedAt</value>
+  </data>
+  <data name="CreateItem" xml:space="preserve">
+    <value>Create Item</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="CustomerEmail" xml:space="preserve">
+    <value>Customer Email</value>
+  </data>
+  <data name="CustomerInfo" xml:space="preserve">
+    <value>Customer Information</value>
   </data>
   <data name="customers" xml:space="preserve">
     <value>Customers</value>
@@ -150,14 +180,23 @@
   <data name="destination" xml:space="preserve">
     <value>Destination</value>
   </data>
+  <data name="DetailsSale" xml:space="preserve">
+    <value>DetailsSale</value>
+  </data>
   <data name="doBackUp" xml:space="preserve">
     <value>Do BackUp</value>
+  </data>
+  <data name="DoSale" xml:space="preserve">
+    <value>Do Sale</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
   </data>
   <data name="Email1" xml:space="preserve">
     <value>Email</value>
+  </data>
+  <data name="Employees" xml:space="preserve">
+    <value>Employees</value>
   </data>
   <data name="endDate" xml:space="preserve">
     <value>End Date</value>
@@ -167,6 +206,9 @@
   </data>
   <data name="Exit" xml:space="preserve">
     <value>Exit</value>
+  </data>
+  <data name="ExpDate" xml:space="preserve">
+    <value>Expected Closing</value>
   </data>
   <data name="final" xml:space="preserve">
     <value>Final</value>
@@ -188,6 +230,15 @@
   </data>
   <data name="invoice" xml:space="preserve">
     <value>Invoice</value>
+  </data>
+  <data name="ItemAmount" xml:space="preserve">
+    <value>Item Amount</value>
+  </data>
+  <data name="ItemName" xml:space="preserve">
+    <value>Item Name</value>
+  </data>
+  <data name="ItemState" xml:space="preserve">
+    <value>Item State</value>
   </data>
   <data name="job" xml:space="preserve">
     <value>Job</value>
@@ -219,11 +270,32 @@
   <data name="lbUser" xml:space="preserve">
     <value>User: </value>
   </data>
+  <data name="LeadAmount" xml:space="preserve">
+    <value>Lead Amount</value>
+  </data>
+  <data name="LeadAssignedTo" xml:space="preserve">
+    <value>Lead Assigned To</value>
+  </data>
+  <data name="LeadDate" xml:space="preserve">
+    <value>Lead Date</value>
+  </data>
+  <data name="LeadName" xml:space="preserve">
+    <value>Lead Name</value>
+  </data>
+  <data name="LeadNotes" xml:space="preserve">
+    <value>Lead Notes</value>
+  </data>
+  <data name="LeadStage" xml:space="preserve">
+    <value>Lead Stage</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
   <data name="Login1" xml:space="preserve">
     <value>Login</value>
+  </data>
+  <data name="MainAddress" xml:space="preserve">
+    <value>Main Address</value>
   </data>
   <data name="manageAllowances" xml:space="preserve">
     <value>Allowance Management</value>
@@ -237,17 +309,35 @@
   <data name="modules" xml:space="preserve">
     <value>Modules</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameCompany" xml:space="preserve">
+    <value>Name Company</value>
+  </data>
   <data name="nameCustomer" xml:space="preserve">
     <value>Name Customer</value>
   </data>
-  <data name="new" xml:space="preserve">
+  <data name="New" xml:space="preserve">
     <value>New</value>
+  </data>
+  <data name="NewCustomer" xml:space="preserve">
+    <value>NewCustomer</value>
+  </data>
+  <data name="NewInventoryItem" xml:space="preserve">
+    <value>New Inventory Item</value>
+  </data>
+  <data name="NewLead" xml:space="preserve">
+    <value>NewLead</value>
   </data>
   <data name="newState" xml:space="preserve">
     <value>New State: </value>
   </data>
   <data name="newStateMileage" xml:space="preserve">
     <value>New State of Mileage: </value>
+  </data>
+  <data name="Notes" xml:space="preserve">
+    <value>Notes</value>
   </data>
   <data name="observations" xml:space="preserve">
     <value>Observations</value>
@@ -261,14 +351,29 @@
   <data name="passwd" xml:space="preserve">
     <value>1234</value>
   </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
   <data name="pManAllowance" xml:space="preserve">
     <value>Allowance Management</value>
   </data>
   <data name="pManUsers" xml:space="preserve">
     <value>User Management</value>
   </data>
+  <data name="PricePerItem" xml:space="preserve">
+    <value>Price Per Item</value>
+  </data>
   <data name="pricePerKilometer" xml:space="preserve">
     <value>Price per Kilometer</value>
+  </data>
+  <data name="ProductCategory" xml:space="preserve">
+    <value>Product Category</value>
+  </data>
+  <data name="ProductsIncludedInTheSale" xml:space="preserve">
+    <value>ProductsIncludedInTheSale</value>
+  </data>
+  <data name="ProductsIntoWarehouses" xml:space="preserve">
+    <value>Products Into Warehouses</value>
   </data>
   <data name="proposition" xml:space="preserve">
     <value>Proposition</value>
@@ -309,8 +414,17 @@
   <data name="sales" xml:space="preserve">
     <value>Sales</value>
   </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SecondaryAddress" xml:space="preserve">
+    <value>Secondary Address</value>
+  </data>
   <data name="settings" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="Stage" xml:space="preserve">
+    <value>Stage</value>
   </data>
   <data name="startDate" xml:space="preserve">
     <value>Start Date</value>
@@ -332,6 +446,12 @@
   </data>
   <data name="total" xml:space="preserve">
     <value>Total</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="UnitOfMeasure" xml:space="preserve">
+    <value>Unit Of Measure</value>
   </data>
   <data name="updateAllowance" xml:space="preserve">
     <value>Update Allowance</value>
@@ -356,5 +476,8 @@
   </data>
   <data name="won" xml:space="preserve">
     <value>Won</value>
+  </data>
+  <data name="Zip" xml:space="preserve">
+    <value>Zip</value>
   </data>
 </root>

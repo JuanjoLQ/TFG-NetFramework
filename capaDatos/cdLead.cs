@@ -1,10 +1,8 @@
 ﻿using capaEntidad;
 using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Utilities;
 using System;
 using System.Collections;
 using System.Windows.Forms;
-
 using Bunifu.UI.WinForms;
 
 namespace capaDatos
@@ -37,7 +35,7 @@ namespace capaDatos
 
                     cmd.ExecuteNonQuery();
                 }
-                MessageBox.Show("Lead añadido", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Lead añadido", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 conn.Close();
             }
@@ -171,7 +169,7 @@ namespace capaDatos
             }
         }
 
-        public void leadsByDate(Label lbStateDate, DataGridView dgvLeadsByLead, int idCustomer, DateTime startDate, DateTime endDate)
+        public void leadsByDate(BunifuLabel lbStateDate, DataGridView dgvLeadsByLead, int idCustomer, DateTime startDate, DateTime endDate)
         {
             dgvLeadsByLead.RowCount = 0;
             ArrayList array = new ArrayList();
@@ -331,7 +329,6 @@ namespace capaDatos
                     cmd.Parameters.AddWithValue("@idLead", idLead);
                     cmd.ExecuteNonQuery();
                 }
-                MessageBox.Show("Lead a Sale", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 conn.Close();
             }

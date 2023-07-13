@@ -1,12 +1,5 @@
-﻿using capaEntidad;
-using MySql.Data.MySqlClient;
-using Org.BouncyCastle.Utilities;
+﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace capaDatos
@@ -54,7 +47,7 @@ namespace capaDatos
 
                     cmd.ExecuteNonQuery();
                 }
-                MessageBox.Show("Sale añadido", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Sale añadido", "Juanjo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 conn.Close();
             }
